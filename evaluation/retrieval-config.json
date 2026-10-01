@@ -1,0 +1,30 @@
+{
+  "version": "0.1",
+  "corpus_sha256": "c3e6196a6a66f67e89f6c221d9414e4a6f586835dab773bdbb253b3878c1b016",
+  "embedding": {
+    "model_id": "Xenova/bge-small-en-v1.5",
+    "model_revision": "ea104dacec62c0de699686887e3f920caeb4f3e3",
+    "dimensions": 384,
+    "max_tokens": 512,
+    "pooling": "cls",
+    "normalize": true,
+    "dtype": "fp32",
+    "document_prefix": "",
+    "query_prefix": "Represent this sentence for searching relevant passages: "
+  },
+  "methods": [
+    "vector",
+    "keyword",
+    "hybrid"
+  ],
+  "candidate_limit": 20,
+  "final_limit": 5,
+  "rrf_constant": 60,
+  "keyword_policy": "english_lexemes_OR_ts_rank_cd",
+  "tie_breaker": "chunk_id_ascending",
+  "metrics": [
+    "source_hit_at_5",
+    "source_mrr_at_5"
+  ],
+  "benchmark_status": "provisional_until_human_review"
+}

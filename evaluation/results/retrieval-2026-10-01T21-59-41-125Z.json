@@ -1,0 +1,490 @@
+{
+  "status": "provisional",
+  "run_id": "2026-10-01T21-59-41-125Z",
+  "dataset_sha256": "9b60bfeed731d58ac5d5c98a449b3bf6428169f025f17d2f0f2df70e63666225",
+  "config": {
+    "version": "0.1",
+    "corpus_sha256": "c3e6196a6a66f67e89f6c221d9414e4a6f586835dab773bdbb253b3878c1b016",
+    "embedding": {
+      "model_id": "Xenova/bge-small-en-v1.5",
+      "model_revision": "ea104dacec62c0de699686887e3f920caeb4f3e3",
+      "dimensions": 384,
+      "max_tokens": 512,
+      "pooling": "cls",
+      "normalize": true,
+      "dtype": "fp32",
+      "document_prefix": "",
+      "query_prefix": "Represent this sentence for searching relevant passages: "
+    },
+    "methods": [
+      "vector",
+      "keyword",
+      "hybrid"
+    ],
+    "candidate_limit": 20,
+    "final_limit": 5,
+    "rrf_constant": 60,
+    "keyword_policy": "english_lexemes_OR_ts_rank_cd",
+    "tie_breaker": "chunk_id_ascending",
+    "metrics": [
+      "source_hit_at_5",
+      "source_mrr_at_5"
+    ],
+    "benchmark_status": "provisional_until_human_review"
+  },
+  "summary": [
+    {
+      "method": "vector",
+      "questions": 2,
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 0.75
+    },
+    {
+      "method": "keyword",
+      "questions": 2,
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 1
+    },
+    {
+      "method": "hybrid",
+      "questions": 2,
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 0.75
+    }
+  ],
+  "runs": [
+    {
+      "question_id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "review_status": "pending_human_review",
+      "answerability": "answerable",
+      "accepted_source_ids": [
+        "cfpb-47"
+      ],
+      "method": "vector",
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 0.5,
+      "first_accepted_rank": 2,
+      "results": [
+        {
+          "chunk_id": "e963144f132a6f6505648477c71a18e89acfa0920cc3072394a6b2e905b08ded",
+          "source_id": "cfpb-44",
+          "chunk_index": 0,
+          "chunk_text": "What is a credit card interest rate? What does APR mean?\n\nA credit card’s interest rate is the price you pay for borrowing money.\n\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).\n\nHow can you avoid paying interest on credit card purchases?\n\nOn most cards, you can avoid paying interest on purchases if you pay your balance in full each month by the due date.",
+          "distance": 0.22235285569635543
+        },
+        {
+          "chunk_id": "ecdc44fb2eab236d3c72cff914edc8c7c851c794ab254f672e60d139a3eb7ef6",
+          "source_id": "cfpb-47",
+          "chunk_index": 0,
+          "chunk_text": "What is a grace period for a credit card?\n\nA grace period is the period between the end of a billing cycle and the date your payment is due.\n\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\nCredit card companies must establish procedures to assure that their bills are mailed or delivered to you at least 21 days before the payment is due.\n\nWith credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.\n\nTip: To keep your grace period, make sure to pay your bill in full each month and on time. If you pay in full some months, and not in other months, you may lose your grace period for the month that you don’t pay in full and for the month after.",
+          "distance": 0.2473821345110826
+        },
+        {
+          "chunk_id": "3d3b1f9f774140efc82c93d82cf4a58aa58594d486701e5272b1206713939c84",
+          "source_id": "cfpb-45",
+          "chunk_index": 0,
+          "chunk_text": "What is the difference between a fixed APR and a variable APR?\n\nThe difference between a fixed APR and a variable APR, is that a fixed APR does not fluctuate with changes to an index. A variable-rate APR, or variable APR, changes with the index interest rate.\n\nA fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.\n\nA variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time.\n\nYou should be able to find a copy of the agreement on your card issuer’s website, and you can request a copy from your card issuer if it is not there. If you have any questions, you should contact your card issuer.",
+          "distance": 0.3428619248497887
+        },
+        {
+          "chunk_id": "ceeae8c02ff59baf81b3fda2b3abf450ca195719d3000c82c4210e963b106b20",
+          "source_id": "cfpb-331",
+          "chunk_index": 0,
+          "chunk_text": "What information does a debt collector have to give me about a debt they’re trying to collect from me?\n\nUnder the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically.\n\nWhat information is required to be in the validation notice from a debt collector about my debt?\n\nThe information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt\n\nYou may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB.\n\nDisputing a debt",
+          "distance": 0.39640684384810176
+        },
+        {
+          "chunk_id": "590b2e0c1f5e1b6339ce1b032bab6f23a27e004c276d45695ac4640e16a78f23",
+          "source_id": "cfpb-331",
+          "chunk_index": 1,
+          "chunk_text": "Disputing a debt\n\nOnce you receive the debt validation information, you have 30 days to dispute the debt in writing. Failing to request verification in writing or within this time period can affect your ability to assert your rights under the debt collection rule.\n\nAlso, if you send the debt collector the written verification request or request for information about the original creditor within this 30-day period, the debt collector must pause collecting the amount of the debt you are disputing until they’ve adequately responded to your request.\n\nIf you’re being contacted by a debt collector, you have rights and protections under federal law, and the rights and protections apply to how and when they can contact you. Learn more about your debt collection protections.\n\nStill having trouble with debt collection?\n\nCompanies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.\n\nLearn how the complaint process works",
+          "distance": 0.40200956952057565
+        }
+      ]
+    },
+    {
+      "question_id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "review_status": "pending_human_review",
+      "answerability": "answerable",
+      "accepted_source_ids": [
+        "cfpb-47"
+      ],
+      "method": "keyword",
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 1,
+      "first_accepted_rank": 1,
+      "results": [
+        {
+          "chunk_id": "ecdc44fb2eab236d3c72cff914edc8c7c851c794ab254f672e60d139a3eb7ef6",
+          "source_id": "cfpb-47",
+          "chunk_index": 0,
+          "chunk_text": "What is a grace period for a credit card?\n\nA grace period is the period between the end of a billing cycle and the date your payment is due.\n\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\nCredit card companies must establish procedures to assure that their bills are mailed or delivered to you at least 21 days before the payment is due.\n\nWith credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.\n\nTip: To keep your grace period, make sure to pay your bill in full each month and on time. If you pay in full some months, and not in other months, you may lose your grace period for the month that you don’t pay in full and for the month after.",
+          "keyword_score": 3.3
+        },
+        {
+          "chunk_id": "e963144f132a6f6505648477c71a18e89acfa0920cc3072394a6b2e905b08ded",
+          "source_id": "cfpb-44",
+          "chunk_index": 0,
+          "chunk_text": "What is a credit card interest rate? What does APR mean?\n\nA credit card’s interest rate is the price you pay for borrowing money.\n\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).\n\nHow can you avoid paying interest on credit card purchases?\n\nOn most cards, you can avoid paying interest on purchases if you pay your balance in full each month by the due date.",
+          "keyword_score": 1.8000001
+        },
+        {
+          "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
+          "source_id": "cfpb-31",
+          "chunk_index": 3,
+          "chunk_text": "What is a security freeze?\n\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.\n\nUnlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts.\n\nHow can I block or remove fraudulent information from my consumer report?\n\nYou can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report",
+          "keyword_score": 1.5
+        },
+        {
+          "chunk_id": "01029b467e18daf697370994d7b00c61a14089311dad27694abbe94496c664de",
+          "source_id": "cfpb-314",
+          "chunk_index": 2,
+          "chunk_text": "Then, dispute the information with the company that provided it to the credit reporting companies\n\nCredit reporting companies gather information about you from other companies called furnishers. Examples of furnishers include your bank, your landlord, and your credit card company.\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports.\n\nThe furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\nSubmit a complaint\n\nIf you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+          "keyword_score": 1.3000001
+        },
+        {
+          "chunk_id": "bae076e6342b31861a51bed4078b8aab6feaed3b71a1d639fdfe11a738c9f473",
+          "source_id": "cfpb-31",
+          "chunk_index": 1,
+          "chunk_text": "Contact any one of these three nationwide credit reporting companies Equifax , Experian , or Transunion to place fraud alerts on your credit reports:\n\nOnline | By calling | By mail\n\nEquifax Alerts | (800) 685-1111 | Equifax Information Services LLC P.O. Box 105069 Atlanta, GA 30348-5069\n\nExperian Fraud Center | (888) 397-3742 | Experian, P.O. Box 9554, Allen, TX 75013\n\nTransunion Fraud Alert | (888) 909-8872 | TransUnion Fraud Victim Assistance Department, P.O. Box 2000, Chester, PA 19016\n\nWhy should I set up a fraud alert?\n\nA fraud alert protects you by requiring creditors to make sure it’s you before they open a new account, issue an additional card, or raise your credit limit. When you place a fraud alert on your credit report at one of the nationwide credit reporting companies, it must notify the others.\n\nThere are two main types of fraud alerts: initial fraud alerts and extended alerts. Servicemembers also have the option of an active-duty alert.\n\nWhen should I place an initial fraud alert?\n\nPlace an initial fraud alert on your credit report if you believe you are, or are about to become, a victim of fraud or identity theft. Credit reporting companies keep that alert on your file for one year. After one year, the initial fraud alert will end and be removed. You have the option to place another fraud alert at that time.\n\nWhen you place an initial fraud alert, creditors must take reasonable steps to make sure it’s you making new credit requests before they can approve.\n\nAlso, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company.\n\nWhen should I place an extended alert?",
+          "keyword_score": 1.3000001
+        }
+      ]
+    },
+    {
+      "question_id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "review_status": "pending_human_review",
+      "answerability": "answerable",
+      "accepted_source_ids": [
+        "cfpb-47"
+      ],
+      "method": "hybrid",
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 0.5,
+      "first_accepted_rank": 2,
+      "results": [
+        {
+          "chunk_id": "e963144f132a6f6505648477c71a18e89acfa0920cc3072394a6b2e905b08ded",
+          "source_id": "cfpb-44",
+          "chunk_index": 0,
+          "chunk_text": "What is a credit card interest rate? What does APR mean?\n\nA credit card’s interest rate is the price you pay for borrowing money.\n\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).\n\nHow can you avoid paying interest on credit card purchases?\n\nOn most cards, you can avoid paying interest on purchases if you pay your balance in full each month by the due date.",
+          "rrf_score": 0.03252247488101534,
+          "vector_rank": 1,
+          "keyword_rank": 2
+        },
+        {
+          "chunk_id": "ecdc44fb2eab236d3c72cff914edc8c7c851c794ab254f672e60d139a3eb7ef6",
+          "source_id": "cfpb-47",
+          "chunk_index": 0,
+          "chunk_text": "What is a grace period for a credit card?\n\nA grace period is the period between the end of a billing cycle and the date your payment is due.\n\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\nCredit card companies must establish procedures to assure that their bills are mailed or delivered to you at least 21 days before the payment is due.\n\nWith credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.\n\nTip: To keep your grace period, make sure to pay your bill in full each month and on time. If you pay in full some months, and not in other months, you may lose your grace period for the month that you don’t pay in full and for the month after.",
+          "rrf_score": 0.03252247488101534,
+          "vector_rank": 2,
+          "keyword_rank": 1
+        },
+        {
+          "chunk_id": "c72adf39b01fce7f37f890ef4503c264757f71869bda5f5ef5af2cc396b73742",
+          "source_id": "cfpb-31",
+          "chunk_index": 2,
+          "chunk_text": "When should I place an extended alert?\n\nPlace an extended alert if your identity has been stolen and you have filed an identity theft report at IdentityTheft.gov .\n\nAn extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit.\n\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\nWhat is an active-duty alert?\n\nActive-duty alerts protect servicemembers on active duty by making businesses take reasonable steps to make sure it’s you before they open a new account, issue an additional credit card, or increase the credit limit on your existing account. The alerts last for 12 months. You can request that the alert be removed sooner. If your deployment lasts longer than 12 months, you may place another alert on your credit file.\n\nTip\n\nIf it may be difficult to contact you directly while you are deployed, you can assign a personal representative to act for you, including to place or remove an active-duty alert.\n\nWhen you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists.\n\nTo add an active-duty alert to your credit report, contact one of the nationwide credit reporting companies. That company will contact the other nationwide credit reporting companies.\n\nWhat is a security freeze?",
+          "rrf_score": 0.03007688828584351,
+          "vector_rank": 7,
+          "keyword_rank": 6
+        },
+        {
+          "chunk_id": "cf569805a13671f3f267884ad0958b192071f96973f28db7d9f81c8df4d1b9ba",
+          "source_id": "cfpb-1253",
+          "chunk_index": 0,
+          "chunk_text": "What can I do if my credit application was denied because of my credit report?\n\nIf you were turned down for a loan or a line of credit, the lender is required to give you a list of the main reasons for its decision or a notice telling you how to get the main reasons.\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.\n\nIf a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+          "rrf_score": 0.03007688828584351,
+          "vector_rank": 6,
+          "keyword_rank": 7
+        },
+        {
+          "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
+          "source_id": "cfpb-31",
+          "chunk_index": 3,
+          "chunk_text": "What is a security freeze?\n\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.\n\nUnlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts.\n\nHow can I block or remove fraudulent information from my consumer report?\n\nYou can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report",
+          "rrf_score": 0.029957522915269395,
+          "vector_rank": 11,
+          "keyword_rank": 3
+        }
+      ]
+    },
+    {
+      "question_id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "review_status": "pending_human_review",
+      "answerability": "answerable",
+      "accepted_source_ids": [
+        "cfpb-1253"
+      ],
+      "method": "vector",
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 1,
+      "first_accepted_rank": 1,
+      "results": [
+        {
+          "chunk_id": "cf569805a13671f3f267884ad0958b192071f96973f28db7d9f81c8df4d1b9ba",
+          "source_id": "cfpb-1253",
+          "chunk_index": 0,
+          "chunk_text": "What can I do if my credit application was denied because of my credit report?\n\nIf you were turned down for a loan or a line of credit, the lender is required to give you a list of the main reasons for its decision or a notice telling you how to get the main reasons.\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.\n\nIf a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+          "distance": 0.13503368481689393
+        },
+        {
+          "chunk_id": "38e64c691374cf020ed165d14a13efd5ae708e20bcd437e20c9f06913dfea407",
+          "source_id": "cfpb-1253",
+          "chunk_index": 1,
+          "chunk_text": "If you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.\n\nIf you were denied due to an “insufficient credit file” (also known as a thin credit file), you can use this checklist to learn how to build and keep good credit .\n\nIt is illegal for a creditor to discriminate in any credit transaction, including mortgages, against any applicant because of:\n\n- Race\n\n- Color\n\n- Religion\n\n- National origin\n\n- Sex\n\n- Marital status\n\n- Age, unless the applicant is not legally able to enter into a contract\n\n- Receipt of income from any public assistance program\n\n- Exercising in good faith a right under the Consumer Credit Protection Act (such as disputing information in your credit report)\n\nIf you feel you may have been discriminated against, learn more about your rights under ECOA and FCRA. If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "distance": 0.24281238871626565
+        },
+        {
+          "chunk_id": "a6b963581b03857f259ce5220223c3c74310a88351698771244fde90467d3ae9",
+          "source_id": "cfpb-313",
+          "chunk_index": 0,
+          "chunk_text": "What are common credit report errors that I should look for on my credit report?\n\nWhen reviewing your credit report, check that it contains only items about you. Be sure to look for information that is inaccurate or incomplete.\n\nHow do I check a credit report for common errors?\n\nCheck for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft\n\nCheck for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names\n\nCheck for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit\n\nIf you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies.\n\nStill having trouble with a credit reporting company?",
+          "distance": 0.25832710912015633
+        },
+        {
+          "chunk_id": "78168b12ae1a3922629653c44ffe6e41218899529ca8393abca6f3317b0cae7d",
+          "source_id": "cfpb-314",
+          "chunk_index": 0,
+          "chunk_text": "How do I dispute an error on my credit report?\n\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.\n\nTip\n\nIf you suspect that the error on your report is a result of identity theft, visit IdentityTheft.gov , the federal government’s one-stop resource to help you report and recover from identity theft.\n\nHow to dispute an error on your credit report\n\nFirst, dispute the information with the credit reporting company or companies\n\nIf you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received.\n\nYou can contact the nationwide credit reporting companies online, by mail, or by phone:\n\nEquifax",
+          "distance": 0.2622592547050234
+        },
+        {
+          "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
+          "source_id": "cfpb-31",
+          "chunk_index": 4,
+          "chunk_text": "- A letter identifying the fraudulent debts and information on your credit report\n\nYou can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft.\n\nCredit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.\n\nIf you need to dispute a debt that is not the result of identity theft, read “How do I dispute an error on my credit report?”\n\nIf you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "distance": 0.28212990516033176
+        }
+      ]
+    },
+    {
+      "question_id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "review_status": "pending_human_review",
+      "answerability": "answerable",
+      "accepted_source_ids": [
+        "cfpb-1253"
+      ],
+      "method": "keyword",
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 1,
+      "first_accepted_rank": 1,
+      "results": [
+        {
+          "chunk_id": "cf569805a13671f3f267884ad0958b192071f96973f28db7d9f81c8df4d1b9ba",
+          "source_id": "cfpb-1253",
+          "chunk_index": 0,
+          "chunk_text": "What can I do if my credit application was denied because of my credit report?\n\nIf you were turned down for a loan or a line of credit, the lender is required to give you a list of the main reasons for its decision or a notice telling you how to get the main reasons.\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.\n\nIf a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+          "keyword_score": 4.1
+        },
+        {
+          "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
+          "source_id": "cfpb-31",
+          "chunk_index": 3,
+          "chunk_text": "What is a security freeze?\n\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.\n\nUnlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts.\n\nHow can I block or remove fraudulent information from my consumer report?\n\nYou can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report",
+          "keyword_score": 3.2
+        },
+        {
+          "chunk_id": "01029b467e18daf697370994d7b00c61a14089311dad27694abbe94496c664de",
+          "source_id": "cfpb-314",
+          "chunk_index": 2,
+          "chunk_text": "Then, dispute the information with the company that provided it to the credit reporting companies\n\nCredit reporting companies gather information about you from other companies called furnishers. Examples of furnishers include your bank, your landlord, and your credit card company.\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports.\n\nThe furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\nSubmit a complaint\n\nIf you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+          "keyword_score": 3.1000001
+        },
+        {
+          "chunk_id": "a6b963581b03857f259ce5220223c3c74310a88351698771244fde90467d3ae9",
+          "source_id": "cfpb-313",
+          "chunk_index": 0,
+          "chunk_text": "What are common credit report errors that I should look for on my credit report?\n\nWhen reviewing your credit report, check that it contains only items about you. Be sure to look for information that is inaccurate or incomplete.\n\nHow do I check a credit report for common errors?\n\nCheck for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft\n\nCheck for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names\n\nCheck for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit\n\nIf you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies.\n\nStill having trouble with a credit reporting company?",
+          "keyword_score": 3
+        },
+        {
+          "chunk_id": "78168b12ae1a3922629653c44ffe6e41218899529ca8393abca6f3317b0cae7d",
+          "source_id": "cfpb-314",
+          "chunk_index": 0,
+          "chunk_text": "How do I dispute an error on my credit report?\n\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.\n\nTip\n\nIf you suspect that the error on your report is a result of identity theft, visit IdentityTheft.gov , the federal government’s one-stop resource to help you report and recover from identity theft.\n\nHow to dispute an error on your credit report\n\nFirst, dispute the information with the credit reporting company or companies\n\nIf you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received.\n\nYou can contact the nationwide credit reporting companies online, by mail, or by phone:\n\nEquifax",
+          "keyword_score": 2.8
+        }
+      ]
+    },
+    {
+      "question_id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "review_status": "pending_human_review",
+      "answerability": "answerable",
+      "accepted_source_ids": [
+        "cfpb-1253"
+      ],
+      "method": "hybrid",
+      "source_hit_at_5": 1,
+      "source_mrr_at_5": 1,
+      "first_accepted_rank": 1,
+      "results": [
+        {
+          "chunk_id": "cf569805a13671f3f267884ad0958b192071f96973f28db7d9f81c8df4d1b9ba",
+          "source_id": "cfpb-1253",
+          "chunk_index": 0,
+          "chunk_text": "What can I do if my credit application was denied because of my credit report?\n\nIf you were turned down for a loan or a line of credit, the lender is required to give you a list of the main reasons for its decision or a notice telling you how to get the main reasons.\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.\n\nIf a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+          "rrf_score": 0.03278688524590164,
+          "vector_rank": 1,
+          "keyword_rank": 1
+        },
+        {
+          "chunk_id": "a6b963581b03857f259ce5220223c3c74310a88351698771244fde90467d3ae9",
+          "source_id": "cfpb-313",
+          "chunk_index": 0,
+          "chunk_text": "What are common credit report errors that I should look for on my credit report?\n\nWhen reviewing your credit report, check that it contains only items about you. Be sure to look for information that is inaccurate or incomplete.\n\nHow do I check a credit report for common errors?\n\nCheck for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft\n\nCheck for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names\n\nCheck for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit\n\nIf you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies.\n\nStill having trouble with a credit reporting company?",
+          "rrf_score": 0.03149801587301587,
+          "vector_rank": 3,
+          "keyword_rank": 4
+        },
+        {
+          "chunk_id": "38e64c691374cf020ed165d14a13efd5ae708e20bcd437e20c9f06913dfea407",
+          "source_id": "cfpb-1253",
+          "chunk_index": 1,
+          "chunk_text": "If you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.\n\nIf you were denied due to an “insufficient credit file” (also known as a thin credit file), you can use this checklist to learn how to build and keep good credit .\n\nIt is illegal for a creditor to discriminate in any credit transaction, including mortgages, against any applicant because of:\n\n- Race\n\n- Color\n\n- Religion\n\n- National origin\n\n- Sex\n\n- Marital status\n\n- Age, unless the applicant is not legally able to enter into a contract\n\n- Receipt of income from any public assistance program\n\n- Exercising in good faith a right under the Consumer Credit Protection Act (such as disputing information in your credit report)\n\nIf you feel you may have been discriminated against, learn more about your rights under ECOA and FCRA. If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "rrf_score": 0.03128054740957967,
+          "vector_rank": 2,
+          "keyword_rank": 6
+        },
+        {
+          "chunk_id": "78168b12ae1a3922629653c44ffe6e41218899529ca8393abca6f3317b0cae7d",
+          "source_id": "cfpb-314",
+          "chunk_index": 0,
+          "chunk_text": "How do I dispute an error on my credit report?\n\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.\n\nTip\n\nIf you suspect that the error on your report is a result of identity theft, visit IdentityTheft.gov , the federal government’s one-stop resource to help you report and recover from identity theft.\n\nHow to dispute an error on your credit report\n\nFirst, dispute the information with the credit reporting company or companies\n\nIf you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received.\n\nYou can contact the nationwide credit reporting companies online, by mail, or by phone:\n\nEquifax",
+          "rrf_score": 0.031009615384615385,
+          "vector_rank": 4,
+          "keyword_rank": 5
+        },
+        {
+          "chunk_id": "01029b467e18daf697370994d7b00c61a14089311dad27694abbe94496c664de",
+          "source_id": "cfpb-314",
+          "chunk_index": 2,
+          "chunk_text": "Then, dispute the information with the company that provided it to the credit reporting companies\n\nCredit reporting companies gather information about you from other companies called furnishers. Examples of furnishers include your bank, your landlord, and your credit card company.\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports.\n\nThe furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\nSubmit a complaint\n\nIf you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+          "rrf_score": 0.03036576949620428,
+          "vector_rank": 9,
+          "keyword_rank": 3
+        }
+      ]
+    },
+    {
+      "question_id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "review_status": "pending_human_review",
+      "answerability": "unanswerable",
+      "accepted_source_ids": [],
+      "method": "vector",
+      "source_hit_at_5": null,
+      "source_mrr_at_5": null,
+      "first_accepted_rank": null,
+      "results": [
+        {
+          "chunk_id": "c72adf39b01fce7f37f890ef4503c264757f71869bda5f5ef5af2cc396b73742",
+          "source_id": "cfpb-31",
+          "chunk_index": 2,
+          "chunk_text": "When should I place an extended alert?\n\nPlace an extended alert if your identity has been stolen and you have filed an identity theft report at IdentityTheft.gov .\n\nAn extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit.\n\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\nWhat is an active-duty alert?\n\nActive-duty alerts protect servicemembers on active duty by making businesses take reasonable steps to make sure it’s you before they open a new account, issue an additional credit card, or increase the credit limit on your existing account. The alerts last for 12 months. You can request that the alert be removed sooner. If your deployment lasts longer than 12 months, you may place another alert on your credit file.\n\nTip\n\nIf it may be difficult to contact you directly while you are deployed, you can assign a personal representative to act for you, including to place or remove an active-duty alert.\n\nWhen you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists.\n\nTo add an active-duty alert to your credit report, contact one of the nationwide credit reporting companies. That company will contact the other nationwide credit reporting companies.\n\nWhat is a security freeze?",
+          "distance": 0.516552884846192
+        },
+        {
+          "chunk_id": "bae076e6342b31861a51bed4078b8aab6feaed3b71a1d639fdfe11a738c9f473",
+          "source_id": "cfpb-31",
+          "chunk_index": 1,
+          "chunk_text": "Contact any one of these three nationwide credit reporting companies Equifax , Experian , or Transunion to place fraud alerts on your credit reports:\n\nOnline | By calling | By mail\n\nEquifax Alerts | (800) 685-1111 | Equifax Information Services LLC P.O. Box 105069 Atlanta, GA 30348-5069\n\nExperian Fraud Center | (888) 397-3742 | Experian, P.O. Box 9554, Allen, TX 75013\n\nTransunion Fraud Alert | (888) 909-8872 | TransUnion Fraud Victim Assistance Department, P.O. Box 2000, Chester, PA 19016\n\nWhy should I set up a fraud alert?\n\nA fraud alert protects you by requiring creditors to make sure it’s you before they open a new account, issue an additional card, or raise your credit limit. When you place a fraud alert on your credit report at one of the nationwide credit reporting companies, it must notify the others.\n\nThere are two main types of fraud alerts: initial fraud alerts and extended alerts. Servicemembers also have the option of an active-duty alert.\n\nWhen should I place an initial fraud alert?\n\nPlace an initial fraud alert on your credit report if you believe you are, or are about to become, a victim of fraud or identity theft. Credit reporting companies keep that alert on your file for one year. After one year, the initial fraud alert will end and be removed. You have the option to place another fraud alert at that time.\n\nWhen you place an initial fraud alert, creditors must take reasonable steps to make sure it’s you making new credit requests before they can approve.\n\nAlso, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company.\n\nWhen should I place an extended alert?",
+          "distance": 0.5266882463283384
+        },
+        {
+          "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
+          "source_id": "cfpb-31",
+          "chunk_index": 4,
+          "chunk_text": "- A letter identifying the fraudulent debts and information on your credit report\n\nYou can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft.\n\nCredit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.\n\nIf you need to dispute a debt that is not the result of identity theft, read “How do I dispute an error on my credit report?”\n\nIf you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "distance": 0.536502947882252
+        },
+        {
+          "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
+          "source_id": "cfpb-31",
+          "chunk_index": 3,
+          "chunk_text": "What is a security freeze?\n\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.\n\nUnlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts.\n\nHow can I block or remove fraudulent information from my consumer report?\n\nYou can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report",
+          "distance": 0.544158930282717
+        },
+        {
+          "chunk_id": "178bad503fec44152e8dc1068a2dcc771ed60f7aefd6ecc99414b6c6d843cda5",
+          "source_id": "cfpb-31",
+          "chunk_index": 0,
+          "chunk_text": "What do I do if I am a victim of identity theft?\n\nIf you are a victim of identity theft, close compromised accounts, report the theft to both local police and at IdentityTheft.gov, place fraud alerts or security freezes on your credit reports, and take steps to protect your credit history and finances.\n\nWhat should I do immediately upon identity theft?\n\nIf you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions. Report identity theft to the Federal Trade Commission (FTC) at IdentityTheft.gov. You will get an Identity Theft Report and recovery plan that walks you through the steps to take.\n\nVisit the Department of Justice (DOJ) or the FTC’s IdentityTheft.gov to learn more.\n\nContact financial institutions, law enforcement, the DOJ, or FTC directly using official websites and phone numbers, because:\n\n- Scammers are pretending to be FTC and lying. They contact people and say that someone used their personal information to open accounts or commit fraud. Know that the FTC never threatens you, makes you transfer your money to “protect it,” or tells you to withdraw cash or buy gold and give it to someone. That’s a scam. Scammers have also impersonated the CFPB, other agencies, and law enforcement in the past.\n\n- Scammers also often pretend to be a financial institution. Be careful if you receive an email, text, or call from someone claiming to be from your bank, credit card provider, or other financial institutions. For more information, visit Banks Never Ask That!\n\nHow can I protect my credit after identity theft?\n\nContact any one of these three nationwide credit reporting companies Equifax , Experian , or Transunion to place fraud alerts on your credit reports:",
+          "distance": 0.5491340604823808
+        }
+      ]
+    },
+    {
+      "question_id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "review_status": "pending_human_review",
+      "answerability": "unanswerable",
+      "accepted_source_ids": [],
+      "method": "keyword",
+      "source_hit_at_5": null,
+      "source_mrr_at_5": null,
+      "first_accepted_rank": null,
+      "results": []
+    },
+    {
+      "question_id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "review_status": "pending_human_review",
+      "answerability": "unanswerable",
+      "accepted_source_ids": [],
+      "method": "hybrid",
+      "source_hit_at_5": null,
+      "source_mrr_at_5": null,
+      "first_accepted_rank": null,
+      "results": [
+        {
+          "chunk_id": "c72adf39b01fce7f37f890ef4503c264757f71869bda5f5ef5af2cc396b73742",
+          "source_id": "cfpb-31",
+          "chunk_index": 2,
+          "chunk_text": "When should I place an extended alert?\n\nPlace an extended alert if your identity has been stolen and you have filed an identity theft report at IdentityTheft.gov .\n\nAn extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit.\n\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\nWhat is an active-duty alert?\n\nActive-duty alerts protect servicemembers on active duty by making businesses take reasonable steps to make sure it’s you before they open a new account, issue an additional credit card, or increase the credit limit on your existing account. The alerts last for 12 months. You can request that the alert be removed sooner. If your deployment lasts longer than 12 months, you may place another alert on your credit file.\n\nTip\n\nIf it may be difficult to contact you directly while you are deployed, you can assign a personal representative to act for you, including to place or remove an active-duty alert.\n\nWhen you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists.\n\nTo add an active-duty alert to your credit report, contact one of the nationwide credit reporting companies. That company will contact the other nationwide credit reporting companies.\n\nWhat is a security freeze?",
+          "rrf_score": 0.01639344262295082,
+          "vector_rank": 1
+        },
+        {
+          "chunk_id": "bae076e6342b31861a51bed4078b8aab6feaed3b71a1d639fdfe11a738c9f473",
+          "source_id": "cfpb-31",
+          "chunk_index": 1,
+          "chunk_text": "Contact any one of these three nationwide credit reporting companies Equifax , Experian , or Transunion to place fraud alerts on your credit reports:\n\nOnline | By calling | By mail\n\nEquifax Alerts | (800) 685-1111 | Equifax Information Services LLC P.O. Box 105069 Atlanta, GA 30348-5069\n\nExperian Fraud Center | (888) 397-3742 | Experian, P.O. Box 9554, Allen, TX 75013\n\nTransunion Fraud Alert | (888) 909-8872 | TransUnion Fraud Victim Assistance Department, P.O. Box 2000, Chester, PA 19016\n\nWhy should I set up a fraud alert?\n\nA fraud alert protects you by requiring creditors to make sure it’s you before they open a new account, issue an additional card, or raise your credit limit. When you place a fraud alert on your credit report at one of the nationwide credit reporting companies, it must notify the others.\n\nThere are two main types of fraud alerts: initial fraud alerts and extended alerts. Servicemembers also have the option of an active-duty alert.\n\nWhen should I place an initial fraud alert?\n\nPlace an initial fraud alert on your credit report if you believe you are, or are about to become, a victim of fraud or identity theft. Credit reporting companies keep that alert on your file for one year. After one year, the initial fraud alert will end and be removed. You have the option to place another fraud alert at that time.\n\nWhen you place an initial fraud alert, creditors must take reasonable steps to make sure it’s you making new credit requests before they can approve.\n\nAlso, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company.\n\nWhen should I place an extended alert?",
+          "rrf_score": 0.016129032258064516,
+          "vector_rank": 2
+        },
+        {
+          "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
+          "source_id": "cfpb-31",
+          "chunk_index": 4,
+          "chunk_text": "- A letter identifying the fraudulent debts and information on your credit report\n\nYou can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft.\n\nCredit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.\n\nIf you need to dispute a debt that is not the result of identity theft, read “How do I dispute an error on my credit report?”\n\nIf you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "rrf_score": 0.015873015873015872,
+          "vector_rank": 3
+        },
+        {
+          "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
+          "source_id": "cfpb-31",
+          "chunk_index": 3,
+          "chunk_text": "What is a security freeze?\n\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.\n\nUnlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts.\n\nHow can I block or remove fraudulent information from my consumer report?\n\nYou can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report",
+          "rrf_score": 0.015625,
+          "vector_rank": 4
+        },
+        {
+          "chunk_id": "178bad503fec44152e8dc1068a2dcc771ed60f7aefd6ecc99414b6c6d843cda5",
+          "source_id": "cfpb-31",
+          "chunk_index": 0,
+          "chunk_text": "What do I do if I am a victim of identity theft?\n\nIf you are a victim of identity theft, close compromised accounts, report the theft to both local police and at IdentityTheft.gov, place fraud alerts or security freezes on your credit reports, and take steps to protect your credit history and finances.\n\nWhat should I do immediately upon identity theft?\n\nIf you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions. Report identity theft to the Federal Trade Commission (FTC) at IdentityTheft.gov. You will get an Identity Theft Report and recovery plan that walks you through the steps to take.\n\nVisit the Department of Justice (DOJ) or the FTC’s IdentityTheft.gov to learn more.\n\nContact financial institutions, law enforcement, the DOJ, or FTC directly using official websites and phone numbers, because:\n\n- Scammers are pretending to be FTC and lying. They contact people and say that someone used their personal information to open accounts or commit fraud. Know that the FTC never threatens you, makes you transfer your money to “protect it,” or tells you to withdraw cash or buy gold and give it to someone. That’s a scam. Scammers have also impersonated the CFPB, other agencies, and law enforcement in the past.\n\n- Scammers also often pretend to be a financial institution. Be careful if you receive an email, text, or call from someone claiming to be from your bank, credit card provider, or other financial institutions. For more information, visit Banks Never Ask That!\n\nHow can I protect my credit after identity theft?\n\nContact any one of these three nationwide credit reporting companies Equifax , Experian , or Transunion to place fraud alerts on your credit reports:",
+          "rrf_score": 0.015384615384615385,
+          "vector_rank": 5
+        }
+      ]
+    }
+  ]
+}
