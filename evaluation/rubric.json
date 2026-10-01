@@ -1,0 +1,25 @@
+﻿{
+  "version": "0.1",
+  "status": "draft",
+  "splits": {
+    "development": "Used for tuning retrieval, prompts, and refusal thresholds.",
+    "test": "Held out until the final comparison. Never used for training."
+  },
+  "metrics": {
+    "retrieval_hit_at_5": "Fraction of answerable questions with an accepted supporting article in the top five results.",
+    "unsupported_answer_rate": "Fraction of substantive answers containing at least one factual claim unsupported by the supplied evidence.",
+    "refusal_recall": "Fraction of unanswerable questions correctly refused.",
+    "false_refusal_rate": "Fraction of answerable questions unnecessarily refused.",
+    "answer_correctness": "Whether the answer satisfies the reviewed reference criteria.",
+    "citation_support": "Whether each cited passage supports its associated claim.",
+    "latency_p95_ms": "95th percentile end-to-end request latency; report cold and warm requests separately."
+  },
+  "comparison_rules": [
+    "Use the same corpus snapshot for each comparable run.",
+    "Use identical retrieved evidence when comparing generation models.",
+    "Record model versions, prompts, settings, and raw responses.",
+    "Report answer coverage alongside unsupported-answer rate.",
+    "Check AI judge decisions against human reviews.",
+    "Do not report draft or unreviewed questions as benchmark results."
+  ]
+}

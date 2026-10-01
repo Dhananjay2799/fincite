@@ -1,0 +1,22 @@
+﻿[
+    {
+        "id":  "cfpb-47",
+        "title":  "What is a grace period for a credit card?",
+        "url":  "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+        "verified_on":  "2026-10-01",
+        "snapshot_status":  "downloaded",
+        "snapshot_path":  "data/raw/cfpb-47.html",
+        "snapshot_sha256":  "907ae965a03f47c9f98d1d04982cdbd5a12de557285f87a6a046f80b702eb78c",
+        "downloaded_at":  "2026-10-01T20:59:49.1819746Z"
+    },
+    {
+        "id":  "cfpb-1253",
+        "title":  "What can I do if my credit application was denied because of my credit report?",
+        "url":  "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+        "verified_on":  "2026-10-01",
+        "snapshot_status":  "downloaded",
+        "snapshot_path":  "data/raw/cfpb-1253.html",
+        "snapshot_sha256":  "9191a8181cb8f9e7d4ecfb246fde2d3535909c7d63ee3942b2bc81faaf005161",
+        "downloaded_at":  "2026-10-01T20:59:49.8560443Z"
+    }
+]

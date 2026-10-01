@@ -1,0 +1,13 @@
+﻿node_modules/
+.next/
+out/
+.vercel/
+.env*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+data/raw/*
+data/processed/*
+training/checkpoints/
+training/outputs/
