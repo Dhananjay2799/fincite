@@ -16,8 +16,8 @@ const sources = JSON.parse(
   ).replace(/^\uFEFF/, "")
 );
 
-if (!Array.isArray(sources)) {
-  throw new Error("sources.json must contain an array.");
+if (!Array.isArray(sources) || sources.length === 0) {
+  throw new Error("Expected a nonempty source array.");
 }
 
 const documents = sources.map((source) => {
@@ -29,24 +29,20 @@ const documents = sources.map((source) => {
 
   const $ = loadBuffer(raw);
   const main = $("main .u-layout-grid__main");
-
-  if (main.length !== 1) {
-    throw new Error(`Expected one main container: ${source.id}`);
-  }
-
   const title = clean(main.find("h1").first().text());
 
-  if (title !== clean(source.title)) {
-    throw new Error(`Unexpected article title: ${source.id}`);
+  if (main.length !== 1 || title !== clean(source.title)) {
+    throw new Error(`Unexpected article container or title: ${source.id}`);
   }
 
   const answer = main.children(".block")
     .not(".block--sub, .u-screen-only");
-
   const lead = answer.children(".lead-paragraph");
-  const body = answer.children(".answer-text").children(".row");
+  const answerText = answer.children(".answer-text");
+  const body = answerText.children(".row");
 
-  if (answer.length !== 1 || lead.length !== 1 || body.length !== 1) {
+  if (answer.length !== 1 || lead.length !== 1 ||
+      answerText.length !== 1 || body.length < 1) {
     throw new Error(`Article structure changed: ${source.id}`);
   }
 
@@ -57,14 +53,46 @@ const documents = sources.map((source) => {
   ).remove();
 
   const blocks = [];
+  let tableRows = 0;
+  let listItems = 0;
 
-  selected.find("h2, h3, p, li").each((_, element) => {
-    // Capture paragraphs inside list items only through their parent item.
-    if ($(element).parents("li").length) return;
+  selected.find("h2, h3, h4, h5, h6, p, li, tr")
+    .each((_, element) => {
+      const node = $(element);
+      const tag = element.tagName;
+      let text;
 
-    const text = clean($(element).text());
-    if (text) blocks.push(text);
-  });
+      if (tag === "tr") {
+        // Each cell stays separate, rather than becoming one joined word.
+        if (node.parents("tr").length) return;
+
+        text = node.children("th, td").map((_, cell) =>
+          clean($(cell).text())
+        ).get().join(" | ");
+
+        if (text) tableRows++;
+      } else {
+        // Table rows are captured above.
+        if (node.parents("table").length) return;
+
+        if (tag === "li") {
+          // Capture a parent item's label without duplicating nested items.
+          const own = node.clone();
+          own.find("ul, ol").remove();
+          const label = clean(own.text());
+          const depth = node.parents("li").length;
+
+          text = label ? `${"  ".repeat(depth)}- ${label}` : "";
+          if (text) listItems++;
+        } else {
+          // Paragraphs and headings inside an item are captured with that item.
+          if (node.parents("li").length) return;
+          text = clean(node.text());
+        }
+      }
+
+      if (text) blocks.push(text);
+    });
 
   const text = [title, ...blocks].join("\n\n");
 
@@ -78,12 +106,16 @@ const documents = sources.map((source) => {
     url: source.url,
     raw_sha256: source.snapshot_sha256,
     text_sha256: sha256(text),
-    extractor_version: "0.2",
+    extractor_version: "0.3",
+    answer_rows: body.length,
+    table_rows: tableRows,
+    list_items: listItems,
     validation_status: "pending_human_review",
     text
   };
 });
 
+// Extract every article successfully before writing new output.
 mkdirSync(resolve(root, "data/processed"), { recursive: true });
 
 for (const document of documents) {
@@ -94,12 +126,15 @@ for (const document of documents) {
   );
 
   console.log(
-    `${document.source_id}: extracted ${document.text.length} characters`
+    `${document.source_id}: ${document.text.length} characters; ` +
+    `${document.answer_rows} answer rows; ` +
+    `${document.table_rows} table rows; ` +
+    `${document.list_items} list items`
   );
 }
 
 writeFileSync(
   resolve(root, "data/processed/documents.jsonl"),
-  documents.map((document) => JSON.stringify(document)).join("\n") + "\n",
+  documents.map(document => JSON.stringify(document)).join("\n") + "\n",
   "utf8"
 );

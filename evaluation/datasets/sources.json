@@ -1,22 +1,82 @@
-﻿[
-    {
-        "id":  "cfpb-47",
-        "title":  "What is a grace period for a credit card?",
-        "url":  "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
-        "verified_on":  "2026-10-01",
-        "snapshot_status":  "downloaded",
-        "snapshot_path":  "data/raw/cfpb-47.html",
-        "snapshot_sha256":  "907ae965a03f47c9f98d1d04982cdbd5a12de557285f87a6a046f80b702eb78c",
-        "downloaded_at":  "2026-10-01T20:59:49.1819746Z"
-    },
-    {
-        "id":  "cfpb-1253",
-        "title":  "What can I do if my credit application was denied because of my credit report?",
-        "url":  "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
-        "verified_on":  "2026-10-01",
-        "snapshot_status":  "downloaded",
-        "snapshot_path":  "data/raw/cfpb-1253.html",
-        "snapshot_sha256":  "9191a8181cb8f9e7d4ecfb246fde2d3535909c7d63ee3942b2bc81faaf005161",
-        "downloaded_at":  "2026-10-01T20:59:49.8560443Z"
-    }
+[
+  {
+    "id": "cfpb-47",
+    "title": "What is a grace period for a credit card?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-47.html",
+    "snapshot_sha256": "907ae965a03f47c9f98d1d04982cdbd5a12de557285f87a6a046f80b702eb78c",
+    "downloaded_at": "2026-10-01T20:59:49.1819746Z"
+  },
+  {
+    "id": "cfpb-1253",
+    "title": "What can I do if my credit application was denied because of my credit report?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-1253.html",
+    "snapshot_sha256": "9191a8181cb8f9e7d4ecfb246fde2d3535909c7d63ee3942b2bc81faaf005161",
+    "downloaded_at": "2026-10-01T20:59:49.8560443Z"
+  },
+  {
+    "id": "cfpb-44",
+    "title": "What is a credit card interest rate? What does APR mean?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-44.html",
+    "snapshot_sha256": "4a2c5f88bb6c4e22865bb519b10964f3260c2629505d364e77e4958532f178da",
+    "downloaded_at": "2026-10-01T21:13:34.452Z"
+  },
+  {
+    "id": "cfpb-45",
+    "title": "What is the difference between a fixed APR and a variable APR?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-45.html",
+    "snapshot_sha256": "0a278f15486b018b57481f3da3cff43932723466921e5b57a02bad12be145cba",
+    "downloaded_at": "2026-10-01T21:13:35.548Z"
+  },
+  {
+    "id": "cfpb-313",
+    "title": "What are common credit report errors that I should look for on my credit report?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-313.html",
+    "snapshot_sha256": "b7dbfa4abc4811fb3a34c5b1046ea2e3e2e321eeebf7add8e73848e192b64c49",
+    "downloaded_at": "2026-10-01T21:13:36.610Z"
+  },
+  {
+    "id": "cfpb-314",
+    "title": "How do I dispute an error on my credit report?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-314.html",
+    "snapshot_sha256": "b36812cdeebc991c0ee4bee5e8991fd2939e5e61662e4fccdfaa5b8c6018181c",
+    "downloaded_at": "2026-10-01T21:13:37.671Z"
+  },
+  {
+    "id": "cfpb-331",
+    "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-331.html",
+    "snapshot_sha256": "5a05001d65c80ca44ff3fbd54984c991524ba1f5abb784e4bb04ebbbeb432c78",
+    "downloaded_at": "2026-10-01T21:13:38.718Z"
+  },
+  {
+    "id": "cfpb-31",
+    "title": "What do I do if I am a victim of identity theft?",
+    "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+    "verified_on": "2026-10-01",
+    "snapshot_status": "downloaded",
+    "snapshot_path": "data/raw/cfpb-31.html",
+    "snapshot_sha256": "1f7c3636370abf1aa5de7c53f7ff36b5cc43c9463ccd1c8b11ddf3971b714983",
+    "downloaded_at": "2026-10-01T21:13:39.770Z"
+  }
 ]
