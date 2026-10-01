@@ -11,6 +11,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "@huggingface/transformers": "^4.3.0",
+    "@neondatabase/serverless": "^1.2.0",
     "cheerio": "^1.2.0"
   }
 }

@@ -11,3 +11,5 @@ data/raw/*
 data/processed/*
 training/checkpoints/
 training/outputs/
+
+/data/model-cache/
