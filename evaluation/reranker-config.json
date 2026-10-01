@@ -1,0 +1,10 @@
+{
+  "model_id": "Xenova/ms-marco-MiniLM-L-6-v2",
+  "model_revision": "a09144355adeed5f58c8ed011d209bf8ee5a1fec",
+  "dtype": "fp32",
+  "max_pair_tokens": 512,
+  "truncation": false,
+  "candidate_limit": 20,
+  "final_limit": 5,
+  "score_type": "raw_logit"
+}

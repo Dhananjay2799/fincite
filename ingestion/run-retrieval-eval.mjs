@@ -182,6 +182,7 @@ try {
         source_hit_at_5: answerable ? Number(rank !== null) : null,
         source_mrr_at_5: answerable ? (rank ? 1 / rank : 0) : null,
         first_accepted_rank: answerable ? rank : null,
+        candidates: candidates.slice(0, config.candidate_limit),
         results
       });
     }
@@ -224,3 +225,4 @@ console.table(summary.map(row => ({
 })));
 console.log("Saved:", path);
 console.log("PROVISIONAL: development diagnostics; human review pending.");
+
