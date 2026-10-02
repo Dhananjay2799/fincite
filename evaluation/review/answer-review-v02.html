@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FinCite · Answer review v0.2</title>
+<style>
+:root{color-scheme:light;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#18312c;background:#f3f6f4}*{box-sizing:border-box}body{margin:0}header{background:#153f36;color:white;padding:24px max(24px,calc((100vw - 1360px)/2));}h1{margin:0;font-size:27px}header p{color:#d0e4da;margin:8px 0 0}main{max-width:1360px;margin:auto;padding:24px}.bar,.card{background:white;border:1px solid #d5dfda;border-radius:12px;padding:18px;margin-bottom:18px}.bar{display:flex;align-items:center;flex-wrap:wrap;gap:12px}input,select,textarea,button{font:inherit}input,select,textarea{border:1px solid #aabdb3;border-radius:6px;padding:9px;background:white;max-width:100%}textarea{width:100%;min-height:62px;resize:vertical}button{border:1px solid #174d3c;border-radius:7px;padding:10px 15px;background:#174d3c;color:white;cursor:pointer}button.secondary{background:white;color:#174d3c}button:disabled{opacity:.4;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #d39322;outline-offset:2px}.grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:18px;align-items:start}.sources{position:sticky;top:16px;max-height:90vh;overflow:auto}h2{font-size:20px;margin:0 0 12px}h3{font-size:16px;margin:20px 0 10px}.muted{font-size:14px;color:#587266}.text{white-space:pre-wrap;line-height:1.6;overflow-wrap:anywhere}.answer{padding:16px;background:#f0f6f2;border-left:4px solid #237953}.item{padding:15px 0;border-bottom:1px solid #e1e9e4}.item:last-child{border-bottom:0}.controls{display:flex;flex-wrap:wrap;gap:8px;margin:9px 0}.field{display:flex;flex-direction:column;gap:5px;flex:1;min-width:160px}.badge{background:#e7f3eb;color:#20573b;border-radius:18px;padding:5px 12px;font-size:13px}details{padding:10px 0}summary{cursor:pointer;font-weight:600}.notice{border-left:4px solid #c68e24;padding:12px;background:#fff8e8}#message{min-height:24px;white-space:pre-wrap}#workspace[hidden]{display:none}.footer{display:flex;gap:10px;align-items:center;flex-wrap:wrap}label.checkbox{display:flex;gap:9px;align-items:flex-start}.small{font-size:13px}@media(max-width:900px){.grid{grid-template-columns:1fr}.sources{position:static;max-height:none}.bar{align-items:stretch}}
+
+/* Explicit colors keep native navigation readable in embedded previews. */
+select,select option,input,textarea{color:#18312c!important;background-color:#fff!important}
+.choice-group{border:0;padding:0;margin:12px 0;min-width:0;flex:1}
+.choice-group legend{font-weight:600;color:#18312c!important;margin-bottom:8px}
+.choice-row{display:flex;gap:8px;flex-wrap:wrap}
+.choice{display:flex;align-items:center;gap:7px;padding:10px 12px;border:1px solid #8fa99b;border-radius:7px;cursor:pointer;background:#fff!important;color:#18312c!important;font-size:14px}
+.choice input{width:17px;height:17px;margin:0;accent-color:#174d3c;flex:none}
+.choice:has(input:checked){background:#e2f2e8!important;border:2px solid #174d3c;padding:9px 11px;font-weight:600}
+.choice:focus-within{outline:3px solid #d39322;outline-offset:2px}
+</style>
+</head>
+<body>
+<header><h1>FinCite · Answer review</h1><p>Read the answer, check its evidence, then record your judgment.</p></header>
+<main>
+<section class="bar" aria-label="File and review controls">
+<label class="field">Load draft or exported checkpoint<input id="file" type="file" accept=".json,application/json"></label>
+<label class="field">Reviewer name<input id="reviewer" autocomplete="name" placeholder="Your name"></label>
+<button id="restore" class="secondary">Restore browser checkpoint</button>
+<button id="export" disabled>Export checkpoint</button>
+</section>
+<p id="message" role="status" aria-live="polite">Version 0.2: visible choices replace review dropdowns. Load your latest exported checkpoint or the scoring draft.</p>
+<div id="workspace" hidden>
+<section class="bar"><button id="prev" class="secondary">← Previous</button><label class="field">Answer<select id="nav"></select></label><button id="next" class="secondary">Next →</button><span id="progress" class="badge"></span></section>
+<div class="grid">
+<div>
+<section class="card"><div id="identity" class="muted"></div><h2 id="question"></h2><div id="answer" class="text answer"></div><details><summary>Show assistant draft judgments</summary><p class="notice small">These are suggestions, not confirmed labels. Read the passages and make your own judgment.</p><div id="suggestions"></div></details></section>
+<section class="card"><h2>Expected information</h2><p class="muted">Met = all required parts are present. Missing = absent or partial. Contradicted = answer conflicts with the criterion. Uncertain = needs adjudication.</p><div id="references"></div><h3>Forbidden assertions</h3><div id="forbidden"></div></section>
+<section class="card"><h2>Grounding and citations</h2><p class="muted">Each unit is a sentence and may contain multiple claims. A factual sentence fails if any material claim is unsupported or contradicted. Check cited evidence separately. Use Notes to identify individual clauses or any segmentation mistakes.</p><div id="claims"></div></section>
+<section class="card"><h2>Response decision</h2><div id="decision"></div><label class="field">Review notes<textarea id="notes" placeholder="Explain changes, uncertainty, or criterion concerns."></textarea></label><p><label class="checkbox"><input id="inventory" type="checkbox"><span>I checked every factual claim in the answer, including conditions and exceptions, against the supplied passages.</span></label></p><div class="footer"><button id="confirm">Mark this answer reviewed</button><span id="caseStatus" class="muted"></span></div><p class="small muted">Uncertain or unselected labels prevent confirmation. You can still export an unfinished checkpoint.</p></section>
+</div>
+<aside class="card sources"><h2>Exact supplied passages</h2><p class="muted">Only these passages were supplied to the model. A known source ID does not prove a citation supports its claim.</p><div id="passages"></div></aside>
+</div>
+</div>
+</main>
+<script>
+'use strict';
+const KEY='fincite-answer-review-v1';
+const $=id=>document.getElementById(id);
+let packet=null,index=0,sourceName='';
+function node(tag,text,cls){const el=document.createElement(tag);if(text!==undefined)el.textContent=text;if(cls)el.className=cls;return el;}
+function msg(text){$('message').textContent=text;}
+function current(){return packet.reviews[index];}
+function clone(x){return JSON.parse(JSON.stringify(x));}
+function validate(p){
+ if(!p||!Array.isArray(p.reviews)||!p.reviews.length)throw Error('No review entries found.');
+ const ids=new Set();
+ for(const r of p.reviews){
+  if(typeof r.review_id!=='string'||ids.has(r.review_id))throw Error('Missing or duplicate review ID.');ids.add(r.review_id);
+  if(typeof r.answer!=='string'||typeof r.question!=='string'||!['answerable','unanswerable'].includes(r.answerability))throw Error('Invalid answer record.');
+  if(!Array.isArray(r.passages)||!Array.isArray(r.reference_checks)||!Array.isArray(r.forbidden_checks))throw Error('Missing evidence or criteria.');
+  for(const s of r.passages)if(typeof s.chunk_text!=='string'||typeof s.source_id!=='string')throw Error('Invalid passage.');
+ }
+}
+function initialize(p,name){
+ validate(p);packet=p;sourceName=name;
+ for(const r of packet.reviews){
+  if(!Array.isArray(r.factual_claim_checks))r.factual_claim_checks=[];
+  if(!r.factual_claim_checks.length){
+   const units=r.assistant_draft?.sentence_checks;
+   const segments=Array.isArray(units)&&units.length?units.map(u=>({unit_id:u.unit_id,text:u.text})):r.answer.split(/(?<=[.!?])\s+(?=[A-Z])/).map((text,i)=>({unit_id:`${r.review_id}:sentence:${i+1}`,text}));
+   r.factual_claim_checks=segments.map(u=>({...u,unit_type:null,evidence_status:null,citation_status:null,reason:''}));
+  }
+ }
+ index=0;$('workspace').hidden=false;$('export').disabled=false;
+ $('reviewer').value=packet.review_ui?.reviewer_name||'';
+ render();save();msg('Loaded. Human labels are not copied from the assistant draft. Export periodically to keep a file backup.');
+}
+function save(){if(!packet)return;packet.review_ui={version:'0.1',source_file:sourceName,reviewer_name:$('reviewer').value.trim(),saved_at:new Date().toISOString(),unit_granularity:'sentence',metric_scope:'development answers; no held-out benchmark approval'};
+ try{localStorage.setItem(KEY,JSON.stringify(packet));}catch(e){msg('Browser checkpoint could not be saved. Use Export checkpoint to keep your work.');}}
+function dirty(){const r=current();r.human_review_status='in_progress';r.reviewed_at=null;save();updateProgress();}
+let choiceSequence=0;
+function selectField(parent,label,options,value,change){
+ const group=node('fieldset',undefined,'choice-group');
+ group.append(node('legend',label));const row=node('div',undefined,'choice-row');
+ const groupName=`review-choice-${++choiceSequence}`;
+ const selected=value===null||value===undefined?'':String(value);
+ for(const [val,text] of options){
+  const labelEl=node('label',undefined,'choice');const radio=node('input');
+  radio.type='radio';radio.name=groupName;radio.value=val;radio.checked=selected===val;
+  radio.addEventListener('change',()=>{if(radio.checked){change(val);dirty();}});
+  labelEl.append(radio,node('span',text));row.append(labelEl);
+ }
+ group.append(row);parent.append(group);return group;
+}
+function notesField(parent,value,change){const label=node('label',undefined,'field');label.append(node('span','Reason / evidence notes'));const t=node('textarea');t.value=value||'';t.addEventListener('input',()=>{change(t.value);dirty();});label.append(t);parent.append(label);}
+const evidenceOptions=[['supported','Supported'],['unsupported','Unsupported'],['contradicted','Contradicted'],['uncertain','Uncertain'],['not_applicable','Not applicable']];
+const citationOptions=[['supported','Supports this sentence'],['not_supported','Does not support this sentence'],['missing','No citation in this sentence'],['unknown_source','Source ID was not supplied'],['uncertain','Uncertain'],['not_applicable','Not applicable']];
+function render(){
+ const r=current();$('nav').replaceChildren();packet.reviews.forEach((x,i)=>$('nav').append(new Option(`${i+1}. ${x.question_id} · ${x.prompt_version} · ${x.human_review_status}`,i)));$('nav').value=index;
+ $('prev').disabled=index===0;$('next').disabled=index===packet.reviews.length-1;
+ $('identity').textContent=`${r.review_id} · ${r.answerability}`;$('question').textContent=r.question;$('answer').textContent=r.answer;
+ for(const id of ['suggestions','references','forbidden','claims','decision','passages'])$(id).replaceChildren();
+ const draft=r.assistant_draft;
+ if(draft){
+  $('suggestions').append(node('p',`Response: ${draft.response_type}; clean refusal: ${draft.correct_refusal===null?'not applicable':draft.correct_refusal}`,'small'));
+  for(const c of draft.reference_checks||[])$('suggestions').append(node('p',`${c.criterion_id}: ${c.status} — ${c.reason}`,'small'));
+  for(const c of draft.sentence_checks||[])$('suggestions').append(node('p',`${c.unit_id}: ${c.evidence_status}; citation: ${c.citation_status}. ${c.reason} ${c.citation_reason}`,'small'));
+ }else $('suggestions').append(node('p','No assistant draft available.'));
+ for(const c of r.reference_checks){const item=node('div',undefined,'item');item.append(node('p',c.criterion));selectField(item,'Criterion status',[['met','Met'],['missing','Missing / partial'],['contradicted','Contradicted'],['uncertain','Uncertain']],c.status,v=>c.status=v);notesField(item,c.reason,v=>c.reason=v);$('references').append(item);}
+ for(const c of r.forbidden_checks){const item=node('div',undefined,'item');item.append(node('p',c.criterion));selectField(item,'Does the answer assert this?',[['true','Yes'],['false','No'],['uncertain','Uncertain']],c.present===null?(c.adjudication_status==='uncertain'?'uncertain':null):c.present,v=>{c.present=v==='true'?true:v==='false'?false:null;c.adjudication_status=v==='uncertain'?'uncertain':null;});notesField(item,c.reason,v=>c.reason=v);$('forbidden').append(item);}
+ r.factual_claim_checks.forEach((c,i)=>{
+  const item=node('div',undefined,'item');item.append(node('h3',`Sentence ${i+1}`),node('p',c.text,'text'));
+  const controls=node('div',undefined,'controls');
+  selectField(controls,'Unit type',[['factual_sentence','Factual statement'],['refusal','Refusal'],['source_limitation','Explanation of source limitations']],c.unit_type,v=>{c.unit_type=v;});
+  selectField(controls,'Evidence',evidenceOptions,c.evidence_status,v=>c.evidence_status=v);
+  selectField(controls,'Citation',citationOptions,c.citation_status,v=>c.citation_status=v);
+  item.append(controls);notesField(item,c.reason,v=>c.reason=v);$('claims').append(item);
+ });
+ selectField($('decision'),'Overall response',[['answer','Answer'],['refusal','Refusal'],['mixed','Answer + incompatible refusal']],r.response_type,v=>r.response_type=v);
+ if(r.answerability==='unanswerable')selectField($('decision'),'Correct refusal without unsupported extra claims?',[['true','Yes'],['false','No']],r.correct_refusal,v=>r.correct_refusal=v==='true'?true:v==='false'?false:null);
+ $('notes').value=r.review_notes||'';$('inventory').checked=!!r.claim_inventory_confirmed;
+ for(const p of r.passages){const d=node('details');d.open=true;d.append(node('summary',`${p.source_id} · chunk ${p.chunk_index??''}`),node('p',p.chunk_text,'text'));$('passages').append(d);}
+ updateProgress();
+}
+function updateProgress(){if(!packet)return;const n=packet.reviews.filter(r=>r.human_review_status==='reviewed').length;$('progress').textContent=`${n}/${packet.reviews.length} reviewed`;$('caseStatus').textContent=current().human_review_status;[...$('nav').options].forEach((o,i)=>o.textContent=`${i+1}. ${packet.reviews[i].question_id} · ${packet.reviews[i].prompt_version} · ${packet.reviews[i].human_review_status}`);}
+function blockers(r,name){
+ const errors=[];if(!name)errors.push('Enter your reviewer name.');
+ if(r.reference_checks.some(c=>!['met','missing','contradicted'].includes(c.status)))errors.push('Resolve every reference criterion, including uncertain labels.');
+ if(r.forbidden_checks.some(c=>typeof c.present!=='boolean'))errors.push('Resolve each forbidden assertion as Yes or No.');
+ for(const [i,c] of r.factual_claim_checks.entries()){
+  if(!['factual_sentence','refusal','source_limitation'].includes(c.unit_type))errors.push(`Sentence ${i+1}: select its type.`);
+  if(c.unit_type==='factual_sentence'){
+   if(!['supported','unsupported','contradicted'].includes(c.evidence_status))errors.push(`Sentence ${i+1}: resolve factual evidence status.`);
+   if(!['supported','not_supported','missing','unknown_source'].includes(c.citation_status))errors.push(`Sentence ${i+1}: resolve citation status.`);
+  }else{
+   if(!['supported','not_applicable'].includes(c.evidence_status))errors.push(`Sentence ${i+1}: check the limitation/refusal or select Not applicable.`);
+   if(!['supported','not_applicable','missing'].includes(c.citation_status))errors.push(`Sentence ${i+1}: resolve citation status.`);
+  }
+  if(c.unit_type==='source_limitation'&&/\bCFPB\b/.test(c.text)&&!c.reason?.trim())errors.push(`Sentence ${i+1}: explain why the scope claim is limited to the supplied sources.`);
+  if(['unsupported','contradicted'].includes(c.evidence_status)&&!c.reason?.trim())errors.push(`Sentence ${i+1}: explain the unsupported or contradicted clause.`);
+ }
+ if(!['answer','refusal','mixed'].includes(r.response_type))errors.push('Select overall response type.');
+ if(r.answerability==='unanswerable'&&typeof r.correct_refusal!=='boolean')errors.push('Select whether this is a correct refusal.');
+ if(r.answerability==='unanswerable'&&r.correct_refusal===true&&(r.response_type!=='refusal'||r.factual_claim_checks.some(c=>['unsupported','contradicted'].includes(c.evidence_status))))errors.push('A clean refusal cannot be mixed or contain unsupported claims.');
+ if(!r.claim_inventory_confirmed)errors.push('Confirm that you checked every factual claim.');return errors;
+}
+$('file').addEventListener('change',async()=>{try{const f=$('file').files[0];if(f)initialize(JSON.parse((await f.text()).replace(/^\uFEFF/,'')),f.name);}catch(e){msg(`Cannot load file: ${e.message}`);}});
+$('restore').addEventListener('click',()=>{try{const raw=localStorage.getItem(KEY);if(!raw){msg('No browser checkpoint found.');return;}const p=JSON.parse(raw);initialize(p,p.review_ui?.source_file||'browser-checkpoint.json');msg('Browser checkpoint restored.');}catch(e){msg(`Cannot restore checkpoint: ${e.message}`);}});
+$('reviewer').addEventListener('input',save);
+$('nav').addEventListener('change',()=>{index=Number($('nav').value);render();});
+$('prev').addEventListener('click',()=>{if(index>0){index--;render();window.scrollTo(0,0);}});
+$('next').addEventListener('click',()=>{if(index<packet.reviews.length-1){index++;render();window.scrollTo(0,0);}});
+$('notes').addEventListener('input',()=>{current().review_notes=$('notes').value;dirty();});
+$('inventory').addEventListener('change',()=>{current().claim_inventory_confirmed=$('inventory').checked;dirty();});
+$('confirm').addEventListener('click',()=>{const r=current(),name=$('reviewer').value.trim(),errors=blockers(r,name);if(errors.length){msg(errors.join('\n'));return;}r.human_review_status='reviewed';r.reviewer_name=name;r.reviewed_at=new Date().toISOString();save();updateProgress();msg(`Reviewed ${r.review_id}. Export a checkpoint before closing.`);});
+$('export').addEventListener('click',()=>{save();const exportPacket=clone(packet);exportPacket.status='development_answer_reviews';exportPacket.human_review_summary={reviewed:packet.reviews.filter(r=>r.human_review_status==='reviewed').length,total:packet.reviews.length};const blob=new Blob([JSON.stringify(exportPacket,null,2)+'\n'],{type:'application/json'});const url=URL.createObjectURL(blob),a=node('a');a.href=url;a.download=`answer-human-review-${new Date().toISOString().replace(/[:.]/g,'-')}.json`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);msg(`Exported ${exportPacket.human_review_summary.reviewed}/${packet.reviews.length} reviewed answers. Save the JSON in evaluation/results.`);});
+</script>
+</body></html>
