@@ -1,0 +1,26 @@
+{
+  "status": "assistant_review_notes",
+  "human_review_recorded": false,
+  "clear_improvements": [
+    "validation-v01-004",
+    "validation-v01-008",
+    "validation-v01-009",
+    "validation-v01-010"
+  ],
+  "adapter_missing_citations": [
+    "validation-v01-005",
+    "validation-v01-007"
+  ],
+  "adapter_missing_qualifiers": {
+    "validation-v01-001": [
+      "from each nationwide reporting company",
+      "over a 12-month period"
+    ]
+  },
+  "limitations": [
+    "Only 12 validation questions in six related groups.",
+    "This validation split also selected the checkpoint.",
+    "Labels are assistant observations, not independent human grades.",
+    "A broader final held-out evaluation is still needed."
+  ]
+}

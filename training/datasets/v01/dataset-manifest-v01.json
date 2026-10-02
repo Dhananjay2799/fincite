@@ -1,0 +1,67 @@
+{
+  "version": "0.1",
+  "status": "draft_not_approved_for_final_training",
+  "purpose": "small_controlled_fine_tuning_experiment",
+  "input_sha256": {
+    "source-inventory.json": "48e0b7759bb93c066335b22a03783181a12187679e79017d3e4b208c040d4746",
+    "development.jsonl": "69d2fcca7ef8c9f042a7f6342e9ba4a47a49b3679cefebf2dfd496263084d7de"
+  },
+  "counts": {
+    "train": {
+      "examples": 48,
+      "answerable": 32,
+      "unanswerable": 16,
+      "groups": 24
+    },
+    "validation": {
+      "examples": 12,
+      "answerable": 8,
+      "unanswerable": 4,
+      "groups": 6
+    }
+  },
+  "files": {
+    "train-candidates-v01.jsonl": "562ba8d9913390a120401e2afd6a27799c92fee181ed1d20a97865ff5df693f4",
+    "validation-candidates-v01.jsonl": "cf98806efd01199fb0bfb57751140ac968aa64b25235c93a3f95b6b572e2ac5d"
+  },
+  "reserved_development_ids": [
+    "dev-001",
+    "dev-002",
+    "dev-003",
+    "dev-004",
+    "dev-005",
+    "dev-006",
+    "dev-007",
+    "dev-008",
+    "dev-009",
+    "dev-010",
+    "dev-011",
+    "dev-012",
+    "dev-013"
+  ],
+  "development_intents_excluded": [
+    "minimum-payment purchase interest",
+    "denial-notice contents",
+    "Bitcoin prediction",
+    "cash-advance interest",
+    "APR definition",
+    "fixed APR changes",
+    "duplicate debts",
+    "contact both dispute parties",
+    "mailed-dispute document checklist",
+    "debt-notice contents",
+    "freeze notification between bureaus",
+    "bank fee-waiver decision",
+    "landlord approval decision"
+  ],
+  "split_policy": "Question variants share a group and a split. Validation target groups are not in training or the earlier 12-example smoke set. Evidence snippets are copied exactly from uploaded passages. Splits share source articles; this is not an article-disjoint or final held-out benchmark. Refusal capabilities can overlap across groups.",
+  "limitations": [
+    "Only eight source articles.",
+    "Assistant-authored labels; no independent human approval.",
+    "Near-paraphrase and intent exclusion are an assistant review, not a certified automated semantic guarantee.",
+    "Some training facts were previously used in the smoke run; start the new experiment from the pinned base model, not the smoke adapter.",
+    "Do not concatenate the smoke dataset into these splits.",
+    "Validation is for tuning; retain a separate final test set.",
+    "These are short evidence snippets, not a full end-to-end retrieval benchmark."
+  ]
+}

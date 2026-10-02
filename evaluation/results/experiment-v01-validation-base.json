@@ -1,0 +1,250 @@
+{
+  "status": "ungraded_validation_baseline",
+  "model_id": "Qwen/Qwen3-1.7B",
+  "model_revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e",
+  "adapter_enabled": false,
+  "validation_sha256": "3e73f13913219f907dec0a60b80b33e6b2d952b819b02bbb0aab29c50a3d888e",
+  "enable_thinking": false,
+  "generation_settings": {
+    "do_sample": false,
+    "num_beams": 1,
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 1.0,
+    "top_k": 50,
+    "pad_token_id": 151645,
+    "eos_token_id": 151645
+  },
+  "torch_version": "2.11.0+cu130",
+  "transformers_version": "4.51.3",
+  "results": [
+    {
+      "id": "validation-v01-001",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: How many free report copies can I order with an extended alert, and what happens to prescreened marketing lists?\n\nSupplied passages:\n[cfpb-31]\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years."
+        }
+      ],
+      "reference_answer": "You can order two free report copies from each nationwide reporting company over a 12-month period. Your name is also removed from prescreened credit offers and insurance marketing lists for five years. [cfpb-31]",
+      "answer": "You can order two free report copies per nationwide credit reporting company with an extended alert. Your name will be removed from prescreened credit offers and insurance marketing lists for five years. [cfpb-31]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 44,
+      "reached_token_limit": false,
+      "generation_seconds": 7.418
+    },
+    {
+      "id": "validation-v01-002",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: With an extended alert, what report-copy and marketing-list benefits does the passage describe?\n\nSupplied passages:\n[cfpb-314]\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision.\n\n[cfpb-31]\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years."
+        }
+      ],
+      "reference_answer": "You can order two free report copies from each nationwide reporting company over a 12-month period. Your name is also removed from prescreened credit offers and insurance marketing lists for five years. [cfpb-31]",
+      "answer": "The passage describes that with an extended alert, you can order two free credit report copies from each nationwide credit reporting company over a 12-month period, and your name will be removed from prescreened credit offers and insurance marketing lists for five years. [cfpb-31]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 59,
+      "reached_token_limit": false,
+      "generation_seconds": 5.14
+    },
+    {
+      "id": "validation-v01-003",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Does a credit freeze prevent someone from taking over an existing account?\n\nSupplied passages:\n[cfpb-31]\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts."
+        }
+      ],
+      "reference_answer": "A freeze can stop identity thieves from opening new accounts because most businesses check credit reports first. It does not prevent thieves from taking over existing accounts. [cfpb-31]",
+      "answer": "Yes, a credit freeze can prevent identity thieves from opening new accounts in your name, but it does not prevent them from taking over existing accounts. [cfpb-31]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 37,
+      "reached_token_limit": false,
+      "generation_seconds": 3.352
+    },
+    {
+      "id": "validation-v01-004",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Does the protection against opening new accounts also prevent existing-account takeover?\n\nSupplied passages:\n[cfpb-314]\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision.\n\n[cfpb-31]\nBecause most businesses do not open credit accounts without checking your credit report, a freeze can stop identity thieves from opening new accounts in your name. Be mindful that a freeze doesn't prevent identity thieves from taking over existing accounts."
+        }
+      ],
+      "reference_answer": "A freeze can stop identity thieves from opening new accounts because most businesses check credit reports first. It does not prevent thieves from taking over existing accounts. [cfpb-31]",
+      "answer": "Yes, the protection against opening new accounts can prevent existing-account takeover. [cfpb-31]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 22,
+      "reached_token_limit": false,
+      "generation_seconds": 2.929
+    },
+    {
+      "id": "validation-v01-005",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Can a bureau decline a frivolous dispute, and what notice deadline applies?\n\nSupplied passages:\n[cfpb-314]\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision."
+        }
+      ],
+      "reference_answer": "A reporting company need not investigate a dispute it reasonably determines is frivolous or irrelevant, such as one with insufficient information. It must send a notice explaining that decision and why within five business days after making the decision. [cfpb-314]",
+      "answer": "Yes, a bureau can decline a frivolous dispute. The notice deadline is within five business days after the bureau makes the decision. [cfpb-314]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 35,
+      "reached_token_limit": false,
+      "generation_seconds": 3.534
+    },
+    {
+      "id": "validation-v01-006",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: If a bureau reasonably finds my dispute irrelevant, must it explain that decision?\n\nSupplied passages:\n[cfpb-31]\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\n[cfpb-314]\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision."
+        }
+      ],
+      "reference_answer": "A reporting company need not investigate a dispute it reasonably determines is frivolous or irrelevant, such as one with insufficient information. It must send a notice explaining that decision and why within five business days after making the decision. [cfpb-314]",
+      "answer": "If a bureau reasonably finds a dispute irrelevant, it must explain that decision [cfpb-314].",
+      "unknown_citation_ids": [],
+      "generated_tokens": 23,
+      "reached_token_limit": false,
+      "generation_seconds": 1.906
+    },
+    {
+      "id": "validation-v01-007",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Does the supplied guidance allow a creditor to discriminate because an applicant receives public assistance income?\n\nSupplied passages:\n[cfpb-1253]\nIt is illegal for a creditor to discriminate in any credit transaction, including mortgages, against any applicant because of:\n\n- Race\n\n- Color\n\n- Religion\n\n- National origin\n\n- Sex\n\n- Marital status\n\n- Age, unless the applicant is not legally able to enter into a contract\n\n- Receipt of income from any public assistance program\n\n- Exercising in good faith a right under the Consumer Credit Protection Act (such as disputing information in your credit report)"
+        }
+      ],
+      "reference_answer": "The passage says it is illegal for a creditor to discriminate in a credit transaction because an applicant receives income from a public assistance program. [cfpb-1253]",
+      "answer": "The supplied guidance states that it is illegal for a creditor to discriminate against an applicant because they receive public assistance income. Therefore, the answer is no, the guidance does not allow a creditor to discriminate based on public assistance income. [cfpb-1253]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 55,
+      "reached_token_limit": false,
+      "generation_seconds": 2.183
+    },
+    {
+      "id": "validation-v01-008",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Is receiving public assistance income a reason a creditor may discriminate against an applicant?\n\nSupplied passages:\n[cfpb-31]\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\n[cfpb-1253]\nIt is illegal for a creditor to discriminate in any credit transaction, including mortgages, against any applicant because of:\n\n- Race\n\n- Color\n\n- Religion\n\n- National origin\n\n- Sex\n\n- Marital status\n\n- Age, unless the applicant is not legally able to enter into a contract\n\n- Receipt of income from any public assistance program\n\n- Exercising in good faith a right under the Consumer Credit Protection Act (such as disputing information in your credit report)"
+        }
+      ],
+      "reference_answer": "The passage says it is illegal for a creditor to discriminate in a credit transaction because an applicant receives income from a public assistance program. [cfpb-1253]",
+      "answer": "Yes, receiving public assistance income is a reason a creditor may discriminate against an applicant. [cfpb-1253]",
+      "unknown_citation_ids": [],
+      "generated_tokens": 27,
+      "reached_token_limit": false,
+      "generation_seconds": 1.067
+    },
+    {
+      "id": "validation-v01-009",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Will a court award me damages for a credit-report error?\n\nSupplied passages:\n[cfpb-31]\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years."
+        }
+      ],
+      "reference_answer": "The supplied passages do not establish the outcome of your case or whether a court would award compensation.",
+      "answer": "A court may award damages for a credit-report error if it determines that the error caused harm to the individual. However, the specific circumstances and evidence required for such a claim would depend on the legal standards of the jurisdiction. The provided passage does not address legal claims or damages, so it cannot be used to determine if a court would award damages for a credit-report error.",
+      "unknown_citation_ids": [],
+      "generated_tokens": 75,
+      "reached_token_limit": false,
+      "generation_seconds": 3.343
+    },
+    {
+      "id": "validation-v01-010",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Will I win compensation if I sue over an error on my report?\n\nSupplied passages:\n[cfpb-314]\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision."
+        }
+      ],
+      "reference_answer": "The supplied passages do not establish the outcome of your case or whether a court would award compensation.",
+      "answer": "Suing over an error on your report may lead to compensation depending on the circumstances, but the ability to win compensation is not guaranteed. If the error is determined to be frivolous or irrelevant by a credit reporting company, you may not be able to pursue compensation. The company must send a notice explaining this decision within five business days [cfpb-314].",
+      "unknown_citation_ids": [],
+      "generated_tokens": 75,
+      "reached_token_limit": false,
+      "generation_seconds": 3.375
+    },
+    {
+      "id": "validation-v01-011",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: What will my monthly payment be on a $20,000 loan if I have not supplied its rate or term?\n\nSupplied passages:\n[cfpb-314]\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision."
+        }
+      ],
+      "reference_answer": "The supplied passages and question do not provide the interest rate, term, or other loan details needed to calculate an exact monthly payment.",
+      "answer": "The provided passages do not contain information about monthly payments for a loan, including the impact of the interest rate or term. Therefore, it is not possible to determine the monthly payment based on the given information.",
+      "unknown_citation_ids": [],
+      "generated_tokens": 42,
+      "reached_token_limit": false,
+      "generation_seconds": 1.654
+    },
+    {
+      "id": "validation-v01-012",
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Calculate my exact monthly loan payment from only the $20,000 principal.\n\nSupplied passages:\n[cfpb-31]\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years."
+        }
+      ],
+      "reference_answer": "The supplied passages and question do not provide the interest rate, term, or other loan details needed to calculate an exact monthly payment.",
+      "answer": "The provided passages do not contain information relevant to calculating loan payments.",
+      "unknown_citation_ids": [],
+      "generated_tokens": 14,
+      "reached_token_limit": false,
+      "generation_seconds": 0.559
+    }
+  ]
+}
