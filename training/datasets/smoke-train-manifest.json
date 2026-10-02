@@ -1,0 +1,32 @@
+{
+  "version": "0.1",
+  "purpose": "pipeline_smoke_test_only",
+  "input_file": "training/datasets/starter-candidates.jsonl",
+  "output_file": "training/datasets/smoke-train.jsonl",
+  "output_sha256": "f08f68b9cf177a40f3e501110716877427f7b67ea3309568f1e776c6c4fc87ff",
+  "example_ids": [
+    "train-seed-001",
+    "train-seed-002",
+    "train-seed-003",
+    "train-seed-004",
+    "train-seed-005",
+    "train-seed-006",
+    "train-seed-007",
+    "train-seed-008",
+    "train-seed-009",
+    "train-seed-010",
+    "train-seed-011",
+    "train-seed-012"
+  ],
+  "examples": 12,
+  "review": {
+    "type": "assistant_guided",
+    "human_approval_recorded": false
+  },
+  "limitations": [
+    "Too small to establish fine-tuning quality.",
+    "No independent human review recorded.",
+    "Development questions are not training examples.",
+    "Final held-out evaluation remains separate."
+  ]
+}

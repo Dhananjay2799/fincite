@@ -13,3 +13,5 @@ training/checkpoints/
 training/outputs/
 
 /data/model-cache/
+
+/training/runs/
