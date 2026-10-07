@@ -1,0 +1,273 @@
+{
+  "status": "assistant_review_only_not_independent_benchmark",
+  "review_version": "0.1",
+  "source_run_filename": "local-development-2026-10-07T18-59-53-043Z.json",
+  "source_run_sha256": "c27fe3efe662a5ae282d8550f9c38ed92dd4995cb64bca2898162625ae6d9331",
+  "prompt_version": "local-live-v0.2",
+  "scope": "Review against supplied passages and saved reference criteria, not verification of current financial law.",
+  "facts": {
+    "successful_requests": 13,
+    "answerable_responses_with_citation_ids": 10,
+    "answerable_responses_with_accepted_source_supplied": 10,
+    "unanswerable_responses_that_avoid_predicting_the_requested_outcome": 3,
+    "median_observed_api_request_seconds": 12.42
+  },
+  "limits": [
+    "Development questions were used for tuning; this is not held-out evaluation.",
+    "Citation presence and accepted source presence do not establish claim support.",
+    "The three outcome refusals are assistant observations; dev-012 has an omitted next step and dev-013 has a formatting problem.",
+    "Existing human-review fields in the source run remain unchanged.",
+    "No unsupported-answer-rate, final accuracy score or judge/human agreement statistic is claimed."
+  ],
+  "reviews": [
+    {
+      "question_id": "dev-001",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Payment-in-full guidance is stated without preserving the condition that the card offers a grace period and the user is not carrying a balance.",
+        "Does not clearly explain interest on new purchases after losing the grace period."
+      ],
+      "issue_tags": [
+        "conditional_scope",
+        "incomplete_reference_coverage"
+      ],
+      "cited_ids": [
+        "cfpb-47"
+      ],
+      "supplied_ids": [
+        "cfpb-44",
+        "cfpb-47"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-002",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Invents a requirement for the notice to include the lender's right to deny the application. That notice requirement is not in the supplied passage.",
+        "Omits the 60-day request/report deadlines and reporting-company telephone number."
+      ],
+      "issue_tags": [
+        "unsupported_notice_requirement",
+        "incomplete_reference_coverage"
+      ],
+      "cited_ids": [
+        "cfpb-1253"
+      ],
+      "supplied_ids": [
+        "cfpb-1253",
+        "cfpb-313"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-003",
+      "assistant_verdict": "appropriate_evidence_limited_response",
+      "observations": [
+        "Does not predict a Bitcoin price or invent a citation.",
+        "An uncited statement of evidence insufficiency should not be treated as a factual hallucination solely for lacking a citation."
+      ],
+      "issue_tags": [],
+      "cited_ids": [],
+      "supplied_ids": [
+        "cfpb-31"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-004",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Core cash-advance answer is supported: purchase grace periods typically do not apply and interest generally starts on the transaction date.",
+        "Additional purchase-interest guidance omits the grace-period and no-carried-balance conditions. Extra material introduces avoidable scope errors."
+      ],
+      "issue_tags": [
+        "conditional_scope",
+        "unnecessary_extra_claims"
+      ],
+      "cited_ids": [
+        "cfpb-47"
+      ],
+      "supplied_ids": [
+        "cfpb-47",
+        "cfpb-44"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-005",
+      "assistant_verdict": "main_answer_supported_citation_gap",
+      "observations": [
+        "Correctly defines APR as a yearly borrowing interest rate.",
+        "Fixed-versus-variable claims are supported by supplied cfpb-45, but only cfpb-44 is cited; cfpb-44 does not support those additional claims."
+      ],
+      "issue_tags": [
+        "claim_to_citation_mismatch"
+      ],
+      "cited_ids": [
+        "cfpb-44"
+      ],
+      "supplied_ids": [
+        "cfpb-45",
+        "cfpb-44"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-006",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Correctly says a fixed APR can change.",
+        "Drops generally from advance-notice guidance and in most circumstances from the restriction to later transactions, making qualified guidance categorical.",
+        "Does not explain the no-index-fluctuation distinction in the reference criteria."
+      ],
+      "issue_tags": [
+        "conditional_scope",
+        "incomplete_reference_coverage"
+      ],
+      "cited_ids": [
+        "cfpb-45"
+      ],
+      "supplied_ids": [
+        "cfpb-45",
+        "cfpb-44"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-007",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Correctly identifies duplicate debt listings as a possible reporting error.",
+        "Incorrectly calls duplicate debt listings a mixed file or identity theft. The source describes these as distinct error categories and does not establish the user's cause."
+      ],
+      "issue_tags": [
+        "unsupported_cause",
+        "category_conflation"
+      ],
+      "cited_ids": [
+        "cfpb-313"
+      ],
+      "supplied_ids": [
+        "cfpb-313",
+        "cfpb-314"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-008",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Core instruction to contact both bureau and furnisher is supported.",
+        "Says the report will be updated once the dispute is resolved without preserving the finding-of-error or unverifiable-information condition. The passage explicitly allows a finding that the information is accurate.",
+        "Adds confusing conditional branches about whether the supplier is itself a credit reporting company."
+      ],
+      "issue_tags": [
+        "unsupported_outcome_guarantee",
+        "unnecessary_extra_claims"
+      ],
+      "cited_ids": [
+        "cfpb-314"
+      ],
+      "supplied_ids": [
+        "cfpb-314"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-009",
+      "assistant_verdict": "needs_revision",
+      "observations": [
+        "Invents an exception permitting original supporting documents when using certified mail and a return receipt. The supplied passage says copies, not originals.",
+        "Omits if available for the confirmation number, account-number detail, a correction/removal request and marking disputed items.",
+        "Certified mail is presented as mandatory, while the passage says it can be chosen."
+      ],
+      "issue_tags": [
+        "invented_exception",
+        "conditional_scope",
+        "incomplete_reference_coverage"
+      ],
+      "cited_ids": [
+        "cfpb-314"
+      ],
+      "supplied_ids": [
+        "cfpb-314"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-010",
+      "assistant_verdict": "supported_core_answer",
+      "observations": [
+        "Covers the requested identifying information, debt amount/itemization and dispute-period information. The added pause-on-written-request claim is supported by the supplied passage.",
+        "Duplicates the same citation at the end. The notice-list introduction could better preserve the source's general qualification."
+      ],
+      "issue_tags": [
+        "formatting",
+        "minor_scope_wording"
+      ],
+      "cited_ids": [
+        "cfpb-331"
+      ],
+      "supplied_ids": [
+        "cfpb-331"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-011",
+      "assistant_verdict": "supported_core_answer",
+      "observations": [
+        "Correctly says each bureau must be contacted separately for a freeze.",
+        "Omits the contrast with a fraud alert included in the full reference criteria."
+      ],
+      "issue_tags": [
+        "incomplete_reference_coverage"
+      ],
+      "cited_ids": [
+        "cfpb-31"
+      ],
+      "supplied_ids": [
+        "cfpb-31"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-012",
+      "assistant_verdict": "appropriate_evidence_limited_response",
+      "observations": [
+        "Does not predict whether the bank will waive the fee.",
+        "Does not suggest checking with the issuer, so full reference-criteria coverage is incomplete."
+      ],
+      "issue_tags": [
+        "incomplete_reference_coverage"
+      ],
+      "cited_ids": [],
+      "supplied_ids": [
+        "cfpb-331",
+        "cfpb-31"
+      ],
+      "independent_human_grade": null
+    },
+    {
+      "question_id": "dev-013",
+      "assistant_verdict": "appropriate_limitation_with_format_issue",
+      "observations": [
+        "Does not predict landlord approval or rejection.",
+        "Leaks a closing internal formatting marker and repeats the limitation. Refusal content is appropriate, but presentation needs correction.",
+        "Calls it the landlord's application rather than the applicant's rental application."
+      ],
+      "issue_tags": [
+        "internal_format_marker",
+        "duplication",
+        "wording"
+      ],
+      "cited_ids": [],
+      "supplied_ids": [
+        "cfpb-314",
+        "cfpb-1253"
+      ],
+      "independent_human_grade": null
+    }
+  ]
+}
