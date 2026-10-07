@@ -1,0 +1,68 @@
+﻿{
+    "review_notes":  [
+                         "Missing source citation.",
+                         "Assumes the user had a grace period to lose."
+                     ],
+    "runtime_build":  11476,
+    "response":  {
+                     "choices":  [
+                                     {
+                                         "finish_reason":  "stop",
+                                         "index":  0,
+                                         "message":  {
+                                                         "role":  "assistant",
+                                                         "content":  "Because you are not paying your balance in full by the due date, you lose your grace period and are charged interest on the unpaid portion of the balance."
+                                                     }
+                                     }
+                                 ],
+                     "created":  1791396553,
+                     "model":  "fincite-v01",
+                     "system_fingerprint":  "b11476-988190680",
+                     "object":  "chat.completion",
+                     "usage":  {
+                                   "completion_tokens":  32,
+                                   "prompt_tokens":  166,
+                                   "total_tokens":  198,
+                                   "prompt_tokens_details":  {
+                                                                 "cached_tokens":  0
+                                                             }
+                               },
+                     "id":  "chatcmpl-bxzSjPIEdQhwBqHz2roluiP4OMacrYqK",
+                     "timings":  {
+                                     "cache_n":  0,
+                                     "prompt_n":  166,
+                                     "prompt_ms":  1521.03,
+                                     "prompt_per_token_ms":  9.162831325301205,
+                                     "prompt_per_second":  109.13657192823285,
+                                     "predicted_n":  32,
+                                     "predicted_ms":  1372.234,
+                                     "predicted_per_token_ms":  44.2656129032258,
+                                     "predicted_per_second":  22.590899219812364
+                                 }
+                 },
+    "model_sha256":  "a58fb6679a4af4eaa0625d7049ecc55478382590d5fe1639d5365d2243a59e5b",
+    "elapsed_seconds":  3.0124888999999997,
+    "quality_improvement_measured":  false,
+    "model":  "fincite-v01-q4_k_m.gguf",
+    "status":  "local_generation_smoke_test_only",
+    "request":  {
+                    "messages":  [
+                                     {
+                                         "content":  "Answer using only the supplied evidence. Preserve conditions and limitations. Cite the source ID. If the evidence cannot answer the question, say so. Keep the answer brief.",
+                                         "role":  "system"
+                                     },
+                                     {
+                                         "content":  "Evidence [cfpb-47]:\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\nQuestion:\nWhy am I charged interest when I pay my credit card minimum payment on time?",
+                                         "role":  "user"
+                                     }
+                                 ],
+                    "stream":  false,
+                    "chat_template_kwargs":  {
+                                                 "enable_thinking":  false
+                                             },
+                    "max_tokens":  256,
+                    "temperature":  0,
+                    "model":  "fincite-v01",
+                    "seed":  42
+                }
+}

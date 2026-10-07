@@ -15,3 +15,7 @@ training/outputs/
 /data/model-cache/
 
 /training/runs/
+
+/inference/models/
+
+/inference/runtime/
