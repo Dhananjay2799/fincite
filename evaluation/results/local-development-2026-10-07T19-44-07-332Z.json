@@ -1,0 +1,564 @@
+{
+  "status": "development_diagnostics_incomplete_or_failed_ungraded",
+  "created_at": "2026-10-07T19:44:07.338Z",
+  "endpoint": "http://127.0.0.1:3000/api/chat",
+  "prompt_version": "local-live-v0.3",
+  "bridge_health": {
+    "status": "ok",
+    "retrieval": "hybrid",
+    "reranker": false,
+    "prompt_version": "local-live-v0.3"
+  },
+  "local_model_file_sha256": "a58fb6679a4af4eaa0625d7049ecc55478382590d5fe1639d5365d2243a59e5b",
+  "model_note": "File integrity verified. Runtime loading used the previously documented local-server command; this runner does not attest process identity.",
+  "input_sha256": {
+    "evaluation/datasets/development.jsonl": "69d2fcca7ef8c9f042a7f6342e9ba4a47a49b3679cefebf2dfd496263084d7de",
+    "data/processed/chunks.jsonl": "08840eb70f4e09ad39b57d476a489fd24942ae6439a5d310ad83a6bda85cf723",
+    "ingestion/live-rag-core.mjs": "f3445cecd8ebebc9450dd1feec73ba61beba17fded0253f64c6d5f146cb0362a",
+    "ingestion/live-retrieval.mjs": "bc869c67f0bbc06c06f6f73813adf9816801a289a32fc65133e1e3ef54b85bd1",
+    "ingestion/serve-local-rag.mjs": "f92a1b985f7c885d7d4f053cc41d047c6daddd2c4913efbde8d1087b326a4504",
+    "ingestion/embedding-config.json": "ce5b31f5802cdbee245cd1b6a1975c482681f84ccd1ba1f15d95192e949c912e",
+    "apps/web/src/app/api/chat/route.ts": "005f3568c4245688e28fc08db6556c1a1a8183336860b2d6110a0548d4e29b6a"
+  },
+  "embedding_config": {
+    "model_id": "Xenova/bge-small-en-v1.5",
+    "model_revision": "ea104dacec62c0de699686887e3f920caeb4f3e3",
+    "dimensions": 384,
+    "max_tokens": 512,
+    "pooling": "cls",
+    "normalize": true,
+    "dtype": "fp32",
+    "document_prefix": "",
+    "query_prefix": "Represent this sentence for searching relevant passages: "
+  },
+  "expected_questions": 13,
+  "grading_status": "ungraded",
+  "latency_note": "Sequential observed API request times, including retrieval and generation. Model was already loaded. Cache/compilation effects may vary; not a cold/warm latency benchmark.",
+  "results": [
+    {
+      "question_id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-47"
+      ],
+      "reference_claims": [
+        "Paying the minimum on time does not necessarily eliminate purchase interest when a balance remains.",
+        "Avoiding interest on new purchases depends on having a grace period, not carrying a balance, and paying the balance in full by the due date.",
+        "Not paying in full can cause loss of the grace period and interest on unpaid balances and new purchases."
+      ],
+      "forbidden_claims": [
+        "Paying the minimum always prevents interest.",
+        "Every credit card must offer a grace period."
+      ],
+      "request": {
+        "question": "Why am I charged interest when I pay my credit card minimum payment on time?"
+      },
+      "http_status": 503,
+      "api_response": {
+        "error": {
+          "code": "RAG_UNAVAILABLE",
+          "message": "Retrieval or model output could not be verified. Check the local RAG terminal."
+        }
+      },
+      "diagnostics": null,
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 22439.5
+    },
+    {
+      "question_id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-1253"
+      ],
+      "reference_claims": [
+        "The notice should provide specific denial reasons or explain how to request them within 60 days.",
+        "Look for the reporting company's name, address, and telephone number.",
+        "Look for the right to obtain a free report from that company within 60 days of the notice.",
+        "Look for information about correcting report errors.",
+        "If a credit score was used, look for that score and the key factors affecting it."
+      ],
+      "forbidden_claims": [
+        "The credit reporting company guarantees approval after a dispute."
+      ],
+      "request": {
+        "question": "My loan application was denied because of my credit report. What information should I look for in the notice?"
+      },
+      "http_status": 200,
+      "api_response": {
+        "answer": "[cfpb-1253]\nIf your loan application was denied because of your credit report, you should look for the following in the notice:\n\n- The numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- The name, address, and telephone number of the credit reporting company that provided the report\n\n- The right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- The process for fixing mistakes on your report or adding information to make your report more complete\n\n[cfpb-313]\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-1253",
+            "title": "What can I do if my credit application was denied because of my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+            "quote": "What can I do if my credit application was denied because of my credit report?\n\nIf you were turned down for a loan or a line of credit, the lender is required to give you a list of the main reasons for its decision or a notice telling you how to get the main reasons.\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.\n\nIf a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "What are common credit report errors that I should look for on my credit report?\n\nWhen reviewing your credit report, check that it contains only items about you. Be sure to look for information that is inaccurate or incomplete.\n\nHow do I check a credit report for common errors?\n\nCheck for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft\n\nCheck for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names\n\nCheck for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit\n\nIf you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies.\n\nStill having trouble with a credit reporting company?",
+            "cited": true
+          }
+        ],
+        "warnings": []
+      },
+      "diagnostics": {
+        "returned_citation_ids": [
+          "cfpb-1253",
+          "cfpb-313"
+        ],
+        "unknown_returned_citation_ids": [],
+        "no_returned_citation_ids": false,
+        "supplied_source_ids": [
+          "cfpb-1253",
+          "cfpb-313"
+        ],
+        "accepted_source_supplied": true
+      },
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 23482.1
+    },
+    {
+      "question_id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "answerability": "unanswerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [],
+      "reference_claims": [
+        "Explain that a future Bitcoin price prediction is outside the supported CFPB guidance."
+      ],
+      "forbidden_claims": [
+        "Provide a predicted price or price range.",
+        "Invent a CFPB citation supporting a price prediction."
+      ],
+      "request": {
+        "question": "What will Bitcoin be worth next December?"
+      },
+      "http_status": 200,
+      "api_response": {
+        "answer": "The question is not directly addressed in the provided passages. The passages discuss topics related to credit reports, fraud alerts, and identity theft, but do not provide any information about the future value of Bitcoin.",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "When should I place an extended alert?\n\nPlace an extended alert if your identity has been stolen and you have filed an identity theft report at IdentityTheft.gov .\n\nAn extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit.\n\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\nWhat is an active-duty alert?\n\nActive-duty alerts protect servicemembers on active duty by making businesses take reasonable steps to make sure it’s you before they open a new account, issue an additional credit card, or increase the credit limit on your existing account. The alerts last for 12 months. You can request that the alert be removed sooner. If your deployment lasts longer than 12 months, you may place another alert on your credit file.\n\nTip\n\nIf it may be difficult to contact you directly while you are deployed, you can assign a personal representative to act for you, including to place or remove an active-duty alert.\n\nWhen you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists.\n\nTo add an active-duty alert to your credit report, contact one of the nationwide credit reporting companies. That company will contact the other nationwide credit reporting companies.\n\nWhat is a security freeze?\n\nContact any one of these three nationwide credit reporting companies Equifax , Experian , or Transunion to place fraud alerts on your credit reports:\n\nOnline | By calling | By mail\n\nEquifax Alerts | (800) 685-1111 | Equifax Information Services LLC P.O. Box 105069 Atlanta, GA 30348-5069\n\nExperian Fraud Center | (888) 397-3742 | Experian, P.O. Box 9554, Allen, TX 75013\n\nTransunion Fraud Alert | (888) 909-8872 | TransUnion Fraud Victim Assistance Department, P.O. Box 2000, Chester, PA 19016\n\nWhy should I set up a fraud alert?\n\nA fraud alert protects you by requiring creditors to make sure it’s you before they open a new account, issue an additional card, or raise your credit limit. When you place a fraud alert on your credit report at one of the nationwide credit reporting companies, it must notify the others.\n\nThere are two main types of fraud alerts: initial fraud alerts and extended alerts. Servicemembers also have the option of an active-duty alert.\n\nWhen should I place an initial fraud alert?\n\nPlace an initial fraud alert on your credit report if you believe you are, or are about to become, a victim of fraud or identity theft. Credit reporting companies keep that alert on your file for one year. After one year, the initial fraud alert will end and be removed. You have the option to place another fraud alert at that time.\n\nWhen you place an initial fraud alert, creditors must take reasonable steps to make sure it’s you making new credit requests before they can approve.\n\nAlso, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company.\n\nWhen should I place an extended alert?",
+            "cited": false
+          }
+        ],
+        "warnings": [
+          "The model did not cite its answer. The passages below are retrieved evidence, not verified support for its claims."
+        ]
+      },
+      "diagnostics": {
+        "returned_citation_ids": [],
+        "unknown_returned_citation_ids": [],
+        "no_returned_citation_ids": true,
+        "supplied_source_ids": [
+          "cfpb-31"
+        ],
+        "accepted_source_supplied": null
+      },
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 14451.6
+    },
+    {
+      "question_id": "dev-004",
+      "question": "I withdrew cash using my credit card. Does the purchase grace period generally let me avoid interest on that cash advance?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-47"
+      ],
+      "reference_claims": [
+        "Grace periods typically cover purchases, not cash advances.",
+        "Cash advances generally begin accruing interest on the transaction date."
+      ],
+      "forbidden_claims": [
+        "A purchase grace period always makes cash advances interest-free."
+      ],
+      "request": {
+        "question": "I withdrew cash using my credit card. Does the purchase grace period generally let me avoid interest on that cash advance?"
+      },
+      "http_status": 200,
+      "api_response": {
+        "answer": "[cfpb-47]\nYes, the purchase grace period generally allows you to avoid interest on that cash advance if you pay your balance in full by the due date.\n\n[cfpb-44]\nIf you pay your balance in full each month by the due date, you can avoid paying interest on purchases.",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "quote": "What is a grace period for a credit card?\n\nA grace period is the period between the end of a billing cycle and the date your payment is due.\n\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\nCredit card companies must establish procedures to assure that their bills are mailed or delivered to you at least 21 days before the payment is due.\n\nWith credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.\n\nTip: To keep your grace period, make sure to pay your bill in full each month and on time. If you pay in full some months, and not in other months, you may lose your grace period for the month that you don’t pay in full and for the month after.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-44",
+            "title": "What is a credit card interest rate? What does APR mean?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/",
+            "quote": "What is a credit card interest rate? What does APR mean?\n\nA credit card’s interest rate is the price you pay for borrowing money.\n\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).\n\nHow can you avoid paying interest on credit card purchases?\n\nOn most cards, you can avoid paying interest on purchases if you pay your balance in full each month by the due date.",
+            "cited": true
+          }
+        ],
+        "warnings": []
+      },
+      "diagnostics": {
+        "returned_citation_ids": [
+          "cfpb-47",
+          "cfpb-44"
+        ],
+        "unknown_returned_citation_ids": [],
+        "no_returned_citation_ids": false,
+        "supplied_source_ids": [
+          "cfpb-47",
+          "cfpb-44"
+        ],
+        "accepted_source_supplied": true
+      },
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 10501.3
+    },
+    {
+      "question_id": "dev-005",
+      "question": "My card lists an APR. What does that number describe?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-44"
+      ],
+      "reference_claims": [
+        "APR means annual percentage rate.",
+        "It expresses the credit card borrowing interest rate on a yearly basis."
+      ],
+      "forbidden_claims": [
+        "APR is the minimum monthly payment."
+      ],
+      "request": {
+        "question": "My card lists an APR. What does that number describe?"
+      },
+      "http_status": 503,
+      "api_response": {
+        "error": {
+          "code": "RAG_UNAVAILABLE",
+          "message": "Retrieval or model output could not be verified. Check the local RAG terminal."
+        }
+      },
+      "diagnostics": null,
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 20896.2
+    },
+    {
+      "question_id": "dev-006",
+      "question": "My card has a fixed APR. Does fixed mean the issuer can never change it?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-45"
+      ],
+      "reference_claims": [
+        "A fixed APR does not fluctuate with an index.",
+        "Fixed does not mean the rate can never change.",
+        "The issuer generally must provide advance notice; in most circumstances the higher rate applies to transactions after notice."
+      ],
+      "forbidden_claims": [
+        "A fixed APR can never change."
+      ],
+      "request": {
+        "question": "My card has a fixed APR. Does fixed mean the issuer can never change it?"
+      },
+      "http_status": 200,
+      "api_response": {
+        "answer": "[cfpb-45]\nThe fixed APR does not mean the issuer can never change it, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.\n\n[cfpb-44]\nThe fixed APR does not mean the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.\n\nThe answer is: No, the fixed APR does not mean the issuer can never change it, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.\n\nThe fixed APR does not mean the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-45",
+            "title": "What is the difference between a fixed APR and a variable APR?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+            "quote": "What is the difference between a fixed APR and a variable APR?\n\nThe difference between a fixed APR and a variable APR, is that a fixed APR does not fluctuate with changes to an index. A variable-rate APR, or variable APR, changes with the index interest rate.\n\nA fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.\n\nA variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time.\n\nYou should be able to find a copy of the agreement on your card issuer’s website, and you can request a copy from your card issuer if it is not there. If you have any questions, you should contact your card issuer.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-44",
+            "title": "What is a credit card interest rate? What does APR mean?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/",
+            "quote": "What is a credit card interest rate? What does APR mean?\n\nA credit card’s interest rate is the price you pay for borrowing money.\n\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).\n\nHow can you avoid paying interest on credit card purchases?\n\nOn most cards, you can avoid paying interest on purchases if you pay your balance in full each month by the due date.",
+            "cited": true
+          }
+        ],
+        "warnings": []
+      },
+      "diagnostics": {
+        "returned_citation_ids": [
+          "cfpb-45",
+          "cfpb-44"
+        ],
+        "unknown_returned_citation_ids": [],
+        "no_returned_citation_ids": false,
+        "supplied_source_ids": [
+          "cfpb-45",
+          "cfpb-44"
+        ],
+        "accepted_source_supplied": true
+      },
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 17237.8
+    },
+    {
+      "question_id": "dev-007",
+      "question": "The same debt appears twice on my credit report under different names. Is that a type of error I should check?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-313"
+      ],
+      "reference_claims": [
+        "The same debt listed more than once, possibly under different names, is a common reporting error to check.",
+        "The general guidance does not establish whether this person's entries are actually duplicates."
+      ],
+      "forbidden_claims": [
+        "Both entries are definitely fraudulent.",
+        "Delete both entries without investigating."
+      ],
+      "request": {
+        "question": "The same debt appears twice on my credit report under different names. Is that a type of error I should check?"
+      },
+      "http_status": 503,
+      "api_response": {
+        "error": {
+          "code": "RAG_UNAVAILABLE",
+          "message": "Retrieval or model output could not be verified. Check the local RAG terminal."
+        }
+      },
+      "diagnostics": null,
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 26391.3
+    },
+    {
+      "question_id": "dev-008",
+      "question": "To challenge inaccurate information on my credit report, should I contact only the bureau or also the company that supplied it?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-314",
+        "cfpb-313",
+        "cfpb-1253"
+      ],
+      "reference_claims": [
+        "Generally dispute with both the credit reporting company and the company that supplied the information."
+      ],
+      "forbidden_claims": [
+        "The company that supplied the information has no role in a dispute."
+      ],
+      "request": {
+        "question": "To challenge inaccurate information on my credit report, should I contact only the bureau or also the company that supplied it?"
+      },
+      "http_status": 200,
+      "api_response": {
+        "answer": "The answer is: You should contact both the credit reporting company and the company that supplied the information.\n\n[cfpb-314]\nTo dispute the information with the credit reporting company or companies, you should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.\n\n[cfpb-314]\nIf you mail a dispute, your dispute letter should include: contact information for you, credit report confirmation number, each error you want fixed, clear explanation of why you are disputing the information, request that the information be removed or corrected, a copy of the portion of your credit report that contains the disputed items, and copies (not originals) of documents that support your position.\n\n[cfpb-314]\nYou can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received.\n\n[cfpb-314]\nYou can contact the nationwide credit reporting companies online, by mail, or by phone: Equifax.",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "Then, dispute the information with the company that provided it to the credit reporting companies\n\nCredit reporting companies gather information about you from other companies called furnishers. Examples of furnishers include your bank, your landlord, and your credit card company.\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports.\n\nThe furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\nSubmit a complaint\n\nIf you have a problem with your credit report, you can also submit a complaint with the CFPB.\n\nHow do I dispute an error on my credit report?\n\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.\n\nTip\n\nIf you suspect that the error on your report is a result of identity theft, visit IdentityTheft.gov , the federal government’s one-stop resource to help you report and recover from identity theft.\n\nHow to dispute an error on your credit report\n\nFirst, dispute the information with the credit reporting company or companies\n\nIf you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received.\n\nYou can contact the nationwide credit reporting companies online, by mail, or by phone:\n\nEquifax",
+            "cited": true
+          }
+        ],
+        "warnings": []
+      },
+      "diagnostics": {
+        "returned_citation_ids": [
+          "cfpb-314"
+        ],
+        "unknown_returned_citation_ids": [],
+        "no_returned_citation_ids": false,
+        "supplied_source_ids": [
+          "cfpb-314"
+        ],
+        "accepted_source_supplied": true
+      },
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 23845.5
+    },
+    {
+      "question_id": "dev-009",
+      "question": "I am mailing a credit-report dispute. What should I include, and should I send original supporting documents?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-314"
+      ],
+      "reference_claims": [
+        "Include contact information and the report confirmation number if available.",
+        "Identify each disputed error and relevant account number.",
+        "Explain the dispute and request correction or removal.",
+        "Include a marked copy of the relevant report section and copies of supporting documents.",
+        "Keep copies and send copies of supporting documents rather than originals."
+      ],
+      "forbidden_claims": [
+        "Send your only original supporting documents."
+      ],
+      "request": {
+        "question": "I am mailing a credit-report dispute. What should I include, and should I send original supporting documents?"
+      },
+      "http_status": 503,
+      "api_response": {
+        "error": {
+          "code": "RAG_UNAVAILABLE",
+          "message": "Retrieval or model output could not be verified. Check the local RAG terminal."
+        }
+      },
+      "diagnostics": null,
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 25689.6
+    },
+    {
+      "question_id": "dev-010",
+      "question": "A collector sent me a debt validation notice. What information should help me identify the debt and understand how to dispute it?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-331"
+      ],
+      "reference_claims": [
+        "Look for collector and consumer identifying information and the creditor's name.",
+        "Look for the account number if any, current debt amount, and itemization.",
+        "Look for response information and the end date of the 30-day dispute period."
+      ],
+      "forbidden_claims": [
+        "Receiving a notice proves the debt is yours."
+      ],
+      "request": {
+        "question": "A collector sent me a debt validation notice. What information should help me identify the debt and understand how to dispute it?"
+      },
+      "http_status": 503,
+      "api_response": {
+        "error": {
+          "code": "RAG_UNAVAILABLE",
+          "message": "Retrieval or model output could not be verified. Check the local RAG terminal."
+        }
+      },
+      "diagnostics": null,
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 24571.7
+    },
+    {
+      "question_id": "dev-011",
+      "question": "If I freeze my credit report with one bureau, do the other two automatically receive the freeze?",
+      "answerability": "answerable",
+      "question_review_status": "pending_human_review",
+      "accepted_source_ids": [
+        "cfpb-31"
+      ],
+      "reference_claims": [
+        "A security freeze at one reporting company does not automatically notify the others.",
+        "Contact each company individually to freeze all three reports.",
+        "This differs from a fraud alert, where one nationwide company notifies the others."
+      ],
+      "forbidden_claims": [
+        "One security-freeze request automatically freezes all three reports."
+      ],
+      "request": {
+        "question": "If I freeze my credit report with one bureau, do the other two automatically receive the freeze?"
+      },
+      "http_status": 503,
+      "api_response": {
+        "error": {
+          "code": "RAG_UNAVAILABLE",
+          "message": "Retrieval or model output could not be verified. Check the local RAG terminal."
+        }
+      },
+      "diagnostics": null,
+      "human_review": {
+        "answer_correctness": null,
+        "unsupported_claims": null,
+        "citation_support": null,
+        "refusal_correctness": null,
+        "notes": null
+      },
+      "api_request_ms": 26675.4
+    }
+  ],
+  "summary": {
+    "attempted": 11,
+    "successful": 5,
+    "failed": 6,
+    "answerable_responses": 4,
+    "answerable_responses_without_citation_ids": 0,
+    "unanswerable_responses": 1,
+    "first_api_request_ms": 22439.5,
+    "quality_scores": null
+  },
+  "finished_at": "2026-10-07T19:48:03.541Z",
+  "changed_inputs": []
+}
