@@ -1,0 +1,73 @@
+{
+  "status": "assistant_development_observations",
+  "source": "fincite-controlled-comparison-v01.json",
+  "independent_human_grading": false,
+  "benchmark_scores": null,
+  "conclusion": "This development comparison does not establish an overall quality improvement from this adapter.",
+  "diagnostics": {
+    "base": {
+      "answerable_responses_with_citation_ids": 10,
+      "answerable_responses": 10,
+      "token_limit_reached": 0
+    },
+    "adapter": {
+      "answerable_responses_with_citation_ids": 9,
+      "answerable_responses": 10,
+      "token_limit_reached": 0
+    }
+  },
+  "notes": [
+    {
+      "question_id": "dev-001",
+      "observation": "Both omit grace-period eligibility conditions. Adapter omits an explicit explanation of minimum payment and new-purchase interest after losing the grace period."
+    },
+    {
+      "question_id": "dev-002",
+      "observation": "Base covers more notice information. Adapter calls the score the lender\u2019s credit score and omits telephone number, the 60-day free-report window and correction process. Both omit the alternative process for requesting denial reasons."
+    },
+    {
+      "question_id": "dev-003",
+      "observation": "Both avoid a Bitcoin price prediction and explain the evidence limitation."
+    },
+    {
+      "question_id": "dev-004",
+      "observation": "Both incorrectly say the purchase grace period covers a cash advance. Supplied evidence says cash advances generally accrue interest from the transaction date."
+    },
+    {
+      "question_id": "dev-005",
+      "observation": "Both explain APR. Adapter drops the source citation present in the base answer."
+    },
+    {
+      "question_id": "dev-006",
+      "observation": "Both lose generally/in-most-circumstances qualifications and omit the index distinction."
+    },
+    {
+      "question_id": "dev-007",
+      "observation": "Base misclassifies duplicate debt as a data management error; the passage lists it under account status. Adapter adds a possible identity-theft explanation that this duplicate entry alone does not establish."
+    },
+    {
+      "question_id": "dev-008",
+      "observation": "Base answers contact-both correctly. Adapter invents a furnisher-first sequence and tells the user to wait before contacting the reporting companies, contrary to the supplied bureau-first then furnisher guidance."
+    },
+    {
+      "question_id": "dev-009",
+      "observation": "Adapter invents an exception allowing originals if the reporting company requires them; evidence says copies, not originals. Both make the optional certified-mail route sound mandatory and omit if-available qualification for confirmation number."
+    },
+    {
+      "question_id": "dev-010",
+      "observation": "Base covers the main notice requirements. Adapter omits consumer/collector identity details, itemization, response information and written-dispute detail; it also omits if-any qualification for account number."
+    },
+    {
+      "question_id": "dev-011",
+      "observation": "Both correctly say freezes do not propagate and each company must be contacted; both omit the fraud-alert contrast in the reference criteria."
+    },
+    {
+      "question_id": "dev-012",
+      "observation": "Both avoid predicting a fee waiver; both omit the suggested next step of checking with the issuer."
+    },
+    {
+      "question_id": "dev-013",
+      "observation": "Both avoid predicting approval. Adapter uses the confusing phrase landlord\u2019s application instead of the applicant\u2019s rental application."
+    }
+  ]
+}
