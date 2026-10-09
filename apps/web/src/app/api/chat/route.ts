@@ -1,4 +1,4 @@
-import { isChatAnswer, type ChatFailure } from "@/lib/chat-types";
+﻿import { isChatAnswer, type ChatFailure } from "@/lib/chat-types";
 export const runtime = "nodejs";
 const fail = (status: number, code: string, message: string) => Response.json(
   { error: { code, message } } satisfies ChatFailure,
@@ -6,7 +6,7 @@ const fail = (status: number, code: string, message: string) => Response.json(
 );
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin) return fail(403, "ORIGIN_BLOCKED", "Use the FinCite frontend.");
+  if (origin && origin !== new URL(request.url).origin && origin !== process.env.FINCITE_PUBLIC_ORIGIN) return fail(403, "ORIGIN_BLOCKED", "Use the FinCite frontend.");
   let body: unknown;
   try { body = await request.json(); } catch {
     return fail(400, "INVALID_REQUEST", "Send a valid JSON question.");
@@ -40,3 +40,4 @@ export async function POST(request: Request) {
     return fail(503, "CONNECTION_FAILED", "The local RAG service is unavailable. Keep the model and RAG terminals running.");
   }
 }
+
