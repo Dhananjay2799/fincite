@@ -1,3 +1,11 @@
+## UI walkthrough
+
+Silent walkthrough showing the interface, source navigation,
+and labelled curated examples. Model evaluation results are
+documented separately below.
+
+https://github.com/user-attachments/assets/85f3fe45-5be1-4bc2-9dbf-14b71daae05b
+
 # FinCite
 
 A consumer-finance RAG application and LoRA fine-tuning pipeline built to test whether source retrieval and model adaptation improve answer quality.
