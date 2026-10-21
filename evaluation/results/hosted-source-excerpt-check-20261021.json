@@ -1,0 +1,72 @@
+{
+  "status": "local_hosted_candidate_checks_passed",
+  "deployment_status": "not_deployed",
+  "created_date": "2026-10-21",
+  "implementation_sha256": {
+    "apps/web/src/app/api/chat/route.ts": "c438ff1a6e83d4f1f95788603ddccaabed704c88f17565f416351d2fc3b16a14",
+    "apps/web/src/lib/server/hosted-rag.mjs": "d60f0e260177169285f7e4034030d653ee4ed3d83e0338d5df7959b720b9ed85",
+    "apps/web/src/lib/server/hosted-service.mjs": "1728c45d6e96f5d1765ff9afef921d91f89300c459e3e761a8e3f11ff9958def",
+    "apps/web/src/lib/server/hosted-retrieval.mjs": "c8c2b975a86039d411f40e30fe8a6e6ce14f27a54a71396ad5a7ad27411de9ef",
+    "apps/web/next.config.ts": "f6fe0f7b282f29783e66f5d66aa9c1800b95d7f46ae79edb06a76fd6722c06fa",
+    "apps/web/vercel.json": "809e570f318c05e65d8d8bdad0be12cbefe625812502813da63f0c4ceb8b833c",
+    "apps/web/package-lock.json": "c7cb5fc50e1a09e1311c2037bf7986eabbdee753252d8a41ce492bcb0933969e"
+  },
+  "node_tests": {
+    "passed": 50,
+    "failed": 0
+  },
+  "frontend": {
+    "eslint": "passed",
+    "typescript": "passed",
+    "production_build": "passed",
+    "build_environment": "VERCEL=1"
+  },
+  "real_model_check": {
+    "status": "passed",
+    "database": "query fixture; not live Neon",
+    "elapsed_seconds": 91.680251917,
+    "rss_mib_at_measurement": 441,
+    "generation_attempts": 0,
+    "source_ids": [
+      "cfpb-47"
+    ],
+    "cash_advance_exception_present": true
+  },
+  "production_api_check": {
+    "status": "passed",
+    "database": "Neon HTTP response fixture; real client, query encoder, classifier and production API",
+    "model_file_cache": "cached",
+    "api_status": 200,
+    "elapsed_seconds": 21.104560465,
+    "generation_attempts": 0,
+    "loopback_bridge_running": false
+  },
+  "api_error_checks": {
+    "missing_database_status": 503,
+    "missing_database_error_code": "DATABASE_NOT_CONFIGURED",
+    "empty_question_status": 400,
+    "untrusted_origin_status": 403
+  },
+  "vercel_connection": {
+    "accessible_workspaces": 0,
+    "matching_projects": 0,
+    "project_created": false,
+    "paid_resources_created": false
+  },
+  "not_verified": [
+    "Live Neon access",
+    "Vercel deployment build and runtime",
+    "Hosted cold-start latency",
+    "Peak memory on Vercel",
+    "Browser visual behavior",
+    "Independent answer quality"
+  ],
+  "quality_scores": null,
+  "file_trace": {
+    "total_mib": 79.66,
+    "linux_cpu_binding_included": true,
+    "linux_cpu_core_library_included": true,
+    "ignored_local_corpus_files_required": false,
+    "measurement": "Next.js route NFT trace, not Vercel final deployment package"
+  }
+}
