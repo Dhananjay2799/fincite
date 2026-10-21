@@ -24,9 +24,11 @@ const model = await AutoModelForSequenceClassification.from_pretrained(config.mo
 });
 try {
   const question = "What does the CFPB do after I submit a complaint?";
+  const variants = [];
+  for (const mode of ["plain", "publisher-context"]) {
   const rankings = [];
   for (const unit of units) {
-    const options = { text_pair: unit.text, truncation: false, padding: false };
+    const options = { text_pair: mode === "plain" ? unit.text : "Consumer Financial Protection Bureau (CFPB) source excerpt:\n" + unit.text, truncation: false, padding: false };
     const check = await tokenizer(question, { ...options, return_tensor: false });
     const ids = check.input_ids, tokens = Array.isArray(ids[0]) ? ids[0].length : ids.length;
     if (tokens > config.max_pair_tokens) continue;
@@ -37,11 +39,12 @@ try {
   }
   rankings.sort((a,b) => b.score-a.score);
   const byId = new Map(units.map(u => [u.unit_id,u]));
+  variants.push({ mode, top_units: rankings.slice(0,12).map(r => ({ ...r, ...byId.get(r.unit_id) })),
+    full_corpus_result: renderExcerpts(passages, units, rankings, undefined, question) });
+  }
   console.log("COMPLAINT_DIAGNOSTIC " + JSON.stringify({
-    purpose: "development_candidate_recall_diagnostic", question, corpus_chunks: passages.length,
-    unit_count: units.length, ranked_units: rankings.length,
-    top_units: rankings.slice(0,12).map(r => ({ ...r, ...byId.get(r.unit_id) })),
-    full_corpus_result: renderExcerpts(passages, units, rankings, undefined, question),
+    purpose: "development_publisher_context_diagnostic", question, corpus_chunks: passages.length,
+    unit_count: units.length, model_config: config, variants,
     limitations: ["All saved corpus chunks are ranked; this does not reproduce live Neon top-five retrieval.", "Inspected development case, not independent quality evaluation."]
   }));
 } finally { await model.dispose(); }
