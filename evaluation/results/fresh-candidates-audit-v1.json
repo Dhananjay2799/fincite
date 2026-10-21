@@ -1,0 +1,266 @@
+{
+  "status": "candidate_integrity_only",
+  "candidates": 24,
+  "answerable": 16,
+  "unanswerable": 8,
+  "question_groups": 24,
+  "bound_quotes": 16,
+  "reserved_records": 85,
+  "human_approved": 0,
+  "frozen": false,
+  "quality_scores": null,
+  "benchmark_ready": false,
+  "required_reviewed_test_questions": 120,
+  "warnings": [
+    {
+      "question_id": "fresh-candidate-001",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "dev-002",
+        "score": 0.2
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Compare with mixed_file and duplicate-debt development tasks; this tests identity contact fields."
+    },
+    {
+      "question_id": "fresh-candidate-002",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-041",
+        "score": 0.21739130434782608
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Training private_balance/private_card_limit ask for private values; this asks about error categories. Reviewer must confirm this distinction."
+    },
+    {
+      "question_id": "fresh-candidate-003",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-seed-004",
+        "score": 0.2413793103448276
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Same article as other reporting tasks; compare account-status families."
+    },
+    {
+      "question_id": "fresh-candidate-004",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-seed-005",
+        "score": 0.34375
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Do not turn this into the already used frivolous_dispute_notice question. Wording scopes the question to a dispute being investigated."
+    },
+    {
+      "question_id": "fresh-candidate-005",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "validation-v01-006",
+        "score": 0.24
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Near dev-009 mailing checklist and training postage_price; assess whether a distinct receipt-purpose task."
+    },
+    {
+      "question_id": "fresh-candidate-006",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-010",
+        "score": 0.2857142857142857
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Compare contact-both and furnisher_deadline/unverified families; address selection is a different target."
+    },
+    {
+      "question_id": "fresh-candidate-007",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-018",
+        "score": 0.20588235294117646
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Adjacent to trained furnisher_unverified but tests the opposite investigation outcome. Requires semantic review."
+    },
+    {
+      "question_id": "fresh-candidate-008",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "validation-v01-002",
+        "score": 0.3333333333333333
+      },
+      "semantic_overlap_checked": false,
+      "notes": "High adjacency: training initial_alert_duration and validation extended_free_reports. Exclude if reviewer considers benefits of alerts the same question family."
+    },
+    {
+      "question_id": "fresh-candidate-009",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-013",
+        "score": 0.32142857142857145
+      },
+      "semantic_overlap_checked": false,
+      "notes": "High adjacency: active_alert_duration and extended_free_reports. Exclude if same benefits family."
+    },
+    {
+      "question_id": "fresh-candidate-010",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-022",
+        "score": 0.2608695652173913
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Compare theft_report_recovery; this tests a blocking request's document bundle, not the recovery-plan outcome."
+    },
+    {
+      "question_id": "fresh-candidate-011",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-018",
+        "score": 0.1875
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Blocking-scope family is new relative to reserved question targets; same source text may already have appeared as context."
+    },
+    {
+      "question_id": "fresh-candidate-012",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-021",
+        "score": 0.16666666666666666
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Check against other 30-day/five-business-day dispute tasks; different remedy and trigger."
+    },
+    {
+      "question_id": "fresh-candidate-013",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-022",
+        "score": 0.22580645161290322
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Compare collection_pause; this concerns identity-theft notification and referrals, not a verification-request pause."
+    },
+    {
+      "question_id": "fresh-candidate-014",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-013",
+        "score": 0.24242424242424243
+      },
+      "semantic_overlap_checked": false,
+      "notes": "High adjacency to trained extended_alert_duration and initial-alert verification context. Review before inclusion."
+    },
+    {
+      "question_id": "fresh-candidate-015",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-022",
+        "score": 0.25
+      },
+      "semantic_overlap_checked": false,
+      "notes": "High adjacency to theft_report_recovery and trusted_contact. Exclude if considered the same immediate-response family."
+    },
+    {
+      "question_id": "fresh-candidate-016",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-009",
+        "score": 0.17391304347826086
+      },
+      "semantic_overlap_checked": false,
+      "notes": "Generic boilerplate across articles; check for any prior complaint question not in the known reserved files."
+    },
+    {
+      "question_id": "fresh-candidate-017",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-041",
+        "score": 0.15789473684210525
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-018",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "dev-008",
+        "score": 0.25
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-019",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-007",
+        "score": 0.16666666666666666
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-020",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "validation-v01-003",
+        "score": 0.125
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-021",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "validation-v01-005",
+        "score": 0.2777777777777778
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-022",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "dev-009",
+        "score": 0.16666666666666666
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-023",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-v01-008",
+        "score": 0.2631578947368421
+      },
+      "semantic_overlap_checked": false,
+      "notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-024",
+      "nearest_reserved_by_word_jaccard": {
+        "id": "train-seed-011",
+        "score": 0.2608695652173913
+      },
+      "semantic_overlap_checked": false,
+      "notes": "High adjacency to trained score_points and new identity-field question. Exclude from final test if not semantically distinct."
+    }
+  ],
+  "limitations": [
+    "Exact and lexical checks do not establish semantic novelty.",
+    "Bound quotations do not establish completeness, current legal applicability or answerability.",
+    "No generation or scoring is performed. The existing heldout.mjs human-review and 120-question gates remain unchanged."
+  ],
+  "validation_execution": "Pure validation function executed in tool JavaScript runtime; Node CLI not run.",
+  "negative_fixture_checks": [
+    {
+      "name": "reserved-question",
+      "rejected": true
+    },
+    {
+      "name": "altered-quote",
+      "rejected": true
+    },
+    {
+      "name": "unknown-source",
+      "rejected": true
+    },
+    {
+      "name": "fake-human-approval",
+      "rejected": true
+    },
+    {
+      "name": "duplicate-id",
+      "rejected": true
+    },
+    {
+      "name": "out-of-range-offset",
+      "rejected": true
+    }
+  ],
+  "inventory_git_blob": "9f7d99eec49cc6c56d133dc34fe7e62a56d320f3",
+  "reviewed_input_commit": "956afbf8cefedff0c5a9f427f1ac7e30cd9431bd"
+}
