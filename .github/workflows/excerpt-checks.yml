@@ -36,6 +36,8 @@ jobs:
         run: node evaluation/replay-excerpt-focus.mjs
       - name: Install locked web dependencies
         run: npm ci --prefix apps/web --no-audit --no-fund
+      - name: Diagnose complaint candidate recall with pinned local model
+        run: node evaluation/diagnose-complaint-recall.mjs
       - name: Lint web application
         run: npm run lint --prefix apps/web
       - name: Build web application
