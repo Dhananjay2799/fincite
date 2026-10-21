@@ -31,13 +31,13 @@ jobs:
       - name: Verify corpus-derived vocabulary
         run: node evaluation/build-excerpt-vocabulary.mjs --check
       - name: Test focus, source copying and hosted responder
-        run: node --test ingestion/test-excerpt-focus.mjs ingestion/test-source-excerpts.mjs evaluation/test-hosted-rag.mjs
+        run: node --test ingestion/test-reranker-input.mjs ingestion/test-excerpt-focus.mjs ingestion/test-source-excerpts.mjs evaluation/test-hosted-rag.mjs
       - name: Replay inspected development cases
         run: node evaluation/replay-excerpt-focus.mjs
       - name: Install locked web dependencies
         run: npm ci --prefix apps/web --no-audit --no-fund
       - name: Diagnose complaint candidate recall with pinned local model
-        run: node evaluation/diagnose-complaint-recall.mjs
+        run: node evaluation/run-publisher-context-development.mjs
       - name: Lint web application
         run: npm run lint --prefix apps/web
       - name: Build web application

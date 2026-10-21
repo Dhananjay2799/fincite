@@ -1,7 +1,7 @@
 import vocabulary from "./excerpt-vocabulary.json" with { type: "json" };
 import { assessExcerptFocus, EXCERPT_FOCUS_VERSION } from "./excerpt-focus.mjs";
 
-export const EXCERPT_POLICY_VERSION = "source-excerpts-v2-focus";
+export const EXCERPT_POLICY_VERSION = "source-excerpts-v3-publisher";
 // Development calibration only: logits are not probabilities or correctness scores.
 export const EXCERPT_POLICY = Object.freeze({ minimum_logit: -5, score_margin: 2, max_units: 3 });
 

@@ -124,7 +124,8 @@ export async function prepareRetriever() {
         const url = new URL(row.url);
         assert.ok(url.protocol === "https:" && url.hostname === "www.consumerfinance.gov");
       }
-      return rows.slice(0, 5);
+      // Preserve the bounded candidate pool until excerpt-level reranking.
+      return rows.slice(0, candidateLimit);
     },
     dispose: () => extractor.dispose()
   };
