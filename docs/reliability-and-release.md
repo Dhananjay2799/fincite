@@ -19,9 +19,17 @@ Use `FINCITE_ANSWER_MODE=generated` in `apps/web/.env.local` to compare the
 original generation prompt. This mode checks citation IDs, withholds entirely
 uncited output, and warns that factual support has not been verified.
 
-Prompt version is now `local-live-v0.4`; policy version and mode appear in bridge
+Prompt version is now `local-live-v0.5`; policy version and mode appear in bridge
 health. The canonical evidence-limited response is a UI state, not a quality
 grade. The model may abstain on an answerable question.
+
+The first local check exposed a false refusal on the cash-advance question even
+though the first passage contained an answer. Quoted mode now makes one bounded
+retry after an initial abstention, using only the first-ranked packed passage and
+a focused sentence-extraction instruction. The retry is token-budgeted and subject
+to the same quotation checks. It can still abstain. `generation_attempts` and
+`initial_abstention` identify retries in saved API responses. Mock regression tests
+exercise this path; improved live answer coverage has not yet been measured.
 
 ### Local verification
 
