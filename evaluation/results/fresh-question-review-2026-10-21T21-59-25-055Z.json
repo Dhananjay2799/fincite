@@ -1,0 +1,386 @@
+{
+  "kind": "fincite_candidate_question_review_v1",
+  "dataset_commit": "50927e2ad12de65326e36d65d08422c4dc82fd02",
+  "dataset_path": "evaluation/datasets/fresh-candidates-v1.jsonl",
+  "exported_at": "2026-10-21T21:59:25.046Z",
+  "status": "question_review_only_not_test_ready",
+  "reviewer_identity": "self_attested_not_authenticated",
+  "summary": {
+    "total": 24,
+    "reviewed": 24,
+    "approved": 24,
+    "excluded": 0,
+    "needs_follow_up": 0,
+    "pending": 0
+  },
+  "reviews": [
+    {
+      "question_id": "fresh-candidate-001",
+      "question": "The name is mine, but my credit report has a wrong phone number and address. Are those details included in the errors to look for?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:47:08.396Z"
+    },
+    {
+      "question_id": "fresh-candidate-002",
+      "question": "My listed account balance and credit limit look wrong. Does the guidance treat both as things to check?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:47:33.380Z"
+    },
+    {
+      "question_id": "fresh-candidate-003",
+      "question": "Can an incorrect last-payment date be a reporting error even if the account number is right?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:48:31.911Z"
+    },
+    {
+      "question_id": "fresh-candidate-004",
+      "question": "For a credit-report dispute that the bureau investigates, does the guidance say to pass my relevant information to the company that supplied it and report the results to me?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:49:00.608Z"
+    },
+    {
+      "question_id": "fresh-candidate-005",
+      "question": "What mailing option does the passage suggest if I want a record that the bureau received my dispute letter?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:49:20.567Z"
+    },
+    {
+      "question_id": "fresh-candidate-006",
+      "question": "Where does the passage say a written dispute to a furnisher can be addressed?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:51:12.825Z"
+    },
+    {
+      "question_id": "fresh-candidate-007",
+      "question": "The furnisher investigated and says the reported information is accurate. What can I ask the credit reporting companies to add if I still disagree?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:51:18.146Z"
+    },
+    {
+      "question_id": "fresh-candidate-008",
+      "question": "Does the free report copy available with an initial fraud alert use up the free annual report described in the passage?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:56:38.806Z"
+    },
+    {
+      "question_id": "fresh-candidate-009",
+      "question": "For how long does the passage say an active-duty alert removes a name from prescreened credit and insurance marketing lists?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:56:45.312Z"
+    },
+    {
+      "question_id": "fresh-candidate-010",
+      "question": "What documents does the passage list for asking reporting companies to block identity-theft information?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:56:50.445Z"
+    },
+    {
+      "question_id": "fresh-candidate-011",
+      "question": "Can the identity-theft blocking method in the passage be used for a debt that is not the result of identity theft?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:56:54.857Z"
+    },
+    {
+      "question_id": "fresh-candidate-012",
+      "question": "After receiving the identity-theft blocking request described in the passage, what time period is stated for blocking the fraudulent information?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:00.323Z"
+    },
+    {
+      "question_id": "fresh-candidate-013",
+      "question": "After a reporting company tells a creditor that someone stole my identity, what does the passage say about passing those identity-theft debts to debt collectors?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:05.463Z"
+    },
+    {
+      "question_id": "fresh-candidate-014",
+      "question": "With an extended fraud alert, must the creditor check that it is me before approving new credit, and can the contact method be one I choose?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:13.678Z"
+    },
+    {
+      "question_id": "fresh-candidate-015",
+      "question": "Apart from reporting identity theft to the FTC, what immediate action does the passage list for affected accounts and financial-institution departments?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:19.646Z"
+    },
+    {
+      "question_id": "fresh-candidate-016",
+      "question": "In the article's CFPB complaint description, what happens after I tell the CFPB about a company issue?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:25.578Z"
+    },
+    {
+      "question_id": "fresh-candidate-017",
+      "question": "What dollar amount of deposit insurance covers a jointly owned checking account?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:31.320Z"
+    },
+    {
+      "question_id": "fresh-candidate-018",
+      "question": "Do the supplied articles establish that my credit-report dispute must go to binding arbitration?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:37.808Z"
+    },
+    {
+      "question_id": "fresh-candidate-019",
+      "question": "How many years may an accurate late-payment entry remain on a credit report?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:42.742Z"
+    },
+    {
+      "question_id": "fresh-candidate-020",
+      "question": "Do these articles establish that my bank must reimburse every dollar stolen from my existing account?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:48.801Z"
+    },
+    {
+      "question_id": "fresh-candidate-021",
+      "question": "Under French law, what deadline applies to a dispute about a French credit report?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:57:54.517Z"
+    },
+    {
+      "question_id": "fresh-candidate-022",
+      "question": "What documents must I submit to qualify for a federal student-loan deferment?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:58:00.159Z"
+    },
+    {
+      "question_id": "fresh-candidate-023",
+      "question": "What routing number should I use for a transfer from my bank account?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:58:09.253Z"
+    },
+    {
+      "question_id": "fresh-candidate-024",
+      "question": "Does a misspelled address on my report lower my credit score by exactly ten points?",
+      "checks": {
+        "evidence": "yes",
+        "novelty": "yes",
+        "wording": "yes"
+      },
+      "notes": "",
+      "saved": true,
+      "decision": "approve",
+      "reviewer_type": "human",
+      "reviewer_id": "Dhananjay",
+      "reviewed_at": "2026-10-21T21:58:38.802Z"
+    }
+  ],
+  "pending_question_ids": [],
+  "quality_scores": null,
+  "benchmark_ready": false,
+  "limitations": [
+    "Question review only, not model-answer grading.",
+    "Existing 120-question and freeze requirements remain unchanged.",
+    "Reviewer attestations are not independently authenticated."
+  ]
+}
