@@ -1,13 +1,17 @@
-export const PROMPT_VERSION = "local-live-v0.2";
+import { ABSTENTION, checkQuotedAnswer } from "./grounding-policy.mjs";
+export { OUTPUT_POLICY_VERSION } from "./grounding-policy.mjs";
+export const PROMPT_VERSION = "local-live-v0.4";
 const MAX_INPUT = 2048 - 256 - 64;
 // Match the plain-text response format used for the LoRA experiment.
 const system = "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation.";
-export function messagesFor(question, passages) {
-  return [{ role: "system", content: system }, { role: "user", content:
+const quoteSystem = `Use only the supplied passages. Answer with up to three complete source sentences copied verbatim, each followed by its [source_id]. Preserve conditions; do not paraphrase. If not answerable, return exactly: ${ABSTENTION}`;
+export function messagesFor(question, passages, answerMode = "generated") {
+  if (!["generated", "quoted"].includes(answerMode)) throw new Error("Invalid answer mode.");
+  return [{ role: "system", content: answerMode === "quoted" ? quoteSystem : system }, { role: "user", content:
     "Question: " + question + "\n\nSupplied passages:\n" +
     passages.map(p => `[${p.source_id}]\n${p.chunk_text}`).join("\n\n") }];
 }
-export function finishAnswer(raw, passages, generation) {
+export function finishAnswer(raw, passages, generation, answerMode = "generated") {
   if (generation.choices?.[0]?.finish_reason !== "stop") {
     throw new Error("The model answer was cut short. Please try a shorter question.");
   }
@@ -17,14 +21,20 @@ export function finishAnswer(raw, passages, generation) {
     throw new Error("The model returned an internal label or invalid answer format. The answer was withheld.");
   }
   const cited = new Set([...answer.matchAll(/\[(cfpb-[^\]\s]+)\]/g)].map(m => m[1]));
+  if (/<\/?think\b|<\|[^]*?\|>/iu.test(answer)) {
+    throw new Error("The model returned internal reasoning markers. The answer was withheld.");
+  }
   const allowed = new Set(passages.map(p => p.source_id));
   if ([...cited].some(id => !allowed.has(id))) {
     throw new Error("The model cited a source that was not supplied. The answer was withheld.");
   }
-  const warnings = [];
-  if (cited.size === 0) {
-    warnings.push("The model did not cite its answer. The passages below are retrieved evidence, not verified support for its claims.");
+  if (answerMode === "quoted") checkQuotedAnswer(answer, passages);
+  if (cited.size === 0 && answer !== ABSTENTION) {
+    throw new Error("The model did not cite its answer. The answer was withheld.");
   }
+  const warnings = answer === ABSTENTION ? [] : [answerMode === "quoted" ?
+    "Exact source wording checked. Relevance, completeness and applicability still need review." :
+    "Citation IDs checked only. Factual support has not been verified."];
   const sources = [];
   for (const passage of passages) {
     const previous = sources.find(s => s.id === passage.source_id);
@@ -34,9 +44,9 @@ export function finishAnswer(raw, passages, generation) {
   }
   // 'answer' is a response container, not an answerability or correctness grade.
   // Do not infer refusal success from a model-generated enum.
-  return { answer, disposition: "answer", sources, warnings };
+  return { answer, disposition: answer === ABSTENTION ? "evidence_limited" : "answer", sources, warnings };
 }
-export async function answerQuestion(question, { retrieve, modelPost }) {
+export async function answerQuestion(question, { retrieve, modelPost, answerMode = "generated" }) {
   const rows = await retrieve(question);
   if (!rows.length) return { answer: "No passages were retrieved from the current corpus for this question.",
     disposition: "evidence_limited", sources: [], warnings: [] };
@@ -45,7 +55,7 @@ export async function answerQuestion(question, { retrieve, modelPost }) {
   for (const row of rows.slice(0, 2)) {
     const proposed = [...passages, row];
     const formatted = await modelPost("/apply-template", {
-      messages: messagesFor(question, proposed),
+      messages: messagesFor(question, proposed, answerMode),
       chat_template_kwargs: { enable_thinking: false }
     });
     if (typeof formatted.prompt !== "string") throw new Error("Could not verify model input size.");
@@ -57,11 +67,11 @@ export async function answerQuestion(question, { retrieve, modelPost }) {
   }
   if (!passages.length) throw new Error("The retrieved passages do not fit the model context. Please shorten your question.");
   const generation = await modelPost("/v1/chat/completions", {
-    model: "fincite-v01", messages: messagesFor(question, passages),
+    model: "fincite-v01", messages: messagesFor(question, passages, answerMode),
     temperature: 0, seed: 42, max_tokens: 256, stream: false,
     chat_template_kwargs: { enable_thinking: false }
   });
   const raw = generation.choices?.[0]?.message?.content;
   if (typeof raw !== "string") throw new Error("The model did not return answer text.");
-  return finishAnswer(raw, passages, generation);
+  return finishAnswer(raw, passages, generation, answerMode);
 }

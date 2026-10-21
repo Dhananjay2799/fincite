@@ -81,6 +81,9 @@ async function waitReady(name, url, verify, timeoutMs) {
   throw new Error(`${name} did not become ready. Check the service output above.`);
 }
 async function main() {
+  const args = process.argv.slice(2);
+  if (args.some(arg => arg !== "--production")) throw new Error("Usage: node scripts/start-local.mjs [--production]");
+  const production = args.includes("--production");
   if (process.platform !== "win32") throw new Error("This launcher targets the existing Windows CPU setup.");
   const model = join(root, "inference/models/fincite-v01-q4_k_m.gguf");
   const env = join(root, "apps/web/.env.local");
@@ -89,6 +92,9 @@ async function main() {
   for (const path of [model, env, bridge, next, join(root, "ingestion/node_modules"),
     join(root, "data/processed/chunks.jsonl")]) {
     if (!existsSync(path)) throw new Error(`Required local file or folder missing: ${path}`);
+  }
+  if (production && !existsSync(join(root, "apps/web/.next/BUILD_ID"))) {
+    throw new Error("Build the frontend first: npm run build --prefix apps/web");
   }
   const servers = findServers(join(root, "inference/runtime/b11476"));
   if (servers.length !== 1) throw new Error(`Expected one llama-server.exe under inference/runtime/b11476; found ${servers.length}.`);
@@ -106,7 +112,7 @@ async function main() {
   await waitReady("RAG bridge", "http://127.0.0.1:8081/health",
     async response => (await response.json()).status === "ok", 300000);
 
-  start("frontend", process.execPath, [next, "dev", "--hostname", "127.0.0.1", "--port", "3000"], join(root, "apps/web"));
+  start("frontend", process.execPath, [next, production ? "start" : "dev", "--hostname", "127.0.0.1", "--port", "3000"], join(root, "apps/web"));
   await waitReady("frontend", "http://127.0.0.1:3000", async () => true, 180000);
   console.log("\nFinCite is ready: http://localhost:3000\nKeep this terminal open. Press Ctrl+C to stop all three services.\nService readiness does not grade answer accuracy.");
 }

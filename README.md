@@ -14,6 +14,8 @@ FinCite retrieves CFPB guidance, generates a short answer and shows the supplied
 
 **Current status:** working local development demo with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
 
+**Reliability hardening:** the live bridge now defaults to verified source quotations, with a generated-answer mode retained for comparisons. Complete copied source sentences and their attribution are checked; relevance and completeness still require review. The new output policy has unit-test coverage, not a new model-quality benchmark. See [reliability, held-out evaluation and release instructions](docs/reliability-and-release.md).
+
 ## What is implemented
 
 - Next.js/TypeScript interface and Node.js chat API.
@@ -41,7 +43,7 @@ flowchart TD
     API --> UI
 ```
 
-The bridge reuses a pinned embedding model, considers the hybrid top five results and supplies at most two whole passages that fit the input budget. The local model uses a 2,048-token context and up to 256 generated tokens. Retrieved sources are labelled as cited by the model or retrieved only. A valid citation ID does not prove that the cited passage supports a claim.
+The bridge reuses a pinned embedding model, considers the hybrid top five results and supplies at most two whole passages that fit the input budget. The local model uses a 2,048-token context and up to 256 generated tokens. In the default quoted mode, complete source sentences must match the cited passage. Generated mode checks citation IDs without proving factual support. Retrieved sources are labelled as cited by the model or retrieved only.
 
 ## Recorded development results
 
@@ -130,6 +132,7 @@ From the repository root, with the local corpus artifacts available:
 node evaluation/validate.mjs
 node evaluation/validate-chunks.mjs
 node --test ingestion/test-live-rag.mjs
+node --test evaluation/test-heldout.mjs
 ```
 
 With the three services running, record development responses:
@@ -139,6 +142,10 @@ node evaluation/run-local-development.mjs
 ```
 
 This runner checks integrity and records responses; it does not automatically grade correctness or grounding. Do not send other questions while recording a sequential run.
+
+For a reviewed held-out test, `evaluation/heldout.mjs` freezes reviewed questions and corpus hashes, records responses and failures, then requires independent human labels before scoring. No held-out test results have been produced yet. The release guide includes the question and review schemas.
+
+After building with `npm run build --prefix apps/web`, use `node scripts/start-local.mjs --production` for a local production server. This does not provision permanent public hosting.
 
 Source ingestion is implemented in `ingestion/download-sources.mjs`, `extract-snapshots.mjs` and `chunk-documents.mjs`. Database setup and document/embedding imports are separate scripts. A fresh download can differ from the recorded snapshots; preserve provenance and regenerate matching manifests and imports before comparing runs.
 

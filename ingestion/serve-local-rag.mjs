@@ -1,6 +1,9 @@
 import { createServer } from "node:http";
 import { prepareRetriever } from "./live-retrieval.mjs";
-import { answerQuestion, PROMPT_VERSION } from "./live-rag-core.mjs";
+import { answerQuestion, PROMPT_VERSION, OUTPUT_POLICY_VERSION } from "./live-rag-core.mjs";
+
+const answerMode = process.env.FINCITE_ANSWER_MODE || "quoted";
+if (!["quoted", "generated"].includes(answerMode)) throw new Error("FINCITE_ANSWER_MODE must be quoted or generated.");
 
 const modelURL = new URL(process.env.FINCITE_MODEL_URL || "http://127.0.0.1:8080");
 if (modelURL.protocol !== "http:" || modelURL.hostname !== "127.0.0.1") {
@@ -20,7 +23,8 @@ const failure = (response, status, code, message) => send(response, status, { er
 const server = createServer(async (request, response) => {
   if (request.headers.origin) return failure(response, 403, "ORIGIN_BLOCKED", "Use the FinCite frontend.");
   if (request.method === "GET" && request.url === "/health") return send(response, 200, {
-    status: "ok", retrieval: "hybrid", reranker: false, prompt_version: PROMPT_VERSION
+    status: "ok", retrieval: "hybrid", reranker: false, prompt_version: PROMPT_VERSION,
+    answer_mode: answerMode, output_policy_version: OUTPUT_POLICY_VERSION
   });
   if (request.method !== "POST" || request.url !== "/chat") return failure(response, 404, "NOT_FOUND", "Endpoint not found.");
   if (busy) return failure(response, 429, "BUSY", "FinCite is handling another question. Please try again shortly.");
@@ -55,10 +59,10 @@ const server = createServer(async (request, response) => {
       if (!result.ok) throw new Error("The local model request failed.");
       return result.json();
     };
-    const answer = await answerQuestion(question.trim(), { retrieve: retriever.retrieve, modelPost });
+    const answer = await answerQuestion(question.trim(), { retrieve: retriever.retrieve, modelPost, answerMode });
     controller.signal.throwIfAborted();
     send(response, 200, answer);
-    console.log("Completed live question; citations checked for supplied IDs only.");
+    console.log(`Completed live question; output policy: ${OUTPUT_POLICY_VERSION}; mode: ${answerMode}.`);
   } catch (error) {
     // Keep database credentials and dependency internals out of browser errors.
     failure(response, error.status === 400 ? 400 : 503, "RAG_UNAVAILABLE",
