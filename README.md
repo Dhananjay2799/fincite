@@ -14,7 +14,7 @@ FinCite retrieves CFPB guidance, generates a short answer and shows the supplied
 
 **Current status:** working local development demo with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
 
-**Reliability hardening:** the live bridge now defaults to verified source quotations, with a generated-answer mode retained for comparisons. Complete copied source sentences and their attribution are checked; relevance and completeness still require review. The new output policy has unit-test coverage, not a new model-quality benchmark. See [reliability, held-out evaluation and release instructions](docs/reliability-and-release.md).
+**Reliability hardening:** the live bridge now defaults to constrained evidence-ID selection, with a generated-answer mode retained for comparisons. Code copies the selected source paragraph and attaches its citation; relevance and completeness still require review. The new output policy has unit-test coverage, not a new model-quality benchmark. See [reliability, held-out evaluation and release instructions](docs/reliability-and-release.md).
 
 ## What is implemented
 
@@ -43,7 +43,7 @@ flowchart TD
     API --> UI
 ```
 
-The bridge reuses a pinned embedding model, considers the hybrid top five results and supplies at most two whole passages that fit the input budget. The local model uses a 2,048-token context and up to 256 generated tokens. In the default quoted mode, complete source sentences must match the cited passage. Generated mode checks citation IDs without proving factual support. Retrieved sources are labelled as cited by the model or retrieved only.
+The bridge reuses a pinned embedding model, considers the hybrid top five results and supplies at most two whole passages that fit the input budget. The local model uses a 2,048-token context and up to 256 generated tokens. In the default quoted mode, the model selects an evidence ID; code renders the corresponding source paragraph and citation. Generated mode checks citation IDs without proving factual support. Retrieved sources are labelled as cited by the model or retrieved only.
 
 ## Recorded development results
 
@@ -131,7 +131,7 @@ From the repository root, with the local corpus artifacts available:
 ```powershell
 node evaluation/validate.mjs
 node evaluation/validate-chunks.mjs
-node --test ingestion/test-live-rag.mjs
+node --test ingestion/test-live-rag.mjs ingestion/test-evidence-selection.mjs
 node --test evaluation/test-heldout.mjs
 ```
 

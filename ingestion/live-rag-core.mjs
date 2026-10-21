@@ -1,6 +1,7 @@
 import { ABSTENTION, checkQuotedAnswer } from "./grounding-policy.mjs";
+import { evidenceCandidates, selectionMessages, selectionFormat, selectedText } from "./evidence-selection.mjs";
 export { OUTPUT_POLICY_VERSION } from "./grounding-policy.mjs";
-export const PROMPT_VERSION = "local-live-v0.5";
+export const PROMPT_VERSION = "local-live-v0.6";
 const MAX_INPUT = 2048 - 256 - 64;
 // Match the plain-text response format used for the LoRA experiment.
 const system = "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation.";
@@ -10,10 +11,6 @@ export function messagesFor(question, passages, answerMode = "generated") {
   return [{ role: "system", content: answerMode === "quoted" ? quoteSystem : system }, { role: "user", content:
     "Question: " + question + "\n\nSupplied passages:\n" +
     passages.map(p => `[${p.source_id}]\n${p.chunk_text}`).join("\n\n") }];
-}
-function focusedMessages(question, passage) {
-  return [{ role: "system", content: `Find the source sentences that address the question. Copy one or two complete sentences exactly, then append [${passage.source_id}] after each. Do not explain or paraphrase. If no sentence addresses it, return exactly: ${ABSTENTION}` },
-    { role: "user", content: `Question: ${question}\n\nSource [${passage.source_id}]:\n${passage.chunk_text}` }];
 }
 export function finishAnswer(raw, passages, generation, answerMode = "generated") {
   if (generation.choices?.[0]?.finish_reason !== "stop") {
@@ -59,7 +56,7 @@ export async function answerQuestion(question, { retrieve, modelPost, answerMode
   for (const row of rows.slice(0, 2)) {
     const proposed = [...passages, row];
     const formatted = await modelPost("/apply-template", {
-      messages: messagesFor(question, proposed, answerMode),
+      messages: answerMode === "quoted" ? selectionMessages(question, evidenceCandidates(proposed)) : messagesFor(question, proposed, answerMode),
       chat_template_kwargs: { enable_thinking: false }
     });
     if (typeof formatted.prompt !== "string") throw new Error("Could not verify model input size.");
@@ -70,30 +67,24 @@ export async function answerQuestion(question, { retrieve, modelPost, answerMode
     if (encoded.tokens.length <= MAX_INPUT) passages.push(row);
   }
   if (!passages.length) throw new Error("The retrieved passages do not fit the model context. Please shorten your question.");
+  const candidates = evidenceCandidates(passages);
+  if (answerMode === "quoted" && !candidates.length) {
+    return { answer: ABSTENTION, disposition: "evidence_limited", sources: [], warnings: [] };
+  }
   const generation = await modelPost("/v1/chat/completions", {
-    model: "fincite-v01", messages: messagesFor(question, passages, answerMode),
-    temperature: 0, seed: 42, max_tokens: 256, stream: false,
+    model: "fincite-v01", messages: answerMode === "quoted" ? selectionMessages(question, candidates) : messagesFor(question, passages),
+    temperature: 0, seed: 42, max_tokens: answerMode === "quoted" ? 64 : 256, stream: false,
+    ...(answerMode === "quoted" ? { response_format: selectionFormat(candidates) } : {}),
     chat_template_kwargs: { enable_thinking: false }
   });
   const raw = generation.choices?.[0]?.message?.content;
   if (typeof raw !== "string") throw new Error("The model did not return answer text.");
-  const initial = finishAnswer(raw, passages, generation, answerMode);
-  if (answerMode !== "quoted" || initial.disposition !== "evidence_limited") return initial;
-
-  // One bounded retry on the first-ranked packed passage, without the second
-  // potentially distracting article. Recheck tokens for the different prompt.
-  // Never infer that retrieval rank proves answerability or force an answer.
-  const focused = [passages[0]];
-  const messages = focusedMessages(question, focused[0]);
-  const formatted = await modelPost("/apply-template", { messages, chat_template_kwargs: { enable_thinking: false } });
-  if (typeof formatted.prompt !== "string") throw new Error("Could not verify retry input size.");
-  const encoded = await modelPost("/tokenize", { content: formatted.prompt, add_special: true, parse_special: true });
-  if (!Array.isArray(encoded.tokens)) throw new Error("Could not verify retry input size.");
-  if (encoded.tokens.length > MAX_INPUT) return { ...initial, generation_attempts: 1 };
-  const retry = await modelPost("/v1/chat/completions", {
-    model: "fincite-v01", messages, temperature: 0, seed: 42, max_tokens: 256, stream: false,
-    chat_template_kwargs: { enable_thinking: false }
-  });
-  const result = finishAnswer(retry.choices?.[0]?.message?.content, focused, retry, answerMode);
-  return { ...result, generation_attempts: 2, initial_abstention: true };
+  if (generation.choices?.[0]?.finish_reason !== "stop") {
+    throw new Error("The model output was cut short. The answer was withheld.");
+  }
+  const selected = answerMode === "quoted" ? selectedText(raw, candidates) : { text: raw };
+  const result = finishAnswer(selected.text, passages, generation, answerMode);
+  return { ...result, generation_attempts: 1, ...(answerMode === "quoted" ? {
+    selected_evidence_id: selected.selected_evidence_id, output_mode: "selected_source_excerpt"
+  } : {}) };
 }

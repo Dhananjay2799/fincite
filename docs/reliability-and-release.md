@@ -2,39 +2,44 @@
 
 ## What this patch changes
 
-The bridge now defaults to `FINCITE_ANSWER_MODE=quoted`. The same fine-tuned
-model selects complete sentences from the retrieved evidence. A deterministic
-check requires each selected sentence to occur in the cited passage, with its
-original wording. Arbitrary substring matches are not sufficient: clipping the
-condition off an `if` sentence is rejected. Unknown citations, uncited claims,
-internal reasoning markers and cut-off responses are withheld.
+The bridge defaults to `FINCITE_ANSWER_MODE=quoted`. In this mode the model
+selects an excerpt ID from supplied source paragraphs using schema-constrained
+JSON. The code copies the selected paragraph and attaches its citation using a
+request-local allowlist. The model does not generate the quotation or citation.
+The schema allows only a supplied evidence ID or `NONE`, with no free-text field.
+The server checks IDs and JSON again even when constrained decoding is enabled.
 
 This deliberately trades paraphrasing for inspectable source wording. It does
 not establish relevance, completeness, personal applicability, source freshness,
-or semantic correctness. A model can choose the wrong sentence or omit a related
-exception. Source passages can also contain instructions, which must still be
-treated as untrusted data. Quote matching is not a prompt-injection solution.
+or semantic correctness. The model can choose an irrelevant excerpt or `NONE`
+when an answer is present. Source text remains untrusted data. Selection is not
+proof that the question has been answered, nor a prompt-injection solution.
 
 Use `FINCITE_ANSWER_MODE=generated` in `apps/web/.env.local` to compare the
 original generation prompt. This mode checks citation IDs, withholds entirely
 uncited output, and warns that factual support has not been verified.
 
-Prompt version is now `local-live-v0.5`; policy version and mode appear in bridge
-health. The canonical evidence-limited response is a UI state, not a quality
-grade. The model may abstain on an answerable question.
+Prompt version is `local-live-v0.6`; output policy is `source-selection-v2`.
+The mode and versions appear in bridge health. A canonical evidence-limited
+response is a UI state, not a quality grade. The API records `selected_evidence_id`
+and `output_mode=selected_source_excerpt` for a selection response.
 
-The first local check exposed a false refusal on the cash-advance question even
-though the first passage contained an answer. Quoted mode now makes one bounded
-retry after an initial abstention, using only the first-ranked packed passage and
-a focused sentence-extraction instruction. The retry is token-budgeted and subject
-to the same quotation checks. It can still abstain. `generation_attempts` and
-`initial_abstention` identify retries in saved API responses. Mock regression tests
-exercise this path; improved live answer coverage has not yet been measured.
+### Live regressions observed before this revision
+
+- v0.4 refused the cash-advance question even though the supplied source answered it.
+- v0.5's focused retry generated text that failed exact-copy/citation formatting,
+  producing HTTP 503 responses. Passing mocked tests did not establish live quality.
+- v0.6 removes the model's copying and citation-formatting task rather than relaxing
+  quotation checks. There is no free-form retry and no hard-coded financial answer.
+
+The pinned b11476 runtime documents `response_format` with `type=json_object`
+and a `schema` for constrained decoding:
+https://github.com/ggml-org/llama.cpp/blob/988190680/tools/server/README.md
 
 ### Local verification
 
 ```powershell
-node --test ingestion/test-live-rag.mjs evaluation/test-heldout.mjs
+node --test ingestion/test-live-rag.mjs ingestion/test-evidence-selection.mjs evaluation/test-heldout.mjs
 node scripts/start-local.mjs
 ```
 

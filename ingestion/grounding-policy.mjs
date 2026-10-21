@@ -1,5 +1,5 @@
 export const ABSTENTION = "The supplied passages do not answer this question.";
-export const OUTPUT_POLICY_VERSION = "source-quotes-v1";
+export const OUTPUT_POLICY_VERSION = "source-selection-v2";
 const normalize = text => text.normalize("NFC").replace(/\s+/gu, " ").trim();
 const segmenter = new Intl.Segmenter("en", { granularity: "sentence" });
 

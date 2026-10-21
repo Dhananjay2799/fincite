@@ -124,7 +124,7 @@ async function main() {
     const healthResponse = await fetch("http://127.0.0.1:8081/health", { signal: AbortSignal.timeout(10000) });
     assert.ok(healthResponse.ok); const health = await healthResponse.json();
     assert.equal(health.prompt_version, PROMPT_VERSION); assert.equal(health.output_policy_version, OUTPUT_POLICY_VERSION);
-    const codePaths = ["ingestion/live-rag-core.mjs", "ingestion/grounding-policy.mjs", "ingestion/live-retrieval.mjs", "ingestion/serve-local-rag.mjs"];
+    const codePaths = ["ingestion/live-rag-core.mjs", "ingestion/grounding-policy.mjs", "ingestion/evidence-selection.mjs", "ingestion/live-retrieval.mjs", "ingestion/serve-local-rag.mjs"];
     const codeHashes = Object.fromEntries(codePaths.map(p => [p, hash(readFileSync(resolve(root, p)))]));
     const output = resolve(second);
     const report = { status: "in_progress", manifest_sha256: hash(JSON.stringify(manifest)), created_at: new Date().toISOString(),
