@@ -26,7 +26,7 @@ export function buildFocusVocabulary(inventory, sourceInventoryBlob) {
     for (const term of terms) frequency[term] = (frequency[term] ?? 0) + 1;
   }
   return { version: "excerpt-vocabulary-v1", source_inventory_git_blob: sourceInventoryBlob,
-    document_count: seen.size, source_ids: [...seen].sort(), source_terms: sourceTerms,
+    document_count: seen.size, source_ids: [...seen].sort(), source_terms: Object.fromEntries(Object.entries(sourceTerms)),
     declared_scope: "US CFPB general consumer guidance",
     supported_scope_aliases: ["us", "usa", "united states", "united states of america", "american", "federal", "national", "federal consumer", "consumer protection", "credit reporting", "fair credit reporting", "debt collection", "equal credit opportunity", "fcra", "ecoa"],
     document_frequency: Object.fromEntries(Object.entries(frequency).sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0)) };
