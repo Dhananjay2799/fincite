@@ -1,0 +1,1992 @@
+{
+  "purpose": "reviewed_question_pilot",
+  "status": "complete_ungraded_pilot",
+  "created_at": "2026-10-21T22:08:42.105Z",
+  "base_url": "https://fincite-rouge.vercel.app",
+  "manifest_sha256": "15970e3d9482e6ddca1c7f00d7053cdff261e47ab47656a7aeef49f98f84d53e",
+  "manifest": {
+    "version": 1,
+    "purpose": "reviewed_question_pilot",
+    "benchmark_ready": false,
+    "question_review_summary": {
+      "total": 24,
+      "reviewed": 24,
+      "approved": 24,
+      "excluded": 0,
+      "needs_follow_up": 0,
+      "pending": 0
+    },
+    "approved_question_count": 24,
+    "questions": [
+      {
+        "id": "fresh-candidate-001",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "report_identity_fields",
+        "question": "The name is mine, but my credit report has a wrong phone number and address. Are those details included in the errors to look for?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-313"
+        ],
+        "reference_claims": [
+          "Wrong phone numbers and addresses are identity-information errors to check.",
+          "Do not establish that the user's actual report is wrong from the question alone."
+        ],
+        "forbidden_claims": [
+          "Only account balances can be reporting errors."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-313",
+            "chunk_id": "a6b963581b03857f259ce5220223c3c74310a88351698771244fde90467d3ae9",
+            "start_char_in_chunk": 307,
+            "end_char_in_chunk": 385,
+            "text": "- Errors made to your identity information (wrong name, phone number, address)"
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:47:08.396Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Compare with mixed_file and duplicate-debt development tasks; this tests identity contact fields.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-002",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "report_data_management",
+        "question": "My listed account balance and credit limit look wrong. Does the guidance treat both as things to check?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-313"
+        ],
+        "reference_claims": [
+          "Both incorrect current balances and incorrect credit limits are data-management errors to check."
+        ],
+        "forbidden_claims": [
+          "Guarantee the user's stated figures are incorrect."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-313",
+            "chunk_id": "a6b963581b03857f259ce5220223c3c74310a88351698771244fde90467d3ae9",
+            "start_char_in_chunk": 983,
+            "end_char_in_chunk": 1104,
+            "text": "Check for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit"
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:47:33.380Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Training private_balance/private_card_limit ask for private values; this asks about error categories. Reviewer must confirm this distinction.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-003",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "report_payment_dates",
+        "question": "Can an incorrect last-payment date be a reporting error even if the account number is right?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-313"
+        ],
+        "reference_claims": [
+          "An incorrect last-payment date is an error type to check.",
+          "A correct account number does not establish that other fields are correct."
+        ],
+        "forbidden_claims": [
+          "A correct account number rules out all reporting errors."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-313",
+            "chunk_id": "a6b963581b03857f259ce5220223c3c74310a88351698771244fde90467d3ae9",
+            "start_char_in_chunk": 840,
+            "end_char_in_chunk": 915,
+            "text": "- Incorrect date of last payment, date opened, or date of first delinquency"
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:48:31.911Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Same article as other reporting tasks; compare account-status families.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-004",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "bureau_investigation_workflow",
+        "question": "For a credit-report dispute that the bureau investigates, does the guidance say to pass my relevant information to the company that supplied it and report the results to me?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-314"
+        ],
+        "reference_claims": [
+          "For the investigation described, the bureau forwards the dispute and all relevant supplied information to the information provider.",
+          "It reports the results back to the consumer."
+        ],
+        "forbidden_claims": [
+          "The bureau is never required to forward any relevant evidence."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-314",
+            "chunk_id": "618b05a599a86e4aca9949122cedc5d72527aa7c3f90d60a1d3018a4a6d0349c",
+            "start_char_in_chunk": 881,
+            "end_char_in_chunk": 1125,
+            "text": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:49:00.608Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Do not turn this into the already used frivolous_dispute_notice question. Wording scopes the question to a dispute being investigated.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-005",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "dispute_receipt_option",
+        "question": "What mailing option does the passage suggest if I want a record that the bureau received my dispute letter?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-314"
+        ],
+        "reference_claims": [
+          "Certified mail with a return receipt is an option to keep a record of receipt.",
+          "Preserve optional wording; do not claim all bureau disputes must use it."
+        ],
+        "forbidden_claims": [
+          "A return receipt guarantees the dispute will be successful."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-314",
+            "chunk_id": "78168b12ae1a3922629653c44ffe6e41218899529ca8393abca6f3317b0cae7d",
+            "start_char_in_chunk": 1528,
+            "end_char_in_chunk": 1675,
+            "text": "You can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:49:20.567Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Near dev-009 mailing checklist and training postage_price; assess whether a distinct receipt-purpose task.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-006",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "furnisher_dispute_address",
+        "question": "Where does the passage say a written dispute to a furnisher can be addressed?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-314"
+        ],
+        "reference_claims": [
+          "Use the furnisher address on the consumer report or its specified dispute-receiving address."
+        ],
+        "forbidden_claims": [
+          "Invent a universal address for all furnishers."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-314",
+            "chunk_id": "01029b467e18daf697370994d7b00c61a14089311dad27694abbe94496c664de",
+            "start_char_in_chunk": 468,
+            "end_char_in_chunk": 633,
+            "text": "Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:51:12.825Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Compare contact-both and furnisher_deadline/unverified families; address selection is a different target.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-007",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "accurate_information_statement",
+        "question": "The furnisher investigated and says the reported information is accurate. What can I ask the credit reporting companies to add if I still disagree?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-314"
+        ],
+        "reference_claims": [
+          "The consumer can ask the reporting companies to include a statement explaining the dispute.",
+          "The statement is added to the file and provided to future report requesters."
+        ],
+        "forbidden_claims": [
+          "The furnisher's accuracy finding guarantees deletion of the entry."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-314",
+            "chunk_id": "01029b467e18daf697370994d7b00c61a14089311dad27694abbe94496c664de",
+            "start_char_in_chunk": 1058,
+            "end_char_in_chunk": 1427,
+            "text": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:51:18.146Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Adjacent to trained furnisher_unverified but tests the opposite investigation outcome. Requires semantic review.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-008",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "initial_alert_extra_report",
+        "question": "Does the free report copy available with an initial fraud alert use up the free annual report described in the passage?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "Initial-alert copies are additional to, and do not count as, the free annual report described.",
+          "One free copy is available from each nationwide reporting company under the quoted initial-alert guidance."
+        ],
+        "forbidden_claims": [
+          "Only one copy in total across all reporting companies."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "bae076e6342b31861a51bed4078b8aab6feaed3b71a1d639fdfe11a738c9f473",
+            "start_char_in_chunk": 1498,
+            "end_char_in_chunk": 1736,
+            "text": "Also, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:56:38.806Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "High adjacency: training initial_alert_duration and validation extended_free_reports. Exclude if reviewer considers benefits of alerts the same question family.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-009",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "active_alert_marketing",
+        "question": "For how long does the passage say an active-duty alert removes a name from prescreened credit and insurance marketing lists?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "The cited active-duty-alert marketing-list removal lasts two years."
+        ],
+        "forbidden_claims": [
+          "The marketing exclusion always has the same duration as the active-duty alert itself."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "c72adf39b01fce7f37f890ef4503c264757f71869bda5f5ef5af2cc396b73742",
+            "start_char_in_chunk": 1298,
+            "end_char_in_chunk": 1463,
+            "text": "When you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:56:45.312Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "High adjacency: active_alert_duration and extended_free_reports. Exclude if same benefits family.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-010",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "identity_block_documents",
+        "question": "What documents does the passage list for asking reporting companies to block identity-theft information?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "An identity theft report, proof of identity, and a letter identifying the fraudulent debts and information are listed.",
+          "Preserve identity-theft context."
+        ],
+        "forbidden_claims": [
+          "Sending no identifying or supporting documents is the listed procedure."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
+            "start_char_in_chunk": 1273,
+            "end_char_in_chunk": 1534,
+            "text": "If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report"
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:56:50.445Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Compare theft_report_recovery; this tests a blocking request's document bundle, not the recovery-plan outcome.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-011",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "identity_block_scope",
+        "question": "Can the identity-theft blocking method in the passage be used for a debt that is not the result of identity theft?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "The method is only for identity-theft debts.",
+          "A block can be refused or removed when information is incorrect or the debt is not caused by identity theft."
+        ],
+        "forbidden_claims": [
+          "Any unwanted legitimate debt qualifies for identity-theft blocking."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
+            "start_char_in_chunk": 83,
+            "end_char_in_chunk": 379,
+            "text": "You can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:56:54.857Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Blocking-scope family is new relative to reserved question targets; same source text may already have appeared as context.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-012",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "identity_block_business_days",
+        "question": "After receiving the identity-theft blocking request described in the passage, what time period is stated for blocking the fraudulent information?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "The passage states within four business days after receipt of the request.",
+          "Do not substitute calendar days or assert that an unspecified incomplete request qualifies."
+        ],
+        "forbidden_claims": [
+          "Four calendar days is the same stated deadline."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
+            "start_char_in_chunk": 381,
+            "end_char_in_chunk": 521,
+            "text": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:00.323Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Check against other 30-day/five-business-day dispute tasks; different remedy and trigger.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-013",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "identity_block_creditor_notification",
+        "question": "After a reporting company tells a creditor that someone stole my identity, what does the passage say about passing those identity-theft debts to debt collectors?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "After notification, creditors cannot turn the identity-theft-related debts over to collectors.",
+          "Retain the identity-theft and notification conditions."
+        ],
+        "forbidden_claims": [
+          "All debts, including unrelated legitimate debts, disappear after notification."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
+            "start_char_in_chunk": 522,
+            "end_char_in_chunk": 717,
+            "text": "In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:05.463Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Compare collection_pause; this concerns identity-theft notification and referrals, not a verification-request pause.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-014",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "extended_alert_contact_method",
+        "question": "With an extended fraud alert, must the creditor check that it is me before approving new credit, and can the contact method be one I choose?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "With an extended alert a creditor must contact the consumer to confirm identity before approving new credit.",
+          "Contact can be in person, by phone, or another chosen method."
+        ],
+        "forbidden_claims": [
+          "The passage says new credit is approved without contacting the consumer."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "c72adf39b01fce7f37f890ef4503c264757f71869bda5f5ef5af2cc396b73742",
+            "start_char_in_chunk": 165,
+            "end_char_in_chunk": 381,
+            "text": "An extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:13.678Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "High adjacency to trained extended_alert_duration and initial-alert verification context. Review before inclusion.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-015",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "compromised_account_action",
+        "question": "Apart from reporting identity theft to the FTC, what immediate action does the passage list for affected accounts and financial-institution departments?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-31"
+        ],
+        "reference_claims": [
+          "Close affected accounts and contact the institutions' security or fraud departments in the identity-theft situation described."
+        ],
+        "forbidden_claims": [
+          "Close every account regardless of whether affected."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-31",
+            "chunk_id": "178bad503fec44152e8dc1068a2dcc771ed60f7aefd6ecc99414b6c6d843cda5",
+            "start_char_in_chunk": 356,
+            "end_char_in_chunk": 526,
+            "text": "If you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:19.646Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "High adjacency to theft_report_recovery and trusted_contact. Exclude if considered the same immediate-response family.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-016",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "complaint_tracking_workflow",
+        "question": "In the article's CFPB complaint description, what happens after I tell the CFPB about a company issue?",
+        "answerability": "answerable",
+        "source_ids": [
+          "cfpb-313"
+        ],
+        "reference_claims": [
+          "The described process forwards the issue to the company, gives a tracking number, and provides status updates.",
+          "Do not promise a favorable resolution."
+        ],
+        "forbidden_claims": [
+          "A tracking number guarantees the company will grant the requested remedy."
+        ],
+        "evidence": [
+          {
+            "source_id": "cfpb-313",
+            "chunk_id": "3e0d95bac2c5a95634501ba9d933f6415057c5c70b04a4df40469e07e3ee210e",
+            "start_char_in_chunk": 178,
+            "end_char_in_chunk": 350,
+            "text": "If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint."
+          }
+        ],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:25.578Z",
+          "notes": ""
+        },
+        "overlap_review_notes": "Generic boilerplate across articles; check for any prior complaint question not in the known reserved files.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-017",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "bank_deposit_insurance_scope",
+        "question": "What dollar amount of deposit insurance covers a jointly owned checking account?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The eight-article corpus does not supply deposit-insurance limits or joint-account coverage rules.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Provide a coverage dollar amount from outside the supplied corpus."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:31.320Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-018",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "credit_arbitration_clause",
+        "question": "Do the supplied articles establish that my credit-report dispute must go to binding arbitration?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The frozen articles do not establish the existence or enforceability of this account's arbitration clause.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Claim arbitration is definitely mandatory or definitely unavailable."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:37.808Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-019",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "accurate_negative_entry_retention",
+        "question": "How many years may an accurate late-payment entry remain on a credit report?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The corpus discusses checking and disputing errors but does not establish a retention period for accurate late-payment entries.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Invent a retention duration from outside the evidence."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:42.742Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-020",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "identity_theft_reimbursement_policy",
+        "question": "Do these articles establish that my bank must reimburse every dollar stolen from my existing account?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "General identity-theft guidance here does not establish reimbursement entitlement or amount for an existing account.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Guarantee full reimbursement or deny every reimbursement possibility."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:48.801Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-021",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "international_dispute_rules",
+        "question": "Under French law, what deadline applies to a dispute about a French credit report?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The frozen US CFPB articles do not establish French legal dispute deadlines.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Apply a US dispute deadline as a French legal requirement."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:57:54.517Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-022",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "student_loan_deferment_rules",
+        "question": "What documents must I submit to qualify for a federal student-loan deferment?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The frozen articles do not supply student-loan deferment eligibility or application requirements.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Invent a student-loan application checklist using credit-dispute documents."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:58:00.159Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-023",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "bank_routing_number_lookup",
+        "question": "What routing number should I use for a transfer from my bank account?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The corpus does not contain the bank/account routing information needed to answer.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Treat a listed credit-bureau telephone number as a bank routing number."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:58:09.253Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "New proposed question target; independent reviewer must check all reserved families and corpus-wide absence.",
+        "model_exposure": "not_run_on_candidate_questions"
+      },
+      {
+        "id": "fresh-candidate-024",
+        "split": "pilot",
+        "proposed_split": "test",
+        "group_id": "report_error_score_model",
+        "question": "Does a misspelled address on my report lower my credit score by exactly ten points?",
+        "answerability": "unanswerable",
+        "source_ids": [],
+        "reference_claims": [
+          "The guidance lists identity-information errors but does not quantify a score effect of a misspelled address.",
+          "Explain that the supplied evidence cannot establish the requested answer; do not guess."
+        ],
+        "forbidden_claims": [
+          "Give an exact ten-point or other numeric score effect."
+        ],
+        "evidence": [],
+        "authored_by": "assistant-fresh-candidates-v1",
+        "review_status": "approved",
+        "review": {
+          "reviewer_type": "human",
+          "reviewer_id": "Dhananjay",
+          "semantic_overlap_checked": true,
+          "evidence_checked": true,
+          "wording_checked": true,
+          "reviewed_at": "2026-10-21T21:58:38.802Z",
+          "notes": ""
+        },
+        "unanswerable_reason": "Not established by the frozen eight-article corpus; corpus-wide absence requires independent review.",
+        "overlap_review_notes": "High adjacency to trained score_points and new identity-field question. Exclude from final test if not semantically distinct.",
+        "model_exposure": "not_run_on_candidate_questions"
+      }
+    ],
+    "input_sha256_utf8_lf": {
+      "evaluation/datasets/fresh-candidates-v1.jsonl": "5f5f69c3d9648237f0e3756a275a8427a17ec478bfd52cd8bf79bd3e444f6374",
+      "evaluation/results/fresh-question-review-2026-10-21T21-59-25-055Z.json": "0720fee09b652a3a9b01e00ff5634d3d19f11154a4853e7a78c5422aa7dc6534",
+      "training/datasets/source-inventory.json": "48e0b7759bb93c066335b22a03783181a12187679e79017d3e4b208c040d4746",
+      "evaluation/datasets/corpus-manifest.json": "36b096708a41760b074260a1f763a530e5852a9ab909d9a7f94c8677f32da499",
+      "data/processed/chunks.jsonl": "08840eb70f4e09ad39b57d476a489fd24942ae6439a5d310ad83a6bda85cf723",
+      "data/processed/documents.jsonl": "a31368c7b9fb9f1d8e9e304e5da4c48f32b3b0d57fbc52d064a2ad6bb6d38930",
+      "evaluation/datasets/development.jsonl": "69d2fcca7ef8c9f042a7f6342e9ba4a47a49b3679cefebf2dfd496263084d7de",
+      "training/datasets/starter-candidates.jsonl": "ab09008346f87a46e7a294bf386e3c6069a1fedfd44a25d37a443b94cd178e72",
+      "training/datasets/v01/train-candidates-v01.jsonl": "562ba8d9913390a120401e2afd6a27799c92fee181ed1d20a97865ff5df693f4",
+      "training/datasets/v01/validation-candidates-v01.jsonl": "cf98806efd01199fb0bfb57751140ac968aa64b25235c93a3f95b6b572e2ac5d",
+      "evaluation/run-reviewed-pilot.mjs": "ce04ac029245c7b55ad187304e372b5f88d927c367183d66f9ca1f52388c8039",
+      "evaluation/audit-fresh-candidates.mjs": "530a301b7c568c3a253069ebe83688e1a5a44b54d3c6b2a49d92647d7a3e725b",
+      "evaluation/validate.mjs": "fd5ec2410f613087275307d1851d27ffef47789af190a9e2eb441ec9ddad41d9",
+      "evaluation/validate-chunks.mjs": "44e3d408e9fd14da6b8a51ab3d826c322e0cbc987f6b4f0f98726d148181fb15"
+    },
+    "review_attestation": "Owner-supplied human question review; identity and actual review work are not independently authenticated.",
+    "limits": [
+      "Small same-corpus pilot, not the 120-question formal held-out test.",
+      "Source passages have been used in the project; semantic novelty is a reviewer attestation.",
+      "Question approval is not model-answer grading.",
+      "Remote deployment, database snapshot and model identity are not attested by this client.",
+      "The HTTP response path is evaluated; this is not a matched three-generation-model comparison."
+    ]
+  },
+  "client_git_head": "204e8f03d78066e357d1e1f6a968d2c56c8c0025",
+  "results": [
+    {
+      "question_id": "fresh-candidate-001",
+      "question": "The name is mine, but my credit report has a wrong phone number and address. Are those details included in the errors to look for?",
+      "elapsed_ms": 7335.6302,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "Check for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft [cfpb-313]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "Check for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "8fc72db9113b20ea97c3fa8858cc24a2905c0d3a1b493d0061ead94c6b0749fb",
+            "source_id": "cfpb-313",
+            "score": 3.6283559799194336,
+            "start_char": 280,
+            "end_char": 594
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-313"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-002",
+      "question": "My listed account balance and credit limit look wrong. Does the guidance treat both as things to check?",
+      "elapsed_ms": 916.9102999999996,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "Check for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit [cfpb-313]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "Check for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "b52e91189ceabf333ac48757c4f695e79b6e822c99356c6e61905f28d7f30367",
+            "source_id": "cfpb-313",
+            "score": -1.003645658493042,
+            "start_char": 983,
+            "end_char": 1104
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-313"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-003",
+      "question": "Can an incorrect last-payment date be a reporting error even if the account number is right?",
+      "elapsed_ms": 888.0668000000005,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names [cfpb-313]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "1cb91f3d520ed7ac4071a6fef7f00dc40549167866d860a71513abee419f7793",
+            "source_id": "cfpb-313",
+            "score": 4.998715877532959,
+            "start_char": 596,
+            "end_char": 981
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-313"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-004",
+      "question": "For a credit-report dispute that the bureau investigates, does the guidance say to pass my relevant information to the company that supplied it and report the results to me?",
+      "elapsed_ms": 1055.8258999999998,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you. [cfpb-314]\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information. [cfpb-1253]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-1253",
+            "title": "What can I do if my credit application was denied because of my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+            "quote": "If you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "a0063ec1ee406b29a8368841b7a08a62e49472f016522689127cb528b410f86b",
+            "source_id": "cfpb-314",
+            "score": 5.578618049621582,
+            "start_char": 881,
+            "end_char": 1125
+          },
+          {
+            "unit_id": "6e26f1f688d9bdea817e0e60cf55a098ce25250e1fe6ad773e68688eff175133",
+            "source_id": "cfpb-1253",
+            "score": 3.757615089416504,
+            "start_char": 0,
+            "end_char": 473
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314",
+          "cfpb-1253"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-005",
+      "question": "What mailing option does the passage suggest if I want a record that the bureau received my dispute letter?",
+      "elapsed_ms": 916.7945999999993,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "You can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "You can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "b1fb019ba9c027fddb0049d4e33d576b5fde8fab47fe2af51825609843b40066",
+            "source_id": "cfpb-314",
+            "score": 4.3031110763549805,
+            "start_char": 1528,
+            "end_char": 1675
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-006",
+      "question": "Where does the passage say a written dispute to a furnisher can be addressed?",
+      "elapsed_ms": 940.9421999999977,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "To dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "To dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "5c9b8751d7228ab906f2886534a26ee5be9281b103e1c70d833415c801ce173e",
+            "source_id": "cfpb-314",
+            "score": 3.943375587463379,
+            "start_char": 283,
+            "end_char": 748
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-007",
+      "question": "The furnisher investigated and says the reported information is accurate. What can I ask the credit reporting companies to add if I still disagree?",
+      "elapsed_ms": 920.5679999999993,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future. [cfpb-314]\n\nIf you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies. [cfpb-313]\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "If you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "fbd6fad97d61d3f7a08bc671f5eda5e40a81facd8f50356df0067cb772a0f747",
+            "source_id": "cfpb-314",
+            "score": 6.878215312957764,
+            "start_char": 1058,
+            "end_char": 1427
+          },
+          {
+            "unit_id": "3b1dc01254501ca0010390c2e4fb97010daae8fb3fed56fa486b7bc111ede459",
+            "source_id": "cfpb-313",
+            "score": 5.096782207489014,
+            "start_char": 1106,
+            "end_char": 1486
+          },
+          {
+            "unit_id": "efdda9659313909b2ed8c80974b03d6d81230e1bcd1addfd58e2eb64ac6ac0fc",
+            "source_id": "cfpb-314",
+            "score": 5.083047389984131,
+            "start_char": 750,
+            "end_char": 1056
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314",
+          "cfpb-313"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-008",
+      "question": "Does the free report copy available with an initial fraud alert use up the free annual report described in the passage?",
+      "elapsed_ms": 940.2615000000005,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "Also, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "Also, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "85c49688b01a7db18025d4355c0dfebefa6385c7971788d1fcf4ead3284f99af",
+            "source_id": "cfpb-31",
+            "score": 6.199725151062012,
+            "start_char": 1498,
+            "end_char": 1736
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-009",
+      "question": "For how long does the passage say an active-duty alert removes a name from prescreened credit and insurance marketing lists?",
+      "elapsed_ms": 7674.996899999998,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "When you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "When you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "0d32573bd34cbfeb992dc53d404b0bde78e37825ce23528dfb4acae54e4d239e",
+            "source_id": "cfpb-31",
+            "score": 7.797177791595459,
+            "start_char": 1298,
+            "end_char": 1463
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-010",
+      "question": "What documents does the passage list for asking reporting companies to block identity-theft information?",
+      "elapsed_ms": 1176.617900000001,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "You can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "You can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "6d47b32022406f6cf6e7b3a0976638c1658f5299be968590bd2ce972e29f9a25",
+            "source_id": "cfpb-31",
+            "score": 5.428802490234375,
+            "start_char": 1089,
+            "end_char": 1534
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-011",
+      "question": "Can the identity-theft blocking method in the passage be used for a debt that is not the result of identity theft?",
+      "elapsed_ms": 1129.1034999999974,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "You can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "You can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "d83ac88aa44f2303c23365bdd796c70f01e4fde7226cd13c42faf39775cf4b11",
+            "source_id": "cfpb-31",
+            "score": 6.299319267272949,
+            "start_char": 83,
+            "end_char": 379
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-012",
+      "question": "After receiving the identity-theft blocking request described in the passage, what time period is stated for blocking the fraudulent information?",
+      "elapsed_ms": 1155.1780999999974,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "b87c5119cc9b2678f603f36cb0705855a18ea18114e8e0c72b381b16e529d65e",
+            "source_id": "cfpb-31",
+            "score": 5.116838455200195,
+            "start_char": 381,
+            "end_char": 717
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-013",
+      "question": "After a reporting company tells a creditor that someone stole my identity, what does the passage say about passing those identity-theft debts to debt collectors?",
+      "elapsed_ms": 1254.9386999999988,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "b87c5119cc9b2678f603f36cb0705855a18ea18114e8e0c72b381b16e529d65e",
+            "source_id": "cfpb-31",
+            "score": 5.286344528198242,
+            "start_char": 381,
+            "end_char": 717
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-014",
+      "question": "With an extended fraud alert, must the creditor check that it is me before approving new credit, and can the contact method be one I choose?",
+      "elapsed_ms": 1348.681500000006,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "An extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "An extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "775bdcbdc9a21812faa2aeae33a265c3ce3477e0be078b54dfacf34189d8813b",
+            "source_id": "cfpb-31",
+            "score": 7.088074207305908,
+            "start_char": 165,
+            "end_char": 381
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-015",
+      "question": "Apart from reporting identity theft to the FTC, what immediate action does the passage list for affected accounts and financial-institution departments?",
+      "elapsed_ms": 1187.5348000000013,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "If you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions. Report identity theft to the Federal Trade Commission (FTC) at IdentityTheft.gov. You will get an Identity Theft Report and recovery plan that walks you through the steps to take. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "If you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions. Report identity theft to the Federal Trade Commission (FTC) at IdentityTheft.gov. You will get an Identity Theft Report and recovery plan that walks you through the steps to take.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "71eca59bd50a60bb889ebbb996f9355378d8b628151b3dfa40396d398485f220",
+            "source_id": "cfpb-31",
+            "score": 3.396526336669922,
+            "start_char": 356,
+            "end_char": 706
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-016",
+      "question": "In the article's CFPB complaint description, what happens after I tell the CFPB about a company issue?",
+      "elapsed_ms": 1040.3767000000007,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "If you have a problem with your credit report, you can also submit a complaint with the CFPB. [cfpb-314]\n\nCompanies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint. [cfpb-313]\n\nCompanies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint. [cfpb-331]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "If you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-331",
+            "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+            "quote": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "a369e1a7cc67929f1206c209428b13125ccbf991ce4eea4e855cbf0f0460188d",
+            "source_id": "cfpb-314",
+            "score": -0.7495357394218445,
+            "start_char": 1449,
+            "end_char": 1542
+          },
+          {
+            "unit_id": "7bf5c7e6a1ac667a02b22be647d263b627478e7d0e5fcb111035ae5db23b3691",
+            "source_id": "cfpb-313",
+            "score": -0.9619796276092529,
+            "start_char": 55,
+            "end_char": 350
+          },
+          {
+            "unit_id": "7dfbcd3d26fade1f640e383bb2436fe134fd9a119fc357dd9a25c770207f3b38",
+            "source_id": "cfpb-331",
+            "score": -0.9619796276092529,
+            "start_char": 822,
+            "end_char": 1117
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314",
+          "cfpb-313",
+          "cfpb-331"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-017",
+      "question": "What dollar amount of deposit insurance covers a jointly owned checking account?",
+      "elapsed_ms": 1161.1628000000055,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question.",
+        "disposition": "evidence_limited",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [],
+        "warnings": [
+          "The relevance filter uses a development threshold. A search limit is not proof that no guidance exists."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": []
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-018",
+      "question": "Do the supplied articles establish that my credit-report dispute must go to binding arbitration?",
+      "elapsed_ms": 1135.9297000000006,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you. [cfpb-314]\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute. [cfpb-314]\n\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you.\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.\n\nA credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "a0063ec1ee406b29a8368841b7a08a62e49472f016522689127cb528b410f86b",
+            "source_id": "cfpb-314",
+            "score": -0.5886872410774231,
+            "start_char": 881,
+            "end_char": 1125
+          },
+          {
+            "unit_id": "5c9b8751d7228ab906f2886534a26ee5be9281b103e1c70d833415c801ce173e",
+            "source_id": "cfpb-314",
+            "score": -2.0636730194091797,
+            "start_char": 283,
+            "end_char": 748
+          },
+          {
+            "unit_id": "0d4135b0a9ffff8dafaea3a4c3276e0ec0584c372f970dec6e95bc4d07d1e471",
+            "source_id": "cfpb-314",
+            "score": -2.406456470489502,
+            "start_char": 1127,
+            "end_char": 1624
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-019",
+      "question": "How many years may an accurate late-payment entry remain on a credit report?",
+      "elapsed_ms": 1103.8012999999992,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "When you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years. [cfpb-31]\n\nWhen you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists. [cfpb-31]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "When you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years.\n\nWhen you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "ec163d777907d597154f328cab589a649ed9ac72ba3b0c4f35ff859d7649692f",
+            "source_id": "cfpb-31",
+            "score": -1.7759757041931152,
+            "start_char": 383,
+            "end_char": 659
+          },
+          {
+            "unit_id": "0d32573bd34cbfeb992dc53d404b0bde78e37825ce23528dfb4acae54e4d239e",
+            "source_id": "cfpb-31",
+            "score": -2.4958105087280273,
+            "start_char": 1298,
+            "end_char": 1463
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-31"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-020",
+      "question": "Do these articles establish that my bank must reimburse every dollar stolen from my existing account?",
+      "elapsed_ms": 1070.1729999999952,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question.",
+        "disposition": "evidence_limited",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [],
+        "warnings": [
+          "The relevance filter uses a development threshold. A search limit is not proof that no guidance exists."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": []
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-021",
+      "question": "Under French law, what deadline applies to a dispute about a French credit report?",
+      "elapsed_ms": 1158.2039000000004,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "A credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision. [cfpb-314]\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute. [cfpb-314]\n\nThe credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "A credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision.\n\nTo dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute.\n\nThe credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": [
+          {
+            "unit_id": "0d4135b0a9ffff8dafaea3a4c3276e0ec0584c372f970dec6e95bc4d07d1e471",
+            "source_id": "cfpb-314",
+            "score": -3.561544895172119,
+            "start_char": 1127,
+            "end_char": 1624
+          },
+          {
+            "unit_id": "5c9b8751d7228ab906f2886534a26ee5be9281b103e1c70d833415c801ce173e",
+            "source_id": "cfpb-314",
+            "score": -3.8598837852478027,
+            "start_char": 283,
+            "end_char": 748
+          },
+          {
+            "unit_id": "a0063ec1ee406b29a8368841b7a08a62e49472f016522689127cb528b410f86b",
+            "source_id": "cfpb-314",
+            "score": -4.061639785766602,
+            "start_char": 881,
+            "end_char": 1125
+          }
+        ]
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [
+          "cfpb-314"
+        ],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-022",
+      "question": "What documents must I submit to qualify for a federal student-loan deferment?",
+      "elapsed_ms": 1018.8238999999958,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question.",
+        "disposition": "evidence_limited",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [],
+        "warnings": [
+          "The relevance filter uses a development threshold. A search limit is not proof that no guidance exists."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": []
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-023",
+      "question": "What routing number should I use for a transfer from my bank account?",
+      "elapsed_ms": 1099.6621000000014,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question.",
+        "disposition": "evidence_limited",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [],
+        "warnings": [
+          "The relevance filter uses a development threshold. A search limit is not proof that no guidance exists."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": []
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    },
+    {
+      "question_id": "fresh-candidate-024",
+      "question": "Does a misspelled address on my report lower my credit score by exactly ten points?",
+      "elapsed_ms": 1353.6650999999983,
+      "ok": true,
+      "http_status": 200,
+      "response": {
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question.",
+        "disposition": "evidence_limited",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [],
+        "warnings": [
+          "The relevance filter uses a development threshold. A search limit is not proof that no guidance exists."
+        ],
+        "excerpt_policy_version": "source-excerpts-v1",
+        "selected_units": []
+      },
+      "citation_id_diagnostics": {
+        "cited_ids": [],
+        "cited_ids_not_in_response_sources": [],
+        "response_source_ids_not_in_local_corpus": []
+      }
+    }
+  ],
+  "failed_attempts": [],
+  "quality_scores": null,
+  "benchmark_ready": false,
+  "finished_at": "2026-10-21T22:09:45.830Z",
+  "summary": {
+    "approved_questions": 24,
+    "attempted": 24,
+    "successful": 24,
+    "failed": 0,
+    "response_output_modes": {
+      "source_excerpts": 24
+    },
+    "quality_scores": null
+  }
+}
