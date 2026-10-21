@@ -6,7 +6,8 @@ const fail = (status: number, code: string, message: string) => Response.json(
 );
 export async function POST(request: Request) {
   const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin && origin !== process.env.FINCITE_PUBLIC_ORIGIN) return fail(403, "ORIGIN_BLOCKED", "Use the FinCite frontend.");
+  const localOrigins = new Set(["http://localhost:3000", "http://127.0.0.1:3000"]);
+  if (origin && !localOrigins.has(origin) && origin !== new URL(request.url).origin && origin !== process.env.FINCITE_PUBLIC_ORIGIN) return fail(403, "ORIGIN_BLOCKED", "Use the FinCite frontend.");
   let body: unknown;
   try { body = await request.json(); } catch {
     return fail(400, "INVALID_REQUEST", "Send a valid JSON question.");
@@ -31,13 +32,12 @@ export async function POST(request: Request) {
       // Never forward arbitrary dependency errors or credentials.
       const message = upstream.status === 429 ? "FinCite is handling another question. Please try again shortly." :
         upstream.status === 400 ? "Please shorten your question." :
-        "Retrieval or model output could not be verified. Check the local RAG terminal.";
+        "Source retrieval could not be completed. Check the local RAG terminal.";
       return fail([400, 429, 503].includes(upstream.status) ? upstream.status : 503, "RAG_UNAVAILABLE", message);
     }
     if (!isChatAnswer(result)) return fail(502, "INVALID_RESPONSE", "The answer format could not be verified.");
     return Response.json(result, { headers: { "Cache-Control": "no-store" } });
   } catch {
-    return fail(503, "CONNECTION_FAILED", "The local RAG service is unavailable. Keep the model and RAG terminals running.");
+    return fail(503, "CONNECTION_FAILED", "The local RAG service is unavailable. Keep the FinCite launcher running.");
   }
 }
-

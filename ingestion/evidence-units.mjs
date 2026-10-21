@@ -4,8 +4,8 @@ const normalized = text => text.replace(/\s+/gu, " ").trim();
 const isList = text => /^(?:[-*•]|\d+[.)])\s/u.test(text);
 const isHeading = text => /[?:]$/u.test(text) || (!/[.!]$/u.test(text) && text.split(/\s+/u).length <= 18);
 
-// Experimental builder used only by offline evaluation. The live selector is
-// intentionally unchanged until relevance and abstention have been checked.
+// Keep whole paragraphs and list groups for source excerpts and offline review.
+// Offsets refer to the original supplied passage, not normalized display text.
 export function buildEvidenceUnits(passages) {
   const units = [], seen = new Set();
   for (const passage of passages) {

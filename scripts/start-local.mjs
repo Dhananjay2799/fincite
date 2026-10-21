@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const children = [];
 let stopping = false;
+let answerMode = "excerpts";
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 function shutdown(code = 0) {
@@ -48,6 +49,7 @@ function start(name, executable, args, cwd) {
   console.log(`\nStarting ${name}...`);
   const child = spawn(executable, args, {
     cwd, stdio: "inherit", shell: false, detached: process.platform !== "win32",
+    env: { ...process.env, FINCITE_ANSWER_MODE: answerMode },
   });
   children.push({ name, child });
   child.once("error", error => {
@@ -82,39 +84,46 @@ async function waitReady(name, url, verify, timeoutMs) {
 }
 async function main() {
   const args = process.argv.slice(2);
-  if (args.some(arg => arg !== "--production")) throw new Error("Usage: node scripts/start-local.mjs [--production]");
+  if (args.some(arg => !["--production", "--experimental-generated"].includes(arg))) throw new Error("Usage: node scripts/start-local.mjs [--production] [--experimental-generated]");
+  answerMode = args.includes("--experimental-generated") ? "generated" : "excerpts";
   const production = args.includes("--production");
   if (process.platform !== "win32") throw new Error("This launcher targets the existing Windows CPU setup.");
   const model = join(root, "inference/models/fincite-v01-q4_k_m.gguf");
   const env = join(root, "apps/web/.env.local");
   const bridge = join(root, "ingestion/serve-local-rag.mjs");
   const next = join(root, "apps/web/node_modules/next/dist/bin/next");
-  for (const path of [model, env, bridge, next, join(root, "ingestion/node_modules"),
+  for (const path of [env, bridge, next, join(root, "ingestion/node_modules"),
     join(root, "data/processed/chunks.jsonl")]) {
     if (!existsSync(path)) throw new Error(`Required local file or folder missing: ${path}`);
   }
   if (production && !existsSync(join(root, "apps/web/.next/BUILD_ID"))) {
     throw new Error("Build the frontend first: npm run build --prefix apps/web");
   }
-  const servers = findServers(join(root, "inference/runtime/b11476"));
-  if (servers.length !== 1) throw new Error(`Expected one llama-server.exe under inference/runtime/b11476; found ${servers.length}.`);
-  for (const port of [8080, 8081, 3000]) await checkPort(port);
+  for (const port of [8081, 3000]) await checkPort(port);
+  if (answerMode !== "excerpts") {
+    if (!existsSync(model)) throw new Error(`Model missing: ${model}`);
+    const servers = findServers(join(root, "inference/runtime/b11476"));
+    if (servers.length !== 1) throw new Error(`Expected one llama-server.exe under inference/runtime/b11476; found ${servers.length}.`);
+    await checkPort(8080);
 
-  start("local model", servers[0], [
-    "--model", model, "--alias", "fincite-v01", "--host", "127.0.0.1", "--port", "8080",
-    "--n-gpu-layers", "0", "--ctx-size", "2048", "--parallel", "1",
-    "--threads", "4", "--batch-size", "128", "--ubatch-size", "128", "--jinja",
-  ], root);
-  await waitReady("local model", "http://127.0.0.1:8080/health",
-    async response => (await response.json()).status === "ok", 180000);
+    start("local model", servers[0], [
+      "--model", model, "--alias", "fincite-v01", "--host", "127.0.0.1", "--port", "8080",
+      "--n-gpu-layers", "0", "--ctx-size", "2048", "--parallel", "1",
+      "--threads", "4", "--batch-size", "128", "--ubatch-size", "128", "--jinja",
+    ], root);
+    await waitReady("local model", "http://127.0.0.1:8080/health",
+      async response => (await response.json()).status === "ok", 180000);
 
+  } else {
+    console.log("Source excerpt mode: no language model is started. First use may download the pinned reranker.");
+  }
   start("RAG bridge", process.execPath, [`--env-file=${env}`, bridge], join(root, "ingestion"));
   await waitReady("RAG bridge", "http://127.0.0.1:8081/health",
     async response => (await response.json()).status === "ok", 300000);
 
   start("frontend", process.execPath, [next, production ? "start" : "dev", "--hostname", "127.0.0.1", "--port", "3000"], join(root, "apps/web"));
   await waitReady("frontend", "http://127.0.0.1:3000", async () => true, 180000);
-  console.log("\nFinCite is ready: http://localhost:3000\nKeep this terminal open. Press Ctrl+C to stop all three services.\nService readiness does not grade answer accuracy.");
+  console.log("\nFinCite is ready: http://localhost:3000\nKeep this terminal open. Press Ctrl+C to stop services started here.\nService readiness does not grade answer accuracy.");
 }
 main().catch(error => {
   if (!stopping) console.error(`Startup failed: ${error.message}`);

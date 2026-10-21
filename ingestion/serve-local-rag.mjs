@@ -1,19 +1,26 @@
 import { createServer } from "node:http";
 import { prepareRetriever } from "./live-retrieval.mjs";
 import { answerQuestion, PROMPT_VERSION, OUTPUT_POLICY_VERSION } from "./live-rag-core.mjs";
+import { answerWithExcerpts, EXCERPT_POLICY_VERSION } from "./source-excerpts.mjs";
+import { prepareExcerptReranker } from "./excerpt-reranker.mjs";
+import { buildEvidenceUnits } from "./evidence-units.mjs";
 
-const answerMode = process.env.FINCITE_ANSWER_MODE || "quoted";
-if (!["quoted", "generated"].includes(answerMode)) throw new Error("FINCITE_ANSWER_MODE must be quoted or generated.");
+const answerMode = process.env.FINCITE_ANSWER_MODE || "excerpts";
+if (!["excerpts", "quoted", "generated"].includes(answerMode)) throw new Error("FINCITE_ANSWER_MODE must be excerpts, quoted or generated.");
 
 const modelURL = new URL(process.env.FINCITE_MODEL_URL || "http://127.0.0.1:8080");
 if (modelURL.protocol !== "http:" || modelURL.hostname !== "127.0.0.1") {
   throw new Error("This development bridge requires a loopback HTTP model URL.");
 }
-console.log("Checking local model...");
-const health = await fetch(new URL("/health", modelURL), { signal: AbortSignal.timeout(10000) });
-if (!health.ok || (await health.json()).status !== "ok") throw new Error("Start llama-server first.");
+if (answerMode !== "excerpts") {
+  console.log("Checking experimental local model...");
+  const health = await fetch(new URL("/health", modelURL), { signal: AbortSignal.timeout(10000) });
+  if (!health.ok || (await health.json()).status !== "ok") throw new Error("Start llama-server first.");
+}
 console.log("Connecting to Neon and loading the pinned embedding model...");
 const retriever = await prepareRetriever();
+console.log(answerMode === "excerpts" ? "Loading pinned excerpt reranker (first run downloads weights)..." : "Experimental generation enabled.");
+const reranker = answerMode === "excerpts" ? await prepareExcerptReranker() : null;
 let busy = false;
 const send = (response, status, body) => {
   response.writeHead(status, { "Content-Type": "application/json; charset=utf-8", "Cache-Control": "no-store" });
@@ -23,8 +30,8 @@ const failure = (response, status, code, message) => send(response, status, { er
 const server = createServer(async (request, response) => {
   if (request.headers.origin) return failure(response, 403, "ORIGIN_BLOCKED", "Use the FinCite frontend.");
   if (request.method === "GET" && request.url === "/health") return send(response, 200, {
-    status: "ok", retrieval: "hybrid", reranker: false, prompt_version: PROMPT_VERSION,
-    answer_mode: answerMode, output_policy_version: OUTPUT_POLICY_VERSION
+    status: "ok", retrieval: "hybrid", reranker: Boolean(reranker), prompt_version: answerMode === "excerpts" ? null : PROMPT_VERSION,
+    answer_mode: answerMode, output_policy_version: answerMode === "excerpts" ? EXCERPT_POLICY_VERSION : OUTPUT_POLICY_VERSION
   });
   if (request.method !== "POST" || request.url !== "/chat") return failure(response, 404, "NOT_FOUND", "Endpoint not found.");
   if (busy) return failure(response, 429, "BUSY", "FinCite is handling another question. Please try again shortly.");
@@ -59,10 +66,12 @@ const server = createServer(async (request, response) => {
       if (!result.ok) throw new Error("The local model request failed.");
       return result.json();
     };
-    const answer = await answerQuestion(question.trim(), { retrieve: retriever.retrieve, modelPost, answerMode });
+    const answer = answerMode === "excerpts" ? await answerWithExcerpts(question.trim(), {
+      retrieve: retriever.retrieve, buildUnits: buildEvidenceUnits, rank: reranker.rank, signal: controller.signal
+    }) : await answerQuestion(question.trim(), { retrieve: retriever.retrieve, modelPost, answerMode });
     controller.signal.throwIfAborted();
     send(response, 200, answer);
-    console.log(`Completed live question; output policy: ${OUTPUT_POLICY_VERSION}; mode: ${answerMode}.`);
+    console.log(`Completed live question; mode: ${answerMode}; generation attempts: ${answer.generation_attempts ?? 0}.`);
   } catch (error) {
     // Keep database credentials and dependency internals out of browser errors.
     failure(response, error.status === 400 ? 400 : 503, "RAG_UNAVAILABLE",
@@ -77,4 +86,4 @@ const server = createServer(async (request, response) => {
 });
 server.requestTimeout = 15000;
 server.listen(8081, "127.0.0.1", () => console.log("READY: FinCite RAG bridge http://127.0.0.1:8081"));
-process.on("SIGINT", () => { server.close(); retriever.dispose().finally(() => process.exit(0)); });
+process.on("SIGINT", () => { server.close(); Promise.allSettled([retriever.dispose(), reranker?.dispose()]).finally(() => process.exit(0)); });
