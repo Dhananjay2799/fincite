@@ -79,3 +79,22 @@ test("a cancelled cold-start request does not proceed to retrieval and leaves re
   await answer("q");
   assert.equal(retrieved, 1);
 });
+
+test("hosted reranking receives a supporting passage beyond the old five-row cutoff", async () => {
+ const invitation="If you have a problem with credit reporting, you can submit a complaint to the CFPB.";
+ const workflow="If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.";
+ const fixtures=Array.from({length:6},(_,i)=>{
+  const chunk_text=i===5?workflow:invitation;
+  return {...row,chunk_id:"recall-"+i,source_id:"cfpb-313",chunk_text,
+   chunk_sha256:createHash("sha256").update(chunk_text).digest("hex")};
+ });
+ const pinned={chunks:fixtures.map(r=>({chunk_id:r.chunk_id,source_id:r.source_id,document_sha256:r.document_sha256,chunk_sha256:r.chunk_sha256})),
+  documents:[{source_id:"cfpb-313",document_sha256:row.document_sha256,url:row.url}]};
+ const responder=createHostedResponder(async()=>({
+  retrieve:q=>retrieveHostedRows(async()=>fixtures,q,[1,0],{dimensions:2,document_prefix:"",model_id:"model",model_revision:"pinned"},pinned),
+  rank:async(_,units)=>units.map(u=>({unit_id:u.unit_id,score:u.text===workflow?8:0}))
+ }));
+ const response=await responder("What does the CFPB do after I submit a complaint?");
+ assert.equal(response.answer,workflow+" [cfpb-313]");
+ assert.equal(response.generation_attempts,0);
+});
