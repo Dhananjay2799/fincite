@@ -75,6 +75,12 @@ Both versions received identical reconstructed evidence and prompts for the 13 d
 
 The Colab comparison uses grouped source quotes reconstructed from the saved local response. Its message formatting and precision differ from the local quantized deployment. It isolates adapter behavior within that comparison, not the effect of quantization.
 
+## Hosted source-excerpt candidate
+
+A Vercel deployment path is prepared in `apps/web`: its Node.js chat API runs Neon retrieval, pinned CPU models and verified source excerpts directly, without a local bridge or GGUF. It validates returned text against the committed corpus hashes. Local mode remains available.
+
+**Deployment has not been completed.** Workspace access and a privately configured database secret are still required. See [hosted setup and executed checks](docs/vercel-source-excerpts.md) for the `apps/web` project root, Hobby-only setup, measured bundle size and explicit verification limits.
+
 ## Run the existing local demo
 
 Requires Node.js, npm, a configured Neon database and local validated chunks. The experimental generated mode additionally requires the exported GGUF and Windows CPU runtime. Model weights, runtime binaries, raw/processed data and credentials are excluded from Git; cloning alone does not restore those artifacts.

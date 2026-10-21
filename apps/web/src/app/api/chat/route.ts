@@ -1,5 +1,6 @@
 ﻿import { isChatAnswer, type ChatFailure } from "@/lib/chat-types";
 export const runtime = "nodejs";
+export const maxDuration = 180;
 const fail = (status: number, code: string, message: string) => Response.json(
   { error: { code, message } } satisfies ChatFailure,
   { status, headers: { "Cache-Control": "no-store" } }
@@ -15,6 +16,25 @@ export async function POST(request: Request) {
   const question = body && typeof body === "object" && "question" in body ? body.question : undefined;
   if (typeof question !== "string" || !question.trim() || question.length > 1000) {
     return fail(400, "INVALID_QUESTION", "Enter a question between 1 and 1,000 characters.");
+  }
+  // Hosted deployments never contact a loopback service. Local development
+  // retains its existing bridge unless explicitly opted in.
+  if (process.env.VERCEL === "1" || process.env.FINCITE_BACKEND === "hosted") {
+    if (!process.env.DATABASE_URL?.trim()) return fail(503, "DATABASE_NOT_CONFIGURED", "The hosted source search has not been configured.");
+    try {
+      const { answerHostedQuestion } = await import("@/lib/server/hosted-rag.mjs");
+      const result: unknown = await answerHostedQuestion(question.trim(), {
+        signal: AbortSignal.any([request.signal, AbortSignal.timeout(170000)])
+      });
+      if (!isChatAnswer(result)) return fail(502, "INVALID_RESPONSE", "The source excerpt format could not be verified.");
+      return Response.json(result, { headers: { "Cache-Control": "no-store" } });
+    } catch (cause) {
+      const status = cause && typeof cause === "object" && "status" in cause ? cause.status : undefined;
+      console.error("Hosted excerpt request failed", { status: typeof status === "number" ? status : 503 });
+      return status === 429 ? fail(429, "BUSY", "FinCite is handling another question. Please try again shortly.") :
+        status === 400 ? fail(400, "INVALID_QUESTION", "Please shorten your question.") :
+        fail(503, "SOURCE_SEARCH_UNAVAILABLE", "Source search is temporarily unavailable. Please try again shortly.");
+    }
   }
   if (!process.env.FINCITE_API_URL) return fail(503, "INFERENCE_NOT_CONNECTED", "The local RAG connection has not been configured.");
   try {

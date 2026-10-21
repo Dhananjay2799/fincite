@@ -120,7 +120,7 @@ export default function FinCiteWorkspace() {
           <p className={styles.eyebrow}>THE FINCITE APPROACH</p><h2>A source behind<br />the explanation.</h2><p className={styles.panelDescription}>Financial guidance is easier to understand when you can see where it comes from.</p>
           <ol className={styles.steps}><li><span>01</span><div><strong>Find relevant guidance</strong><p>Search official CFPB articles.</p></div></li><li><span>02</span><div><strong>Read the source</strong><p>See complete excerpts with source links.</p></div></li><li><span>03</span><div><strong>Make limits visible</strong><p>Show when the search cannot select an excerpt.</p></div></li></ol>
           <div className={styles.corpusNote}><Icon name="book" size={18} /><div><strong>Project corpus</strong><p>8 CFPB articles · 17 passages</p><small>Current development snapshot</small></div></div>
-          <div className={styles.connectionNote}><span className={styles.connectionDot} /><div><strong>Local RAG development</strong><p>Custom questions search CFPB passages and show ranked source excerpts. Generated explanations remain experimental.</p></div></div>
+          <div className={styles.connectionNote}><span className={styles.connectionDot} /><div><strong>Source search demo</strong><p>Custom questions search CFPB passages and show ranked source excerpts. Generated explanations remain experimental.</p></div></div>
         </aside>
       </main>
       <footer className={styles.composerArea}>
