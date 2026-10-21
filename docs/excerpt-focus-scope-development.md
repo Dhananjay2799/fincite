@@ -1,6 +1,6 @@
 # Excerpt topic/scope guard: development patch
 
-Status: draft implementation; automated checks passed; three owner-reported preview checks recorded; broader live retrieval checks pending.
+Status: draft; updated implementation passes automated checks; fresh live verification is pending.
 Public production behavior is not changed while this branch remains unmerged.
 
 ## Why the patch exists
@@ -19,11 +19,14 @@ checks. When called with a question through answerWithExcerpts, it additionally:
    CFPB/known-law-topic scope, rather than treating a place in an address as
    evidence of legal applicability;
 2. measures IDF-weighted question-term coverage in the selected article's
-   frozen vocabulary, with a 0.4 minimum and at least two matching terms in
-   the actual excerpt (or the whole query when it has only one term);
+   frozen vocabulary, with a 0.4 minimum and two matching anchors from the body
+   plus verified publisher context (or the whole query when it has one term),
+   always requiring at least one match in the actual excerpt;
 3. withholds formal process/document terms ending in -tion/-ment that are absent
    from the frozen corpus, after excluding generic question-framing words;
-4. removes duplicate excerpt text across sources before applying the result cap.
+4. removes duplicate excerpt text across sources before applying the result cap;
+5. withholds explicit personal decision guarantees, following the wider-pool
+   regression documented in [the publisher-context correction](complaint-excerpt-recall-development.md).
 
 The source vocabulary is derived from the eight saved articles, not question
 answers, review labels or a list of blocked financial questions. The normalizer
@@ -32,14 +35,17 @@ reported below. No question IDs or fixed answer lookup are used in the live guar
 No new model, dependency or provider API is introduced.
 
 Article-level context preserves terms that are implied by an article heading or
-elsewhere in the article. Body-term matching prevents a title-only match from
+elsewhere in the article. The requirement for an actual body match prevents publisher/title context alone from
 being enough. This is a topic heuristic, not proof that the body answers every
 part of a question. Related conditional paragraphs can still be distracting.
 
 Direct renderExcerpts calls without a question remain copying-only utilities for
 compatibility; the live shared answerWithExcerpts path always passes the question.
 focus_check_applied records that distinction. Policy version becomes
-source-excerpts-v2-focus, and guard version is excerpt-focus-v1.
+source-excerpts-v3-publisher, and guard version is excerpt-focus-v3-publisher-scope.
+The current ranking input includes verified CFPB publisher context; the bounded
+retrieval pool of up to 20 chunks is retained until excerpt ranking. The initial
+replays below predate those refinements; see the publisher-context correction.
 
 ## Authoring results and limitations
 
@@ -135,3 +141,20 @@ measurement or independent benchmark. Live late-payment-retention, supported
 balance/limit and complaint-workflow cases remain to be checked. The latter two
 are useful safeguards against false abstention because a stricter global ranker
 cutoff would have lost them in the prior pilot. The PR remains draft.
+
+## Additional owner-reported preview checks and correction
+
+The owner then pasted three more preview responses:
+late-payment retention returned a search limit; the balance/limit question
+returned the relevant cfpb-313 list; the complaint-workflow question returned
+only invitations to submit a complaint. That last response did not explain the
+requested next steps. These observations do not authenticate deployment SHAs or
+provide independent answer grades.
+
+The updated publisher-aware ranker/focus path and larger bounded candidate pool
+are documented in [complaint-excerpt-recall-development.md](complaint-excerpt-recall-development.md).
+A real-model 40-question full-corpus development run now passes all selection
+expectations and includes the complaint workflow. The preceding failed run is
+preserved, including the approval-guarantee regression that motivated the new
+scope check. These runs do not replace fresh live verification of the changed
+retrieval path. The PR remains draft.
