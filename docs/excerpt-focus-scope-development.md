@@ -66,11 +66,25 @@ Nothing here guarantees factual completeness, personal applicability or current 
 The arbitration cutoff was close in an earlier prototype, illustrating why the
 additional process-name check and fresh live cases are needed.
 
-Authoring execution used pure functions in the tool JavaScript runtime.
-The renderer replay injected a strict canonical-URL stub because that runtime
-has no standard URL class. Node imports, the real URL implementation, hashing,
-filesystem checks and the actual web build remain to be exercised by GitHub checks.
-See the [authoring record](../evaluation/results/excerpt-focus-authoring-replay-20261021.json).
+Authoring execution used pure functions in the tool JavaScript runtime with a
+strict canonical-URL stub. The subsequent real Node 24.21.0 CI run passed the
+vocabulary check, all 22 focused tests, all 34 saved-case expectations, web lint
+and production build. This exercised Node imports, real URL parsing, filesystem
+and hashing checks, and the production bundler.
+See the [authoring record](../evaluation/results/excerpt-focus-authoring-replay-20261021.json)
+and [successful CI run](https://github.com/Dhananjay2799/fincite/actions/runs/39688578705).
+
+The initial CI run failed because the generated in-memory source-term map used
+a null prototype while the saved JSON map had an ordinary object prototype.
+The builder now returns JSON-compatible maps; the full deep comparison remains
+enabled. The vocabulary terms and filter policy did not change in that correction.
+
+Vercel reported preview deployment dpl_FHBQcYyZFJcSBfzaaHnarji7GV5h ready for
+implementation commit 66973ad149445a452f46d5337948dca5cc7c18d5.
+Live full-retrieval verification is still pending: the connected Vercel account
+returned 403 for the atom2799 team and protected preview access. Build success
+does not establish runtime configuration or relevance. The PR remains draft;
+production is unchanged.
 
 ## Verification
 
