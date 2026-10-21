@@ -1,6 +1,6 @@
 # Excerpt topic/scope guard: development patch
 
-Status: draft implementation, pending Node checks, build and live retrieval verification.
+Status: draft implementation; automated checks passed; three owner-reported preview checks recorded; broader live retrieval checks pending.
 Public production behavior is not changed while this branch remains unmerged.
 
 ## Why the patch exists
@@ -112,3 +112,26 @@ process/jurisdiction/duration questions and supported low-score/paraphrase cases
 Record false abstentions as well as rejected non-answers. If checks fail, keep the
 branch in draft and revise it; do not lower evidence-integrity requirements.
 Any deployment after this work needs its own recorded version and live checks.
+
+## Owner-reported preview checks
+
+On October 21, 2026, the owner pasted three responses from
+https://fincite-git-fix-excerpt-focus-scope-atom2799.vercel.app/ into the project
+conversation. The assistant assessed the pasted text; it could not independently
+access the protected preview or bind these requests to a deployment SHA.
+
+| Question | Observed pasted response | Assessment |
+| --- | --- | --- |
+| Does my credit card’s purchase grace period apply to cash advances? | The two complete cash-advance sentences, ending in [cfpb-47]. | Supported excerpt retained for this question. |
+| Must I use arbitration to dispute a credit-report error? | Search limit; no excerpt selected and no supporting source cited. | Previously non-answering dispute instructions withheld for this wording. |
+| Under French law, how long does a credit bureau have to investigate my dispute? | Search limit; no excerpt selected and no supporting source cited. | US deadlines withheld for this explicit jurisdiction modifier. |
+
+The cash-advance source-card quotation was blank in the pasted copy. The primary
+answer quotation was present, but source-card rendering/expansion has not been
+independently verified from that copy.
+
+These are owner-reported spot checks, not an authenticated run, broad quality
+measurement or independent benchmark. Live late-payment-retention, supported
+balance/limit and complaint-workflow cases remain to be checked. The latter two
+are useful safeguards against false abstention because a stricter global ranker
+cutoff would have lost them in the prior pilot. The PR remains draft.
