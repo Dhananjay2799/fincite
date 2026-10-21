@@ -1,6 +1,6 @@
 # Excerpt topic/scope guard: development patch
 
-Status: draft; updated implementation passes automated checks; fresh live verification is pending.
+Status: automated checks passed; updated complaint preview result supplied by the owner; ready for review.
 Public production behavior is not changed while this branch remains unmerged.
 
 ## Why the patch exists
@@ -158,3 +158,14 @@ expectations and includes the complaint workflow. The preceding failed run is
 preserved, including the approval-guarantee regression that motivated the new
 scope check. These runs do not replace fresh live verification of the changed
 retrieval path. The PR remains draft.
+
+## Review readiness
+
+The updated complaint result was supplied by the owner and includes the expected
+forwarding, tracking-number and status-update workflow as the first excerpt.
+See [the complaint correction record](complaint-excerpt-recall-development.md)
+for its provenance and limits. The latest complete CI run
+[39691942812](https://github.com/Dhananjay2799/fincite/actions/runs/39691942812)
+passed for branch commit 358e226. This closes the specific preview smoke-check
+item above. It does not establish independently authenticated deployment
+identity, comprehensive answer quality or a production release.

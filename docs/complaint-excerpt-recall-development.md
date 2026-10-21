@@ -63,8 +63,7 @@ The broader candidate pool can admit different related non-answers. The guards
 remain lexical heuristics and may falsely abstain or accept incomplete material.
 
 The workflow paragraph is expected to explain forwarding the issue to the
-company, a tracking number, and status updates. A fresh live preview check is
-still required after the implementation changes, before merging.
+company, a tracking number, and status updates. The owner-reported updated complaint preview check is recorded below.
 
 ## Automated verification
 
@@ -84,3 +83,25 @@ quality or refusal score is claimed.
 The tests also cover a supporting passage arriving after five retrieved rows,
 publisher context without rewriting source text, hostile source domains,
 publisher-only false matches, and personal-decision guarantees.
+
+## Updated owner-reported preview check
+
+On October 21, 2026, the owner pasted the updated response from
+https://fincite-git-fix-excerpt-focus-scope-atom2799.vercel.app/ .
+For "What does the CFPB do after I submit a complaint?", the first excerpt now
+describes forwarding the issue to the company, providing a tracking number and
+keeping the user updated, attributed to cfpb-313. Two related submission
+invitations follow. This addresses the observed missing-workflow issue, while
+the extra invitations remain less useful than the first excerpt.
+
+This is an owner-pasted UI observation, not an independently authenticated HTTP
+capture or a binding to a deployment SHA. The protected preview remained
+inaccessible to this assistant. No new quality score is inferred from the check.
+
+The latest complete CI run for branch commit
+358e226a0889d0f0ce84e9ebb3dc51749ae3df05 passed:
+https://github.com/Dhananjay2799/fincite/actions/runs/39691942812 .
+The earlier failed notification for 5a04e42 refers to the preserved
+approval-guarantee regression, which the later scope correction addresses.
+The implementation is ready for review; this record does not assert a
+production deployment or independent benchmark result.
