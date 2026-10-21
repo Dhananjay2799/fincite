@@ -1,0 +1,268 @@
+{
+  "status": "assistant_pilot_review_only",
+  "reviewed_file": "evaluation/results/reviewed-pilot-2026-10-21T22-08-42-062Z.json",
+  "reviewed_file_git_blob": "3fc94d71530b844e4bf47eb36c36faa37da1a544",
+  "client_git_head": "204e8f03d78066e357d1e1f6a968d2c56c8c0025",
+  "independent_answer_review": "not_performed",
+  "quality_scores": null,
+  "deterministic_checks": {
+    "matching_question_records": 24,
+    "request_successes": 24,
+    "request_failures": 0,
+    "source_excerpt_responses": 24,
+    "recorded_generation_attempts": 0,
+    "checked_selected_spans": 29,
+    "source_span_reconstruction_failures": []
+  },
+  "observed_dispositions": {
+    "approved_answerable_questions": 16,
+    "answerable_with_excerpts": 16,
+    "approved_unanswerable_questions": 8,
+    "unanswerable_with_limit_ids": [
+      "fresh-candidate-017",
+      "fresh-candidate-020",
+      "fresh-candidate-022",
+      "fresh-candidate-023",
+      "fresh-candidate-024"
+    ],
+    "unanswerable_with_excerpts_ids": [
+      "fresh-candidate-018",
+      "fresh-candidate-019",
+      "fresh-candidate-021"
+    ]
+  },
+  "latency_diagnostics": {
+    "sample_size": 24,
+    "median_ms": 1116.4523999999983,
+    "p95_nearest_rank_ms": 7335.6302,
+    "maximum_ms": 7674.996899999998,
+    "cold_warm_classification": "not_available"
+  },
+  "per_question": [
+    {
+      "question_id": "fresh-candidate-001",
+      "question": "The name is mine, but my credit report has a wrong phone number and address. Are those details included in the errors to look for?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-002",
+      "question": "My listed account balance and credit limit look wrong. Does the guidance treat both as things to check?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-003",
+      "question": "Can an incorrect last-payment date be a reporting error even if the account number is right?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-004",
+      "question": "For a credit-report dispute that the bureau investigates, does the guidance say to pass my relevant information to the company that supplied it and report the results to me?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-005",
+      "question": "What mailing option does the passage suggest if I want a record that the bureau received my dispute letter?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-006",
+      "question": "Where does the passage say a written dispute to a furnisher can be addressed?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-007",
+      "question": "The furnisher investigated and says the reported information is accurate. What can I ask the credit reporting companies to add if I still disagree?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The first excerpt directly addresses a disagreement after an accuracy finding. Additional general dispute and wrong/unverifiable-information excerpts introduce another branch that the question did not need."
+    },
+    {
+      "question_id": "fresh-candidate-008",
+      "question": "Does the free report copy available with an initial fraud alert use up the free annual report described in the passage?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-009",
+      "question": "For how long does the passage say an active-duty alert removes a name from prescreened credit and insurance marketing lists?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-010",
+      "question": "What documents does the passage list for asking reporting companies to block identity-theft information?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-011",
+      "question": "Can the identity-theft blocking method in the passage be used for a debt that is not the result of identity theft?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-012",
+      "question": "After receiving the identity-theft blocking request described in the passage, what time period is stated for blocking the fraudulent information?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-013",
+      "question": "After a reporting company tells a creditor that someone stole my identity, what does the passage say about passing those identity-theft debts to debt collectors?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-014",
+      "question": "With an extended fraud alert, must the creditor check that it is me before approving new credit, and can the contact method be one I choose?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-015",
+      "question": "Apart from reporting identity theft to the FTC, what immediate action does the passage list for affected accounts and financial-institution departments?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The returned saved excerpt includes information relevant to the approved reference criteria. This is not a formal completeness or applicability grade."
+    },
+    {
+      "question_id": "fresh-candidate-016",
+      "question": "In the article's CFPB complaint description, what happens after I tell the CFPB about a company issue?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "answerable",
+      "api_disposition": "answer",
+      "observation": "relevant_support_observed",
+      "note": "The forwarding/tracking/update paragraph supplies the requested information, but identical complaint boilerplate appears twice under two article IDs."
+    },
+    {
+      "question_id": "fresh-candidate-017",
+      "question": "What dollar amount of deposit insurance covers a jointly owned checking account?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "evidence_limited",
+      "observation": "evidence_limit_observed",
+      "note": "The app reports that its search cannot determine the answer and shows no selected source excerpt. This is consistent with the proposed corpus limitation, without proving corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-018",
+      "question": "Do the supplied articles establish that my credit-report dispute must go to binding arbitration?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "answer",
+      "observation": "non_answering_excerpts",
+      "note": "The excerpts discuss bureau investigation, furnisher disputes and frivolous-dispute notices. They do not establish whether this account is subject to binding arbitration."
+    },
+    {
+      "question_id": "fresh-candidate-019",
+      "question": "How many years may an accurate late-payment entry remain on a credit report?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "answer",
+      "observation": "non_answering_excerpts",
+      "note": "The excerpts give extended/active-duty marketing-list exclusion periods. These are not retention periods for accurate late-payment entries and can mislead when shown for this question."
+    },
+    {
+      "question_id": "fresh-candidate-020",
+      "question": "Do these articles establish that my bank must reimburse every dollar stolen from my existing account?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "evidence_limited",
+      "observation": "evidence_limit_observed",
+      "note": "The app reports that its search cannot determine the answer and shows no selected source excerpt. This is consistent with the proposed corpus limitation, without proving corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-021",
+      "question": "Under French law, what deadline applies to a dispute about a French credit report?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "answer",
+      "observation": "non_answering_excerpts",
+      "note": "The excerpts discuss US CFPB dispute guidance. They do not establish a French legal deadline; showing five-business-day and 30-day periods here is a scope failure."
+    },
+    {
+      "question_id": "fresh-candidate-022",
+      "question": "What documents must I submit to qualify for a federal student-loan deferment?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "evidence_limited",
+      "observation": "evidence_limit_observed",
+      "note": "The app reports that its search cannot determine the answer and shows no selected source excerpt. This is consistent with the proposed corpus limitation, without proving corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-023",
+      "question": "What routing number should I use for a transfer from my bank account?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "evidence_limited",
+      "observation": "evidence_limit_observed",
+      "note": "The app reports that its search cannot determine the answer and shows no selected source excerpt. This is consistent with the proposed corpus limitation, without proving corpus-wide absence."
+    },
+    {
+      "question_id": "fresh-candidate-024",
+      "question": "Does a misspelled address on my report lower my credit score by exactly ten points?",
+      "review_type": "assistant_observation_not_independent_human_grade",
+      "approved_question_answerability": "unanswerable",
+      "api_disposition": "evidence_limited",
+      "observation": "evidence_limit_observed",
+      "note": "The app reports that its search cannot determine the answer and shows no selected source excerpt. This is consistent with the proposed corpus limitation, without proving corpus-wide absence."
+    }
+  ],
+  "next_target": "Develop and test a relevance/scope guard on separate development cases; do not claim that exact copying alone answers the question.",
+  "limitations": [
+    "Small same-corpus pilot using owner-reviewed candidate labels; not the formal 120-question test.",
+    "Assistant observations are not independent human answer grades.",
+    "No overall correctness, unsupported-answer or refusal rate is claimed.",
+    "Model generation was not invoked by the public source-excerpt path.",
+    "Remote deployment/database/model identity is not attested; SHA-256 input verification was not rerun by this assistant because the execution environment is offline.",
+    "A single global relevance cutoff cannot cleanly separate the observed arbitration failure from every supported case."
+  ]
+}
