@@ -57,7 +57,8 @@ export function renderExcerpts(passages, candidates, rankings, policy = EXCERPT_
     focus_check_applied: focusApplied,
     focus_diagnostics: focusApplied ? { checked_units: eligible.length,
       rejected_units: [...assessments.values()].filter(value => !value.accepted).length,
-      scope_unconfirmed: [...assessments.values()].some(value => !value.scope.confirmed) } : null,
+      scope_unconfirmed: [...assessments.values()].some(value => !value.scope.confirmed),
+      personal_decision_guarantee: [...assessments.values()].some(value => value.personal_decision_guarantee) } : null,
     selected_units: selected.map(unit => ({ unit_id: unit.unit_id, source_id: unit.source_id, score: unit.score,
       start_char: unit.start_char, end_char: unit.end_char })),
   };

@@ -1,4 +1,4 @@
-export const EXCERPT_FOCUS_VERSION = "excerpt-focus-v2-publisher";
+export const EXCERPT_FOCUS_VERSION = "excerpt-focus-v3-publisher-scope";
 export const EXCERPT_FOCUS_POLICY = Object.freeze({ minimum_coverage: 0.4, minimum_body_terms: 2 });
 const STOP_WORDS = ["option","section","function","a","an","the","and","or","but","if","then","than","of","to","for","from","with","without","as","at","by","in","on","into","about","after","before","between","during","through","within","out","up","down","over","under","against","among","all","any","both","each","every","some","more","most","other","same","such","no","nor","not","only","own","so","too","very","just","also","again","still","even","already","now","here","there","this","that","these","those","it","its","is","are","was","were","be","been","being","have","has","had","having","do","does","did","doing","can","could","would","should","may","might","must","will","shall","i","me","my","mine","we","us","our","ours","you","your","yours","he","him","his","she","her","hers","they","them","their","theirs","who","whom","whose","what","which","when","where","why","how","much","many","far","long","please","tell","say","said","says","state","states","describe","describes","described","explain","explanation","explains","include","includes","included","including","look","looking","get","give","take","use","used","using","let","want","need","like","possible","possibility","know","knows","knowing","information","thing","things","detail","details","question","questions","answer","answers","ask","asks","asked","asking","passage","passages","supplied","supply","article","articles","source","sources","evidence","guidance","according","based","provide","provided","establish","establishes","mean","means","mention","mentions","suggested","suggest","suggests","happen","happens","happening","listed","list","description","go","definition","condition","exception","requirement","obligation","action","duration","permission"];
 function stemTerm(value) {
@@ -44,6 +44,13 @@ export function assessLegalScope(question, vocabulary) {
   const unsupported = scopes.filter(scope => !vocabulary.supported_scope_aliases.includes(scope));
   return { confirmed: unsupported.length === 0, extracted_scopes: scopes, unconfirmed_scopes: unsupported };
 }
+export function requestsPersonalDecisionGuarantee(question) {
+  // General guidance cannot establish a guaranteed decision for this person.
+  // This narrow guard does not grade model refusal or resolve other future outcomes.
+  return /\b(?:guarantee(?:d|s)?|ensure[sd]?|promise[sd]?)\b/iu.test(question) &&
+    /\b(?:my|me|mine|our|us)\b/iu.test(question) &&
+    /\b(?:approv(?:e[ds]?|al|ing)|accept(?:ed|ance)?|waiv(?:e[ds]?|er)|award(?:ed)?|den(?:y|ied|ial))\b/iu.test(question);
+}
 export function assessExcerptFocus(question, unit, vocabulary, policy = EXCERPT_FOCUS_POLICY) {
   if (typeof question !== "string" || !question.trim() || typeof unit.text !== "string" || !Number.isFinite(policy.minimum_coverage) ||
     policy.minimum_coverage < 0 || policy.minimum_coverage > 1 || !Number.isInteger(policy.minimum_body_terms) || policy.minimum_body_terms < 1) {
@@ -61,11 +68,12 @@ export function assessExcerptFocus(question, unit, vocabulary, policy = EXCERPT_
   const bodyMatches = query.filter(term => body.has(term));
   const coverage = total ? matched.reduce((sum, term) => sum + weight(term), 0) / total : 0;
   const scope = assessLegalScope(question, vocabulary);
+  const personalDecisionGuarantee = requestsPersonalDecisionGuarantee(question);
   // Unseen formal process/document terms require evidence in the frozen corpus, not just a related topic.
   // This is a conservative lexical heuristic, not a semantic entailment or POS model.
   const unconfirmedTopics = query.filter(term => /(?:tion|ment)$/u.test(term) && !Object.hasOwn(vocabulary.document_frequency, term));
   const minimumBody = Math.min(policy.minimum_body_terms, query.length);
-  return { accepted: query.length > 0 && scope.confirmed && unconfirmedTopics.length === 0 && coverage >= policy.minimum_coverage && bodyMatches.length >= minimumBody && query.some(term => rawBody.has(term)),
+  return { accepted: query.length > 0 && !personalDecisionGuarantee && scope.confirmed && unconfirmedTopics.length === 0 && coverage >= policy.minimum_coverage && bodyMatches.length >= minimumBody && query.some(term => rawBody.has(term)),
     coverage, query_terms: query, matched_terms: matched, body_matched_terms: bodyMatches,
-    missing_terms: query.filter(term => !contextual.has(term)), unconfirmed_topic_terms: unconfirmedTopics, scope };
+    missing_terms: query.filter(term => !contextual.has(term)), unconfirmed_topic_terms: unconfirmedTopics, personal_decision_guarantee: personalDecisionGuarantee, scope };
 }
