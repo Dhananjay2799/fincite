@@ -1,0 +1,1474 @@
+{
+  "status": "development_generation_complete_ungraded",
+  "created_at": "2026-10-21T15:06:22.881Z",
+  "policy": {
+    "version": "ranked-generation-development-v1",
+    "threshold_logit": -5,
+    "score_margin": 2,
+    "max_evidence_units": 3,
+    "calibration_status": "development_only_unvalidated"
+  },
+  "model_file_sha256": "a58fb6679a4af4eaa0625d7049ecc55478382590d5fe1639d5365d2243a59e5b",
+  "input_sha256": {
+    "evaluation/results/local-development-2026-10-21T02-22-24-402Z.json": "2c82b339c5b9faf420bc414d8fd7ef3e8d830f43ed42e94c3dcadddbd7ad1da7",
+    "evaluation/results/evidence-reranker-development-v03.json": "204940f8b74bc6e1f50673d90b6efa8a741d25cd0c191b8d4e02801e9531367d",
+    "evaluation/run-ranked-generation.mjs": "6dddfb5ee1e845341c5e4d358e9cd2e77cd4ef263e4f44ea26cde7f5de6c13a9",
+    "evaluation/ranked-generation-policy.mjs": "4bcdf8db20f6c6da20e58259072cd3a8b8bdeacd1c7c1b99fca5b467eeb38c73",
+    "ingestion/live-rag-core.mjs": "f5b263748df8407e88ece7a4a8db3c16d9eb6f8c10f7fbd3ed16bee6a18e4e72",
+    "ingestion/grounding-policy.mjs": "5183b1220129bfac228d1b95042428fb0c7f8987f9974d78d3051c67df3a0dc2"
+  },
+  "model_identity_note": "Local file checked; the HTTP runner does not attest the model process identity.",
+  "comparison_note": "Evidence, decision policy and output task differ from the v0.6 selector. This is a pipeline development experiment, not an isolated LoRA effect or a held-out benchmark.",
+  "settings": {
+    "temperature": 0,
+    "seed": 42,
+    "max_tokens": 256,
+    "enable_thinking": false,
+    "input_budget": 1728
+  },
+  "results": [
+    {
+      "question_id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "Paying the minimum on time does not necessarily eliminate purchase interest when a balance remains.",
+        "Avoiding interest on new purchases depends on having a grace period, not carrying a balance, and paying the balance in full by the due date.",
+        "Not paying in full can cause loss of the grace period and interest on unpaid balances and new purchases."
+      ],
+      "forbidden_claims": [
+        "Paying the minimum always prevents interest.",
+        "Every credit card must offer a grace period."
+      ],
+      "previous_answer": "On most cards, you can avoid paying interest on purchases if you pay your balance in full each month by the due date. [cfpb-44]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "fad633df670e3baec1a71d8c85b363b564975c89420af72c955c86af442887d6",
+            "source_id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "section": "What is a grace period for a credit card?",
+            "text": "If your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.",
+            "start_char": 377,
+            "end_char": 812,
+            "score": 3.1302146911621094,
+            "pair_tokens": 108
+          },
+          {
+            "unit_id": "d7cc8a5d0b3cee95ef0a49a63150482d828ec43295b3f7a1e90c804008ccfc6b",
+            "source_id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "section": "What is a grace period for a credit card?",
+            "text": "During this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.",
+            "start_char": 142,
+            "end_char": 375,
+            "score": 2.818709135055542,
+            "pair_tokens": 67
+          }
+        ],
+        "best_logit": 3.1302146911621094
+      },
+      "packed_units": [
+        {
+          "unit_id": "fad633df670e3baec1a71d8c85b363b564975c89420af72c955c86af442887d6",
+          "source_id": "cfpb-47",
+          "title": "What is a grace period for a credit card?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+          "section": "What is a grace period for a credit card?",
+          "text": "If your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.",
+          "start_char": 377,
+          "end_char": 812,
+          "score": 3.1302146911621094,
+          "pair_tokens": 108
+        },
+        {
+          "unit_id": "d7cc8a5d0b3cee95ef0a49a63150482d828ec43295b3f7a1e90c804008ccfc6b",
+          "source_id": "cfpb-47",
+          "title": "What is a grace period for a credit card?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+          "section": "What is a grace period for a credit card?",
+          "text": "During this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.",
+          "start_char": 142,
+          "end_char": 375,
+          "score": 2.818709135055542,
+          "pair_tokens": 67
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "If you pay your credit card minimum payment on time, you may still be charged interest if you lose your grace period due to not paying your balance in full by the due date. Credit card companies are not required to give a grace period, but most provide it on purchases. If you lose your grace period, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made. [cfpb-47]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "If you pay your credit card minimum payment on time, you may still be charged interest if you lose your grace period due to not paying your balance in full by the due date. Credit card companies are not required to give a grace period, but most provide it on purchases. If you lose your grace period, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made. [cfpb-47]"
+            }
+          }
+        ],
+        "created": 1792595190,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 105,
+          "prompt_tokens": 236,
+          "total_tokens": 341,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "id": "chatcmpl-iq8YOsXOhpxFGNM5Hakwn04tBZEzQZ6D",
+        "timings": {
+          "cache_n": 0,
+          "prompt_n": 236,
+          "prompt_ms": 2369.348,
+          "prompt_per_token_ms": 10.039610169491525,
+          "prompt_per_second": 99.60546108043225,
+          "predicted_n": 105,
+          "predicted_ms": 5077.154,
+          "predicted_per_token_ms": 48.81878846153847,
+          "predicted_per_second": 20.483916776997503
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 236,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: Why am I charged interest when I pay my credit card minimum payment on time?\n\nSupplied passages:\n[cfpb-47]\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\n[cfpb-47]\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "If you pay your credit card minimum payment on time, you may still be charged interest if you lose your grace period due to not paying your balance in full by the due date. Credit card companies are not required to give a grace period, but most provide it on purchases. If you lose your grace period, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made. [cfpb-47]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "quote": "If your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.\n\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 7559.1994
+    },
+    {
+      "question_id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "The notice should provide specific denial reasons or explain how to request them within 60 days.",
+        "Look for the reporting company's name, address, and telephone number.",
+        "Look for the right to obtain a free report from that company within 60 days of the notice.",
+        "Look for information about correcting report errors.",
+        "If a credit score was used, look for that score and the key factors affecting it."
+      ],
+      "forbidden_claims": [
+        "The credit reporting company guarantees approval after a dispute."
+      ],
+      "previous_answer": "First, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days. [cfpb-1253]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "dde2d518bf837694c59ab01d027cda2fd2a2a7e1638fd88f3382f7a2b31deeb8",
+            "source_id": "cfpb-1253",
+            "title": "What can I do if my credit application was denied because of my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+            "section": "What can I do if my credit application was denied because of my credit report?",
+            "text": "If a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete",
+            "start_char": 648,
+            "end_char": 1258,
+            "score": 2.8346619606018066,
+            "pair_tokens": 137
+          },
+          {
+            "unit_id": "b59964dc4ea30d1822da22b6424f190fc4a1ef6040f8d458003e917bc7155d1d",
+            "source_id": "cfpb-1253",
+            "title": "What can I do if my credit application was denied because of my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+            "section": "What can I do if my credit application was denied because of my credit report?",
+            "text": "First, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.",
+            "start_char": 269,
+            "end_char": 646,
+            "score": 1.7847282886505127,
+            "pair_tokens": 104
+          }
+        ],
+        "best_logit": 2.8346619606018066
+      },
+      "packed_units": [
+        {
+          "unit_id": "dde2d518bf837694c59ab01d027cda2fd2a2a7e1638fd88f3382f7a2b31deeb8",
+          "source_id": "cfpb-1253",
+          "title": "What can I do if my credit application was denied because of my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+          "section": "What can I do if my credit application was denied because of my credit report?",
+          "text": "If a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete",
+          "start_char": 648,
+          "end_char": 1258,
+          "score": 2.8346619606018066,
+          "pair_tokens": 137
+        },
+        {
+          "unit_id": "b59964dc4ea30d1822da22b6424f190fc4a1ef6040f8d458003e917bc7155d1d",
+          "source_id": "cfpb-1253",
+          "title": "What can I do if my credit application was denied because of my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+          "section": "What can I do if my credit application was denied because of my credit report?",
+          "text": "First, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.",
+          "start_char": 269,
+          "end_char": 646,
+          "score": 1.7847282886505127,
+          "pair_tokens": 104
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "The adverse action notice should include the specific reasons for denial, the lender's numerical credit score, and the name, address, and phone number of the credit reporting company. You also have the right to a free copy of your credit report within 60 days of the notice. [cfpb-1253]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The adverse action notice should include the specific reasons for denial, the lender's numerical credit score, and the name, address, and phone number of the credit reporting company. You also have the right to a free copy of your credit report within 60 days of the notice. [cfpb-1253]"
+            }
+          }
+        ],
+        "created": 1792595196,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 66,
+          "prompt_tokens": 304,
+          "total_tokens": 370,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-5K45VUjaDbeSbZuu4ChqvTafwe46gAT8",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 248,
+          "prompt_ms": 2464.013,
+          "prompt_per_token_ms": 9.935536290322581,
+          "prompt_per_second": 100.64881962879255,
+          "predicted_n": 66,
+          "predicted_ms": 3095.421,
+          "predicted_per_token_ms": 47.62186153846154,
+          "predicted_per_second": 20.998759134864045
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 304,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: My loan application was denied because of my credit report. What information should I look for in the notice?\n\nSupplied passages:\n[cfpb-1253]\nIf a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\n[cfpb-1253]\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "The adverse action notice should include the specific reasons for denial, the lender's numerical credit score, and the name, address, and phone number of the credit reporting company. You also have the right to a free copy of your credit report within 60 days of the notice. [cfpb-1253]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-1253",
+            "title": "What can I do if my credit application was denied because of my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+            "quote": "If a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 5648.3308
+    },
+    {
+      "question_id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "answerability": "unanswerable",
+      "reference_claims": [
+        "Explain that a future Bitcoin price prediction is outside the supported CFPB guidance."
+      ],
+      "forbidden_claims": [
+        "Provide a predicted price or price range.",
+        "Invent a CFPB citation supporting a price prediction."
+      ],
+      "previous_answer": "When should I place an extended alert? [cfpb-31]",
+      "evidence_plan": {
+        "decision": "abstain",
+        "units": [],
+        "best_logit": -11.283267974853516
+      },
+      "packed_units": [],
+      "skipped_units": [],
+      "answer_origin": "development_relevance_gate",
+      "answer": "The supplied passages do not answer this question.",
+      "raw_model_response": null,
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "generation_performed": false,
+      "elapsed_ms": 0.03470000000015716
+    },
+    {
+      "question_id": "dev-004",
+      "question": "I withdrew cash using my credit card. Does the purchase grace period generally let me avoid interest on that cash advance?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "Grace periods typically cover purchases, not cash advances.",
+        "Cash advances generally begin accruing interest on the transaction date."
+      ],
+      "forbidden_claims": [
+        "A purchase grace period always makes cash advances interest-free."
+      ],
+      "previous_answer": "During this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases. [cfpb-47]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "7caea7b254188827954ccb3d6d2d93ed8f6d75f17d66f97cc5091b18976551b0",
+            "source_id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "section": "What is a grace period for a credit card?",
+            "text": "With credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.",
+            "start_char": 965,
+            "end_char": 1214,
+            "score": 5.816418647766113,
+            "pair_tokens": 75
+          },
+          {
+            "unit_id": "fad633df670e3baec1a71d8c85b363b564975c89420af72c955c86af442887d6",
+            "source_id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "section": "What is a grace period for a credit card?",
+            "text": "If your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.",
+            "start_char": 377,
+            "end_char": 812,
+            "score": 4.370538711547852,
+            "pair_tokens": 115
+          }
+        ],
+        "best_logit": 5.816418647766113
+      },
+      "packed_units": [
+        {
+          "unit_id": "7caea7b254188827954ccb3d6d2d93ed8f6d75f17d66f97cc5091b18976551b0",
+          "source_id": "cfpb-47",
+          "title": "What is a grace period for a credit card?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+          "section": "What is a grace period for a credit card?",
+          "text": "With credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.",
+          "start_char": 965,
+          "end_char": 1214,
+          "score": 5.816418647766113,
+          "pair_tokens": 75
+        },
+        {
+          "unit_id": "fad633df670e3baec1a71d8c85b363b564975c89420af72c955c86af442887d6",
+          "source_id": "cfpb-47",
+          "title": "What is a grace period for a credit card?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+          "section": "What is a grace period for a credit card?",
+          "text": "If your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.",
+          "start_char": 377,
+          "end_char": 812,
+          "score": 4.370538711547852,
+          "pair_tokens": 115
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "The purchase grace period generally allows you to avoid interest on cash advances if you pay your balance in full by the due date. If you don't pay your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. [cfpb-47]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The purchase grace period generally allows you to avoid interest on cash advances if you pay your balance in full by the due date. If you don't pay your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. [cfpb-47]"
+            }
+          }
+        ],
+        "created": 1792595201,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 60,
+          "prompt_tokens": 243,
+          "total_tokens": 303,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-Cj62WOZs5Gk5ziIzaJ64YvENClx41GEP",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 187,
+          "prompt_ms": 2249.106,
+          "prompt_per_token_ms": 12.027304812834226,
+          "prompt_per_second": 83.1441470522065,
+          "predicted_n": 60,
+          "predicted_ms": 2894.157,
+          "predicted_per_token_ms": 49.053508474576276,
+          "predicted_per_second": 20.385901663247708
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 243,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: I withdrew cash using my credit card. Does the purchase grace period generally let me avoid interest on that cash advance?\n\nSupplied passages:\n[cfpb-47]\nWith credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.\n\n[cfpb-47]\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "The purchase grace period generally allows you to avoid interest on cash advances if you pay your balance in full by the due date. If you don't pay your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. [cfpb-47]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-47",
+            "title": "What is a grace period for a credit card?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
+            "quote": "With credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction.\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 5227.147800000001
+    },
+    {
+      "question_id": "dev-005",
+      "question": "My card lists an APR. What does that number describe?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "APR means annual percentage rate.",
+        "It expresses the credit card borrowing interest rate on a yearly basis."
+      ],
+      "forbidden_claims": [
+        "APR is the minimum monthly payment."
+      ],
+      "previous_answer": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "b4c25d1415f7565f17536389e2adfead11b4ea79c4990658bf13ec664ae165f5",
+            "source_id": "cfpb-44",
+            "title": "What is a credit card interest rate? What does APR mean?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/",
+            "section": "What is a credit card interest rate? What does APR mean?",
+            "text": "For credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).",
+            "start_char": 131,
+            "end_char": 255,
+            "score": -0.014259993098676205,
+            "pair_tokens": 41
+          },
+          {
+            "unit_id": "25dc8b0cf14442eb9388c95fc8291cddeaa1d45a73845f87dda203ca5175f8a2",
+            "source_id": "cfpb-45",
+            "title": "What is the difference between a fixed APR and a variable APR?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+            "section": "What is the difference between a fixed APR and a variable APR?",
+            "text": "A variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time.",
+            "start_char": 610,
+            "end_char": 817,
+            "score": -0.8992853164672852,
+            "pair_tokens": 59
+          }
+        ],
+        "best_logit": -0.014259993098676205
+      },
+      "packed_units": [
+        {
+          "unit_id": "b4c25d1415f7565f17536389e2adfead11b4ea79c4990658bf13ec664ae165f5",
+          "source_id": "cfpb-44",
+          "title": "What is a credit card interest rate? What does APR mean?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/",
+          "section": "What is a credit card interest rate? What does APR mean?",
+          "text": "For credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).",
+          "start_char": 131,
+          "end_char": 255,
+          "score": -0.014259993098676205,
+          "pair_tokens": 41
+        },
+        {
+          "unit_id": "25dc8b0cf14442eb9388c95fc8291cddeaa1d45a73845f87dda203ca5175f8a2",
+          "source_id": "cfpb-45",
+          "title": "What is the difference between a fixed APR and a variable APR?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+          "section": "What is the difference between a fixed APR and a variable APR?",
+          "text": "A variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time.",
+          "start_char": 610,
+          "end_char": 817,
+          "score": -0.8992853164672852,
+          "pair_tokens": 59
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "The APR describes the yearly interest rate charged on credit card balances. It can be fixed or variable, depending on the card's terms. [cfpb-44]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The APR describes the yearly interest rate charged on credit card balances. It can be fixed or variable, depending on the card's terms. [cfpb-44]"
+            }
+          }
+        ],
+        "created": 1792595204,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 35,
+          "prompt_tokens": 163,
+          "total_tokens": 198,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-4mSRmk5MxBt1tpqrAsSWLaicbrK5QkaX",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 107,
+          "prompt_ms": 1318.059,
+          "prompt_per_token_ms": 12.318308411214954,
+          "prompt_per_second": 81.17997752756136,
+          "predicted_n": 35,
+          "predicted_ms": 1597.44,
+          "predicted_per_token_ms": 46.98352941176471,
+          "predicted_per_second": 21.284054487179485
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 163,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: My card lists an APR. What does that number describe?\n\nSupplied passages:\n[cfpb-44]\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).\n\n[cfpb-45]\nA variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "The APR describes the yearly interest rate charged on credit card balances. It can be fixed or variable, depending on the card's terms. [cfpb-44]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-44",
+            "title": "What is a credit card interest rate? What does APR mean?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-card-interest-rate-what-does-apr-mean-en-44/",
+            "quote": "For credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR).",
+            "cited": true
+          },
+          {
+            "id": "cfpb-45",
+            "title": "What is the difference between a fixed APR and a variable APR?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+            "quote": "A variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time.",
+            "cited": false
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 3015.9449000000022
+    },
+    {
+      "question_id": "dev-006",
+      "question": "My card has a fixed APR. Does fixed mean the issuer can never change it?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "A fixed APR does not fluctuate with an index.",
+        "Fixed does not mean the rate can never change.",
+        "The issuer generally must provide advance notice; in most circumstances the higher rate applies to transactions after notice."
+      ],
+      "forbidden_claims": [
+        "A fixed APR can never change."
+      ],
+      "previous_answer": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "54ac4e22a8d1ccb1900fbad01af9dee780aaf61f86c6a2bafb1a1559ffa6a755",
+            "source_id": "cfpb-45",
+            "title": "What is the difference between a fixed APR and a variable APR?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+            "section": "What is the difference between a fixed APR and a variable APR?",
+            "text": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.",
+            "start_char": 261,
+            "end_char": 608,
+            "score": 8.165604591369629,
+            "pair_tokens": 93
+          }
+        ],
+        "best_logit": 8.165604591369629
+      },
+      "packed_units": [
+        {
+          "unit_id": "54ac4e22a8d1ccb1900fbad01af9dee780aaf61f86c6a2bafb1a1559ffa6a755",
+          "source_id": "cfpb-45",
+          "title": "What is the difference between a fixed APR and a variable APR?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+          "section": "What is the difference between a fixed APR and a variable APR?",
+          "text": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.",
+          "start_char": 261,
+          "end_char": 608,
+          "score": 8.165604591369629,
+          "pair_tokens": 93
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "The fixed APR does not mean the issuer can never change it. The issuer must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The fixed APR does not mean the issuer can never change it. The issuer must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]"
+            }
+          }
+        ],
+        "created": 1792595208,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 54,
+          "prompt_tokens": 161,
+          "total_tokens": 215,
+          "prompt_tokens_details": {
+            "cached_tokens": 58
+          }
+        },
+        "id": "chatcmpl-c1yAPmc8lRuh2FomnvcjoCwJCnkOZqto",
+        "timings": {
+          "cache_n": 58,
+          "prompt_n": 103,
+          "prompt_ms": 1304.761,
+          "prompt_per_token_ms": 12.667582524271845,
+          "prompt_per_second": 78.94166057998362,
+          "predicted_n": 54,
+          "predicted_ms": 2466.697,
+          "predicted_per_token_ms": 46.54145283018868,
+          "predicted_per_second": 21.48622226402351
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 161,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: My card has a fixed APR. Does fixed mean the issuer can never change it?\n\nSupplied passages:\n[cfpb-45]\nA fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "The fixed APR does not mean the issuer can never change it. The issuer must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-45",
+            "title": "What is the difference between a fixed APR and a variable APR?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-fixed-apr-and-a-variable-apr-en-45/",
+            "quote": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 3842.0910000000003
+    },
+    {
+      "question_id": "dev-007",
+      "question": "The same debt appears twice on my credit report under different names. Is that a type of error I should check?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "The same debt listed more than once, possibly under different names, is a common reporting error to check.",
+        "The general guidance does not establish whether this person's entries are actually duplicates."
+      ],
+      "forbidden_claims": [
+        "Both entries are definitely fraudulent.",
+        "Delete both entries without investigating."
+      ],
+      "previous_answer": "- Same debt listed more than once, possibly with different names [cfpb-313]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "1cb91f3d520ed7ac4071a6fef7f00dc40549167866d860a71513abee419f7793",
+            "source_id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "section": "How do I check a credit report for common errors?",
+            "text": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names",
+            "start_char": 596,
+            "end_char": 981,
+            "score": 1.8940095901489258,
+            "pair_tokens": 100
+          }
+        ],
+        "best_logit": 1.8940095901489258
+      },
+      "packed_units": [
+        {
+          "unit_id": "1cb91f3d520ed7ac4071a6fef7f00dc40549167866d860a71513abee419f7793",
+          "source_id": "cfpb-313",
+          "title": "What are common credit report errors that I should look for on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+          "section": "How do I check a credit report for common errors?",
+          "text": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names",
+          "start_char": 596,
+          "end_char": 981,
+          "score": 1.8940095901489258,
+          "pair_tokens": 100
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "[cfpb-313] The same debt appearing under different names is a type of error that should be checked. It may indicate incorrect reporting of account status or ownership. If you believe the debt is incorrect, you can contact the credit bureau to correct it.",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "[cfpb-313] The same debt appearing under different names is a type of error that should be checked. It may indicate incorrect reporting of account status or ownership. If you believe the debt is incorrect, you can contact the credit bureau to correct it."
+            }
+          }
+        ],
+        "created": 1792595212,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 55,
+          "prompt_tokens": 178,
+          "total_tokens": 233,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-HlOcD6lOtCcjqJLBR1I46VFw18UCSds7",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 122,
+          "prompt_ms": 1490.971,
+          "prompt_per_token_ms": 12.221073770491802,
+          "prompt_per_second": 81.82587052330328,
+          "predicted_n": 55,
+          "predicted_ms": 2481.403,
+          "predicted_per_token_ms": 45.951907407407404,
+          "predicted_per_second": 21.761882289978693
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 178,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: The same debt appears twice on my credit report under different names. Is that a type of error I should check?\n\nSupplied passages:\n[cfpb-313]\nCheck for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names"
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "[cfpb-313] The same debt appearing under different names is a type of error that should be checked. It may indicate incorrect reporting of account status or ownership. If you believe the debt is incorrect, you can contact the credit bureau to correct it.",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-313",
+            "title": "What are common credit report errors that I should look for on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+            "quote": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 4024.7971
+    },
+    {
+      "question_id": "dev-008",
+      "question": "To challenge inaccurate information on my credit report, should I contact only the bureau or also the company that supplied it?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "Generally dispute with both the credit reporting company and the company that supplied the information."
+      ],
+      "forbidden_claims": [
+        "The company that supplied the information has no role in a dispute."
+      ],
+      "previous_answer": "You have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information. [cfpb-314]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "d4571ac94d78add7da1c70038db234cfdc710605b89fa69b59763e4f82c41df6",
+            "source_id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "section": "How do I dispute an error on my credit report?",
+            "text": "You have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.",
+            "start_char": 1592,
+            "end_char": 1775,
+            "score": 3.1735525131225586,
+            "pair_tokens": 58
+          },
+          {
+            "unit_id": "fbd6fad97d61d3f7a08bc671f5eda5e40a81facd8f50356df0067cb772a0f747",
+            "source_id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "section": "Then, dispute the information with the company that provided it to the credit reporting companies",
+            "text": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.",
+            "start_char": 1058,
+            "end_char": 1427,
+            "score": 1.795250415802002,
+            "pair_tokens": 95
+          },
+          {
+            "unit_id": "d1327692fa9b7ef7b0934890350b865beeb0586c4fcd6aa56690dcc984b86880",
+            "source_id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "section": "First, dispute the information with the credit reporting company or companies",
+            "text": "If you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.",
+            "start_char": 2106,
+            "end_char": 2459,
+            "score": 1.560239553451538,
+            "pair_tokens": 104
+          }
+        ],
+        "best_logit": 3.1735525131225586
+      },
+      "packed_units": [
+        {
+          "unit_id": "d4571ac94d78add7da1c70038db234cfdc710605b89fa69b59763e4f82c41df6",
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "How do I dispute an error on my credit report?",
+          "text": "You have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.",
+          "start_char": 1592,
+          "end_char": 1775,
+          "score": 3.1735525131225586,
+          "pair_tokens": 58
+        },
+        {
+          "unit_id": "fbd6fad97d61d3f7a08bc671f5eda5e40a81facd8f50356df0067cb772a0f747",
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Then, dispute the information with the company that provided it to the credit reporting companies",
+          "text": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.",
+          "start_char": 1058,
+          "end_char": 1427,
+          "score": 1.795250415802002,
+          "pair_tokens": 95
+        },
+        {
+          "unit_id": "d1327692fa9b7ef7b0934890350b865beeb0586c4fcd6aa56690dcc984b86880",
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "First, dispute the information with the credit reporting company or companies",
+          "text": "If you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.",
+          "start_char": 2106,
+          "end_char": 2459,
+          "score": 1.560239553451538,
+          "pair_tokens": 104
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "To challenge inaccurate information on your credit report, you should contact both the credit reporting company and the company that supplied the information. [cfpb-314]\n\nIf the company that supplied the information determines the information is accurate, you can contact the credit reporting company again and ask them to include a statement explaining the dispute in your credit reports. [cfpb-314]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "To challenge inaccurate information on your credit report, you should contact both the credit reporting company and the company that supplied the information. [cfpb-314]\n\nIf the company that supplied the information determines the information is accurate, you can contact the credit reporting company again and ask them to include a statement explaining the dispute in your credit reports. [cfpb-314]"
+            }
+          }
+        ],
+        "created": 1792595218,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 78,
+          "prompt_tokens": 289,
+          "total_tokens": 367,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-BFcJgmQCQoYE9EYdIBFYSeVs85AOhPQm",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 233,
+          "prompt_ms": 2735.973,
+          "prompt_per_token_ms": 11.74237339055794,
+          "prompt_per_second": 85.16165912456007,
+          "predicted_n": 78,
+          "predicted_ms": 3821.967,
+          "predicted_per_token_ms": 49.63593506493507,
+          "predicted_per_second": 20.146694097568083
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 289,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: To challenge inaccurate information on my credit report, should I contact only the bureau or also the company that supplied it?\n\nSupplied passages:\n[cfpb-314]\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.\n\n[cfpb-314]\nThe furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\n[cfpb-314]\nIf you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "To challenge inaccurate information on your credit report, you should contact both the credit reporting company and the company that supplied the information. [cfpb-314]\n\nIf the company that supplied the information determines the information is accurate, you can contact the credit reporting company again and ask them to include a statement explaining the dispute in your credit reports. [cfpb-314]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "You have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information.\n\nThe furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.\n\nIf you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 6716.4375
+    },
+    {
+      "question_id": "dev-009",
+      "question": "I am mailing a credit-report dispute. What should I include, and should I send original supporting documents?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "Include contact information and the report confirmation number if available.",
+        "Identify each disputed error and relevant account number.",
+        "Explain the dispute and request correction or removal.",
+        "Include a marked copy of the relevant report section and copies of supporting documents.",
+        "Keep copies and send copies of supporting documents rather than originals."
+      ],
+      "forbidden_claims": [
+        "Send your only original supporting documents."
+      ],
+      "previous_answer": "If you mail a dispute, your dispute letter should include: [cfpb-314]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "aac540c56a65ad2636d345b0bba37bf7c2ae5f05e08a2161c58151a262bbc6d1",
+            "source_id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "section": "First, dispute the information with the credit reporting company or companies",
+            "text": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position",
+            "start_char": 2461,
+            "end_char": 3070,
+            "score": 6.803897857666016,
+            "pair_tokens": 138
+          }
+        ],
+        "best_logit": 6.803897857666016
+      },
+      "packed_units": [
+        {
+          "unit_id": "aac540c56a65ad2636d345b0bba37bf7c2ae5f05e08a2161c58151a262bbc6d1",
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "First, dispute the information with the credit reporting company or companies",
+          "text": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position",
+          "start_char": 2461,
+          "end_char": 3070,
+          "score": 6.803897857666016,
+          "pair_tokens": 138
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou should send original supporting documents if you are mailing them directly to the credit bureau. If you are mailing them to the creditor, you should send copies (not originals) of the documents. [source_id]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou should send original supporting documents if you are mailing them directly to the credit bureau. If you are mailing them to the creditor, you should send copies (not originals) of the documents. [source_id]"
+            }
+          }
+        ],
+        "created": 1792595228,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 161,
+          "prompt_tokens": 215,
+          "total_tokens": 376,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-9UVai895MnqASai6WUKy3R4ywO4ZtHdg",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 159,
+          "prompt_ms": 2001.143,
+          "prompt_per_token_ms": 12.585805031446542,
+          "prompt_per_second": 79.45459170084297,
+          "predicted_n": 161,
+          "predicted_ms": 7837.144,
+          "predicted_per_token_ms": 48.982150000000004,
+          "predicted_per_second": 20.415600376871982
+        }
+      },
+      "validation_error": "The model did not cite its answer. The answer was withheld.",
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 215,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: I am mailing a credit-report dispute. What should I include, and should I send original supporting documents?\n\nSupplied passages:\n[cfpb-314]\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position"
+        }
+      ],
+      "generation_performed": true,
+      "elapsed_ms": 9915.643600000003
+    },
+    {
+      "question_id": "dev-010",
+      "question": "A collector sent me a debt validation notice. What information should help me identify the debt and understand how to dispute it?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "Look for collector and consumer identifying information and the creditor's name.",
+        "Look for the account number if any, current debt amount, and itemization.",
+        "Look for response information and the end date of the 30-day dispute period."
+      ],
+      "forbidden_claims": [
+        "Receiving a notice proves the debt is yours."
+      ],
+      "previous_answer": "Under the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically. [cfpb-331]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "8c52d6f40ddb574d32d9e5e9321506084f862c6f7ce4256bc93e42eef5609d38",
+            "source_id": "cfpb-331",
+            "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+            "section": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "text": "Under the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically.",
+            "start_char": 104,
+            "end_char": 452,
+            "score": 6.561593055725098,
+            "pair_tokens": 89
+          },
+          {
+            "unit_id": "223782b1f10b15b6a12355584435c6182fbc4a1149ca884cfb53ba879afb7e9a",
+            "source_id": "cfpb-331",
+            "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+            "section": "What information is required to be in the validation notice from a debt collector about my debt?",
+            "text": "The information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt",
+            "start_char": 552,
+            "end_char": 1364,
+            "score": 6.377942085266113,
+            "pair_tokens": 196
+          }
+        ],
+        "best_logit": 6.561593055725098
+      },
+      "packed_units": [
+        {
+          "unit_id": "8c52d6f40ddb574d32d9e5e9321506084f862c6f7ce4256bc93e42eef5609d38",
+          "source_id": "cfpb-331",
+          "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+          "section": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "text": "Under the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically.",
+          "start_char": 104,
+          "end_char": 452,
+          "score": 6.561593055725098,
+          "pair_tokens": 89
+        },
+        {
+          "unit_id": "223782b1f10b15b6a12355584435c6182fbc4a1149ca884cfb53ba879afb7e9a",
+          "source_id": "cfpb-331",
+          "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+          "section": "What information is required to be in the validation notice from a debt collector about my debt?",
+          "text": "The information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt",
+          "start_char": 552,
+          "end_char": 1364,
+          "score": 6.377942085266113,
+          "pair_tokens": 196
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "The information provided in the debt validation notice includes the debt collector's contact information, the creditor's name, the account number, the current debt amount, and the date the notice was sent. This helps you identify the debt and understand how to dispute it. If the debt is not yours, you can dispute it by contacting the collector and providing evidence that the debt is not yours or that the amount is incorrect. The notice also includes a 30-day period during which you can dispute the debt. [cfpb-331]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "The information provided in the debt validation notice includes the debt collector's contact information, the creditor's name, the account number, the current debt amount, and the date the notice was sent. This helps you identify the debt and understand how to dispute it. If the debt is not yours, you can dispute it by contacting the collector and providing evidence that the debt is not yours or that the amount is incorrect. The notice also includes a 30-day period during which you can dispute the debt. [cfpb-331]"
+            }
+          }
+        ],
+        "created": 1792595238,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 109,
+          "prompt_tokens": 345,
+          "total_tokens": 454,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-9yWF0AyfD6Uc6bX85Nol62uO8aF59K7T",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 289,
+          "prompt_ms": 3472.327,
+          "prompt_per_token_ms": 12.014972318339101,
+          "prompt_per_second": 83.22948846695603,
+          "predicted_n": 109,
+          "predicted_ms": 6332.102,
+          "predicted_per_token_ms": 58.630574074074076,
+          "predicted_per_second": 17.05594761423616
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 345,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: A collector sent me a debt validation notice. What information should help me identify the debt and understand how to dispute it?\n\nSupplied passages:\n[cfpb-331]\nUnder the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically.\n\n[cfpb-331]\nThe information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt"
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "The information provided in the debt validation notice includes the debt collector's contact information, the creditor's name, the account number, the current debt amount, and the date the notice was sent. This helps you identify the debt and understand how to dispute it. If the debt is not yours, you can dispute it by contacting the collector and providing evidence that the debt is not yours or that the amount is incorrect. The notice also includes a 30-day period during which you can dispute the debt. [cfpb-331]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-331",
+            "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+            "quote": "Under the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically.\n\nThe information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 9916.743199999997
+    },
+    {
+      "question_id": "dev-011",
+      "question": "If I freeze my credit report with one bureau, do the other two automatically receive the freeze?",
+      "answerability": "answerable",
+      "reference_claims": [
+        "A security freeze at one reporting company does not automatically notify the others.",
+        "Contact each company individually to freeze all three reports.",
+        "This differs from a fraud alert, where one nationwide company notifies the others."
+      ],
+      "forbidden_claims": [
+        "One security-freeze request automatically freezes all three reports."
+      ],
+      "previous_answer": "Unlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies. [cfpb-31]",
+      "evidence_plan": {
+        "decision": "generate",
+        "units": [
+          {
+            "unit_id": "2c4e2f25df35c602b14d251ee59bcaf7cbfa3a22df11cc1d3f6db345e69346df",
+            "source_id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "section": "What is a security freeze?",
+            "text": "Unlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.",
+            "start_char": 451,
+            "end_char": 753,
+            "score": 4.908323764801025,
+            "pair_tokens": 75
+          },
+          {
+            "unit_id": "85ec282fd8513368a6ba526b07e6f1844f992cc17a0b76e7f1cc73c003c579ea",
+            "source_id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "section": "What is a security freeze?",
+            "text": "A security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.",
+            "start_char": 28,
+            "end_char": 449,
+            "score": 3.2216172218322754,
+            "pair_tokens": 109
+          }
+        ],
+        "best_logit": 4.908323764801025
+      },
+      "packed_units": [
+        {
+          "unit_id": "2c4e2f25df35c602b14d251ee59bcaf7cbfa3a22df11cc1d3f6db345e69346df",
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "What is a security freeze?",
+          "text": "Unlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.",
+          "start_char": 451,
+          "end_char": 753,
+          "score": 4.908323764801025,
+          "pair_tokens": 75
+        },
+        {
+          "unit_id": "85ec282fd8513368a6ba526b07e6f1844f992cc17a0b76e7f1cc73c003c579ea",
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "What is a security freeze?",
+          "text": "A security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.",
+          "start_char": 28,
+          "end_char": 449,
+          "score": 3.2216172218322754,
+          "pair_tokens": 109
+        }
+      ],
+      "skipped_units": [],
+      "answer_origin": "fine_tuned_model_generation",
+      "answer": "If you freeze your credit report with one bureau, the other two will not automatically receive the freeze. You must contact each credit reporting company individually to place a freeze with all three. [cfpb-31]",
+      "raw_model_response": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "message": {
+              "role": "assistant",
+              "content": "If you freeze your credit report with one bureau, the other two will not automatically receive the freeze. You must contact each credit reporting company individually to place a freeze with all three. [cfpb-31]"
+            }
+          }
+        ],
+        "created": 1792595243,
+        "model": "fincite-v01",
+        "system_fingerprint": "b11476-988190680",
+        "object": "chat.completion",
+        "usage": {
+          "completion_tokens": 44,
+          "prompt_tokens": 235,
+          "total_tokens": 279,
+          "prompt_tokens_details": {
+            "cached_tokens": 56
+          }
+        },
+        "id": "chatcmpl-bwtSYwTD3Emx8hVZmFtOFgwWKa4MmRYW",
+        "timings": {
+          "cache_n": 56,
+          "prompt_n": 179,
+          "prompt_ms": 2291.059,
+          "prompt_per_token_ms": 12.799212290502794,
+          "prompt_per_second": 78.12980809311327,
+          "predicted_n": 44,
+          "predicted_ms": 2100.793,
+          "predicted_per_token_ms": 48.8556511627907,
+          "predicted_per_second": 20.468461195367652
+        }
+      },
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "input_tokens": 235,
+      "messages": [
+        {
+          "role": "system",
+          "content": "Answer using only the supplied passages. Keep the answer brief and preserve conditions and exceptions. Cite supported factual claims using [source_id]. If the passages cannot answer the question, explain that limitation without guessing or inventing a citation."
+        },
+        {
+          "role": "user",
+          "content": "Question: If I freeze my credit report with one bureau, do the other two automatically receive the freeze?\n\nSupplied passages:\n[cfpb-31]\nUnlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\n[cfpb-31]\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes."
+        }
+      ],
+      "generation_performed": true,
+      "checked_response": {
+        "answer": "If you freeze your credit report with one bureau, the other two will not automatically receive the freeze. You must contact each credit reporting company individually to place a freeze with all three. [cfpb-31]",
+        "disposition": "answer",
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "Unlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies.\n\nA security freeze, also called a credit freeze, stops new creditors from accessing your credit file until you lift the freeze. Under federal law, you can freeze and unfreeze your credit record for free at the three nationwide credit reporting companies – Experian, TransUnion, and Equifax. This federal law does not apply to someone who requests your credit report for employment, tenant-screening, or insurance purposes.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Citation IDs checked only. Factual support has not been verified."
+        ]
+      },
+      "elapsed_ms": 4513.175299999995
+    },
+    {
+      "question_id": "dev-012",
+      "question": "Will my bank waive my specific late fee tomorrow? I have not provided my account terms or spoken with the bank.",
+      "answerability": "unanswerable",
+      "reference_claims": [
+        "Do not predict the bank's decision.",
+        "Explain that official general guidance cannot establish this account-specific outcome.",
+        "Suggest checking with the issuer without promising a waiver."
+      ],
+      "forbidden_claims": [
+        "The bank will definitely waive the fee.",
+        "The bank will definitely reject the request."
+      ],
+      "previous_answer": "How can I protect my credit after identity theft? [cfpb-31]",
+      "evidence_plan": {
+        "decision": "abstain",
+        "units": [],
+        "best_logit": -9.101457595825195
+      },
+      "packed_units": [],
+      "skipped_units": [],
+      "answer_origin": "development_relevance_gate",
+      "answer": "The supplied passages do not answer this question.",
+      "raw_model_response": null,
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "generation_performed": false,
+      "elapsed_ms": 0.033900000002176967
+    },
+    {
+      "question_id": "dev-013",
+      "question": "My apartment application is pending. Will this particular landlord approve me tomorrow?",
+      "answerability": "unanswerable",
+      "reference_claims": [
+        "Do not predict the landlord's approval decision.",
+        "Explain that the available guidance cannot determine this personal outcome."
+      ],
+      "forbidden_claims": [
+        "Guarantee approval or rejection."
+      ],
+      "previous_answer": "If a lender rejects your application based on your credit report, the lender is also required to: [cfpb-1253]",
+      "evidence_plan": {
+        "decision": "abstain",
+        "units": [],
+        "best_logit": -10.79425048828125
+      },
+      "packed_units": [],
+      "skipped_units": [],
+      "answer_origin": "development_relevance_gate",
+      "answer": "The supplied passages do not answer this question.",
+      "raw_model_response": null,
+      "validation_error": null,
+      "request_error": null,
+      "human_review": null,
+      "generation_performed": false,
+      "elapsed_ms": 0.01359999999840511
+    }
+  ],
+  "quality_scores": null,
+  "changed_inputs": [],
+  "finished_at": "2026-10-21T15:07:23.299Z"
+}

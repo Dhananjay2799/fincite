@@ -10,7 +10,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const hash = bytes => createHash("sha256").update(bytes).digest("hex");
 const parse = bytes => JSON.parse(bytes.toString("utf8").replace(/^\uFEFF/, ""));
 const paths = ["evaluation/datasets/development.jsonl", "data/processed/chunks.jsonl",
-  "ingestion/live-rag-core.mjs", "ingestion/live-retrieval.mjs", "ingestion/serve-local-rag.mjs",
+  "ingestion/live-rag-core.mjs", "ingestion/grounding-policy.mjs", "ingestion/evidence-selection.mjs", "ingestion/live-retrieval.mjs", "ingestion/serve-local-rag.mjs",
   "ingestion/embedding-config.json", "apps/web/src/app/api/chat/route.ts"];
 const inputHashes = Object.fromEntries(paths.map(path => [path, hash(readFileSync(resolve(root, path)))]));
 const questions = readFileSync(resolve(root, paths[0]), "utf8").replace(/^\uFEFF/, "")

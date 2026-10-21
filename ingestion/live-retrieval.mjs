@@ -17,7 +17,7 @@ assert.ok(chunkIds.length > 0);
 const candidateLimit = 20;
 const rrfConstant = 60;
 env.cacheDir = resolve(root, "data/model-cache");
-// Keep only the embedding model resident. Live reranking is not enabled yet.
+// Retrieval owns the embedding model; excerpt mode separately owns its reranker.
 export async function prepareRetriever() {
   if (!process.env.DATABASE_URL) throw new Error("DATABASE_URL is required.");
   const sql = neon(process.env.DATABASE_URL);

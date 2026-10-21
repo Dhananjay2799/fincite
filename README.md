@@ -10,9 +10,11 @@ https://github.com/user-attachments/assets/85f3fe45-5be1-4bc2-9dbf-14b71daae05b
 
 A consumer-finance RAG application and LoRA fine-tuning pipeline built to test whether source retrieval and model adaptation improve answer quality.
 
-FinCite retrieves CFPB guidance, generates a short answer and shows the supplied passages for inspection. It helps people find and understand general guidance about credit cards, credit reports and debt notices. It cannot inspect bank accounts, freeze credit, resolve disputes or determine personal financial outcomes.
+FinCite retrieves CFPB guidance and shows ranked source excerpts with links. Generated explanations are retained as an experimental comparison mode. It helps people find and understand general guidance about credit cards, credit reports and debt notices. It cannot inspect bank accounts, freeze credit, resolve disputes or determine personal financial outcomes.
 
 **Current status:** working local development demo with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
+
+**Current demo behavior:** the bridge defaults to source excerpts ranked by a pinned cross-encoder. Code verifies source offsets and copies complete paragraphs or list groups; the language model does not write the displayed excerpts. Relevance and completeness remain limited. See [source excerpt mode and verification](docs/source-excerpts-v1.md).
 
 ## What is implemented
 
@@ -20,12 +22,12 @@ FinCite retrieves CFPB guidance, generates a short answer and shows the supplied
 - Repeatable CFPB ingestion with snapshot hashes and source provenance.
 - Eight articles, 17 validated chunks and 384-dimensional BGE embeddings stored in Neon PostgreSQL.
 - Vector search, keyword search and hybrid reciprocal rank fusion.
-- A separate reranker development experiment; reranking is disabled in the live app.
+- Pinned CPU reranking of source excerpt units in the default live flow.
 - Qwen3-1.7B LoRA training in free Colab, adapter reload checks and base-versus-adapter comparisons.
 - Merged Q4_K_M GGUF inference on a Windows CPU using llama.cpp.
-- Citation-ID checks, visible missing-citation warnings and raw evaluation records.
+- Exact source-span checks for excerpts, citation-ID checks for experimental generation, and raw evaluation records.
 
-Example buttons show curated previews. Type a custom question to use live retrieval and generation.
+Example buttons show curated previews. Type a custom question to search live source excerpts.
 
 ## Architecture
 
@@ -35,13 +37,14 @@ flowchart TD
     API --> Bridge[Node RAG bridge]
     Bridge --> DB[Neon: vector and keyword retrieval]
     DB --> Bridge
-    Bridge --> Model[Local Qwen GGUF via llama.cpp]
-    Model --> Bridge
+    Bridge --> Reranker[CPU excerpt relevance ranking]
+    Reranker --> Copy[Copy verified source spans]
+    Copy --> Bridge
     Bridge --> API
     API --> UI
 ```
 
-The bridge reuses a pinned embedding model, considers the hybrid top five results and supplies at most two whole passages that fit the input budget. The local model uses a 2,048-token context and up to 256 generated tokens. Retrieved sources are labelled as cited by the model or retrieved only. A valid citation ID does not prove that the cited passage supports a claim.
+The default bridge uses hybrid retrieval over the existing corpus, ranks complete paragraph/list units from the top five chunks, and returns up to three source excerpts. Whole units over the reranker token budget are skipped, never truncated. Its relevance threshold is development-calibrated, not a correctness guarantee. No generative model is started by the default launcher. The optional generated mode uses the local Qwen GGUF and checks citation IDs without proving factual support.
 
 ## Recorded development results
 
@@ -74,7 +77,7 @@ The Colab comparison uses grouped source quotes reconstructed from the saved loc
 
 ## Run the existing local demo
 
-Requires Node.js, npm, a configured Neon database, local validated chunks, the exported GGUF and the Windows CPU runtime. Model weights, runtime binaries, raw/processed data and credentials are excluded from Git; cloning alone does not restore those artifacts.
+Requires Node.js, npm, a configured Neon database and local validated chunks. The experimental generated mode additionally requires the exported GGUF and Windows CPU runtime. Model weights, runtime binaries, raw/processed data and credentials are excluded from Git; cloning alone does not restore those artifacts.
 
 Install JavaScript dependencies from the repository root:
 
@@ -90,37 +93,21 @@ DATABASE_URL=your_neon_connection_string
 FINCITE_API_URL=http://127.0.0.1:8081
 ```
 
-### Terminal 1: local inference
-
-Place the exported model at `inference/models/fincite-v01-q4_k_m.gguf` and the b11476 Windows CPU runtime under `inference/runtime/b11476`. From the repository root:
+Start the default source excerpt demo from the repository root:
 
 ```powershell
-$server = Get-ChildItem inference/runtime/b11476 -Recurse -Filter llama-server.exe -File |
-    Select-Object -First 1
-
-& $server.FullName `
-    --model inference/models/fincite-v01-q4_k_m.gguf `
-    --alias fincite-v01 `
-    --host 127.0.0.1 --port 8080 `
-    --n-gpu-layers 0 --ctx-size 2048 --parallel 1 `
-    --threads 4 --batch-size 128 --ubatch-size 128 --jinja
+node scripts/start-local.mjs
 ```
 
-### Terminal 2: retrieval bridge
+Open http://localhost:3000 and keep that terminal open. First use downloads the pinned CPU reranker. The launcher starts the bridge and frontend; it does not load the GGUF. Press Ctrl+C to stop the services it started.
+
+For the historical generation experiments only, place the GGUF at `inference/models/fincite-v01-q4_k_m.gguf` and the b11476 runtime under `inference/runtime/b11476`, then use:
 
 ```powershell
-Set-Location ingestion
-node --env-file=../apps/web/.env.local serve-local-rag.mjs
+node scripts/start-local.mjs --experimental-generated
 ```
 
-### Terminal 3: frontend
-
-```powershell
-Set-Location apps/web
-npm run dev
-```
-
-Open http://localhost:3000. All three processes must remain running. This is a local demo; public hosted inference is not implemented. No paid inference provider is required for this configuration.
+This is a local demo, not permanent public hosting. No paid inference provider is required.
 
 ## Validation and evaluation
 
@@ -129,16 +116,21 @@ From the repository root, with the local corpus artifacts available:
 ```powershell
 node evaluation/validate.mjs
 node evaluation/validate-chunks.mjs
-node --test ingestion/test-live-rag.mjs
+node --test ingestion/test-live-rag.mjs ingestion/test-evidence-selection.mjs ingestion/test-evidence-units.mjs ingestion/test-source-excerpts.mjs
+node --test evaluation/test-heldout.mjs
 ```
 
-With the three services running, record development responses:
+With experimental generated mode running (it needs port 8080), the historical generation runner records development responses:
 
 ```powershell
 node evaluation/run-local-development.mjs
 ```
 
 This runner checks integrity and records responses; it does not automatically grade correctness or grounding. Do not send other questions while recording a sequential run.
+
+For a reviewed held-out test, `evaluation/heldout.mjs` freezes reviewed questions and corpus hashes, records responses and failures, then requires independent human labels before scoring. No held-out test results have been produced yet. The release guide includes the question and review schemas.
+
+After building with `npm run build --prefix apps/web`, use `node scripts/start-local.mjs --production` for a local production server. This does not provision permanent public hosting.
 
 Source ingestion is implemented in `ingestion/download-sources.mjs`, `extract-snapshots.mjs` and `chunk-documents.mjs`. Database setup and document/embedding imports are separate scripts. A fresh download can differ from the recorded snapshots; preserve provenance and regenerate matching manifests and imports before comparing runs.
 
@@ -148,7 +140,7 @@ Source ingestion is implemented in `ingestion/download-sources.mjs`, `extract-sn
 | --- | --- |
 | Base model | `Qwen/Qwen3-1.7B`, revision `70d244cc86ccca08cf5af4e1e306ecf908b1ad5e` |
 | Embeddings | `Xenova/bge-small-en-v1.5`, revision `ea104dacec62c0de699686887e3f920caeb4f3e3` |
-| Reranker experiment | `Xenova/ms-marco-MiniLM-L-6-v2`, revision `a09144355adeed5f58c8ed011d209bf8ee5a1fec` |
+| Excerpt reranker | `Xenova/ms-marco-MiniLM-L-6-v2`, revision `a09144355adeed5f58c8ed011d209bf8ee5a1fec` |
 | Training libraries | Transformers 4.51.3, PEFT 0.15.2, Accelerate 1.6.0 |
 | GGUF converter | llama.cpp revision `18b5f8b1862ebfe0f1c33d2355b81a54d2fec867` |
 | Local GGUF SHA256 | `a58fb6679a4af4eaa0625d7049ecc55478382590d5fe1639d5365d2243a59e5b` |
@@ -157,7 +149,7 @@ Notebooks, dataset manifests, configurations and raw results live in `training/`
 
 ## Remaining work
 
-- Improve preservation of source qualifications, citation coverage and answer grounding.
+- Improve excerpt relevance and completeness; evaluate generated explanations independently before enabling them by default.
 - Review candidate data and check semantic overlap across splits.
 - Build an independently reviewed held-out test set with more articles and questions.
 - Measure unsupported-answer rate, answer coverage, false refusals and citation support together.
