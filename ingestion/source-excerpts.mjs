@@ -1,8 +1,11 @@
-export const EXCERPT_POLICY_VERSION = "source-excerpts-v1";
+import vocabulary from "./excerpt-vocabulary.json" with { type: "json" };
+import { assessExcerptFocus, EXCERPT_FOCUS_VERSION } from "./excerpt-focus.mjs";
+
+export const EXCERPT_POLICY_VERSION = "source-excerpts-v2-focus";
 // Development calibration only: logits are not probabilities or correctness scores.
 export const EXCERPT_POLICY = Object.freeze({ minimum_logit: -5, score_margin: 2, max_units: 3 });
 
-export function renderExcerpts(passages, candidates, rankings, policy = EXCERPT_POLICY) {
+export function renderExcerpts(passages, candidates, rankings, policy = EXCERPT_POLICY, question) {
   const byId = new Map(candidates.map(unit => [unit.unit_id, unit]));
   const seen = new Set();
   const ranked = rankings.map(item => {
@@ -21,8 +24,20 @@ export function renderExcerpts(passages, candidates, rankings, policy = EXCERPT_
     return { ...unit, score: item.score };
   }).sort((a, b) => b.score - a.score || a.unit_id.localeCompare(b.unit_id));
   const best = ranked[0]?.score;
-  const selected = best === undefined || best < policy.minimum_logit ? [] : ranked.filter(unit =>
-    unit.score >= policy.minimum_logit && unit.score >= best - policy.score_margin).slice(0, policy.max_units);
+  const eligible = best === undefined || best < policy.minimum_logit ? [] : ranked.filter(unit =>
+    unit.score >= policy.minimum_logit && unit.score >= best - policy.score_margin);
+  // Copy/attribution checks above always run first. Query scope is used on live paths;
+  // direct render-only callers without a question perform copying checks only.
+  const focusApplied = typeof question === "string";
+  const assessments = new Map(focusApplied ? eligible.map(unit =>
+    [unit.unit_id, assessExcerptFocus(question, unit, vocabulary)]) : []);
+  const seenText = new Set();
+  const selected = eligible.filter(unit => !focusApplied || assessments.get(unit.unit_id).accepted)
+    .filter(unit => {
+      const key = unit.text.normalize("NFKC").replace(/\s+/gu, " ").trim().toLowerCase();
+      if (seenText.has(key)) return false;
+      seenText.add(key); return true;
+    }).slice(0, policy.max_units);
   const sources = [];
   for (const unit of selected) {
     const previous = sources.find(source => source.id === unit.source_id);
@@ -38,6 +53,11 @@ export function renderExcerpts(passages, candidates, rankings, policy = EXCERPT_
     warnings: [selected.length ? "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes." :
       "The relevance filter uses a development threshold. A search limit is not proof that no guidance exists."],
     excerpt_policy_version: EXCERPT_POLICY_VERSION,
+    focus_policy_version: focusApplied ? EXCERPT_FOCUS_VERSION : null,
+    focus_check_applied: focusApplied,
+    focus_diagnostics: focusApplied ? { checked_units: eligible.length,
+      rejected_units: [...assessments.values()].filter(value => !value.accepted).length,
+      scope_unconfirmed: [...assessments.values()].some(value => !value.scope.confirmed) } : null,
     selected_units: selected.map(unit => ({ unit_id: unit.unit_id, source_id: unit.source_id, score: unit.score,
       start_char: unit.start_char, end_char: unit.end_char })),
   };
@@ -50,5 +70,5 @@ export async function answerWithExcerpts(question, { retrieve, buildUnits, rank,
   const candidates = buildUnits(passages);
   const rankings = candidates.length ? await rank(question, candidates, signal) : [];
   signal?.throwIfAborted();
-  return renderExcerpts(passages, candidates, rankings);
+  return renderExcerpts(passages, candidates, rankings, EXCERPT_POLICY, question);
 }

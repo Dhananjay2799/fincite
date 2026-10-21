@@ -1,0 +1,42 @@
+name: Excerpt checks
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "ingestion/**"
+      - "evaluation/**"
+      - "training/datasets/source-inventory.json"
+      - "apps/web/**"
+      - ".github/workflows/excerpt-checks.yml"
+permissions:
+  contents: read
+concurrency:
+  group: excerpt-checks-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out reviewed code
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          persist-credentials: false
+      - name: Use Node 24
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38
+        with:
+          node-version: "24"
+      - name: Record runtime
+        run: node --version
+      - name: Verify corpus-derived vocabulary
+        run: node evaluation/build-excerpt-vocabulary.mjs --check
+      - name: Test focus, source copying and hosted responder
+        run: node --test ingestion/test-excerpt-focus.mjs ingestion/test-source-excerpts.mjs evaluation/test-hosted-rag.mjs
+      - name: Replay inspected development cases
+        run: node evaluation/replay-excerpt-focus.mjs
+      - name: Install locked web dependencies
+        run: npm ci --prefix apps/web --no-audit --no-fund
+      - name: Lint web application
+        run: npm run lint --prefix apps/web
+      - name: Build web application
+        run: npm run build --prefix apps/web
