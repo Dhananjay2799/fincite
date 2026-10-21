@@ -1,0 +1,77 @@
+{
+  "status": "assistant_development_review_only",
+  "independent_human_review": "pending",
+  "quality_scores": null,
+  "reviewed_commit": "956afbf8cefedff0c5a9f427f1ac7e30cd9431bd",
+  "inputs": {
+    "qwen": "evaluation/results/adapter-prompt-development-20261021T184544Z.json",
+    "gemini": "evaluation/results/gemini-development-2026-10-21T21-26-29-053Z.json"
+  },
+  "record_checks": {
+    "method": "in_memory_GitHub_connector_review",
+    "records": 26,
+    "unique_question_prompt_pairs": 26,
+    "exact_messages_match_both_qwen_controls": true,
+    "all_http_200_ok_STOP": true,
+    "raw_response_answer_reconstruction_matches": true,
+    "unknown_supplied_source_ids": 0,
+    "sha256_provenance_revalidated": false,
+    "repository_tests_rerun": false,
+    "limitation": "Execution environment offline; no claim of local validator/test execution."
+  },
+  "observations": [
+    {
+      "question_id": "dev-001",
+      "note": "All arms need care with grace-period eligibility and the carried-balance condition. Both Gemini prompts assert the user's reason for being charged interest and loss of a grace period as established facts. The excerpts give conditional general guidance, not an account diagnosis. The adapter answers omit relevant conditions and/or new-purchase consequences."
+    },
+    {
+      "question_id": "dev-002",
+      "note": "Both Gemini prompts include the denial reasons/request-within-60-days alternative, reporting-company contacts, free-report period, correction process, and score/factors. The adapter contract answer covers more items than its original answer but omits the denial-reasons alternative. The references condition score disclosure on a score having been used; the supplied snippet is less explicit about this, so evidence quality also needs review."
+    },
+    {
+      "question_id": "dev-003",
+      "note": "All six outputs avoid predicting Bitcoin's price. Contract-prompt responses use the canonical evidence limitation. This is an observation on one used development question, not a general refusal score."
+    },
+    {
+      "question_id": "dev-004",
+      "note": "Base/original incorrectly says the purchase grace period covers cash advances. Base/contract and both adapter answers reject that premise, although adapter wording drops some typical/general qualifiers. Gemini/original correctly preserves typically/generally and transaction-date interest. Gemini/contract instead returns the canonical limitation despite directly supporting evidence: a clear unnecessary refusal in this saved run."
+    },
+    {
+      "question_id": "dev-005",
+      "note": "All arms express APR as a yearly interest rate. Gemini/contract also expands annual percentage rate. Adapter/original lacks a citation. Both Gemini answers add supported variable-APR detail that the question did not require."
+    },
+    {
+      "question_id": "dev-006",
+      "note": "Both Gemini answers preserve generally for notice and in most circumstances for application of a higher rate. Both adapter answers strengthen generally must notify to must notify. Base/contract appends a contradictory evidence limitation. Gemini and adapter still omit the index distinction in the reference criteria."
+    },
+    {
+      "question_id": "dev-007",
+      "note": "All arms identify duplicated debt under different names as an error type to check. Adapter/contract repeats the user's duplicate-entry premise as a fact. Gemini retains category-level wording, but neither Gemini answer explicitly explains that the user's particular entries have not been verified as duplicates."
+    },
+    {
+      "question_id": "dev-008",
+      "note": "All arms cover contacting both the credit reporting company and the information supplier. Both Gemini answers preserve generally. Adapter/original lacks a citation; contract restores an ID."
+    },
+    {
+      "question_id": "dev-009",
+      "note": "Both Gemini answers enumerate the complete supplied checklist, retain if available for the report confirmation number, and specify copies rather than originals. Adapter answers omit some detail/qualifiers; original lacks a citation. Base/contract appends an unnecessary limitation after a substantive answer and has no citation. The broader development reference also mentions retaining copies, which the supplied snippet does not explicitly state; do not penalize an evidence-only model for failing to invent absent guidance."
+    },
+    {
+      "question_id": "dev-010",
+      "note": "Both Gemini answers include all supplied identification, itemization, response, and 30-day-end-date items, with citations for each list item. Base/contract also provides the full checklist. Adapter/original introduces the notice-sent date, which is not a checklist item in the supplied evidence, and omits several items. Adapter/contract is fuller, but places its only citation at the end rather than on each factual item."
+    },
+    {
+      "question_id": "dev-011",
+      "note": "Base and Gemini under both prompts, plus adapter/original, state that separate freeze requests are needed. Adapter/contract falsely refuses despite direct supporting evidence. Neither Gemini response explicitly develops the fraud-alert contrast in the reference criteria."
+    },
+    {
+      "question_id": "dev-012",
+      "note": "All six outputs avoid predicting the bank's fee-waiver decision. None suggests contacting the issuer, a reference next step absent from the supplied unrelated snippets. This highlights the need to align review criteria with evidence-only instructions."
+    },
+    {
+      "question_id": "dev-013",
+      "note": "All six outputs avoid predicting the landlord's approval decision. Gemini/original cites its description of the unrelated supplied material; contract gives only the canonical limitation."
+    }
+  ],
+  "release_decision": "Keep source-excerpt production default; no demonstrated overall LoRA quality improvement or held-out benchmark."
+}
