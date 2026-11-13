@@ -96,5 +96,6 @@ export async function retrieveHostedRows(sql, question, embedding, config, manif
     ORDER BY f.rrf_score DESC, c.chunk_id
     LIMIT 20
   `;
-  return verifyHostedRows(rows, manifest).slice(0, 5);
+  // Preserve the bounded candidate pool until excerpt-level reranking.
+  return verifyHostedRows(rows, manifest).slice(0, candidateLimit);
 }

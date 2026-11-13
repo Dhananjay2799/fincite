@@ -1,3 +1,4 @@
+import { excerptRankingText } from "./reranker-input.mjs";
 import { readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -17,7 +18,7 @@ export async function prepareExcerptReranker() {
       const ranked = [];
       for (const unit of units) {
         signal?.throwIfAborted();
-        const options = { text_pair: unit.text, truncation: false, padding: false };
+        const options = { text_pair: excerptRankingText(unit), truncation: false, padding: false };
         const check = await tokenizer(question, { ...options, return_tensor: false });
         const ids = check.input_ids;
         const tokens = Array.isArray(ids[0]) ? ids[0].length : ids.length;

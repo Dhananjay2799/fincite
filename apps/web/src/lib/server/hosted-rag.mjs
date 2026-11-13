@@ -1,3 +1,4 @@
+import { excerptRankingText } from "../../../../../ingestion/reranker-input.mjs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { neon } from "@neondatabase/serverless";
@@ -42,7 +43,7 @@ export async function loadHostedResources({ createSQL = neon } = {}) {
         const ranked = [];
         for (const unit of units) {
           signal?.throwIfAborted();
-          const pair = { text_pair: unit.text, truncation: false, padding: false };
+          const pair = { text_pair: excerptRankingText(unit), truncation: false, padding: false };
           const check = await tokenizer(question, { ...pair, return_tensor: false });
           const ids = check.input_ids;
           const tokens = Array.isArray(ids[0]) ? ids[0].length : ids.length;

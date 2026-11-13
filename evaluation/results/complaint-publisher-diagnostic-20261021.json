@@ -1,0 +1,427 @@
+{
+  "purpose": "development_publisher_context_diagnostic",
+  "workflow_run_url": "https://github.com/Dhananjay2799/fincite/actions/runs/39690887932",
+  "workflow_head_commit": "6c7a3f67ac0e1257ee3eae1180850ef16bfb12e2",
+  "question": "What does the CFPB do after I submit a complaint?",
+  "corpus_chunks": 17,
+  "unit_count": 75,
+  "model_config": {
+    "model_id": "Xenova/ms-marco-MiniLM-L-6-v2",
+    "model_revision": "a09144355adeed5f58c8ed011d209bf8ee5a1fec",
+    "dtype": "fp32",
+    "max_pair_tokens": 512,
+    "truncation": false,
+    "candidate_limit": 20,
+    "final_limit": 5,
+    "score_type": "raw_logit"
+  },
+  "variants": [
+    {
+      "mode": "plain",
+      "top_units": [
+        {
+          "unit_id": "34a4561f5f6d93a0586c6e8b55ef6b5d7765a48bbcf27f6275c019342ea17635",
+          "score": 4.892795085906982,
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "",
+          "text": "If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "start_char": 846,
+          "end_char": 930
+        },
+        {
+          "unit_id": "ab4c511977d3f40952656f2518676f8095d20a00d5be719ea6b9dd161860dc16",
+          "score": 4.627015590667725,
+          "source_id": "cfpb-331",
+          "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+          "section": "What information is required to be in the validation notice from a debt collector about my debt?",
+          "text": "You may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB.",
+          "start_char": 1366,
+          "end_char": 1581
+        },
+        {
+          "unit_id": "a369e1a7cc67929f1206c209428b13125ccbf991ce4eea4e855cbf0f0460188d",
+          "score": 4.3761749267578125,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Submit a complaint",
+          "text": "If you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+          "start_char": 1449,
+          "end_char": 1542
+        },
+        {
+          "unit_id": "8da4bc2e04af143bf406320e30920c853002bf9e2f51de7a52b0a69e81d5617b",
+          "score": 3.9512016773223877,
+          "source_id": "cfpb-1253",
+          "title": "What can I do if my credit application was denied because of my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+          "section": "",
+          "text": "If you feel you may have been discriminated against, learn more about your rights under ECOA and FCRA. If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "start_char": 1102,
+          "end_char": 1289
+        },
+        {
+          "unit_id": "7bf5c7e6a1ac667a02b22be647d263b627478e7d0e5fcb111035ae5db23b3691",
+          "score": -4.153071403503418,
+          "source_id": "cfpb-313",
+          "title": "What are common credit report errors that I should look for on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+          "section": "Still having trouble with a credit reporting company?",
+          "text": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.",
+          "start_char": 55,
+          "end_char": 350
+        },
+        {
+          "unit_id": "7dfbcd3d26fade1f640e383bb2436fe134fd9a119fc357dd9a25c770207f3b38",
+          "score": -4.153071403503418,
+          "source_id": "cfpb-331",
+          "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+          "section": "Still having trouble with debt collection?",
+          "text": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.",
+          "start_char": 822,
+          "end_char": 1117
+        },
+        {
+          "unit_id": "6e26f1f688d9bdea817e0e60cf55a098ce25250e1fe6ad773e68688eff175133",
+          "score": -5.1749067306518555,
+          "source_id": "cfpb-1253",
+          "title": "What can I do if my credit application was denied because of my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+          "section": "What can I do if my credit application was denied because of my credit report?",
+          "text": "If you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+          "start_char": 1260,
+          "end_char": 1733
+        },
+        {
+          "unit_id": "c02d3552f383e20f4c0f1addfd7fee7ccded6443978d6d539c41525a29eddd76",
+          "score": -5.745508670806885,
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "What should I do immediately upon identity theft?",
+          "text": "Contact financial institutions, law enforcement, the DOJ, or FTC directly using official websites and phone numbers, because:\n\n- Scammers are pretending to be FTC and lying. They contact people and say that someone used their personal information to open accounts or commit fraud. Know that the FTC never threatens you, makes you transfer your money to “protect it,” or tells you to withdraw cash or buy gold and give it to someone. That’s a scam. Scammers have also impersonated the CFPB, other agencies, and law enforcement in the past.\n\n- Scammers also often pretend to be a financial institution. Be careful if you receive an email, text, or call from someone claiming to be from your bank, credit card provider, or other financial institutions. For more information, visit Banks Never Ask That!",
+          "start_char": 793,
+          "end_char": 1592
+        },
+        {
+          "unit_id": "a0063ec1ee406b29a8368841b7a08a62e49472f016522689127cb528b410f86b",
+          "score": -6.172260284423828,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Online: dispute.transunion.com",
+          "text": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you.",
+          "start_char": 881,
+          "end_char": 1125
+        },
+        {
+          "unit_id": "0d4135b0a9ffff8dafaea3a4c3276e0ec0584c372f970dec6e95bc4d07d1e471",
+          "score": -6.3609514236450195,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Online: dispute.transunion.com",
+          "text": "A credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision.",
+          "start_char": 1127,
+          "end_char": 1624
+        },
+        {
+          "unit_id": "fbd6fad97d61d3f7a08bc671f5eda5e40a81facd8f50356df0067cb772a0f747",
+          "score": -8.02839469909668,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Then, dispute the information with the company that provided it to the credit reporting companies",
+          "text": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.",
+          "start_char": 1058,
+          "end_char": 1427
+        },
+        {
+          "unit_id": "b87c5119cc9b2678f603f36cb0705855a18ea18114e8e0c72b381b16e529d65e",
+          "score": -8.122257232666016,
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "",
+          "text": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.",
+          "start_char": 381,
+          "end_char": 717
+        }
+      ],
+      "full_corpus_result": {
+        "answer": "If you have a problem with credit reporting, you can submit a complaint to the CFPB. [cfpb-31]\n\nYou may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB. [cfpb-331]\n\nIf you have a problem with your credit report, you can also submit a complaint with the CFPB. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-331",
+            "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+            "quote": "You may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "If you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v2-focus",
+        "focus_policy_version": "excerpt-focus-v1",
+        "focus_check_applied": true,
+        "focus_diagnostics": {
+          "checked_units": 4,
+          "rejected_units": 0,
+          "scope_unconfirmed": false
+        },
+        "selected_units": [
+          {
+            "unit_id": "34a4561f5f6d93a0586c6e8b55ef6b5d7765a48bbcf27f6275c019342ea17635",
+            "source_id": "cfpb-31",
+            "score": 4.892795085906982,
+            "start_char": 846,
+            "end_char": 930
+          },
+          {
+            "unit_id": "ab4c511977d3f40952656f2518676f8095d20a00d5be719ea6b9dd161860dc16",
+            "source_id": "cfpb-331",
+            "score": 4.627015590667725,
+            "start_char": 1366,
+            "end_char": 1581
+          },
+          {
+            "unit_id": "a369e1a7cc67929f1206c209428b13125ccbf991ce4eea4e855cbf0f0460188d",
+            "source_id": "cfpb-314",
+            "score": 4.3761749267578125,
+            "start_char": 1449,
+            "end_char": 1542
+          }
+        ]
+      }
+    },
+    {
+      "mode": "publisher-context",
+      "top_units": [
+        {
+          "unit_id": "7bf5c7e6a1ac667a02b22be647d263b627478e7d0e5fcb111035ae5db23b3691",
+          "score": 6.049449920654297,
+          "source_id": "cfpb-313",
+          "title": "What are common credit report errors that I should look for on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-common-credit-report-errors-that-i-should-look-for-on-my-credit-report-en-313/",
+          "section": "Still having trouble with a credit reporting company?",
+          "text": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.",
+          "start_char": 55,
+          "end_char": 350
+        },
+        {
+          "unit_id": "7dfbcd3d26fade1f640e383bb2436fe134fd9a119fc357dd9a25c770207f3b38",
+          "score": 6.049449920654297,
+          "source_id": "cfpb-331",
+          "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+          "section": "Still having trouble with debt collection?",
+          "text": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint.",
+          "start_char": 822,
+          "end_char": 1117
+        },
+        {
+          "unit_id": "34a4561f5f6d93a0586c6e8b55ef6b5d7765a48bbcf27f6275c019342ea17635",
+          "score": 5.929856300354004,
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "",
+          "text": "If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "start_char": 846,
+          "end_char": 930
+        },
+        {
+          "unit_id": "ab4c511977d3f40952656f2518676f8095d20a00d5be719ea6b9dd161860dc16",
+          "score": 5.878002166748047,
+          "source_id": "cfpb-331",
+          "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+          "section": "What information is required to be in the validation notice from a debt collector about my debt?",
+          "text": "You may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB.",
+          "start_char": 1366,
+          "end_char": 1581
+        },
+        {
+          "unit_id": "a369e1a7cc67929f1206c209428b13125ccbf991ce4eea4e855cbf0f0460188d",
+          "score": 5.756380081176758,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Submit a complaint",
+          "text": "If you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+          "start_char": 1449,
+          "end_char": 1542
+        },
+        {
+          "unit_id": "8da4bc2e04af143bf406320e30920c853002bf9e2f51de7a52b0a69e81d5617b",
+          "score": 5.637974262237549,
+          "source_id": "cfpb-1253",
+          "title": "What can I do if my credit application was denied because of my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+          "section": "",
+          "text": "If you feel you may have been discriminated against, learn more about your rights under ECOA and FCRA. If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+          "start_char": 1102,
+          "end_char": 1289
+        },
+        {
+          "unit_id": "6e26f1f688d9bdea817e0e60cf55a098ce25250e1fe6ad773e68688eff175133",
+          "score": 4.499139785766602,
+          "source_id": "cfpb-1253",
+          "title": "What can I do if my credit application was denied because of my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
+          "section": "What can I do if my credit application was denied because of my credit report?",
+          "text": "If you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information.",
+          "start_char": 1260,
+          "end_char": 1733
+        },
+        {
+          "unit_id": "a0063ec1ee406b29a8368841b7a08a62e49472f016522689127cb528b410f86b",
+          "score": 4.047562599182129,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Online: dispute.transunion.com",
+          "text": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you.",
+          "start_char": 881,
+          "end_char": 1125
+        },
+        {
+          "unit_id": "0d4135b0a9ffff8dafaea3a4c3276e0ec0584c372f970dec6e95bc4d07d1e471",
+          "score": 3.7019870281219482,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Online: dispute.transunion.com",
+          "text": "A credit reporting company is not required to investigate disputes that it reasonably determines are frivolous or irrelevant, such as disputes that do not contain enough information for the CRA to investigate them (e.g., disputes that do not specify what information is being disputed).The company must send you a notice explaining that it has decided the dispute is frivolous and why it has made that determination and the notice must be sent within five business days after it made the decision.",
+          "start_char": 1127,
+          "end_char": 1624
+        },
+        {
+          "unit_id": "efdda9659313909b2ed8c80974b03d6d81230e1bcd1addfd58e2eb64ac6ac0fc",
+          "score": 2.857417345046997,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Then, dispute the information with the company that provided it to the credit reporting companies",
+          "text": "If the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports.",
+          "start_char": 750,
+          "end_char": 1056
+        },
+        {
+          "unit_id": "fbd6fad97d61d3f7a08bc671f5eda5e40a81facd8f50356df0067cb772a0f747",
+          "score": 2.698775291442871,
+          "source_id": "cfpb-314",
+          "title": "How do I dispute an error on my credit report?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+          "section": "Then, dispute the information with the company that provided it to the credit reporting companies",
+          "text": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future.",
+          "start_char": 1058,
+          "end_char": 1427
+        },
+        {
+          "unit_id": "b87c5119cc9b2678f603f36cb0705855a18ea18114e8e0c72b381b16e529d65e",
+          "score": 2.6685125827789307,
+          "source_id": "cfpb-31",
+          "title": "What do I do if I am a victim of identity theft?",
+          "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+          "section": "",
+          "text": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors.",
+          "start_char": 381,
+          "end_char": 717
+        }
+      ],
+      "full_corpus_result": {
+        "answer": "If you have a problem with credit reporting, you can submit a complaint to the CFPB. [cfpb-31]\n\nYou may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB. [cfpb-331]\n\nIf you have a problem with your credit report, you can also submit a complaint with the CFPB. [cfpb-314]",
+        "disposition": "answer",
+        "output_mode": "source_excerpts",
+        "answer_origin": "retrieved_source_text",
+        "generation_attempts": 0,
+        "sources": [
+          {
+            "id": "cfpb-31",
+            "title": "What do I do if I am a victim of identity theft?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
+            "quote": "If you have a problem with credit reporting, you can submit a complaint to the CFPB.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-331",
+            "title": "What information does a debt collector have to give me about a debt they’re trying to collect from me?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
+            "quote": "You may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB.",
+            "cited": true
+          },
+          {
+            "id": "cfpb-314",
+            "title": "How do I dispute an error on my credit report?",
+            "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-credit-report-en-314/",
+            "quote": "If you have a problem with your credit report, you can also submit a complaint with the CFPB.",
+            "cited": true
+          }
+        ],
+        "warnings": [
+          "Source wording copied exactly. These excerpts may not fully answer your question. General guidance cannot determine account-specific decisions or future outcomes."
+        ],
+        "excerpt_policy_version": "source-excerpts-v2-focus",
+        "focus_policy_version": "excerpt-focus-v1",
+        "focus_check_applied": true,
+        "focus_diagnostics": {
+          "checked_units": 7,
+          "rejected_units": 3,
+          "scope_unconfirmed": false
+        },
+        "selected_units": [
+          {
+            "unit_id": "34a4561f5f6d93a0586c6e8b55ef6b5d7765a48bbcf27f6275c019342ea17635",
+            "source_id": "cfpb-31",
+            "score": 5.929856300354004,
+            "start_char": 846,
+            "end_char": 930
+          },
+          {
+            "unit_id": "ab4c511977d3f40952656f2518676f8095d20a00d5be719ea6b9dd161860dc16",
+            "source_id": "cfpb-331",
+            "score": 5.878002166748047,
+            "start_char": 1366,
+            "end_char": 1581
+          },
+          {
+            "unit_id": "a369e1a7cc67929f1206c209428b13125ccbf991ce4eea4e855cbf0f0460188d",
+            "source_id": "cfpb-314",
+            "score": 5.756380081176758,
+            "start_char": 1449,
+            "end_char": 1542
+          }
+        ]
+      }
+    }
+  ],
+  "limitations": [
+    "All saved corpus chunks are ranked; this does not reproduce live Neon top-five retrieval.",
+    "Inspected development case, not independent quality evaluation."
+  ],
+  "quality_scores": null
+}
