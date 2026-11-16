@@ -2,7 +2,6 @@ import type { NextConfig } from "next";
 import { resolve } from "node:path";
 
 const nextConfig: NextConfig = {
-  allowedDevOrigins: ['luther-dialogue-february-clause.trycloudflare.com'],
   outputFileTracingRoot: resolve(__dirname, "../.."),
   serverExternalPackages: ["@huggingface/transformers", "onnxruntime-node"],
   // CPU-only Linux x64 deployment: retain its native binding and core library.

@@ -1,3 +1,15 @@
+# FinCite
+
+A consumer-finance RAG application and LoRA fine-tuning pipeline built to test whether source retrieval and model adaptation improve answer quality.
+
+FinCite retrieves CFPB guidance and shows ranked source excerpts with links. Generated explanations are retained as an experimental comparison mode. It helps people find and understand general guidance about credit cards, credit reports and debt notices. It cannot inspect bank accounts, freeze credit, resolve disputes or determine personal financial outcomes.
+
+**Live demo:** https://fincite-rouge.vercel.app — type a question to search CFPB source excerpts. The first search after idle time can take about 10 seconds.
+
+**Current status:** live hosted source-excerpt demo and local development demo, with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
+
+**Current demo behavior:** the bridge defaults to source excerpts ranked by a pinned cross-encoder. Code verifies source offsets and copies complete paragraphs or list groups; the language model does not write the displayed excerpts. Relevance and completeness remain limited. See [source excerpt mode and verification](docs/source-excerpts-v1.md).
+
 ## UI walkthrough
 
 Silent walkthrough showing the interface, source navigation,
@@ -5,16 +17,6 @@ and labelled curated examples. Model evaluation results are
 documented separately below.
 
 https://github.com/user-attachments/assets/85f3fe45-5be1-4bc2-9dbf-14b71daae05b
-
-# FinCite
-
-A consumer-finance RAG application and LoRA fine-tuning pipeline built to test whether source retrieval and model adaptation improve answer quality.
-
-FinCite retrieves CFPB guidance and shows ranked source excerpts with links. Generated explanations are retained as an experimental comparison mode. It helps people find and understand general guidance about credit cards, credit reports and debt notices. It cannot inspect bank accounts, freeze credit, resolve disputes or determine personal financial outcomes.
-
-**Current status:** working local development demo with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
-
-**Current demo behavior:** the bridge defaults to source excerpts ranked by a pinned cross-encoder. Code verifies source offsets and copies complete paragraphs or list groups; the language model does not write the displayed excerpts. Relevance and completeness remain limited. See [source excerpt mode and verification](docs/source-excerpts-v1.md).
 
 ## What is implemented
 
@@ -75,11 +77,11 @@ Both versions received identical reconstructed evidence and prompts for the 13 d
 
 The Colab comparison uses grouped source quotes reconstructed from the saved local response. Its message formatting and precision differ from the local quantized deployment. It isolates adapter behavior within that comparison, not the effect of quantization.
 
-## Hosted source-excerpt candidate
+## Hosted source-excerpt demo
 
-A Vercel deployment path is prepared in `apps/web`: its Node.js chat API runs Neon retrieval, pinned CPU models and verified source excerpts directly, without a local bridge or GGUF. It validates returned text against the committed corpus hashes. Local mode remains available.
+The Vercel deployment at https://fincite-rouge.vercel.app is built from `apps/web`: its Node.js chat API runs Neon retrieval, pinned CPU models and verified source excerpts directly, without a local bridge or GGUF. It validates returned text against the committed corpus hashes. Local mode remains available.
 
-**Deployment has not been completed.** Workspace access and a privately configured database secret are still required. See [hosted setup and executed checks](docs/vercel-source-excerpts.md) for the `apps/web` project root, Hobby-only setup, measured bundle size and explicit verification limits.
+The deployment runs on the Vercel Hobby plan with a privately configured database secret. It has no rate limiting and a small corpus, so treat it as a demo, not a service. See [hosted setup and executed checks](docs/vercel-source-excerpts.md) for the `apps/web` project root, Hobby-only setup, measured bundle size and explicit verification limits.
 
 ## Run the existing local demo
 
@@ -159,6 +161,6 @@ Notebooks, dataset manifests, configurations and raw results live in `training/`
 - Review candidate data and check semantic overlap across splits.
 - Build an independently reviewed held-out test set with more articles and questions.
 - Measure unsupported-answer rate, answer coverage, false refusals and citation support together.
-- Complete clean-machine artifact restoration, public deployment and the presentation demo.
+- Complete clean-machine artifact restoration and the presentation demo; add rate limiting to the hosted API.
 
 The engineering result so far is a functioning pipeline with reproducible development comparisons and documented regressions. A claim that FinCite reduces hallucinations remains unproven.
