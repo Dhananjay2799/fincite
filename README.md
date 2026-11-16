@@ -6,6 +6,10 @@ FinCite retrieves CFPB guidance and shows ranked source excerpts with links. Gen
 
 **Live demo:** https://fincite-rouge.vercel.app — type a question to search CFPB source excerpts. The first search after idle time can take about 10 seconds.
 
+**Current status:** live hosted source-excerpt demo and local development demo, with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
+
+**Current demo behavior:** the bridge defaults to source excerpts ranked by a pinned cross-encoder. Code verifies source offsets and copies complete paragraphs or list groups; the language model does not write the displayed excerpts. Relevance and completeness remain limited. See [source excerpt mode and verification](docs/source-excerpts-v1.md).
+
 ## UI walkthrough
 
 Silent walkthrough showing the interface, source navigation,
@@ -13,10 +17,6 @@ and labelled curated examples. Model evaluation results are
 documented separately below.
 
 https://github.com/user-attachments/assets/85f3fe45-5be1-4bc2-9dbf-14b71daae05b
-
-**Current status:** live hosted source-excerpt demo and local development demo, with recorded retrieval, training and generation experiments. The controlled comparison does **not** establish an overall answer-quality improvement from the current adapter. Generated answers can still contradict retrieved evidence.
-
-**Current demo behavior:** the bridge defaults to source excerpts ranked by a pinned cross-encoder. Code verifies source offsets and copies complete paragraphs or list groups; the language model does not write the displayed excerpts. Relevance and completeness remain limited. See [source excerpt mode and verification](docs/source-excerpts-v1.md).
 
 ## What is implemented
 
