@@ -153,4 +153,4 @@ import does not modify existing rows.
 
 1. Place the matching `data/raw` and `data/processed` files in the working copy.
 2. On this branch, from the repository root, run `node --env-file=apps/web/.env.local ingestion/import-documents.mjs`, then `node --env-file=apps/web/.env.local ingestion/import-embeddings.mjs`.
-3. Merge, then update the article and passage counts in the README and interface.
+3. Merge. The README and interface counts are already updated on this branch.

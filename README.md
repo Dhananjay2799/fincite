@@ -22,7 +22,7 @@ https://github.com/user-attachments/assets/85f3fe45-5be1-4bc2-9dbf-14b71daae05b
 
 - Next.js/TypeScript interface and Node.js chat API.
 - Repeatable CFPB ingestion with snapshot hashes and source provenance.
-- Eight articles, 17 validated chunks and 384-dimensional BGE embeddings stored in Neon PostgreSQL.
+- 163 Ask CFPB articles on credit cards, credit reports and debt collection: 292 validated chunks with 384-dimensional BGE embeddings stored in Neon PostgreSQL. The recorded experiments below used the original eight articles and 17 chunks.
 - Vector search, keyword search and hybrid reciprocal rank fusion.
 - Pinned CPU reranking of source excerpt units in the default live flow.
 - Qwen3-1.7B LoRA training in free Colab, adapter reload checks and base-versus-adapter comparisons.
@@ -47,6 +47,18 @@ flowchart TD
 ```
 
 The default bridge uses hybrid retrieval over the existing corpus, ranks complete paragraph/list units from the top five chunks, and returns up to three source excerpts. Whole units over the reranker token budget are skipped, never truncated. Its relevance threshold is development-calibrated, not a correctness guarantee. No generative model is started by the default launcher. The optional generated mode uses the local Qwen GGUF and checks citation IDs without proving factual support.
+
+## Corpus expansion comparison
+
+The corpus grew from 8 to 163 articles without changing the extractor, retrieval or selection policy. On 59 development questions run through the hosted responder against a local stand-in database:
+
+| Check | 8 articles | 163 articles |
+| --- | ---: | ---: |
+| Answerable (32) returning a labelled source | 32 | 27 |
+| Unanswerable-labelled (15) returning no excerpt | 15 | 11 |
+| New-topic (12) returning an excerpt from an article on that topic | 0 | 12 |
+
+Coverage of everyday questions improves; the small-corpus selection thresholds are less reliable at withholding. Labels were written for the eight-article corpus and nothing was independently graded. [Comparison, inspected regressions and limits](docs/corpus-expansion-v2.md).
 
 ## Recorded development results
 

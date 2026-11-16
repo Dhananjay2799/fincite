@@ -481,7 +481,7 @@ export default function FinCiteWorkspace() {
               <Icon name="book" size={18} />
               <div>
                 <strong>Project corpus</strong>
-                <p>8 CFPB articles · 17 passages</p>
+                <p>163 CFPB articles · 292 passages</p>
                 <small>Current development snapshot</small>
               </div>
             </div>
