@@ -5,7 +5,7 @@
   "method": "evaluation/run-corpus-comparison.mjs: real pinned embedding and reranker models, hosted responder code, PGlite with pgvector standing in for Neon.",
   "limits": [
     "PGlite is not the production Neon database.",
-    "Labels were written for the original 8-article corpus; an article outside the label can be a correct source in the expanded corpus.",
+    "Labels were written for the original 8-article corpus; an article outside the label can be a correct source in the expanded corpus. Labels for the 10 saved excerpt probes are the sources selected in the saved 2026-10-21 replay record.",
     "The 12 new-topic questions were written by the assistant after seeing the article list and have no reviewed labels.",
     "No response was graded by an independent human reviewer."
   ],
@@ -1722,6 +1722,343 @@
           }
         ],
         "answer": "- Harassment. Debt collectors may not harass you or anyone else over the phone or through any other form of contact, including text or email.\n\n- Representation by attorney. If a debt collector knows that an attorney is representing you about the debt, the debt collector generally must stop contacting you and must contact the attorney instead. This is only true if the debt collector knows, or can easily find out, the name and contact information of your attorney. If an attorney is representing you and a debt collector calls, give them your attorney’s name and contact information and tell them that they should contact your attorney directly, instead of you. It’s also a good idea to keep all documents sent by a debt collector and write down dates and times of conversations, along with notes about what you discussed. These records can help you if you meet with a lawyer or go to court. [cfpb-329]\n\nYou can ask a debt collector to stop contacting you. Asking them to stop contacting you will not necessarily stop them from suing you or reporting the debt to a credit reporting company, which can affect your credit report and credit scores. If you don’t owe the debt or have already paid the debt, it is important to take action to contest the attempt to collect the debt. [cfpb-330]\n\nYou have the right to tell a debt collector to stop contacting you. If you ask a debt collector to stop all contact – regardless of the communications channel – the collector must stop. Keep in mind, though, that you could still owe the debt. [cfpb-1411]"
+      }
+    },
+    {
+      "id": "excerpt-probe-01",
+      "question": "Does a cash withdrawal on my card qualify for interest-free days?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-47",
+        "cfpb-44"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-47"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-47",
+            "score": -0.54
+          }
+        ],
+        "answer": "With credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction. [cfpb-47]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-47"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-47",
+            "score": -0.54
+          }
+        ],
+        "answer": "With credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction. [cfpb-47]"
+      }
+    },
+    {
+      "id": "excerpt-probe-02",
+      "question": "Should I post my only original evidence when writing to correct a credit report?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314",
+        "cfpb-1253"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": -0.93
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": -1.11
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": -1.29
+          }
+        ],
+        "answer": "If you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide. [cfpb-314]\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position [cfpb-314]\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports. [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": -0.93
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": -1.11
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": -1.29
+          }
+        ],
+        "answer": "If you identify an error on your credit report, you should start by disputing that information with the credit reporting company (Experian, Equifax, and/or Transunion). You should explain in writing what you think is wrong, why, and include copies of documents that support your dispute. You can also use our instructions and template letter as a guide. [cfpb-314]\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position [cfpb-314]\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports. [cfpb-314]"
+      }
+    },
+    {
+      "id": "excerpt-probe-03",
+      "question": "What makes a variable card interest rate move up or down?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-45"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-45",
+            "score": 2.94
+          }
+        ],
+        "answer": "A variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time. [cfpb-45]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-45",
+            "score": 2.94
+          }
+        ],
+        "answer": "A variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time. [cfpb-45]"
+      }
+    },
+    {
+      "id": "excerpt-probe-04",
+      "question": "Where do I ask for a card agreement that is missing online?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-45"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-45",
+            "score": 2.26
+          }
+        ],
+        "answer": "You should be able to find a copy of the agreement on your card issuer’s website, and you can request a copy from your card issuer if it is not there. If you have any questions, you should contact your card issuer. [cfpb-45]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-29"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-29",
+            "score": -0.83
+          },
+          {
+            "source_id": "cfpb-29",
+            "score": -1.24
+          }
+        ],
+        "answer": "If there is unauthorized use of your card before you report it missing, the most you will owe for unauthorized charges on the card is $50. Many cardholder agreements say you are not responsible for any charges in this circumstance. [cfpb-29]\n\nCheck your credit card agreement to review your rights regarding unauthorized charges. You can find or request your agreement by visiting your credit card company’s website or by visiting the CFPB’s Credit Card Agreement Database. [cfpb-29]"
+      }
+    },
+    {
+      "id": "excerpt-probe-05",
+      "question": "Is a closed account still marked open something to check on a credit report?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-313"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 3.21
+          }
+        ],
+        "answer": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names [cfpb-313]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313",
+          "cfpb-1819"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 3.21
+          },
+          {
+            "source_id": "cfpb-1819",
+            "score": 1.6
+          }
+        ],
+        "answer": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names [cfpb-313]\n\nSpecialty checking account reporting companies, which include Chex Systems and Early Warning Services, collect and report information about checking accounts you’ve had in the past. If you’ve had your account closed due to an unpaid negative balance, the bank or credit union would typically report this “involuntary closure” to a checking account reporting company. You may also be reported if you were suspected of fraudulent activity by the bank or credit union. Banks and credit unions often use reports from these companies to help decide whether to offer you a checking account and the type of checking account to offer you. [cfpb-1819]"
+      }
+    },
+    {
+      "id": "excerpt-probe-06",
+      "question": "Which details on a collection letter show the amount and the deadline for a dispute?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-331",
+        "cfpb-314"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-331",
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-331",
+            "score": -2.39
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": -2.4
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": -2.72
+          }
+        ],
+        "answer": "The information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt [cfpb-331]\n\nOnce you receive the debt validation information, you have 30 days to dispute the debt in writing. Failing to request verification in writing or within this time period can affect your ability to assert your rights under the debt collection rule. [cfpb-331]\n\nIf you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1467",
+          "cfpb-2122",
+          "cfpb-338"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1467",
+            "score": 1.4
+          },
+          {
+            "source_id": "cfpb-2122",
+            "score": -0.11
+          },
+          {
+            "source_id": "cfpb-338",
+            "score": -0.26
+          }
+        ],
+        "answer": "- Dispute the debt. If you believe you don’t owe the debt or it’s not yours to pay, you should dispute it. If you receive a validation notice and dispute the debt in writing within 30 days, the debt collector must stop contacting you until they verify the debt in writing. The written validation notice will include a deadline for when you must submit your written dispute letter.\n\n- Set boundaries for how debt collectors contact you. You can tell debt collectors how to contact you . You can also tell debt collectors not to contact you at certain times or places or by phone, email, text message, or mail. If you don’t want to hear from the debt collector again, you can also send the collector a written request to stop contacting you. [cfpb-1467]\n\nIf you believe that a debt collector is trying to collect a debt that exceeds the amount permitted by the NSA, you should dispute the debt in writing by sending a letter to the collector as soon as possible. This protects your rights under the FDCPA and puts the collector on notice that it may be trying to collect an impermissible amount. [cfpb-2122]\n\nA debt collector must stop all collection activity on a debt if you send them a written dispute about the debt, generally within 30 days after your initial communication with them. Collection activities can restart, though, after the debt collector sends verification responding to the dispute. [cfpb-338]"
+      }
+    },
+    {
+      "id": "excerpt-probe-07",
+      "question": "Which cryptocurrency will double in value next week?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "excerpt-probe-08",
+      "question": "What is my checking account balance right now?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1819"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1819",
+            "score": -3.67
+          }
+        ],
+        "answer": "Specialty checking account reporting companies, which include Chex Systems and Early Warning Services, collect and report information about checking accounts you’ve had in the past. If you’ve had your account closed due to an unpaid negative balance, the bank or credit union would typically report this “involuntary closure” to a checking account reporting company. You may also be reported if you were suspected of fraudulent activity by the bank or credit union. Banks and credit unions often use reports from these companies to help decide whether to offer you a checking account and the type of checking account to offer you. [cfpb-1819]"
+      }
+    },
+    {
+      "id": "excerpt-probe-09",
+      "question": "Will disputing this error guarantee my mortgage application is approved?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "excerpt-probe-10",
+      "question": "Will a collector agree to my proposed settlement amount tomorrow?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1447"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1447",
+            "score": 1.14
+          }
+        ],
+        "answer": "If you agree to a repayment or settlement plan, get the plan and the debt collector’s promises in writing before you make a payment. Those promises may include stopping collection efforts and ending or forgiving the debt once you have completed the plan. [cfpb-1447]"
       }
     }
   ]
