@@ -1,4 +1,5 @@
 ﻿import { isChatAnswer, type ChatFailure } from "@/lib/chat-types";
+import { clientKey, hostedRateLimiter } from "@/lib/server/rate-limit.mjs";
 export const runtime = "nodejs";
 export const maxDuration = 180;
 const fail = (status: number, code: string, message: string) => Response.json(
@@ -20,6 +21,16 @@ export async function POST(request: Request) {
   // Hosted deployments never contact a loopback service. Local development
   // retains its existing bridge unless explicitly opted in.
   if (process.env.VERCEL === "1" || process.env.FINCITE_BACKEND === "hosted") {
+    // Per-instance limit on the public endpoint; see rate-limit.mjs for its scope.
+    const limit = hostedRateLimiter.check(clientKey(request.headers));
+    if (!limit.allowed) {
+      return Response.json(
+        { error: { code: "RATE_LIMITED", message: limit.scope === "day"
+          ? "You have reached today's question limit for this demo. Please try again tomorrow."
+          : "Too many questions in a short time. Please wait a minute and try again." } } satisfies ChatFailure,
+        { status: 429, headers: { "Cache-Control": "no-store", "Retry-After": String(limit.retryAfterSeconds) } }
+      );
+    }
     if (!process.env.DATABASE_URL?.trim()) return fail(503, "DATABASE_NOT_CONFIGURED", "The hosted source search has not been configured.");
     try {
       const { answerHostedQuestion } = await import("@/lib/server/hosted-rag.mjs");

@@ -22,6 +22,10 @@ Model files download into a disposable cache under the operating system temporar
 
 The install command skips optional ONNX GPU downloads. Linux CPU runtime files are included explicitly in the Next.js trace; Windows/macOS/ARM and CUDA/TensorRT files are excluded from Vercel's `/api/chat` bundle. This does not change the Windows local runtime. Large-function beta settings and paid compute are not required by the measured trace.
 
+## Request limits
+
+On the hosted path, `/api/chat` allows each client address 20 questions per minute and 300 per day, then returns 429 with a `Retry-After` header. `FINCITE_RATE_LIMIT_PER_MINUTE` and `FINCITE_RATE_LIMIT_PER_DAY` override the defaults. The client address is the first `x-forwarded-for` entry, which Vercel sets. Counters live in one function instance's memory: they reset on a cold start and are not shared across instances, so this is not a distributed or abuse-proof limit. The local bridge path is not limited.
+
 ## Verification performed
 
 - 50 Node tests pass: existing grounding/evaluation tests plus hosted hash validation, query parameter binding, stale-embedding exclusion, resource reuse, failed initialization recovery, overlapping-request rejection and cancellation.

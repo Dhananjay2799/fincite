@@ -35,7 +35,7 @@ jobs:
       - name: Test focus, source copying and hosted responder
         run: node --test ingestion/test-reranker-input.mjs ingestion/test-excerpt-focus.mjs ingestion/test-source-excerpts.mjs evaluation/test-hosted-rag.mjs
       - name: Test live RAG core, evidence selection, evaluation runners and held-out tooling
-        run: node --test ingestion/test-live-rag.mjs ingestion/test-evidence-selection.mjs ingestion/test-evidence-units.mjs evaluation/test-heldout.mjs evaluation/test-gemini-comparison.mjs evaluation/test-ranked-generation-policy.mjs evaluation/test-reviewed-pilot.mjs
+        run: node --test ingestion/test-live-rag.mjs ingestion/test-evidence-selection.mjs ingestion/test-evidence-units.mjs evaluation/test-heldout.mjs evaluation/test-gemini-comparison.mjs evaluation/test-ranked-generation-policy.mjs evaluation/test-reviewed-pilot.mjs evaluation/test-rate-limit.mjs
       - name: Replay inspected development cases
         run: node evaluation/replay-excerpt-focus.mjs
       - name: Install locked web dependencies
