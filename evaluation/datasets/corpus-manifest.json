@@ -1,6 +1,94 @@
 {
-  "corpus_sha256": "c3e6196a6a66f67e89f6c221d9414e4a6f586835dab773bdbb253b3878c1b016",
+  "corpus_sha256": "f8999cf5d9475196066ca1574d345ab1fe30e5a85d76a174bdfbc6d192ba42d0",
   "documents": [
+    {
+      "source_id": "cfpb-1",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-prescreened-credit-card-offer-en-1/",
+      "raw_sha256": "8eb27aa3377c5e29790224f85c86112c797759be64206206743f759e57cfa278",
+      "document_sha256": "39a1c541b5b7844a3970c14095038a97f80e818ae4451361cf70c3eaa37e5963",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1049",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/if-i-link-my-credit-card-to-my-checking-account-to-cover-overdrafts-can-the-bankcredit-union-charge-me-a-fee-each-time-i-use-it-to-cover-an-overdraft-en-1049/",
+      "raw_sha256": "4238f42634076ed71d54b9c74ea35d88d7eeaa1c7f230d51208ae97ea13cf8b2",
+      "document_sha256": "e5a70ec09bfc042d35a1c12d972839131f3e0609459531f4d18a35ff161779da",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-11",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/why-did-i-get-a-low-credit-limit-on-a-credit-card-en-11/",
+      "raw_sha256": "00356e5179ff03d16561b9a395ff17ce5bd097e075a561083483a874e42851df",
+      "document_sha256": "4f4606be34b724d28d20f9c79bd35106b91bb9c26d0bd8e6e65dc818b69cf10a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1157",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-take-my-social-security-or-va-benefits-en-1157/",
+      "raw_sha256": "240b97568809b0cfedd49b8521a3c63997820cf5e9b112b3f06df7086b43766d",
+      "document_sha256": "15a6bad085a02e67c02704c351d79a068d4b30e62f7821401d8195e6944b734e",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1221",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-does-it-take-to-get-my-free-credit-report-after-i-order-it-en-1221/",
+      "raw_sha256": "afc3e4cac172acc7c67f83bcd7b35d02611dae20204a7a8687e34b3d1ff2fbdf",
+      "document_sha256": "9585966a556d9f1599b84cbe0af8fc62bc93b169d73897418b525fbb8d84c35f",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1229",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-requesting-my-credit-report-hurt-my-credit-score-en-1229/",
+      "raw_sha256": "01adbe1254632654cf57067109d0023ee7364cc7352c58eb093addb04ac83960",
+      "document_sha256": "1c36fdb366e8cd812536efed24b91df94f8d795bae5cbf4b5e2f1b9c2c197f77",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1231",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-it-hurt-my-credit-to-close-a-credit-card-en-1231/",
+      "raw_sha256": "1c2b54bd76628b24e320aa301918e2acf856219f1090381eb014b4295728fd49",
+      "document_sha256": "3577880aeed23a461de9bf3f488ddc7c89cf62f2fd007e9662ca0d30ab807af9",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1239",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/why-do-i-receive-so-many-offers-for-new-credit-cards-in-the-mail-en-1239/",
+      "raw_sha256": "7c04d66aaa31f4477198d21dcd3516f4790da5e3d08b8a8ccb0523f1beb9a2c6",
+      "document_sha256": "f3fb375975d2cbfff8ff7802f696473da94f082efa14cc37d98b29eea6fca9b2",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1243",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-identity-theft-en-1243/",
+      "raw_sha256": "5158bfe519b9c65dc3906fee5c448edc3c8183c707490805e482f0dcbc67d2a7",
+      "document_sha256": "225cbb16d32958bcff135cad831fbf4b078d49f6d8d5936ae7eff2c456f5ff46",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1249",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/is-it-possible-to-remove-accurate-negative-information-from-my-credit-report-en-1249/",
+      "raw_sha256": "e83b411fac88a2458c5d1063cbd367b1b1c36aa951eec92b3f00b20236bcde5b",
+      "document_sha256": "8d8c6e7782b5c8b573b4d9677e2a108d7986bd23ed51b9371fbf335a0382a225",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1251",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-reporting-company-en-1251/",
+      "raw_sha256": "890e3ddd696bd1ad268856e216e68e9b7f8528e7c47c8991cc5bab088877b42b",
+      "document_sha256": "10aec4aa8c5b7a11855bba8e0143769fb96e884bc61b302157e642d3a006a632",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
     {
       "source_id": "cfpb-1253",
       "url": "https://www.consumerfinance.gov/ask-cfpb/my-credit-application-was-denied-because-of-my-credit-report-what-can-i-do-en-1253/",
@@ -10,10 +98,754 @@
       "validation_status": "pending_human_review"
     },
     {
+      "source_id": "cfpb-1257",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-do-not-want-creditors-to-report-my-accounts-to-credit-reporting-companies-what-can-i-do-en-1257/",
+      "raw_sha256": "e075d9766d645656fef1bd73f355d92abbaafc0641d6753517a58dae9d9cfa29",
+      "document_sha256": "12987fe03071a9f8f55a47f73196d31e8573a0ee16081587cb8bc7f068ba3d50",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1265",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/do-i-have-to-pay-for-my-credit-score-en-1265/",
+      "raw_sha256": "47b7385aebf9904630686462f0d68a1e9f1d27c246f87f7ac3ab71470d8a4c49",
+      "document_sha256": "ca8ba94f3b7646d2863a1b6cc4d0fe8b47b5e2109c5a6e5ef2871aedb95d38b9",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1291",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/if-my-spouse-has-a-bad-credit-score-does-it-affect-my-credit-score-en-1291/",
+      "raw_sha256": "1635ee567db4b719b780ad5c7ad499df98c4639e17d9ffcab20d6ecfc8812465",
+      "document_sha256": "12ad8bb885d558267296efc11edc4db1ee6f8070f323d3bb27321a20a270bcb0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1293",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/will-paying-off-my-credit-card-balance-every-month-improve-my-score-en-1293/",
+      "raw_sha256": "4594d0b58268cbbbfabc60c5337924ef3f20958331c49a9f4338b0e987bf9f67",
+      "document_sha256": "a207c20861f5676c7919bf1a12d7ac38bf6144ad344d7bd316f8700388234c50",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1317",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-inquiry-en-1317/",
+      "raw_sha256": "67aef053a4a574201daca31353eb6524372b1a224e86e27790ceaaf118c1d6a1",
+      "document_sha256": "76035080688c221502c9454cb68e4eb1f5644185d00c095f2d1378840bde877c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1327",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-if-i-disagree-with-the-results-of-my-credit-report-dispute-en-1327/",
+      "raw_sha256": "72a2f6293cad3a9817405ef93a68948c9ad08f8ad03ffc33a80c705d5f344ff8",
+      "document_sha256": "39de8177230bdb4cf556938c577c4a12070de8987d4590b76bd9a20f021af9fd",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1331",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/should-i-dispute-a-creditor-on-my-credit-report-if-i-dont-recognize-the-company-en-1331/",
+      "raw_sha256": "5a03ee8526a64e14f3394878e15f0757d30fc395511378b5a829fc7a234f996d",
+      "document_sha256": "26d83ea6acbacf50e15e1a89cedd3718483f42bcf1519d7370ef930d5eda2d1b",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1339",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-does-it-take-to-repair-an-error-on-a-credit-report-en-1339/",
+      "raw_sha256": "b0a4d60fae334c81586e7c230eee10344401c41b8abed8897c924f7e5d321a2f",
+      "document_sha256": "c8038b431c8619fbfc58d9c1a3ca19d064e16ad65c31f4a09a52dae3d1fd133c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1341",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-freeze-or-security-freeze-on-my-credit-report-en-1341/",
+      "raw_sha256": "59574fc0d85c4ae586a74f2a389ffbf96437549c13604dec16b1eb9e99eaae67",
+      "document_sha256": "553ae4bb377c708a398f15d822691c341009377148ba1ce726b399d409bbe21b",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1343",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-can-i-tell-a-credit-repair-scam-from-a-reputable-credit-counselor-en-1343/",
+      "raw_sha256": "359ee742d85681c75e3e21b2f9fc8d0b42e219b0a24625c6f99a8a608391610f",
+      "document_sha256": "71cc90ec55d3b7d8fbbea32d4996ef05d1c013274a6ccdb8840bd132edf4feae",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1345",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/could-i-be-turned-down-for-a-job-because-of-something-in-my-credit-report-en-1345/",
+      "raw_sha256": "e6f7365ff0f45157cd04062f8ab817f61d39ebbd18dfb3904e198aff5fbd8f6e",
+      "document_sha256": "15bcfefe629ee75b0a276d71bdb7d99b6d89b802be561813989eb27373c54ab3",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1357",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-remove-debts-that-are-listed-multiple-times-from-my-credit-report-en-1357/",
+      "raw_sha256": "c14440e83056a18a28469c0cae5b0bebfa256f7bb58dc53347a1a1a7a09ec903",
+      "document_sha256": "9a6814b8ca9e354799a680f9502ef946f6a1fca530729f0e02646dca39217b73",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1359",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-can-i-spot-identity-theft-en-1359/",
+      "raw_sha256": "f74aa2c84e7d8e48431ff322871fa23454bb64268e7711a2e72d3118501692a0",
+      "document_sha256": "70cd7f3404fd1f4f7753e4a17faa9cf9cf77f5b48ce75ee421abe19bdd05af96",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1363",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/if-i-dispute-a-debt-how-does-that-show-up-on-my-credit-report-en-1363/",
+      "raw_sha256": "1c54ced9c6950643184c27a66f2f7549a42d0348ac93e0d5689d835d5de47084",
+      "document_sha256": "1653c9df8b337fd6cd5dddc70129ad409b545560fc456716395753e1df2c54ab",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1365",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-monitoring-service-en-1365/",
+      "raw_sha256": "97fe77e554431b2c6464766c8d9bd1e6c17b0626b86b2dc080ff24159036b255",
+      "document_sha256": "57c0239725a27b1202c3d24572b2a80b948d72022b3dfbd40094e5ea5e9acd52",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1369",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-identity-monitoring-or-identity-theft-service-en-1369/",
+      "raw_sha256": "f45c7c79c9475a85a4d9f27f0bfa4b78503a0c79d0a4cfff6f85b5bea5569e67",
+      "document_sha256": "95ff4fbf2c052cc52a3be2f4eb5430c4fa80d3df6ec0ec2940dbdfd86321b969",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1371",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/im-in-the-military-can-exercising-my-rights-under-the-scra-hurt-my-credit-score-en-1371/",
+      "raw_sha256": "cea3d1901daf28f59a08d2eced816d6117d7759f79d116d83ddc2ada0d197b47",
+      "document_sha256": "68be68c2995069fa4478b15d42a9dbedb9f0ffb6704c94cde9fad1029b59b5a3",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1373",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/as-an-active-duty-member-of-the-military-can-i-get-a-truly-free-credit-score-for-me-or-my-spouse-en-1373/",
+      "raw_sha256": "dd0bfd14af73512e86f90e1442040e14c9d99993c61b50334f6fefbc2f1f2608",
+      "document_sha256": "c8d23a411dfce6d6686f0cac7fb7db98b9ce5503e495b664ee27694ca274af84",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1377",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-i-make-issuers-stop-sending-me-credit-card-offers-in-the-mail-en-1377/",
+      "raw_sha256": "117a0b573cf77ea7e6667de14e735f6d53b7430cf9f76d36036c726b30944259",
+      "document_sha256": "e115b7881fc71a45560cc997b4e8e9af80e8ebd26bae21be7e8b2caace91b66c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1381",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-judgment-en-1381/",
+      "raw_sha256": "c38ab609dbaf20f783d8a5a5557136fa425f98d9c5687eba7adb14f2161c22ff",
+      "document_sha256": "73c4ddd4a2efba19bbd5b6b4f63221a7bf91ed26937aebb0079feca9a8ea161b",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1387",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-an-original-creditor-and-what-is-the-difference-between-an-original-creditor-and-a-debt-collector-en-1387/",
+      "raw_sha256": "b61b85b95000bc249fa27c177caf925f3496125b855affb7f87c40323c7b459b",
+      "document_sha256": "0cc6f46fa616d8ed0aeb821668eba29d5e1ae40c4508d09f842d04f300d258b8",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-14",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-the-card-issuer-request-information-about-my-income-my-age-and-my-social-security-number-when-i-apply-for-a-credit-card-en-14/",
+      "raw_sha256": "df7787df0e094418c50d1ed60c3736feac533d5c31f9aa2bfff2170fe4a3a938",
+      "document_sha256": "d14f8feda2a5e3a353d7c9fa0e9e93bec31ca0ab29962d462dcebce2486b87c0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1401",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-an-unfair-deceptive-or-abusive-practice-by-a-debt-collector-en-1401/",
+      "raw_sha256": "e73f29ead351648a32a7478cee71f5ab1c95cf167d954bd875b6156d7ecc213b",
+      "document_sha256": "603a8eb8d2ec3ab4da126a16e3b9f967dfbf0ce143fa941f3fa555694f380788",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1403",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-can-i-do-if-a-debt-collector-contacts-me-about-a-debt-i-already-paid-or-dont-think-i-owe-en-1403/",
+      "raw_sha256": "226c932d4e9b0a7a37a8f2b46533bd0353bb26fe3db595dbff509373746ead70",
+      "document_sha256": "419fa8d735f6e64071fb9e3fc8ca43d2ed3a56765f00c34b95ce60011b76123f",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1411",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-a-debt-collector-to-stop-contacting-me-en-1411/",
+      "raw_sha256": "ad89a9b05a2ab6b6136484a12ce333fdc103a06e6a2b5c1ec59555d22fd03d73",
+      "document_sha256": "8603cbce2d75d259f135234569c901ab7a5f8ea6ba372bc2bf33758413f8ec28",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1413",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-contact-me-about-a-debt-after-a-divorce-en-1413/",
+      "raw_sha256": "2d1465b9345ee57f9f884e81ad8e078c7dd8a4214a247e64c606e7e1107efee2",
+      "document_sha256": "8bcd7575ccddb89d056501982a8f9e840dc75987405731a48f4ae33405ccc9be",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1417",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-increase-the-interest-rate-on-a-debt-i-owe-en-1417/",
+      "raw_sha256": "ba3725e9c63ae3b0ab8772563191100250af590ba3778e95e2ed3886528f22e5",
+      "document_sha256": "a172e82c72dd0c805b008047208842bedad751eb70cdb1a597605a90260670f0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1423",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-debt-collectors-collect-a-debt-thats-several-years-old-en-1423/",
+      "raw_sha256": "7c5ea640eedc68e83cf23800647024338fc859ef28cecf31a7eea8a02eda3a49",
+      "document_sha256": "815cbda2ccee6792258a1c397d74db811eed9c801f6ed7da98c74e65df9a1046",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1425",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-try-to-collect-on-a-debt-that-was-discharged-in-bankruptcy-en-1425/",
+      "raw_sha256": "6a6e6014f5a51e4c4c8f43587ebee78e82da3d164e487568a2c6e9706a203424",
+      "document_sha256": "4da0ed432419c47e0bae343d8b560bf4d855a5421a8418d167a57a07df384032",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1427",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-may-happen-if-i-ignore-or-avoid-a-debt-collector-en-1427/",
+      "raw_sha256": "e340642beace8e49ba43c954375ae10ad91c864c19854e52cd8a1edb0439d7b4",
+      "document_sha256": "511e0b9e8049fe6c533393ba44fc4898daa86f85f47653c3f9e9609da35a4f9e",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1433",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-find-a-lawyer-to-help-me-with-a-creditor-or-collector-trying-to-collect-a-debt-from-me-en-1433/",
+      "raw_sha256": "77d869509f00029ec7d5f4f22bf7328a870fa1585bdf0ade5e8122c4ee745cba",
+      "document_sha256": "2b453c988dfdd9fc4c8fac12d47bb81d4d6802b6d7a91fc4a4381b746e8aaa7e",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1439",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-take-or-garnish-my-wages-or-benefits-en-1439/",
+      "raw_sha256": "d05c9350994cd29e2c945e6f838808bb21f3a025b991b56c62c54e822513fced",
+      "document_sha256": "3bd0a3ad41bccf6e40f19b3471581d7672ee140ef14411e27906e4731c259007",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1447",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-negotiate-a-settlement-with-a-debt-collector-en-1447/",
+      "raw_sha256": "ce7f9bbf40fd3e66fa0526f98ff3605ab2f00545c99f31f6c70eec7200085e0a",
+      "document_sha256": "efd65792630376ac0cf503cd25a2734b29eb220471a98c1e3c7da5f3330e5736",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1449",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-credit-counseling-and-debt-settlement-debt-consolidation-or-credit-repair-en-1449/",
+      "raw_sha256": "648f87d8cc3a2f23b2ab21f1faec2975cb3db3e1d1e3e04536c7b0f1c0c73cac",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1451",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-credit-counseling-en-1451/",
+      "raw_sha256": "b287dff464ba4112380ce8a835d3e0f4955502401b5347878cd407437f3826f7",
+      "document_sha256": "92a8cf3bbfd714436a033041082de1a78f0abd561e481726bc057539da607972",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1457",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-relief-program-and-how-do-i-know-if-i-should-use-one-en-1457/",
+      "raw_sha256": "6709697856e5972690b8a810b71a2c3fc994958bdd9463e9fe0bfb10c4998263",
+      "document_sha256": "a44807dd92e901ea7f84ec54ed0d98f78bb05d052f0f4e834d36b38a0e7dd26e",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1463",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-a-persons-debt-go-away-when-they-die-en-1463/",
+      "raw_sha256": "5083d56d512d26faccfacfd5b303e1f789233cacf816f7f277bc8ed87ccedf52",
+      "document_sha256": "ad51b50b5346cb3a64bc188fd0e7dda09273943d5cf51f48e49fe37a4df22fe6",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1467",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/am-i-responsible-for-my-spouses-debts-after-they-die-en-1467/",
+      "raw_sha256": "850d76e8542d3280f6f0e886b6392680ff984a9536282f5d036ea9abcd816960",
+      "document_sha256": "faed82bcce242b78cd0b0a12ee636541a56e70c99166b7eb10bc956c89c20997",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1469",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-contact-me-about-a-deceased-relatives-debts-en-1469/",
+      "raw_sha256": "88695b077e8e908c6223d11ea928e4294ff57565eddd4f32f7833f06ba5f1385",
+      "document_sha256": "68d0492566f9126aedab9101a0127c8795cdfaefa9de126c68a1e56ecd40fce0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1483",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/is-it-a-scam-if-a-debt-collector-calls-me-after-seeing-my-relatives-obituary-en-1483/",
+      "raw_sha256": "275de317ad4401f0c62942b06096400986abad12f97785db405eeb0f2b28cdbf",
+      "document_sha256": "c8a9a90339d19ff44286fcd307ebdf7d13dc900052a81f9d42279d650199f865",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1485",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-was-an-authorized-user-on-my-deceased-relatives-credit-card-account-am-i-liable-to-repay-the-debt-en-1485/",
+      "raw_sha256": "1ae07c71c2aa232c67e501af96639db24fc60e9879abdde92cd842dbe4a796cd",
+      "document_sha256": "cfb4fbf004a547ccdbeab17a07c747c9b3643d071fb841075ca028cc95fe62ee",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1493",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/im-in-the-military-can-a-debt-collector-have-my-security-clearance-revoked-if-i-fall-behind-on-paying-my-debt-en-1493/",
+      "raw_sha256": "34a7f25abef1b85aae4665dc2ae4ce75092ac2c07d6e9ed0c76410928a9829e8",
+      "document_sha256": "c96f6d9367f4df723fda72923f4f9c940259b7f73b8f8c24b2dfc73a0f7af696",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1495",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/im-a-servicemember-and-im-being-contacted-by-a-debt-collector-about-a-debt-what-are-my-rights-and-where-can-i-get-help-en-1495/",
+      "raw_sha256": "6d822c0a1bb1dfc61fbd67a4ab85cac14305de6e3ef383ffe5a8dceebc56c25c",
+      "document_sha256": "cd61557642e3496b736854c50f994b4aedf46822803ccc74c61d85ae72429179",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1499",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/im-a-servicemember-and-im-being-sued-what-can-i-do-if-i-cant-make-it-to-court-to-defend-myself-or-a-default-judgment-is-entered--because-i-didnt--appear-in-court-en-1499/",
+      "raw_sha256": "0f5cd1b7e245fa68ea4eb727b4c39a291de556b71c99d2c631d80273c8b66e81",
+      "document_sha256": "020ae8f2466a0249a21bca7d467e7b47d73fa348cf8782dbf27031a687dfa891",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-15",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-can-i-keep-a-low-rate-on-a-balance-transfer-or-other-introductory-rate-en-15/",
+      "raw_sha256": "550aecd69c27fe7d6fdb63483a8b0e0f417faddffb5a9bb2a8d2622220c698f0",
+      "document_sha256": "e473af22afd74d5fdfe5ede068df702fa126db59baad6f849944aca969d7c162",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1537",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-i-be-arrested-for-an-unpaid-debt-en-1537/",
+      "raw_sha256": "c9e80bd5cded7df504c408e79279bcb16224c7c0e22e6e696d5e4d2eb7506766",
+      "document_sha256": "e26fd66848910c0a7efe832e080a1b2d18053e62064166cd18de54161ff35e88",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1539",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-creditor-refer-my-account-to-collection-agency-before-debt-is-due-do-i-have-to-be-told-before-debt-turn-in-to-collections-en-1539/",
+      "raw_sha256": "8b36cbe86eefc118ea35408a4cfa1427319601c8d8d5942bf03e20b44e24f15f",
+      "document_sha256": "36af12f5eb085c4ce974f8516ee05a5960479b7923ffd4d472f51eaebf496f9f",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1541",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-credit-card-add-on-products-en-1541/",
+      "raw_sha256": "046da1fc4fc64854346723a368e8a98e713c68ffd5e54091b20f2a8f3b93ddf9",
+      "document_sha256": "4d21f0223c2da68ba6ed6fc26af220355d2217cdc5ec1d02c0bb98c09fc25ee0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1583",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/should-i-get-a-payday-loan-if-i-need-money-now-en-1583/",
+      "raw_sha256": "85f2e3177f80565e1c4d6fd56dc659a050429739c65767d3ad00eaeb3e1d0f96",
+      "document_sha256": "5d676518f8b1607e1cc6d900700b0b03860be9ab49954963877157af57657102",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1625",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-an-annual-percentage-rate-apr-and-why-is-it-higher-than-the-interest-rate-for-my-payday-loan-en-1625/",
+      "raw_sha256": "281f5cc70dac7d79549219910852cde4aae02730a0db3a169902cbe7a0659738",
+      "document_sha256": "781093af8990ec89aec56f2a1f509009e6eeabb6d5ef92b14725b23d3f72137a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1695",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-when-a-debt-collector-contacts-me-en-1695/",
+      "raw_sha256": "2c75d04ed0d37fb69016d18edf47bfb31fdf606b73d0fe77e12671188facc255",
+      "document_sha256": "2005c0275b61e3e3fec3909d5b1a1ca92b96e0b4c6c991f971ce56c45128416c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1697",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-my-credit-card-bills-en-1697/",
+      "raw_sha256": "b08967ef00163e0dd04ddf44db3be81a334cd9ecc1b54d2665d5ffe53331abd4",
+      "document_sha256": "54bf5bbb1ae8d57990979c8251bad2708c033adf934a23d5de697a62eff2b527",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1699",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-tell-if-a-debt-collector-is-legitimate-or-a-scam-en-1699/",
+      "raw_sha256": "37124829b6d480d99bc0105675e28398c35acc2db6cb3c8bf4294968942cb80a",
+      "document_sha256": "c45506398296b1930622f58765ae7a8ab935acaaeb3561a2e57dba32e13db682",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1785",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-covered-under-the-military-lending-act-en-1785/",
+      "raw_sha256": "fa46c2447060e3885554f51c78be647396bf0384b6a9b1266f3c03fe172e5dc5",
+      "document_sha256": "2062ddb7958436db3ac9d0f6314628426ed8097c0b1461d849185ed1c3e835d3",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-18",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-am-a-stay-at-home-spouse-or-partner-without-a-separate-income-i-share-income-and-expenses-with-my-spouse-or-partner-can-i-still-get-a-credit-card-in-my-own-name-en-18/",
+      "raw_sha256": "8e393b01236771bfccbf75426eef3f4afb6d9439a466ec74bf8dcebcb19b8dc4",
+      "document_sha256": "2a6cc29514a8a27227a213303c4c2f3d22328e1bd7c2406666327d1a31beadce",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1813",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-specialty-consumer-reporting-agencies-and-what-types-of-information-do-they-collect-en-1813/",
+      "raw_sha256": "26237f09ac24635121842ae5a8d0962b2760a06b9b0dd9cf3ab5d90b24f5d78e",
+      "document_sha256": "8a868a5a31921f0ba2503c234f3eb03f8db7412c52240702b31a04ed2b12dae5",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1815",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-late-rent-affect-my-credit-score-en-1815/",
+      "raw_sha256": "72e5c7af4bd1d0e771d0d1b64313662fdeaa20e7fe5dab1a236aa1891a8eaf54",
+      "document_sha256": "4566363b94a8e27617ae64f55f7187fe3ff27ed96bfac14ad97ef9335883ec2f",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1817",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-my-history-of-paying-utility-bills-like-telephone-cable-electricity-or-water-go-in-my-credit-report-en-1817/",
+      "raw_sha256": "25158792d36ae295fd8dafc86e5e14a25cb91a3790ef8f8c40bc8f1bea702dfe",
+      "document_sha256": "6dd57d23a6a5a89ed4f326d49e71a8bd857fd449433c1c42758ac1ff48804a44",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1819",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/will-it-hurt-my-credit-if-my-bank-or-credit-union-closed-my-checking-account-en-1819/",
+      "raw_sha256": "af8c282555bd865f59fa5ce17594b0a3a9802e8464b77d0e116a81cb49023b48",
+      "document_sha256": "33ff5ebd71cf55cf0696f466c6c3d80c84ebf88bc6089d99301b1c71b5f3a744",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1821",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/do-auto-and-homeowners-insurance-companies-share-my-information-about-claims-en-1821/",
+      "raw_sha256": "69c3055a8122a2858cdc0049549d6a37febd44feef6872a43de059394c0005f1",
+      "document_sha256": "11e799ca49da2c41572b2f00fdc643ff587f3d188720430fbcc9aac84addcaa5",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1823",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-i-apply-for-a-job-what-do-employers-see-when-they-do-a-credit-check-for-employment-and-a-background-check-en-1823/",
+      "raw_sha256": "ccd5e1f247051dc3ab30b023af160927d863c98c8cc9c2f1da39d7b9addcbfef",
+      "document_sha256": "f87421f8fe8b82fc0a737372927f28a52724a97afbf6c7df04419fae48d26b71",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1827",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-medical-credit-cards-and-payment-plans-for-medical-bills-en-1827/",
+      "raw_sha256": "71c023d6a0f1f49da6590a3df4a58da3b50ff7725ff7f2f7e7c8470abc258a8d",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1837",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/do-medical-bills-affect-my-credit-and-where-do-i-find-out-whats-in-my-medical-payment-history-en-1837/",
+      "raw_sha256": "b56dae02db7835ea4986246f0c29852df93679c2115ca8f5ac595f17696fd6b7",
+      "document_sha256": "9e82969cefc1aef3556dabcab88da6e1be341d7fe884b9ecc98983984eb2f971",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1859",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/ive-seen-a-lot-of-advertisements-for-companies-that-consolidate-credit-card-debt-are-these-legitimate-en-1859/",
+      "raw_sha256": "7d317ec94683ee0eef497e0a557799551ad1ed25846d79dc667c8f8ec1ef7f92",
+      "document_sha256": "f2c95e0b05973e650f50a3be0f9e2608e5cc50317ba164f53523e396ee24a945",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1861",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-need-to-know-if-im-thinking-about-consolidating-my-credit-card-debt-en-1861/",
+      "raw_sha256": "45f196b9d32b81a8be01db6655180afea5c87e587edc492b89beb693136bd611",
+      "document_sha256": "365aa434a0cab71fd07b24f87c40dd3cec70827c2934f879a90f021ffbea58d4",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1865",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-check-to-see-if-a-child-has-a-credit-report-en-1865/",
+      "raw_sha256": "b2980b085886a435400e5898935c04570fd9ace190eed32a32b671c32999a705",
+      "document_sha256": "a1729840944d46739525d37037824b19073ee99e2708967d63d6d23f49f1484d",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1883",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-fico-score-en-1883/",
+      "raw_sha256": "3ff26e1f7a707c57da219fd0caaacd38bb4e33a4d4ed15413e7298da586e191a",
+      "document_sha256": "e4a4db332b2ac4ce5c68998eaf802cdc14209995d405f1631d30a771b7e0d684",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-19",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-is-a-card-issuer-not-allowed-to-base-decisions-on-when-i-apply-for-credit-en-19/",
+      "raw_sha256": "ebe93ef6c852000c5877f7b81196e068291c611e69ed3af19c01ab0aeca05806",
+      "document_sha256": "f0e25d496ec4ef3b5e9644bb0cec3dfe57051d6d84e24907e318b8e099863761",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1969",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-can-i-get-a-refund-on-a-product-or-service-i-purchased-with-my-credit-card-en-1969/",
+      "raw_sha256": "26b2add2aaf192ff28a231f55c84d937f4dd3e28e288112366d162f28364b202",
+      "document_sha256": "d0cf595fc96289ad9d6789ff5dd37cc13782a20eb577e57792db025f2c90bd1a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-1981",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-my-bank-or-credit-union-charge-me-a-fee-for-processing-a-garnishment-if-i-receive-social-security-or-va-benefits-en-1981/",
+      "raw_sha256": "2c10a3bedfcc4490db473465751c1f161f914fae811993000f5f7300f4dd52d9",
+      "document_sha256": "b1b5dac670459146ec78c9607dbe8cbc591c477d20507e177e28a88d878b2856",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-20",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-card-issuer-consider-my-age-when-deciding-whether-to-issue-a-credit-card-to-me-en-20/",
+      "raw_sha256": "cc2207ad28b2c0c40bb73669f6d33bb847422f70b63e810b85409dcd03dd3366",
+      "document_sha256": "070d5b385144b0a7978df8fede46245bf22f8a4d99ce2e52919588b342a5b229",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2029",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-an-error-on-my-checking-account-consumer-report-en-2029/",
+      "raw_sha256": "5ab0c8fd4a28403ad59edd228acbc87096ab3c0928e85edfd2075c34f15a8322",
+      "document_sha256": "cd4732d409958fcb96abbd4688df36efc2110582891238d4a2ac7bfc423a234a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2069",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-the-difference-between-a-credit-report-and-a-credit-score-en-2069/",
+      "raw_sha256": "69ada6c7c0de04d215b9cbf4e7224e79c67bdcab588cabe74c8907f48a8d7a48",
+      "document_sha256": "1fde5b3ac886e1f54e7077e59463e37510abc7d84741df856a6a345e145dbca6",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2098",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/should-i-share-personal-information-with-a-debt-collector-en-2098/",
+      "raw_sha256": "e9c4b62585157fe06459896e04ba1bc5a4f64bfb84aa9a3190bd6bfa3e7bed52",
+      "document_sha256": "995d15dfcea8b94d8c367efbb250f6ae66a8aa62e9fb488cdb4a893e02e19749",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2105",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-my-rental-application-is-denied-because-of-a-tenant-screening-report-en-2105/",
+      "raw_sha256": "6f6c9fa07306d234dda97e96325c13139de50a836bd95c381bd25e5b336825d5",
+      "document_sha256": "81cd3044118c9646b5c0d98f11719fe644543390b27ee8dbd9a75646b81e4ec9",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2110",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-and-how-often-can-a-debt-collector-call-me-on-the-phone-en-2110/",
+      "raw_sha256": "f13a84601817bc5c67b93ddf7e74c77b3ec08da9f9878d076856fe2e4bf3c81a",
+      "document_sha256": "cfee2eb6453027a480381f3fcf83c06f0cc1f8ad4e70fd88983250ff7d26c878",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2111",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-can-a-debt-collector-report-to-a-credit-reporting-agency-en-2111/",
+      "raw_sha256": "66a02519330cef6867992e32de5a42a9fe498a0a8816ea1fcf600b7f7eb3b712",
+      "document_sha256": "cf093aea47848fca8d5034332ec6045de0b79f71d09b352b4a75ef071846cccb",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2112",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-contact-me-through-social-media-en-2112/",
+      "raw_sha256": "0fd21c8650689d47cd9c5b2d5d0c069afeaf854308f798c014d5b60275326be4",
+      "document_sha256": "ce1fcf96984dd72d0d8831effb0906f76c9cc6ae924fddf7a62fe31303ffdc62",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2113",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-limited-content-message-en-2113/",
+      "raw_sha256": "68a3003d8c330e4cbd20e1f4c962569de497fdbd6600d84cffc182b5ff31f6da",
+      "document_sha256": "81d23501c7efd8a8986dc26778fde74adfc189e4ed1a1bb748011298357f38f2",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2122",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-know-about-debt-collection-and-credit-reporting-if-my-medical-bill-was-sent-to-collections-en-2122/",
+      "raw_sha256": "b001609b0d8ae6f76e4881c0fc9a7715c9f49640ec6f38fa656c48230421cde2",
+      "document_sha256": "c52f0caf08b530691959f40b6a1d990baf41a8b06b71e0cc5e6503f794c65060",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2123",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-surprise-medical-bill-and-what-should-i-know-about-the-no-surprises-act-en-2123/",
+      "raw_sha256": "21ca3dc4c9b9beaf15d76145fa3326538485672d2f2d6dc50207f9e951c9d00c",
+      "document_sha256": "b3b14978dd357384db6e1bba1bf6628f74501bedbb4cebd84cca9e167aac1a8c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2125",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-i-cant-pay-a-medical-bill-en-2125/",
+      "raw_sha256": "fd3d0a0529d2f58501da99983c56155b1cb59c2d5ab7e99cdbeb8995d1c99472",
+      "document_sha256": "05a8bc3769330dc9bf9a1bcf836118b9bfc66638123eeeff6664f58b078fede4",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2133",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-zombie-second-mortgage-en-2133/",
+      "raw_sha256": "40a183e31c75dd72d2d6f52fc45d03b7f486f4d83f0dc5e59921e89f63a5ec1f",
+      "document_sha256": "bf22f56fc84a3b0bc5286a7b553b52b69f56a1f59e57c337e87067f95ba93826",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2134",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-a-debt-collector-contacts-me-about-a-mortgage-i-thought-was-already-satisfied-or-written-off-en-2134/",
+      "raw_sha256": "aa98bd35ee12462b6eaa177eaded7f6f9ca5d8873fe462c82d5658470c8e4cd4",
+      "document_sha256": "fe5032fe31b2a5ff2391bde6de3c6dd6b91e534cc2825193a2451d19d66578b0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2144",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-happens-if-my-credit-card-company-has-an-outage-and-i-cant-access-my-account-en-2144/",
+      "raw_sha256": "1eb58caeaf93d8db9b6be07a50455b4e9bdfac737430ed3b968db865bb84fbe1",
+      "document_sha256": "d720b475527aab43c1ca9373d983d2ca0bc419094e1fd5b93414b26d955b332d",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2154",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/why-do-i-need-a-credit-history-en-2154/",
+      "raw_sha256": "1310ce95ec01748d6d6790918673a35a03235f1ce999179bbd3485582aae3977",
+      "document_sha256": "496c7068cfa963f61c0de2a9c15cb8034832303bab5a6dcd1a7f72a966bcba3d",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-2155",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-some-ways-to-start-or-rebuild-a-good-credit-history-en-2155/",
+      "raw_sha256": "9cef5ca0015b3ea940de76f950d1f4376ed3b409b96a46842e6f932c561d2529",
+      "document_sha256": "64dbfa4a3192db44d76b84b89a72f8f3a80c7a1fafce127805b8396f8e9173f5",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-25",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/my-new-credit-card-wont-work-what-should-i-do-en-25/",
+      "raw_sha256": "7982a8446fca10a732f15587b41eded8c1b50e9652d3d9e8d94863fb5a96da2d",
+      "document_sha256": "d77a514b5841f9211f151bac0f107d878c0c597c8bf313e702d886c4c31b1456",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-26",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-an-unauthorized-use-of-a-credit-card-en-26/",
+      "raw_sha256": "00856afdaf0f3fd5dd139274c163fb09670a5e61893423c1168b496adb562bd1",
+      "document_sha256": "53d24ffbe6809af1b7af950133563134906540790694adc498e982dbba112f2a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-29",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/am-i-responsible-for-unauthorized-charges-if-my-credit-cards-are-lost-or-stolen-en-29/",
+      "raw_sha256": "dceac7e49cf1179c78ddc15f9e640a89e9343e2baa2f214f8253c15b54b1f5a4",
+      "document_sha256": "211f9750becfdd6d2d1475c7e764336e88945443b0ee1da3d217a2f18362aa06",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-3",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-can-a-credit-card-company-look-at-my-credit-reports-en-3/",
+      "raw_sha256": "54095c7341801df66530e52510e0060a3549403ef95264e46bf786219824f352",
+      "document_sha256": "1eebc45409d5e9f01b1f538fb3e6a3716af74296d3eb71cd8a37a67555ad7946",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-309",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-report-en-309/",
+      "raw_sha256": "95834f1db0ab8b6edfdda2ed6e43b61fe7a39d01624cd9f44cdd7ae291e01faf",
+      "document_sha256": "3145e7ecf12563c8f0d552b8984999480e11f0c36947944ac3fcf175fb6e31e2",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
       "source_id": "cfpb-31",
       "url": "https://www.consumerfinance.gov/ask-cfpb/what-do-i-do-if-i-am-a-victim-of-identity-theft-en-31/",
       "raw_sha256": "1f7c3636370abf1aa5de7c53f7ff36b5cc43c9463ccd1c8b11ddf3971b714983",
       "document_sha256": "67932c021083f6a93bf62859e0a4ecdcd5605f5888c817b33767eaedaeac8372",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-312",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-should-i-review-my-credit-report-en-312/",
+      "raw_sha256": "0ba7daea02d1d8c04872c17d7d12e617b555d196f21375220f783c58b0a3e121",
+      "document_sha256": "2f08249b7301c51380911c1da53cd271a8fb1795ed8421dd1961e424ddc65da8",
       "extractor_version": "0.3",
       "validation_status": "pending_human_review"
     },
@@ -34,10 +866,186 @@
       "validation_status": "pending_human_review"
     },
     {
+      "source_id": "cfpb-315",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-score-en-315/",
+      "raw_sha256": "dcd6ee04a340831f80daf8803580e7d43aad7138f2cb55943e0bb8bd4d959434",
+      "document_sha256": "01b437a3c3ba2c03d64ec6975af2ce514246a183920f036836e5889e96e7812e",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-316",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/where-can-i-get-my-credit-scores-en-316/",
+      "raw_sha256": "6bd3693662aee98a07479c954792634e94422125487fbf47a7ae44d9ace429a2",
+      "document_sha256": "e9d6419fffb5489c6a0311c38ee5542e4b2969c00b7b121241f02d0e55a2d5bf",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-319",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-my-credit-score-affect-my-ability-to-get-a-mortgage-loan-or-the-mortgage-rate-i-pay-en-319/",
+      "raw_sha256": "17b31a6d72549f56d9fdab61ddf6ebe1341b4c6b52dcfb6e8a846f1ba37d856f",
+      "document_sha256": "5c07e91ee9620c1b80e52a4f2736615a0525f8e85e6e3e9fd0ef42e34c48b3de",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-32",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-i-went-to-use-my-credit-card-the-store-told-me-the-charge-was-not-authorized-what-does-that-mean-what-can-i-do-en-32/",
+      "raw_sha256": "d78d77562a8e8d0c88b15c0ce7638b86f6f50b6f6c9998727d29e5a9da479407",
+      "document_sha256": "b5fdd9d3c65b40a62579fd32f652fc43c89084d5f81cd2357ee0d43482a86fe7",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-321",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-kind-of-credit-inquiry-has-no-effect-on-my-credit-score-en-321/",
+      "raw_sha256": "55bbe574d02f21449aa34e2421b4718028531e4bed3589c7210305afd4817f26",
+      "document_sha256": "75c206123e8f95cd328c2b1bc491d9d39dbd38316645fa73d111cd61f6183213",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-322",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-will-a-lender-run-a-credit-check-or-obtain-a-copy-of-my-credit-report-en-322/",
+      "raw_sha256": "88a3bd2bf6deaf6847293f770887c5c395bfc7a5191756ac6bae653b073d9cac",
+      "document_sha256": "a1dfa63dc28207a03c750eb94669c1d07a081ffb2805eecbcd1218414b30cc93",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-323",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-does-information-stay-on-my-credit-report-en-323/",
+      "raw_sha256": "4a51034a5fd79f49342d79f2a17578e707121f2af24a8fdd524f153d1e1005ad",
+      "document_sha256": "ad3b7e0fbaf64c2a1c93d1f224977e9b5935076336ad17fc46fc4cab037a3759",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-325",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-long-does-a-bankruptcy-appear-on-credit-reports-en-325/",
+      "raw_sha256": "146b690fd8b90664ded11f410e80548b911d882f0fbd7f7ce0e5967327923c13",
+      "document_sha256": "50f8a4d22029cfb218ed9240e7028d02adb0123bda75a1927a30f5cb284053a6",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-329",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-laws-limit-what-debt-collectors-can-say-or-do-en-329/",
+      "raw_sha256": "5d0f8fb9c9371f8b9421741853ac26fd88ce925a0f6bc6ebf3ecfc07e806f468",
+      "document_sha256": "192e17664d48b5d52d8c69428333a50393d8ed571b301a8d41f276cc75a25dd2",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-330",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-debt-collector-and-why-are-they-contacting-me-en-330/",
+      "raw_sha256": "d7d0a9a8663a6aeda4e7578cc4569118a53de5174a01c41dafc1e8504acdf500",
+      "document_sha256": "5c99f0913601fb15068a8e843dfe783c5a15528c55d0482c3afb1bd0815f3628",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
       "source_id": "cfpb-331",
       "url": "https://www.consumerfinance.gov/ask-cfpb/what-information-does-a-debt-collector-have-to-give-me-about-the-debt-en-331/",
       "raw_sha256": "5a05001d65c80ca44ff3fbd54984c991524ba1f5abb784e4bb04ebbbeb432c78",
       "document_sha256": "b4a14e46ec1c5987e1276a388d4aac30c95ff73213d2bbc32e2b83baf9742f1f",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-332",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-debt-collectors-tell-other-people-like-family-friends-or-my-employer-about-my-debt-en-332/",
+      "raw_sha256": "38b54d6c041ddb71c1186f2308a000be5483e4bc710ac9c619f4e8c95c33b54d",
+      "document_sha256": "8bce1b9304489c4b757488467ea96353bdbc7cf556b46ac2caf08d95d550850a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-334",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-im-sued-by-a-debt-collector-or-creditor-en-334/",
+      "raw_sha256": "df7760b05ae998f7f43823df3a267587e59b239c6dde64dc3f973de44bfe717d",
+      "document_sha256": "a933737b9e2a536ffb243c47eb49e2d1ee3fe0cba1784898662ed2b14ba98d2c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-336",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-harassment-by-a-debt-collector-en-336/",
+      "raw_sha256": "446a0824adc5516f27f779f2c8878ad388acadbec4a1683a369d8b332f01db5e",
+      "document_sha256": "91e0ecfe6c1b34dd6e569bac662a0d7baa51e664f3e6acf72c6c457424b7f1f9",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-338",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-a-debt-collector-still-collect-a-debt-after-ive-disputed-it-en-338/",
+      "raw_sha256": "19f7701f3185a8e27d6e643b00a16893e9d6693c3845f0388dbcaa941b69fbe3",
+      "document_sha256": "7c322ca463a27cd8619ce21c9341cb816cf83dba719dd7a56467bae1f247ff7d",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-34",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-i-withdraw-money-from-my-credit-card-at-an-atm-en-34/",
+      "raw_sha256": "ec4547d9bcef02fb2e81d2b91de906aafd912cf7f68fdcc5b6c17f2c7f536f6c",
+      "document_sha256": "3c3ed93407d8a68444340ff99f81f6e0a224296fe277c73196b703d83e912148",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-36",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/a-box-on-my-credit-card-bill-says-that-i-will-pay-off-the-balance-in-three-years-if-i-pay-a-certain-amount-what-does-that-mean-do-i-have-to-pay-that-much-if-i-pay-that-much-and-make-new-purchases-will-i-still-owe-nothing-after-three-years-en-36/",
+      "raw_sha256": "67cfc90659659521619e6b98924741fe38fa6fd982ad89991b1371ca8ce150da",
+      "document_sha256": "9075176f0ee22c4f99900819ed176c04ee638f2dce2250a73b5c453f9ad89886",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-39",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/my-bill-shows-different-aprs-and-shows-how-much-of-the-balance-is-subject-to-each-interest-rate-i-cannot-figure-out-how-this-is-calculated-how-does-that-work-en-39/",
+      "raw_sha256": "da5888da05d79fd0e390c860276a8dfdf64e02249964bfc25f74ac37ec7bb9b9",
+      "document_sha256": "d21109bc2537d3f2cdcc28fee2c14698f5c138bba578594fee20ed3d28842b21",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-4",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/does-it-hurt-my-credit-score-when-i-get-unsolicited-credit-card-offers-en-4/",
+      "raw_sha256": "241b5f70199df49061c21a50103a9c6c38e617e6647d1e60e734bfce7d6ee3e0",
+      "document_sha256": "7a8ffe55931489ad743a00f284a7139b7e015b5abcd521d241c3c4fa2eff03ef",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-40",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-got-a-credit-card-promising-no-interest-for-a-purchase-if-i-pay-in-full-within-12-months-how-does-this-work-en-40/",
+      "raw_sha256": "57befd8c06aa001d28b7801786d6fa076c5df5dae713c69fa0bf521f47add58e",
+      "document_sha256": "d6b1b1a66ad4866ecfb80be29d5cb63a4fc5ba6c2debacdf8d2505fa2ba3fe5a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-42",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-credit-balance-on-my-credit-card-bill-en-42/",
+      "raw_sha256": "588031f8edcc311be35d632eda9b890534af5d46b89f197a9268a61f97452222",
+      "document_sha256": "dacff071d93aab6df03e240f8853e5af2401940c62f1cb164b20cda40f3df3d2",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-43",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-can-i-do-if-i-dont-receive-my-credit-card-bill-en-43/",
+      "raw_sha256": "4fcd51099111ad0be55821fa31d968b6db564c06dc336a306eaa0edf520a58d1",
+      "document_sha256": "b521fefe6f66bfc2b3692dc22384d3ce563272c6e2144b621eea5b0481eb0ce3",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-433",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-are-prepaid-cards-debit-cards-and-credit-cards-different-en-433/",
+      "raw_sha256": "f3d9d4fdec3c67d6f4d5f60c4a1568021f102ef0c2376618b8c717d9088ba00a",
+      "document_sha256": "3054a674bb7bd3279e6cc0edc348ce0a8696c236d7335e7b1a1cb7628592b5ad",
       "extractor_version": "0.3",
       "validation_status": "pending_human_review"
     },
@@ -58,20 +1066,462 @@
       "validation_status": "pending_human_review"
     },
     {
+      "source_id": "cfpb-46",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-daily-periodic-rate-on-a-credit-card-en-46/",
+      "raw_sha256": "3009571c9f77690881eec8106c037c6f61580c852162e9a36ee45445233de463",
+      "document_sha256": "a56033fc6dbb9e371b765a09e070935f706e2e357ca18569fa6ade841a6791c4",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
       "source_id": "cfpb-47",
       "url": "https://www.consumerfinance.gov/ask-cfpb/what-is-a-grace-period-for-a-credit-card-en-47/",
       "raw_sha256": "907ae965a03f47c9f98d1d04982cdbd5a12de557285f87a6a046f80b702eb78c",
       "document_sha256": "9b1c6fe81da0be7db32d84a347f64836f75f2e97b8cb7ff0574b1df1aad150c0",
       "extractor_version": "0.3",
       "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-48",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/if-i-pay-off-my-credit-card-balance-when-it-is-due-is-the-company-allowed-to-charge-me-interest-for-that-month-en-48/",
+      "raw_sha256": "1ea79903bac76e55f6c2157bdf7e8dea5f3f0250bbc17e0f764948c6bf03f3d4",
+      "document_sha256": "8dbb53b003af503c99d95253c83259961cf22db89d3e34ee742d02eec8a785cf",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-49",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/do-i-pay-interest-on-new-purchases-after-i-get-a-zero-or-low-rate-balance-transfer-en-49/",
+      "raw_sha256": "8f584554e43f83cb4d66da3b63fd90dc0e1eea884f103915732524e57cb642eb",
+      "document_sha256": "e58126a62fb1f4c0177cd642ef1827908d0761327a6ef8f6f71016a49bf6ddc1",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-5",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-get-a-free-copy-of-my-credit-reports-en-5/",
+      "raw_sha256": "681251760b85a3fa8e5ce75e4fcb898c10b3a49cab000dd0a6bc11bdb1d71a4c",
+      "document_sha256": "96c64fc10dc98946ed9d1847ad2839b2275f361d284f5031ba304aca705a94c0",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-51",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-does-my-credit-card-company-calculate-the-amount-of-interest-i-owe-en-51/",
+      "raw_sha256": "65ee3eb463fe7c8d125016adaa639e1f76e9d8a157720323e3eae5e3739273f0",
+      "document_sha256": "fd877549250297038ce2f1d3e69e1f7c298f99ca737fa4ddb3afc1f1540ebe95",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-54",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-paid-my-bill-on-time-last-month-and-still-was-charged-a-late-fee-how-can-that-be-en-54/",
+      "raw_sha256": "5ea40fe0e102311623d79b6dedff13b0350ecaf4366c48648422c2c8b3c790cd",
+      "document_sha256": "f0be08057d936757238d7b8c8469de58404bac36378867240792bd0bf31ee450",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-56",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/why-did-my-credit-card-issuer-increase-my-late-payment-fee-en-56/",
+      "raw_sha256": "b112162454b47d7f5099bac8ee52287d044666f935a027cfbc32a7dc0b583aa8",
+      "document_sha256": "2437236eada85dd352fd727626ed23b49c340d721051a3028a1ac247ba32ffe6",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-58",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-went-over-my-credit-limit-and-i-was-charged-an-overlimit-fee-what-can-i-do-en-58/",
+      "raw_sha256": "cbbf7af4121487275c4122123297b556b4ca722cf31dc3689a18977bddbafa54",
+      "document_sha256": "9f4073714abbd494aca5abfe02da5181929dbd7d1d1cbf1dcf25cd64af7772f9",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-6",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-got-my-free-credit-reports-but-they-do-not-include-my-credit-scores-can-i-get-my-credit-score-for-free-too-en-6/",
+      "raw_sha256": "bb4860e704c71545539d0ee4a86421ab1163bf261314bac9a6f90bdcdcd9dd20",
+      "document_sha256": "a0d81e9b4c4134e3cd6716e5019f1cad296643d911a43c1ee7012d4d4f214e9c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-60",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-my-credit-card-company-charge-a-fee-based-on-how-i-paid-my-bill-such-as-for-making-a-payment-over-the-phone-en-60/",
+      "raw_sha256": "9e79337c9757ee096efd458b3e9828fbb1f623e967162fe64fcbf0db5bd3abf1",
+      "document_sha256": "47f13f5c936267a30918d459f911df2c99fad699fc42ae6c12d540bf6aec1a2e",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-61",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/how-do-i-dispute-a-charge-on-my-credit-card-bill-en-61/",
+      "raw_sha256": "8bc44f51b68767e458f1c78ec80bd78fd17f887d18ec2d31ec237aa9ac80123a",
+      "document_sha256": "882bb5d5e05381f40281bba3c02af2b068dd51660d3cbe6c8a923b1b0aafb18c",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-63",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-they-charge-me-interest-on-a-charge-i-told-them-i-did-not-make-en-63/",
+      "raw_sha256": "57b974f6be49382eea68498e1d8d3f94d0bbd62630f086313addcf4cad5cf2cd",
+      "document_sha256": "a05986819af59f0a6b768d9a2c430a076e63853f88b987ed401fd47a1b80d566",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-655",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-are-my-options-debt-collection-agency-contacts-me-about-student-loans-en-655/",
+      "raw_sha256": "9fe23981f2d252ea333f48163b814ee0e1ab0e914a09d0db43ce746790e1fa76",
+      "document_sha256": "f35eee0654d77b213f8836eb61b13e13fbb295f05c919b8ed4296052c8cba5f5",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-663",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-happens-if-i-default-on-a-federal-student-loan-en-663/",
+      "raw_sha256": "becb9af1c54a1258dcb818270763f619fcc9d960595dfcba9170b0811dcb4de4",
+      "document_sha256": "444657839be18711ab206f3532a7be33844b991b0161a5c7c5a8cf0ce4111686",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-69",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-can-my-credit-card-company-increase-my-interest-rate-what-can-i-do-to-get-the-rate-back-down-en-69/",
+      "raw_sha256": "f48cefcc34461dd50f71cb7265054b014745542ba8c477f32b256ed23615d22c",
+      "document_sha256": "ab8ebed45021a125b36b1e425356064f42f063db02ed06b6a6239f03ab7b407a",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-70",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-my-credit-card-company-change-the-terms-of-my-account-en-70/",
+      "raw_sha256": "e5bed8fa51f022f66b06a854ff41a6e48e5b6d9fb6835cc295367cd7ea88dfa1",
+      "document_sha256": "6dbc9183f9e88e44b8b68bef4512b79235f11719786b0392ac1c713e937bd143",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-73",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/is-there-a-law-that-limits-credit-card-interest-rates-for-servicemembers-en-73/",
+      "raw_sha256": "116a04f96c7131b604a22de6712b2e8518463fe7475e0288810c8a25f1558455",
+      "document_sha256": "38530ab83565b3483bc903d760b9b04cd8d56756b52e68e799515adc631f8c30",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-74",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-my-credit-card-issuer-reduce-my-credit-limit-en-74/",
+      "raw_sha256": "3505b3b7a7c224b18507b69e952c31de805218fda7636ab7e72b1b5d92bddfeb",
+      "document_sha256": "c4188e12dfc01c5221106a4685fe93c7302978f29705145beefb95ffb51cc120",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-76",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-my-card-issuer-change-my-credit-card-from-a-mastercard-to-a-visa-or-from-a-gas-carddepartment-store-card-to-a-mastercard-en-76/",
+      "raw_sha256": "7240d27658fd9389d3b33a37f3e21d0bff2cf0678c3f4909d52bf3eab8120b82",
+      "document_sha256": "788e4446a8ed812f355473cd511c8f254a4ac802a542109f6f0a297916453aca",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-77",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/what-should-i-do-if-my-payment-does-not-show-on-my-credit-card-statement-en-77/",
+      "raw_sha256": "a8bbbb1bcb2ba321a8b3299c39230bb0ef2efe1718714739b9d66ce92f084f84",
+      "document_sha256": "ac81d1a5e81c7b46cab77fb393bbe696df90fc01dbc237b0ccc0d5e02c007908",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-78",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/this-month-my-payment-is-due-on-a-sunday-when-is-it-really-due-en-78/",
+      "raw_sha256": "d5aa2e96c6932bbd623376bd103d17b3f4b2f978ed231c2448f966095b794f0c",
+      "document_sha256": "e0c787c0ae387022fdfcb58de9585990331635d4af806c9968a75af11cbee49f",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-79",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-is-my-credit-card-payment-considered-to-be-late-en-79/",
+      "raw_sha256": "995be451ad87dd3718d51e7e9abb994aed331c53c3b85f3ffd9a8224c8aa6c70",
+      "document_sha256": "14f755b993056ff2f3e0892d8c47232f5979676b72a8d54ffc0baedb7b732948",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-80",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-received-my-bill-this-month-and-the-payment-is-due-the-same-day-as-usual-but-the-bill-came-much-later-than-usual-can-i-get-more-time-to-pay-en-80/",
+      "raw_sha256": "d7eb22bd347b61113ec0ecc11f436e1357909779472278216217fb539002d53b",
+      "document_sha256": "922c7b29761d7ef69c88ed4e7f46c2f9fcc73b0e63f8e07b1c7e9311c56eddfb",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-813",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/should-i-agree-to-co-sign-someone-elses-car-loan-en-813/",
+      "raw_sha256": "0cf20f9c94228eaeba050a3e06737562cd05ebaf7dc0992bad01da04253fc521",
+      "document_sha256": "65c25e5f86111b42d31266ae9827ea3316e2f521fb202412dd1d5c8d32222f34",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-84",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-want-to-close-my-credit-card-account-what-should-i-do-en-84/",
+      "raw_sha256": "bf66121a5c5d0657cb0a77b001502b0ba1cde103a9233fd1a932625f8e785dcf",
+      "document_sha256": "40fc89f62e4e54dfb04478f89d4c755a5fa64485ff5112ccf697c515bcd5a5e7",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-88",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/am-i-responsible-for-charges-on-a-joint-credit-card-en-88/",
+      "raw_sha256": "97a6a6e6c0f713af19c3a8d593c273facdf19c050183f779f592a07a51ede105",
+      "document_sha256": "22c7d6654a27b7a877472a3a7ba58882280efbe53cab014a84f621ac93d29b08",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-89",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/i-just-received-a-new-card-from-the-card-issuer-with-a-new-account-number-and-a-letter-saying-my-account-had-been-compromised-what-does-that-mean-what-should-i-do-en-89/",
+      "raw_sha256": "92e87594419a0ab44a8cd0ea1717e3bb380cf60b5e7f53f0bd64d7dcd10989b7",
+      "document_sha256": "efad9b818ca40836fe46229f4d5815374254a8360dd88311044d29e8650254ca",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-9",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/when-does-a-credit-card-company-decide-what-interest-rate-to-offer-me-on-a-credit-card-en-9/",
+      "raw_sha256": "4a66d59ceb6f16be5843be175809ac110d007525fe5753485cae92240c9cfdd9",
+      "document_sha256": "966185beb37958b6e40e260a8759d1625e67b813e4c5c78baa686c045fa89194",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
+    },
+    {
+      "source_id": "cfpb-92",
+      "url": "https://www.consumerfinance.gov/ask-cfpb/can-the-credit-card-company-sell-my-account-en-92/",
+      "raw_sha256": "2fd9ecc778c10e6d547c9243ad975469895d1bf3ff3f202019bcc5bc99c68af7",
+      "document_sha256": "c5893a490bce924e9d20b6a84841e16d2617bb54cc184cbb64df837eda1de662",
+      "extractor_version": "0.3",
+      "validation_status": "pending_human_review"
     }
   ],
   "chunks": [
+    {
+      "chunk_id": "0003bbec36252292d8f91c41ef0f71d7a52271a3478b3e7121504b3f703bcc81",
+      "source_id": "cfpb-1859",
+      "chunk_sha256": "40635a53f4ae154583b4f311add833f0367413c5d9a4c701210f4faea1290664",
+      "document_sha256": "f2c95e0b05973e650f50a3be0f9e2608e5cc50317ba164f53523e396ee24a945",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "00278c7acdd52153427e7634a4add8daa491b55eac9cfef79d95d2dd945a2439",
+      "source_id": "cfpb-338",
+      "chunk_sha256": "f275bf077f55a730e7a104c607c4cb39777ad4b61a0d25f18117359c26e7ad60",
+      "document_sha256": "7c322ca463a27cd8619ce21c9341cb816cf83dba719dd7a56467bae1f247ff7d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0066bf8a0c6a27410a338a8402b96436044322f8f933fde898a3330f94448b9c",
+      "source_id": "cfpb-2110",
+      "chunk_sha256": "9daf76e0b46eed1257804258aadf80ad29c4d15d107caeb9f6d63039afe9497e",
+      "document_sha256": "cfee2eb6453027a480381f3fcf83c06f0cc1f8ad4e70fd88983250ff7d26c878",
+      "chunking_version": "paragraphs-v1"
+    },
     {
       "chunk_id": "01029b467e18daf697370994d7b00c61a14089311dad27694abbe94496c664de",
       "source_id": "cfpb-314",
       "chunk_sha256": "ee5cd4bea107f4d3d600f42694930ac5f01634e750eea468c2fdee4dd416d1e6",
       "document_sha256": "8aa01254609fff00c6265d860fb46a839dfb5d7d5d379b5686c104e9b88908b3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "013051ef41072b25ca851ccaca811a960fa24bc3dfee7d29df21d63527be3537",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "3d167224e04c0798a6eea61d7251bcc46114c7ebfa0633aa16529adb36a1ce87",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "01ceb3d088bc7abf65f13aaa669a426df4955cdc7107043775da1df59b361da7",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "0ecf6830d64e099d7c2610f1d501aa1e1907a2d083ac129403ba83126fc9f6e9",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0222f0f90bc3a88ee6475997deb0375fef90540c3fc9776caa11eda689f7cfd5",
+      "source_id": "cfpb-4",
+      "chunk_sha256": "7a8ffe55931489ad743a00f284a7139b7e015b5abcd521d241c3c4fa2eff03ef",
+      "document_sha256": "7a8ffe55931489ad743a00f284a7139b7e015b5abcd521d241c3c4fa2eff03ef",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "04178b4f90177c68479a810eae8bb380022daa3f6aef26a210a2911f22232d4d",
+      "source_id": "cfpb-73",
+      "chunk_sha256": "38530ab83565b3483bc903d760b9b04cd8d56756b52e68e799515adc631f8c30",
+      "document_sha256": "38530ab83565b3483bc903d760b9b04cd8d56756b52e68e799515adc631f8c30",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "047721d67d5d48e68d6f1a4f3e69f7b4e9ae2109a366a6f90a27e71e700e6d63",
+      "source_id": "cfpb-319",
+      "chunk_sha256": "d2c26e2e1d04940593901c9b711eaa1621954be2deb806dfa3739d887471aac6",
+      "document_sha256": "5c07e91ee9620c1b80e52a4f2736615a0525f8e85e6e3e9fd0ef42e34c48b3de",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "048ddbdad36e39e1edb4482dadc90c225faa3cd3e388dc7602203b449eda26d2",
+      "source_id": "cfpb-1865",
+      "chunk_sha256": "dbe149d291d85c7a5a62d72fe33cda5b6b4734ab3bb71281ea81773c18fa0251",
+      "document_sha256": "a1729840944d46739525d37037824b19073ee99e2708967d63d6d23f49f1484d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "05ce6da4c7a832631f8158b55321495aa84000c4c976137060f48bf0428e6878",
+      "source_id": "cfpb-34",
+      "chunk_sha256": "b53be779eaddb5c2b2f24f38366750eefa9ca1b08250e0fbf2838068ad172fcd",
+      "document_sha256": "3c3ed93407d8a68444340ff99f81f6e0a224296fe277c73196b703d83e912148",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "086aec481d0d1b9840bd6bf2a1665003e918217ceb29fc9379b4818f19ae6108",
+      "source_id": "cfpb-2144",
+      "chunk_sha256": "55662e6e565eeb59847fd0a38155bd08393ddea7cfb60ca9f35298ac63b05121",
+      "document_sha256": "d720b475527aab43c1ca9373d983d2ca0bc419094e1fd5b93414b26d955b332d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "096c4871f31342ebe718e259d78efce6f014c31a10f80bdea694794f8511c630",
+      "source_id": "cfpb-1265",
+      "chunk_sha256": "5c5bb8ed64f1cceab1dd6e0a20e47c028d4d955645e4e3e5299df414eb8e6d18",
+      "document_sha256": "ca8ba94f3b7646d2863a1b6cc4d0fe8b47b5e2109c5a6e5ef2871aedb95d38b9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "097e405bce4e67ebb060ca0a58cc801df07f9e205f6e4de4d6ea76e66053af19",
+      "source_id": "cfpb-2029",
+      "chunk_sha256": "6a238879485d8763381212d1e84346fb1fd76dc578ccbb72857477815a4ab804",
+      "document_sha256": "cd4732d409958fcb96abbd4688df36efc2110582891238d4a2ac7bfc423a234a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0c89f879637eb5e2c907a58898c89ef84bf3ce14bbd4769f1c80a094dc94092b",
+      "source_id": "cfpb-1457",
+      "chunk_sha256": "2c01d459475f62c85dde35f3fd6baa8bfb0f1bf8bed4f8328247c2b9a657e26e",
+      "document_sha256": "a44807dd92e901ea7f84ec54ed0d98f78bb05d052f0f4e834d36b38a0e7dd26e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0cd2681af8a7c80397e37b81e1658f75d2d0d1f33e5ecde5be71be12c041e735",
+      "source_id": "cfpb-1339",
+      "chunk_sha256": "c8038b431c8619fbfc58d9c1a3ca19d064e16ad65c31f4a09a52dae3d1fd133c",
+      "document_sha256": "c8038b431c8619fbfc58d9c1a3ca19d064e16ad65c31f4a09a52dae3d1fd133c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0d3de481f8423963a595318414ba5c514d31f6d169bff4d13499d13e598de63f",
+      "source_id": "cfpb-88",
+      "chunk_sha256": "22c7d6654a27b7a877472a3a7ba58882280efbe53cab014a84f621ac93d29b08",
+      "document_sha256": "22c7d6654a27b7a877472a3a7ba58882280efbe53cab014a84f621ac93d29b08",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0dde667ae21686b62a62ee8b4caf32804ab5e106498a3c20df10a9d833e1d056",
+      "source_id": "cfpb-2112",
+      "chunk_sha256": "ce1fcf96984dd72d0d8831effb0906f76c9cc6ae924fddf7a62fe31303ffdc62",
+      "document_sha256": "ce1fcf96984dd72d0d8831effb0906f76c9cc6ae924fddf7a62fe31303ffdc62",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0ebfe5423ae0ee371be7b4bcee2ca6fa842e1eb62c4316129455cbddcab7c038",
+      "source_id": "cfpb-1467",
+      "chunk_sha256": "c3e4c1dc8673b97c44c1c87684a19762e3f3e0551f38f2251555587181f0f078",
+      "document_sha256": "faed82bcce242b78cd0b0a12ee636541a56e70c99166b7eb10bc956c89c20997",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0eec6a32e7dfc27bde9ced7ada245a381bd764bbbbfe0a7ab89cc65e5c76b4d2",
+      "source_id": "cfpb-1369",
+      "chunk_sha256": "2d725eff4c8325a29c89a1fb86cb91b64dc5d4c5dc7c6fcc8f621e832f91e122",
+      "document_sha256": "95ff4fbf2c052cc52a3be2f4eb5430c4fa80d3df6ec0ec2940dbdfd86321b969",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "0fa829236e41aea51718a50f3f0802a4f489489c6d6533b9198943f68666ad45",
+      "source_id": "cfpb-1861",
+      "chunk_sha256": "707d9b6303732584dfb7aae5d4afabc3e1281ba5612ed7d180b1c501240710e8",
+      "document_sha256": "365aa434a0cab71fd07b24f87c40dd3cec70827c2934f879a90f021ffbea58d4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "10ddee4d976ebe730ca677eb196edf91135db0da3dd84788dd0620e82acb432c",
+      "source_id": "cfpb-1265",
+      "chunk_sha256": "d52b57d68dcbee7c1dcb6284fa1b414b63f696eaacf44d642e520212dc941de3",
+      "document_sha256": "ca8ba94f3b7646d2863a1b6cc4d0fe8b47b5e2109c5a6e5ef2871aedb95d38b9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1112067f7b086600719f0638c1dba889c77b309a59909acd101102c403f6dc40",
+      "source_id": "cfpb-19",
+      "chunk_sha256": "3c8ed646ea8fcf491262e4571ed4c19615f4adcc7fe371ee478d92461f4b6a1f",
+      "document_sha256": "f0e25d496ec4ef3b5e9644bb0cec3dfe57051d6d84e24907e318b8e099863761",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "111eeec4c8fae99c95a9f03ce6d7247831b337c025800e9490da8ef06d15d7c0",
+      "source_id": "cfpb-2133",
+      "chunk_sha256": "d0b93ed3b7e50591906cf8c9942f24bb1b11dc0011aa7ae0c672dee2ee041bbb",
+      "document_sha256": "bf22f56fc84a3b0bc5286a7b553b52b69f56a1f59e57c337e87067f95ba93826",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "119c0035c4d67801009af8aac41a0ed5373f7dfc70bee39b17b1f9281b7c3c1c",
+      "source_id": "cfpb-2155",
+      "chunk_sha256": "42b45bfdd6619f94d57ed0f3276ea8441ba3e7024e6f88244f8024ae5590b324",
+      "document_sha256": "64dbfa4a3192db44d76b84b89a72f8f3a80c7a1fafce127805b8396f8e9173f5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "11b846132c032e415581d68226f1b128fa3c0f48bf2d0cd714cda11a545d5f01",
+      "source_id": "cfpb-334",
+      "chunk_sha256": "3d6c1f84d43a2f066bcd9f2152ae38a270a117a3c54a50db2922d29eaf8995d5",
+      "document_sha256": "a933737b9e2a536ffb243c47eb49e2d1ee3fe0cba1784898662ed2b14ba98d2c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "11d61a250d808f1dd3939d591d44059c1bd37db32f096a47cb187472cd13d49b",
+      "source_id": "cfpb-69",
+      "chunk_sha256": "82e63461e9de027640aadca9ff4d87f3ff401ace7aba31177480b159ca922b51",
+      "document_sha256": "ab8ebed45021a125b36b1e425356064f42f063db02ed06b6a6239f03ab7b407a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "11e3c72f797f664d7d1916888b19ab1dae3a454d57df06cdfad4dbbc64eeaf4d",
+      "source_id": "cfpb-1381",
+      "chunk_sha256": "73c4ddd4a2efba19bbd5b6b4f63221a7bf91ed26937aebb0079feca9a8ea161b",
+      "document_sha256": "73c4ddd4a2efba19bbd5b6b4f63221a7bf91ed26937aebb0079feca9a8ea161b",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "126baf58c70e92868438b7a6dfebaf1ea08d5ae90875ed7541223b6cac973625",
+      "source_id": "cfpb-663",
+      "chunk_sha256": "483051791988ad54e391ea9e8d16c7b369657fe2f9385a0205111077dda4db8b",
+      "document_sha256": "444657839be18711ab206f3532a7be33844b991b0161a5c7c5a8cf0ce4111686",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "15b2a3ebd151e11be3650e3940322c7204e308037fcf51a949a1f4390e2d3139",
+      "source_id": "cfpb-70",
+      "chunk_sha256": "6dbc9183f9e88e44b8b68bef4512b79235f11719786b0392ac1c713e937bd143",
+      "document_sha256": "6dbc9183f9e88e44b8b68bef4512b79235f11719786b0392ac1c713e937bd143",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "160fdd35fea8bc2faf77f63dcc1897d749d80115e460558a124b377ee4dfe2ce",
+      "source_id": "cfpb-56",
+      "chunk_sha256": "2437236eada85dd352fd727626ed23b49c340d721051a3028a1ac247ba32ffe6",
+      "document_sha256": "2437236eada85dd352fd727626ed23b49c340d721051a3028a1ac247ba32ffe6",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -82,10 +1532,213 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "17a09fa926bbf4963a0e71141f1d3b4f773cd3b305e534634eb9773bbf40896e",
+      "source_id": "cfpb-1249",
+      "chunk_sha256": "8d8c6e7782b5c8b573b4d9677e2a108d7986bd23ed51b9371fbf335a0382a225",
+      "document_sha256": "8d8c6e7782b5c8b573b4d9677e2a108d7986bd23ed51b9371fbf335a0382a225",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "187a8b29f06d2353e70150e459b171918e5889d82cac9e3de33455911f4053d5",
+      "source_id": "cfpb-40",
+      "chunk_sha256": "47f0a2e711f6b504e74de1262e929981d9ca234aa5a7a0309b440d8fb42c40e2",
+      "document_sha256": "d6b1b1a66ad4866ecfb80be29d5cb63a4fc5ba6c2debacdf8d2505fa2ba3fe5a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "18c1a1e5e06af502c709436361fe853206249402b164dd920c9e6ed896b42787",
+      "source_id": "cfpb-18",
+      "chunk_sha256": "94185ddf7eee9bb2af18c1a0d6003e1428c95e28182fca98bb6cac183cf6b62d",
+      "document_sha256": "2a6cc29514a8a27227a213303c4c2f3d22328e1bd7c2406666327d1a31beadce",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "196d771e09ba7c40dc94b5f4d554206769f6d147cc156753ad93627407978c05",
+      "source_id": "cfpb-1371",
+      "chunk_sha256": "68be68c2995069fa4478b15d42a9dbedb9f0ffb6704c94cde9fad1029b59b5a3",
+      "document_sha256": "68be68c2995069fa4478b15d42a9dbedb9f0ffb6704c94cde9fad1029b59b5a3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "1a1274c14546b005192c4566a72715d745b93cef5e26c8d07e7093487dd0fd71",
       "source_id": "cfpb-31",
       "chunk_sha256": "7a6953afeabfa988135b8ddfe808d79b6019be67ee9a86afcc21f408f37300d0",
       "document_sha256": "67932c021083f6a93bf62859e0a4ecdcd5605f5888c817b33767eaedaeac8372",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1af450eff94bef930001d13a61ece3670539c4044233c57df41b095b60a426f9",
+      "source_id": "cfpb-2155",
+      "chunk_sha256": "d36b86a1ea8208f0d07cb89f1167fc6273194e7bd5ad995cc16cceaf7535d6d8",
+      "document_sha256": "64dbfa4a3192db44d76b84b89a72f8f3a80c7a1fafce127805b8396f8e9173f5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1b366f4ca62817e532e400f9c29c3af531866e8a9a4b68ce3a391cb5b1aee112",
+      "source_id": "cfpb-1499",
+      "chunk_sha256": "f8aec94e18e4b1cae626a1a4c9499f92d0d484cd96cdb407012c84aedcd1d5e9",
+      "document_sha256": "020ae8f2466a0249a21bca7d467e7b47d73fa348cf8782dbf27031a687dfa891",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1c4fa91effa166615744ba328909bd6148ef1926f1a3194d1ee8782584ea58ce",
+      "source_id": "cfpb-2154",
+      "chunk_sha256": "496c7068cfa963f61c0de2a9c15cb8034832303bab5a6dcd1a7f72a966bcba3d",
+      "document_sha256": "496c7068cfa963f61c0de2a9c15cb8034832303bab5a6dcd1a7f72a966bcba3d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1c6e67cf2ae86a2b983d9024f6496f5ad5737d4c75a54b9666f9914ec140fee3",
+      "source_id": "cfpb-89",
+      "chunk_sha256": "e29f49e9c4b2a1c84123bf6452e5c00c5bac156d82310655846a272b0bdb9b19",
+      "document_sha256": "efad9b818ca40836fe46229f4d5815374254a8360dd88311044d29e8650254ca",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1f82c551e7b93faa32f81496ec64171b02c931a50d292471e9e01fb8e5632296",
+      "source_id": "cfpb-813",
+      "chunk_sha256": "b7c04e93ae4e4eed85016f862ffb1760757afc686361e23a37beed6d8a899b03",
+      "document_sha256": "65c25e5f86111b42d31266ae9827ea3316e2f521fb202412dd1d5c8d32222f34",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1f9febab459825f4a2a99204b14b01329ac4142b9d7d92059c3b938008b74ea8",
+      "source_id": "cfpb-1251",
+      "chunk_sha256": "10aec4aa8c5b7a11855bba8e0143769fb96e884bc61b302157e642d3a006a632",
+      "document_sha256": "10aec4aa8c5b7a11855bba8e0143769fb96e884bc61b302157e642d3a006a632",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "1ffb31a19d0c082fce69666098dbe1edb9a19e2ba6d27b231f1842bb1160b9fe",
+      "source_id": "cfpb-1447",
+      "chunk_sha256": "eb462f92ea8a5896fd434b767befeac54a011cdf442b22fd1d662d5f92249bbe",
+      "document_sha256": "efd65792630376ac0cf503cd25a2734b29eb220471a98c1e3c7da5f3330e5736",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "20b7386e4c2f119c4c4204dcc82325e0f1c7b67a5e2bb4cbfa8e65488864b9ae",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "56c110b95dcbb62527b032e4026165eb7e1cc9e34b997e801909e09d65324680",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "23ad0f384d66ecbbfe72e4d63609133f13e6c46719f2d957a8a115cb2ad02835",
+      "source_id": "cfpb-1231",
+      "chunk_sha256": "3577880aeed23a461de9bf3f488ddc7c89cf62f2fd007e9662ca0d30ab807af9",
+      "document_sha256": "3577880aeed23a461de9bf3f488ddc7c89cf62f2fd007e9662ca0d30ab807af9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "277d305f879d5558f00559d8016b90b236c2b14f8304455d44c144c1ddd9ccbb",
+      "source_id": "cfpb-39",
+      "chunk_sha256": "d21109bc2537d3f2cdcc28fee2c14698f5c138bba578594fee20ed3d28842b21",
+      "document_sha256": "d21109bc2537d3f2cdcc28fee2c14698f5c138bba578594fee20ed3d28842b21",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "296da2592071f82593dfcf5dc2c1423f6335eacbdc77e4ed8fbdea4d48762347",
+      "source_id": "cfpb-1823",
+      "chunk_sha256": "1ddb8540443a933fa56ec07960ddf77c72618cd9649059132f83631f66042623",
+      "document_sha256": "f87421f8fe8b82fc0a737372927f28a52724a97afbf6c7df04419fae48d26b71",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "2a2ae5997bf5058522b07c414bc111dee1df846710b53de99f0f74efa6cd9d3a",
+      "source_id": "cfpb-1343",
+      "chunk_sha256": "ad7cc1d4f50529e2718d9b62a71b75dbf2b96c0422c7f6da6c46c9441fc10602",
+      "document_sha256": "71cc90ec55d3b7d8fbbea32d4996ef05d1c013274a6ccdb8840bd132edf4feae",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "2f668e1ac39131753c5e7e9d24300be2194dcfb62ecb8d77160e75a72fdb9f04",
+      "source_id": "cfpb-1433",
+      "chunk_sha256": "2b908fbfc28c8306bda4b8b081c607822e52dc7e6330642d1572707c5cace345",
+      "document_sha256": "2b453c988dfdd9fc4c8fac12d47bb81d4d6802b6d7a91fc4a4381b746e8aaa7e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "2fbb5d353b995c96a150ab90ecfc746db0bb044fa37fbf2bbef33487f8895bba",
+      "source_id": "cfpb-1495",
+      "chunk_sha256": "ad85c7e34177a3c99fff8e95c6a12334a7e2c906040befdf686497a1a8b22f68",
+      "document_sha256": "cd61557642e3496b736854c50f994b4aedf46822803ccc74c61d85ae72429179",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "305573659f99dcd775a0ea025113bc6e50e0eb3a5eecc49089ec7d1074f4165f",
+      "source_id": "cfpb-1969",
+      "chunk_sha256": "027ebcc5a1b63366c4e1c76b872bfafdf9d1e28738efb4e642bf1bfd9f63c390",
+      "document_sha256": "d0cf595fc96289ad9d6789ff5dd37cc13782a20eb577e57792db025f2c90bd1a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "317bf9f5611351044bed85e4a92e6bd8ecd8a1fc5de9b0e3489c35bff11c1250",
+      "source_id": "cfpb-1883",
+      "chunk_sha256": "e4a4db332b2ac4ce5c68998eaf802cdc14209995d405f1631d30a771b7e0d684",
+      "document_sha256": "e4a4db332b2ac4ce5c68998eaf802cdc14209995d405f1631d30a771b7e0d684",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "31d3d8d9703f26d1807d116b7b8f3449e8ce9e6268fd96e21f03f63fe6c82abc",
+      "source_id": "cfpb-2105",
+      "chunk_sha256": "38195aec5fe2b9a69e8238f61c6a25087fb2387a3bb3fb2bd43ba2724257bf10",
+      "document_sha256": "81cd3044118c9646b5c0d98f11719fe644543390b27ee8dbd9a75646b81e4ec9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "32980df663ea71562967fef3817c7e5d2a74ca88ca99160ea76639ed1cb0c4f6",
+      "source_id": "cfpb-1823",
+      "chunk_sha256": "4dc3a4ff03d6df28836f435e9bdfb82d2eebed1097abe344c1d6d9444f7331e2",
+      "document_sha256": "f87421f8fe8b82fc0a737372927f28a52724a97afbf6c7df04419fae48d26b71",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "3343846191fa5673fa2f2117e0f4915b24ff577ba81e80d64c3839d516aa082c",
+      "source_id": "cfpb-76",
+      "chunk_sha256": "788e4446a8ed812f355473cd511c8f254a4ac802a542109f6f0a297916453aca",
+      "document_sha256": "788e4446a8ed812f355473cd511c8f254a4ac802a542109f6f0a297916453aca",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "341530b956bea53f2ddcd73de07c73ab05feda23b6b330153f3db54d2b8937b3",
+      "source_id": "cfpb-655",
+      "chunk_sha256": "bfddc53677198a602ef8d861b26796f192ff80994916af36f365ad01f2145f55",
+      "document_sha256": "f35eee0654d77b213f8836eb61b13e13fbb295f05c919b8ed4296052c8cba5f5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "34ee065661bf1e781cd94291afcf789b6237f88f019ceb28d000229cceb53088",
+      "source_id": "cfpb-1341",
+      "chunk_sha256": "d27920bb8453395fb804c3f5183d50ee953c485c7795201d921b9432d569d240",
+      "document_sha256": "553ae4bb377c708a398f15d822691c341009377148ba1ce726b399d409bbe21b",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "358b1ed6f65d3ce9c7ce482e76ac4f73778b05bfddc45cd30087167378041adb",
+      "source_id": "cfpb-2125",
+      "chunk_sha256": "762829cd9cec044400f43b54b7c193329de221e682dcbc593125cd6322a8eef0",
+      "document_sha256": "05a8bc3769330dc9bf9a1bcf836118b9bfc66638123eeeff6664f58b078fede4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "35a12db4c25c935cca19927184a756e0de8094b4c9e30f096ac4382631925d31",
+      "source_id": "cfpb-1377",
+      "chunk_sha256": "c711a7cc8e1df5f771a72a9505b856732029de5d35c7f66d710a46f9d55347d8",
+      "document_sha256": "e115b7881fc71a45560cc997b4e8e9af80e8ebd26bae21be7e8b2caace91b66c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "3740c00b4aba056af265f85605c63d5024b313cffb217a8f7381239b034ac9db",
+      "source_id": "cfpb-1837",
+      "chunk_sha256": "ff237ab4b255bd411fbb40dfe5d3d06f3c3d58d19735d7504d32b798ccfedee1",
+      "document_sha256": "9e82969cefc1aef3556dabcab88da6e1be341d7fe884b9ecc98983984eb2f971",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "380603347209f3283600e552b2b82110253394690112c9eb31e5dc725978161c",
+      "source_id": "cfpb-1463",
+      "chunk_sha256": "93bdaebf20575c17cf0766136c8ad1c9a802f0e18680199ac7fd80d73ee45ed3",
+      "document_sha256": "ad51b50b5346cb3a64bc188fd0e7dda09273943d5cf51f48e49fe37a4df22fe6",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -96,10 +1749,45 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "3927727fb78909802ed98059fa51b889c208c6d74b402505bb074f5e0a0b2ce7",
+      "source_id": "cfpb-63",
+      "chunk_sha256": "a05986819af59f0a6b768d9a2c430a076e63853f88b987ed401fd47a1b80d566",
+      "document_sha256": "a05986819af59f0a6b768d9a2c430a076e63853f88b987ed401fd47a1b80d566",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "3acae8ed88d002ca33e5aa6225da414cdf8ddf896338d5f6a8ed7ae4545abb67",
+      "source_id": "cfpb-1345",
+      "chunk_sha256": "15bcfefe629ee75b0a276d71bdb7d99b6d89b802be561813989eb27373c54ab3",
+      "document_sha256": "15bcfefe629ee75b0a276d71bdb7d99b6d89b802be561813989eb27373c54ab3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "3b21dffaed463e0c237431ebeb4eb421c86a92abc213a3f932e4e8a80303212f",
+      "source_id": "cfpb-54",
+      "chunk_sha256": "f0be08057d936757238d7b8c8469de58404bac36378867240792bd0bf31ee450",
+      "document_sha256": "f0be08057d936757238d7b8c8469de58404bac36378867240792bd0bf31ee450",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "3d3b1f9f774140efc82c93d82cf4a58aa58594d486701e5272b1206713939c84",
       "source_id": "cfpb-45",
       "chunk_sha256": "1d936c96fa1428c3f057e8505cfecb751382c776879e087568b120b88dc3fa90",
       "document_sha256": "1d936c96fa1428c3f057e8505cfecb751382c776879e087568b120b88dc3fa90",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "3d5a7ba54276cbfd1e182bcb6d35a467d71dba5270c1fdecfc7cc3f2c1d3a599",
+      "source_id": "cfpb-1467",
+      "chunk_sha256": "d70e452d15a5db3524be1c5d8ff74c3facee9e4facf7316282f3ba30dcb5c7d8",
+      "document_sha256": "faed82bcce242b78cd0b0a12ee636541a56e70c99166b7eb10bc956c89c20997",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "3da11d2976004ee05abd6b03daa3d189a05984be2ac5370720f84514000f4f91",
+      "source_id": "cfpb-9",
+      "chunk_sha256": "966185beb37958b6e40e260a8759d1625e67b813e4c5c78baa686c045fa89194",
+      "document_sha256": "966185beb37958b6e40e260a8759d1625e67b813e4c5c78baa686c045fa89194",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -110,10 +1798,290 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "402b2273cee5a5262d12e8502895653ed4ae55c6645ef3a29197b30154fdd9c2",
+      "source_id": "cfpb-2122",
+      "chunk_sha256": "0eb1aa6829dd0416e382128e6f06ed171b1d4f3bd0c1292ded829eadd92fb7f6",
+      "document_sha256": "c52f0caf08b530691959f40b6a1d990baf41a8b06b71e0cc5e6503f794c65060",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "406fc06d58b64daa62308e5269c557bc9105b4cf5bf4b3660520f46370dd9932",
+      "source_id": "cfpb-330",
+      "chunk_sha256": "680ad4c25fcc42ae3321435906ae56fbd92f6fee7b50395ad44a373178d43785",
+      "document_sha256": "5c99f0913601fb15068a8e843dfe783c5a15528c55d0482c3afb1bd0815f3628",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4283d005d93cec4a82fec79581902b3e204e5e5d3c5216c198acc297c919fb91",
+      "source_id": "cfpb-46",
+      "chunk_sha256": "a56033fc6dbb9e371b765a09e070935f706e2e357ca18569fa6ade841a6791c4",
+      "document_sha256": "a56033fc6dbb9e371b765a09e070935f706e2e357ca18569fa6ade841a6791c4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4419e9db5bd6c5eb567b2906af81bf2dfcc4d671ffe1a6ec567d43372d8e78c4",
+      "source_id": "cfpb-1439",
+      "chunk_sha256": "1ce0da48703465a6c59e29d17bf0d2260da9f1f0eafb7e0809cea4041d30a90f",
+      "document_sha256": "3bd0a3ad41bccf6e40f19b3471581d7672ee140ef14411e27906e4731c259007",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "442efd8ad87a39d36f49b61a5e75d6a891bb2907773bacc3e72ebcafe912bb62",
+      "source_id": "cfpb-1537",
+      "chunk_sha256": "047de3b1c2794592b4b1a602db1c7bb869bdd17f692c52019f7355e7ecd8c355",
+      "document_sha256": "e26fd66848910c0a7efe832e080a1b2d18053e62064166cd18de54161ff35e88",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "455b5d14fdcac9f3e4d16ddc4edfa163af913d590c3269c168a6e1f1cbf68eef",
+      "source_id": "cfpb-1969",
+      "chunk_sha256": "ed1441b2d9e543f1e91e860826ee840089e87c6a03857248eb7bf3d483642025",
+      "document_sha256": "d0cf595fc96289ad9d6789ff5dd37cc13782a20eb577e57792db025f2c90bd1a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4592ae5411c249ce1429ddcb6f61962fc8fab8c0a6451eaf0576d8889ae7ff48",
+      "source_id": "cfpb-1373",
+      "chunk_sha256": "c8d23a411dfce6d6686f0cac7fb7db98b9ce5503e495b664ee27694ca274af84",
+      "document_sha256": "c8d23a411dfce6d6686f0cac7fb7db98b9ce5503e495b664ee27694ca274af84",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "45adf327afb90666625a45b3b45eb6f0299d9447feabfc41d0dd2e8b39ea09e0",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "3ccc32e413971920498382e77fb929adecff28338414b6256aec62da3a056f8d",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "46250bbdfa0aa38a161eaded334169508ca81a88d3e13626f027242051d9f689",
+      "source_id": "cfpb-1411",
+      "chunk_sha256": "523cf70d4b4eb9afcbe37c762ddffb2b7a7e25aa9f75c8512fccbad53e32782f",
+      "document_sha256": "8603cbce2d75d259f135234569c901ab7a5f8ea6ba372bc2bf33758413f8ec28",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "469b85b8a737da8d3ebcb06a7d46e8a2f76d0bb42e733f493e87f818963dac65",
+      "source_id": "cfpb-1369",
+      "chunk_sha256": "7e7039a676ce9b9f2fe017e33bc09ed46366b8bcad55db47de1965f0a7b517e2",
+      "document_sha256": "95ff4fbf2c052cc52a3be2f4eb5430c4fa80d3df6ec0ec2940dbdfd86321b969",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "47668069f9b252ed7167cdb066e52f3a5aefe503b103c88b26e6fe74ae3ec740",
+      "source_id": "cfpb-1293",
+      "chunk_sha256": "a207c20861f5676c7919bf1a12d7ac38bf6144ad344d7bd316f8700388234c50",
+      "document_sha256": "a207c20861f5676c7919bf1a12d7ac38bf6144ad344d7bd316f8700388234c50",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "483974fd5cb58ad7dc3e7f791965207d49bfa5e3bd836250d467ee15fe9e4b9d",
+      "source_id": "cfpb-1449",
+      "chunk_sha256": "b5066484ee6248d34d8f491e719e6539ef004b7731d0fc3f291bbd5642aca370",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4a70caf58ad1aaa7f4775b8083eb9ff806cca2e45ee884c88cefb4cdeb1c14ab",
+      "source_id": "cfpb-2111",
+      "chunk_sha256": "cf093aea47848fca8d5034332ec6045de0b79f71d09b352b4a75ef071846cccb",
+      "document_sha256": "cf093aea47848fca8d5034332ec6045de0b79f71d09b352b4a75ef071846cccb",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4ad281f8308dc9d312a390f79be14b2313a348f72867e9ae134561b5977d4619",
+      "source_id": "cfpb-1331",
+      "chunk_sha256": "26d83ea6acbacf50e15e1a89cedd3718483f42bcf1519d7370ef930d5eda2d1b",
+      "document_sha256": "26d83ea6acbacf50e15e1a89cedd3718483f42bcf1519d7370ef930d5eda2d1b",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4ad4cb48038995217b5d30f4b3c8f76eead258eea3b2331be41c91dd16c2e2f8",
+      "source_id": "cfpb-1451",
+      "chunk_sha256": "d50939c100a0b4529675c464c8eda353725009e452f244cef228fb6e512fb39e",
+      "document_sha256": "92a8cf3bbfd714436a033041082de1a78f0abd561e481726bc057539da607972",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4b56261bf97b77cb879baf34b0387b1f8ad84a80288a4689d7e71d8a5d1a181b",
+      "source_id": "cfpb-74",
+      "chunk_sha256": "c4188e12dfc01c5221106a4685fe93c7302978f29705145beefb95ffb51cc120",
+      "document_sha256": "c4188e12dfc01c5221106a4685fe93c7302978f29705145beefb95ffb51cc120",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4c948cfb1342cb3d762094044e9636c9fc1f4abc832b38509ae4b5989b9d3246",
+      "source_id": "cfpb-1699",
+      "chunk_sha256": "296d28ac917ee8dda70fd6b2e82c234c6ca25e07d0cd0ee16336d8e36a2b36d1",
+      "document_sha256": "c45506398296b1930622f58765ae7a8ab935acaaeb3561a2e57dba32e13db682",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4d090b6b51f793f502a2d524ef50bd318b021dcc6f7810eacdcbc6f169ed98c4",
+      "source_id": "cfpb-2123",
+      "chunk_sha256": "3d758314ada4db428633480cdc38d1523ee021e84fc3ae3bd5180a1b624705e7",
+      "document_sha256": "b3b14978dd357384db6e1bba1bf6628f74501bedbb4cebd84cca9e167aac1a8c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4d256097b8080f934988d051239f6fdf7887916584ad689e5611fb76161c47d5",
+      "source_id": "cfpb-1451",
+      "chunk_sha256": "aa5728e1fdc6ef74941a0f161a4b395f344478d3544029fc2ed2f1e746d28b20",
+      "document_sha256": "92a8cf3bbfd714436a033041082de1a78f0abd561e481726bc057539da607972",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4d2abe54a0e92731bb7adf78e2aea59151439fcb6e0c0f2768d8c0345af9b0f0",
+      "source_id": "cfpb-77",
+      "chunk_sha256": "ac81d1a5e81c7b46cab77fb393bbe696df90fc01dbc237b0ccc0d5e02c007908",
+      "document_sha256": "ac81d1a5e81c7b46cab77fb393bbe696df90fc01dbc237b0ccc0d5e02c007908",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "4e8aa1f18393528093fa44a876766f668bee6cf99f43cc776738b9c763284ee3",
+      "source_id": "cfpb-92",
+      "chunk_sha256": "c5893a490bce924e9d20b6a84841e16d2617bb54cc184cbb64df837eda1de662",
+      "document_sha256": "c5893a490bce924e9d20b6a84841e16d2617bb54cc184cbb64df837eda1de662",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "51263db30350277a89c83902cb9d05e5ca6761428500064afec04a85444ece5b",
+      "source_id": "cfpb-316",
+      "chunk_sha256": "8b7d97aae5d1a02c266261387368ac37690f0013b646d5cf39537176ce258f60",
+      "document_sha256": "e9d6419fffb5489c6a0311c38ee5542e4b2969c00b7b121241f02d0e55a2d5bf",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "519433fd39c47bac58760cf49c885135c76a02345ef5218873c673441acaffb1",
+      "source_id": "cfpb-1837",
+      "chunk_sha256": "94c5eb40758aa77cf971ea364d4f23571a5ac44b5ff5596ac0753477f894d934",
+      "document_sha256": "9e82969cefc1aef3556dabcab88da6e1be341d7fe884b9ecc98983984eb2f971",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "51bb4d037141f5120f8d2f37f56e9ce2dc2d5293c03f004fc122cf81ad183e0a",
+      "source_id": "cfpb-51",
+      "chunk_sha256": "115e92b889aaadbe8abe5be96e72c35434e7caab013a6b21bbb53833330f0f70",
+      "document_sha256": "fd877549250297038ce2f1d3e69e1f7c298f99ca737fa4ddb3afc1f1540ebe95",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "53149503c140fa5b70928125b4fb53e6f7c8108a306e8a7969c4abcb380c49e4",
+      "source_id": "cfpb-1423",
+      "chunk_sha256": "63fa762956beee871f592a94d8287546219f7f1be325e220adb3495e7cec4e55",
+      "document_sha256": "815cbda2ccee6792258a1c397d74db811eed9c801f6ed7da98c74e65df9a1046",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5560eb8c2a27186103e7f71a4575b65eefba7944b2c2a6003cc4930655cfef86",
+      "source_id": "cfpb-2113",
+      "chunk_sha256": "81d23501c7efd8a8986dc26778fde74adfc189e4ed1a1bb748011298357f38f2",
+      "document_sha256": "81d23501c7efd8a8986dc26778fde74adfc189e4ed1a1bb748011298357f38f2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5683e56ae70d4365f9771b9735adc886d2e4b7f2fb266a6b3e457ebd0d8a7877",
+      "source_id": "cfpb-1449",
+      "chunk_sha256": "3e4b8f0bde4e2b31086fee3c1689f0db7a0756234211b2935706d45bad52cbf5",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "573816f1c48434f0620fde082e7b91d01166f8f2740094fc273d8c28de253371",
+      "source_id": "cfpb-1817",
+      "chunk_sha256": "6dd57d23a6a5a89ed4f326d49e71a8bd857fd449433c1c42758ac1ff48804a44",
+      "document_sha256": "6dd57d23a6a5a89ed4f326d49e71a8bd857fd449433c1c42758ac1ff48804a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "577ad7bc5fe0d39f6cd12c0aa5b64aa4c4449b50b0305c09dc2b8ec6085e4d24",
+      "source_id": "cfpb-2122",
+      "chunk_sha256": "53b3595c497ad3570cf357fc9005066b934688f6232d8cb85bb55a25ab5b5962",
+      "document_sha256": "c52f0caf08b530691959f40b6a1d990baf41a8b06b71e0cc5e6503f794c65060",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "57901eb8f8194897076945f01449ad8513d812950e67006a4536779c3cd6edda",
+      "source_id": "cfpb-42",
+      "chunk_sha256": "dacff071d93aab6df03e240f8853e5af2401940c62f1cb164b20cda40f3df3d2",
+      "document_sha256": "dacff071d93aab6df03e240f8853e5af2401940c62f1cb164b20cda40f3df3d2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "57a1026e75cefe2fcb05cdad30c18b28477a14913875a19604641c2d6d97ce5c",
+      "source_id": "cfpb-1239",
+      "chunk_sha256": "f3fb375975d2cbfff8ff7802f696473da94f082efa14cc37d98b29eea6fca9b2",
+      "document_sha256": "f3fb375975d2cbfff8ff7802f696473da94f082efa14cc37d98b29eea6fca9b2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "590b2e0c1f5e1b6339ce1b032bab6f23a27e004c276d45695ac4640e16a78f23",
       "source_id": "cfpb-331",
       "chunk_sha256": "560938f427b89e29926d3e28935008114c950666aa79c8320f9ee82bd358b039",
       "document_sha256": "b4a14e46ec1c5987e1276a388d4aac30c95ff73213d2bbc32e2b83baf9742f1f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "59f56967c477551c7b71c004b34760c1801e3e83114eb69bbe3edf0c7be97e4c",
+      "source_id": "cfpb-11",
+      "chunk_sha256": "cb9c18bb0da8d520c2136df59221354406eb82d59b9aa6aeb8d8fe3c04ddc8db",
+      "document_sha256": "4f4606be34b724d28d20f9c79bd35106b91bb9c26d0bd8e6e65dc818b69cf10a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5a1852b5474fdf4ea761fe4a8401bcd96e24edb95f0fd693caed3334c14d775b",
+      "source_id": "cfpb-321",
+      "chunk_sha256": "75c206123e8f95cd328c2b1bc491d9d39dbd38316645fa73d111cd61f6183213",
+      "document_sha256": "75c206123e8f95cd328c2b1bc491d9d39dbd38316645fa73d111cd61f6183213",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5a623d243f894bcb689ae6658de7ce864a1a8653c3791171358bb910be29d3b7",
+      "source_id": "cfpb-2122",
+      "chunk_sha256": "7aaae064df16686ac1c18108d27e40f948a5d80d428797330678017fc0546543",
+      "document_sha256": "c52f0caf08b530691959f40b6a1d990baf41a8b06b71e0cc5e6503f794c65060",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5de33e72a5bc1aa5ee476ea45071ff14216a4072b9364e03965cd8c19a211fe8",
+      "source_id": "cfpb-309",
+      "chunk_sha256": "6d88fcf5558b53fde17728cb35c052978e8adf3750f559e2be3d98cd3ddea8dd",
+      "document_sha256": "3145e7ecf12563c8f0d552b8984999480e11f0c36947944ac3fcf175fb6e31e2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5e9d900967c5ae5090b4b4a4b5ea96e374bc59909b2990f2982ff02f21170dfc",
+      "source_id": "cfpb-1229",
+      "chunk_sha256": "1c36fdb366e8cd812536efed24b91df94f8d795bae5cbf4b5e2f1b9c2c197f77",
+      "document_sha256": "1c36fdb366e8cd812536efed24b91df94f8d795bae5cbf4b5e2f1b9c2c197f77",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5f168830d827da458d86caf39c6ddf6bdd5609810e0a07a932e7d14e4d3d94e8",
+      "source_id": "cfpb-2069",
+      "chunk_sha256": "1fde5b3ac886e1f54e7077e59463e37510abc7d84741df856a6a345e145dbca6",
+      "document_sha256": "1fde5b3ac886e1f54e7077e59463e37510abc7d84741df856a6a345e145dbca6",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "5f7c1ac5edc90c6622f7ba807a0641d4ebf260d598fd671160469b9081bc2dc3",
+      "source_id": "cfpb-1695",
+      "chunk_sha256": "b208685664a247be2892f3e8f8835acf9bb3ed09c7fcfadb444448f15bbccd71",
+      "document_sha256": "2005c0275b61e3e3fec3909d5b1a1ca92b96e0b4c6c991f971ce56c45128416c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "60211f116863348b3eaa8ee07af383076ba95ba0ccce597bd6a5478095b57afb",
+      "source_id": "cfpb-1495",
+      "chunk_sha256": "61c290b23a5ed50237c762c6fb9adbbf38323e07d777a3771eca52e8a451b476",
+      "document_sha256": "cd61557642e3496b736854c50f994b4aedf46822803ccc74c61d85ae72429179",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "60279e11903173a003a94aa11bf68a878aca6184df252c678d0a1a4313155884",
+      "source_id": "cfpb-2125",
+      "chunk_sha256": "045147926094014cd55140455a1b82e2d10a7ec7f3c2eaecb3ab8bed4fe841a5",
+      "document_sha256": "05a8bc3769330dc9bf9a1bcf836118b9bfc66638123eeeff6664f58b078fede4",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -124,10 +2092,605 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "63f5d50d1d389e417214ff99f07779e4eb376b29df160757c95a1671c3164607",
+      "source_id": "cfpb-1401",
+      "chunk_sha256": "fdb9f9034c773ee290675942a6e7f4b0ba57ea30c2ca687754bcec00fd4e68cc",
+      "document_sha256": "603a8eb8d2ec3ab4da126a16e3b9f967dfbf0ce143fa941f3fa555694f380788",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "63fafe01ff1b6574d66b80ea97445a58ef53cdb0afe1ddad3b06c46580117795",
+      "source_id": "cfpb-43",
+      "chunk_sha256": "b521fefe6f66bfc2b3692dc22384d3ce563272c6e2144b621eea5b0481eb0ce3",
+      "document_sha256": "b521fefe6f66bfc2b3692dc22384d3ce563272c6e2144b621eea5b0481eb0ce3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "642cdce34fa4c1193b521cba1bf6acc7ef884964dea18643d29ed99b8f26fe3f",
+      "source_id": "cfpb-1699",
+      "chunk_sha256": "61890d01778055e8104e79726f75da562c91f9f3015721159b987ead2bd23efa",
+      "document_sha256": "c45506398296b1930622f58765ae7a8ab935acaaeb3561a2e57dba32e13db682",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "64ef7e1aa37a89949f2acfc8fb0024905c5635d4d1d3d228bd0722b5ce1cbe05",
+      "source_id": "cfpb-1157",
+      "chunk_sha256": "4f3879dbacbd7786fbb30c8a02de1579e992bd7944f82096d5926a2392aed50e",
+      "document_sha256": "15a6bad085a02e67c02704c351d79a068d4b30e62f7821401d8195e6944b734e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "657193c37a276c3f9a088e023a9e0f6589dea2046c95c9691643f8cbeec82178",
+      "source_id": "cfpb-1411",
+      "chunk_sha256": "c0a44a37d80560c9369816674ddeea5daf50328183a5d6d9627889503a70ea62",
+      "document_sha256": "8603cbce2d75d259f135234569c901ab7a5f8ea6ba372bc2bf33758413f8ec28",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "672ad36b24d0872531becb246751c487062742aa96e8e47b0072f271679cd064",
+      "source_id": "cfpb-1785",
+      "chunk_sha256": "f552f8477ee37c5a5c17835cc84e35aa5f3531553e1444d8400c20889dec19dc",
+      "document_sha256": "2062ddb7958436db3ac9d0f6314628426ed8097c0b1461d849185ed1c3e835d3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "67328b99e8a2bbf46edf7a7cc1acb5d30bcbc14dcb1ed023feb8553c0f2abc70",
+      "source_id": "cfpb-1359",
+      "chunk_sha256": "70cd7f3404fd1f4f7753e4a17faa9cf9cf77f5b48ce75ee421abe19bdd05af96",
+      "document_sha256": "70cd7f3404fd1f4f7753e4a17faa9cf9cf77f5b48ce75ee421abe19bdd05af96",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6865b0bcd7585a8785bcca823da0aa8bb780f8ef0cf6865ce32a03cb3dfb6bbb",
+      "source_id": "cfpb-78",
+      "chunk_sha256": "e0c787c0ae387022fdfcb58de9585990331635d4af806c9968a75af11cbee49f",
+      "document_sha256": "e0c787c0ae387022fdfcb58de9585990331635d4af806c9968a75af11cbee49f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "68e71386f10e30176add8aed4a63885c4c429696716b483b7b758a0381147f75",
+      "source_id": "cfpb-1365",
+      "chunk_sha256": "a6c9df4a154504ea7ef4ed2db1bb7964b9bf014685238814e6b2c469483a442f",
+      "document_sha256": "57c0239725a27b1202c3d24572b2a80b948d72022b3dfbd40094e5ea5e9acd52",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6ac938eee980bfb0263c34449e393cd87d38fbd2449e2a0e4d6c80e07a013124",
+      "source_id": "cfpb-1819",
+      "chunk_sha256": "d0047ab64d14c85e1bb3383daebcab9a20bacd81bbaa7ecec31934f0b895937a",
+      "document_sha256": "33ff5ebd71cf55cf0696f466c6c3d80c84ebf88bc6089d99301b1c71b5f3a744",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6bbf570f0e1ae5242861253b6781f08b743056b953e9233aadb4321c3008b964",
+      "source_id": "cfpb-2125",
+      "chunk_sha256": "52c37c32f7dfa92d29ad002edd354ce75c798a1fe60a93b44cac44e88e8fe9e4",
+      "document_sha256": "05a8bc3769330dc9bf9a1bcf836118b9bfc66638123eeeff6664f58b078fede4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6c1c3bc19fc4381907751c7bab9026e28c1eeb0f05d4f3622869d09a33e2e8f0",
+      "source_id": "cfpb-2105",
+      "chunk_sha256": "aea70e6d41a1830d40775bd1db9749ddad04211167d94442137c56dc2c5d5d16",
+      "document_sha256": "81cd3044118c9646b5c0d98f11719fe644543390b27ee8dbd9a75646b81e4ec9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6c7d9797f1a733c315d62ac6d2f8117df9dd44de0ba232de1d5a5a078144b8ea",
+      "source_id": "cfpb-18",
+      "chunk_sha256": "de1228110b069f3041c470a53bd481aeb291776e26ce61dffa777225a19d4aa9",
+      "document_sha256": "2a6cc29514a8a27227a213303c4c2f3d22328e1bd7c2406666327d1a31beadce",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6d5648bbc5c426bb8b7020ab5537aa70ec61111be75c59353df79ba00305c1c6",
+      "source_id": "cfpb-1625",
+      "chunk_sha256": "5bd9463fb8358d7247af9b47d3c2649305efeaf9595988fba29687ce7cf141d5",
+      "document_sha256": "781093af8990ec89aec56f2a1f509009e6eeabb6d5ef92b14725b23d3f72137a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6da7207dc3b7463b89649d4691c427e2aa397fed73ba07ad5fa66be15758d7dd",
+      "source_id": "cfpb-1469",
+      "chunk_sha256": "9b6552c4b5bb598f4e71c21736da1d3b43be940f75af5ec00eb62358be4b3b0a",
+      "document_sha256": "68d0492566f9126aedab9101a0127c8795cdfaefa9de126c68a1e56ecd40fce0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6df35d91beff71715dd10b50ec83c0ffa741ea2f21b092a10ede082acaf78d56",
+      "source_id": "cfpb-1439",
+      "chunk_sha256": "921d2494f4f0af83eb8513ad300ed5a300da6ff2c031001efc504ed9fa169219",
+      "document_sha256": "3bd0a3ad41bccf6e40f19b3471581d7672ee140ef14411e27906e4731c259007",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "6f515dda6c8bfe25a00e6833484e09153ba06e85a18db49ddfddab4c1dacad3e",
+      "source_id": "cfpb-2133",
+      "chunk_sha256": "8c863c8b6df6801e7fe4611751a47b6bd157481b9c339ab8d9b845ccbfb5671a",
+      "document_sha256": "bf22f56fc84a3b0bc5286a7b553b52b69f56a1f59e57c337e87067f95ba93826",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7015c62c63642a9ea36027f0e33a4a01f9a65de21a85ebb0bdf4ea086020833b",
+      "source_id": "cfpb-6",
+      "chunk_sha256": "b32c8873403a25845742655f31f32995238d7c7ac946d3787757abf3c4a2a268",
+      "document_sha256": "a0d81e9b4c4134e3cd6716e5019f1cad296643d911a43c1ee7012d4d4f214e9c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "70f487e1e6026fb873d8e3f4fef30437e34326e0ac8a4211a78c66c2a29a88b8",
+      "source_id": "cfpb-2098",
+      "chunk_sha256": "f71b976659793c6f96ecbaf31159c43ca7b90d14fecb866d30967dd8a8a349c2",
+      "document_sha256": "995d15dfcea8b94d8c367efbb250f6ae66a8aa62e9fb488cdb4a893e02e19749",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "756177bd481fd07b87fa8d3e3cca5c54b13a7b0d54e0c73af7a7015a2b56ca74",
+      "source_id": "cfpb-1403",
+      "chunk_sha256": "fd96754a417d847fa4b9d23e855d2c74fc16dc5f424fd6d1080ce493adb158aa",
+      "document_sha256": "419fa8d735f6e64071fb9e3fc8ca43d2ed3a56765f00c34b95ce60011b76123f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7593684267d417fdf2cbb12e25af37871bc4e759c416390519cc0442f13dbeb8",
+      "source_id": "cfpb-1257",
+      "chunk_sha256": "12987fe03071a9f8f55a47f73196d31e8573a0ee16081587cb8bc7f068ba3d50",
+      "document_sha256": "12987fe03071a9f8f55a47f73196d31e8573a0ee16081587cb8bc7f068ba3d50",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "767094156272e800aff917112590c99a02d5ff4090e75f08433ba910bfc42447",
+      "source_id": "cfpb-2123",
+      "chunk_sha256": "bef4cc50529b3b868cbe9aa1de462dd1e9caa8d036507708794789494832f798",
+      "document_sha256": "b3b14978dd357384db6e1bba1bf6628f74501bedbb4cebd84cca9e167aac1a8c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "78168b12ae1a3922629653c44ffe6e41218899529ca8393abca6f3317b0cae7d",
       "source_id": "cfpb-314",
       "chunk_sha256": "dc6653f2aca407e17100ab5ac48334a5cfccc751836b7bc6ac0e3aa1c442869b",
       "document_sha256": "8aa01254609fff00c6265d860fb46a839dfb5d7d5d379b5686c104e9b88908b3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "78f8c77f8e9e52344518a992d10cffc6a86233b3cfab1d0e22e337fd1a4ce124",
+      "source_id": "cfpb-2029",
+      "chunk_sha256": "158bd56f42eafc2efebf07845eed9fc4a4f4bfbcec32b851736ce18a955cf58b",
+      "document_sha256": "cd4732d409958fcb96abbd4688df36efc2110582891238d4a2ac7bfc423a234a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7932d168ca590bce90740f09f9e4ede3c74c6be1176c50cb8cc12da1724ea8fe",
+      "source_id": "cfpb-655",
+      "chunk_sha256": "1a58662c94b339d0b2c9a254ad8a0bf3a8557c5fffbcce37eeba70d82ce59c07",
+      "document_sha256": "f35eee0654d77b213f8836eb61b13e13fbb295f05c919b8ed4296052c8cba5f5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "79380478b562095d7ad2e855534e5a8f03d53a92350eff2d2b247c728976c55d",
+      "source_id": "cfpb-1341",
+      "chunk_sha256": "f47772a0c6ace99122dfdf0487acb3bdf8ae3e40e829106749d98d0d4e7508a9",
+      "document_sha256": "553ae4bb377c708a398f15d822691c341009377148ba1ce726b399d409bbe21b",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7983870666cc75c023d558602b62fa6fbecf84b920b9cfdadafb66188a98a623",
+      "source_id": "cfpb-1439",
+      "chunk_sha256": "4790466a2b5beac07c1b320c9c1da6e4aa9d9bdf50f21a8be037bbe068b0a682",
+      "document_sha256": "3bd0a3ad41bccf6e40f19b3471581d7672ee140ef14411e27906e4731c259007",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7990d1b2ba143da6fc8ca1fbef7bf21b4c225c0af2f2d69a1912812fa03388be",
+      "source_id": "cfpb-336",
+      "chunk_sha256": "0e293e83e40ff8d00fd75c67c269c0849f0b001a1d0632a90e81f95563de83f1",
+      "document_sha256": "91e0ecfe6c1b34dd6e569bac662a0d7baa51e664f3e6acf72c6c457424b7f1f9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7a49c93e62a9f9cb95e2167f2130e377fcf270784cac0608b4fe2502d7ab1e39",
+      "source_id": "cfpb-1387",
+      "chunk_sha256": "0cc6f46fa616d8ed0aeb821668eba29d5e1ae40c4508d09f842d04f300d258b8",
+      "document_sha256": "0cc6f46fa616d8ed0aeb821668eba29d5e1ae40c4508d09f842d04f300d258b8",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7ae81f09798ac0181bbcba08ba478f2e52e4e3153a0849b2f5f9b96ed31324d8",
+      "source_id": "cfpb-1457",
+      "chunk_sha256": "dd55987a5128b1fab8f2170c5d3af8dce895b1751a3c885f82174f643c6a57cf",
+      "document_sha256": "a44807dd92e901ea7f84ec54ed0d98f78bb05d052f0f4e834d36b38a0e7dd26e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7c309df245f11bc2c2f395aec74521ebdb9c630496b0ba72549bd89a378ff96f",
+      "source_id": "cfpb-329",
+      "chunk_sha256": "6ecf2c7f16b7fde80bbc18c15f29ab29ce3c8bf353d735b5583374941aeca91e",
+      "document_sha256": "192e17664d48b5d52d8c69428333a50393d8ed571b301a8d41f276cc75a25dd2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7c83353bb5abec470c52bb69042ad10ab33d5975254c2dfd6b5f1beaa9d4e2e3",
+      "source_id": "cfpb-1861",
+      "chunk_sha256": "f760221a6f30415470847c828e89ab5e7a54f1539c175069aab80ec2a2200a09",
+      "document_sha256": "365aa434a0cab71fd07b24f87c40dd3cec70827c2934f879a90f021ffbea58d4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7d7fd52d0ac8cc31f9047dd9714f2fba8235156df920a93176fa98c38ecc5b26",
+      "source_id": "cfpb-79",
+      "chunk_sha256": "14f755b993056ff2f3e0892d8c47232f5979676b72a8d54ffc0baedb7b732948",
+      "document_sha256": "14f755b993056ff2f3e0892d8c47232f5979676b72a8d54ffc0baedb7b732948",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "7feceee0bd6c19c032ec4ea348ce357ebec7e95a03368f972657affc513fd84a",
+      "source_id": "cfpb-1499",
+      "chunk_sha256": "b709afc6f2857ee30be0de7b6545aec2fdc82093a392ede92c01363135c4162c",
+      "document_sha256": "020ae8f2466a0249a21bca7d467e7b47d73fa348cf8782dbf27031a687dfa891",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "80f97cddfdd51e0dbdd7ea5264aa978a723df56f30bdaeb0029d3730c9a549df",
+      "source_id": "cfpb-1425",
+      "chunk_sha256": "4da0ed432419c47e0bae343d8b560bf4d855a5421a8418d167a57a07df384032",
+      "document_sha256": "4da0ed432419c47e0bae343d8b560bf4d855a5421a8418d167a57a07df384032",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "81fb3d953b116342685bc0dfb0c3f1e589d0edd64e0e242e1630863869a60366",
+      "source_id": "cfpb-25",
+      "chunk_sha256": "d77a514b5841f9211f151bac0f107d878c0c597c8bf313e702d886c4c31b1456",
+      "document_sha256": "d77a514b5841f9211f151bac0f107d878c0c597c8bf313e702d886c4c31b1456",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8215cbab3cabebe5c56668d530d000efbafed4ad3c386d23defe0fc7a9a10e3f",
+      "source_id": "cfpb-1583",
+      "chunk_sha256": "5d676518f8b1607e1cc6d900700b0b03860be9ab49954963877157af57657102",
+      "document_sha256": "5d676518f8b1607e1cc6d900700b0b03860be9ab49954963877157af57657102",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8246bc1e996aab45e5ee265ccd95c78e993e431aa270ec743a1fd15ca44d3ed0",
+      "source_id": "cfpb-1449",
+      "chunk_sha256": "38688e3fbe3261bbc0511e48c2326ca6623c3b8fd710085c2e665547c090d95f",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "82fc1aff1882c7997ed17a6cc6aaa2e727b126f0c941d0832794dbe9e95a768b",
+      "source_id": "cfpb-1357",
+      "chunk_sha256": "9a6814b8ca9e354799a680f9502ef946f6a1fca530729f0e02646dca39217b73",
+      "document_sha256": "9a6814b8ca9e354799a680f9502ef946f6a1fca530729f0e02646dca39217b73",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "834f8f13ca4fbc5cf01648737e0dbc091d9b29457bd85ce7825516aa5aba050c",
+      "source_id": "cfpb-1463",
+      "chunk_sha256": "36d3684354dd32466e5fb8080b4a05a51dd914518558369339f94b7b5579fc86",
+      "document_sha256": "ad51b50b5346cb3a64bc188fd0e7dda09273943d5cf51f48e49fe37a4df22fe6",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "854c2f567a7b9112a44f8f4be107c9bba940966f24f74a94d66aa7fd6f91c175",
+      "source_id": "cfpb-1819",
+      "chunk_sha256": "499d9e2fa947dd42dc01f194fce23e5248d7260f20ef90d524ce0bdaaf63b4fa",
+      "document_sha256": "33ff5ebd71cf55cf0696f466c6c3d80c84ebf88bc6089d99301b1c71b5f3a744",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "85b9ab7969a4b0556cf79cdf2a3e6bcb092fd605aa84cb6a08235e66c9ff4f24",
+      "source_id": "cfpb-1417",
+      "chunk_sha256": "a172e82c72dd0c805b008047208842bedad751eb70cdb1a597605a90260670f0",
+      "document_sha256": "a172e82c72dd0c805b008047208842bedad751eb70cdb1a597605a90260670f0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "85f7976f0646b7a032fec664ca80f5b67ac0c7dd47994407fecf19b5f756c7e8",
+      "source_id": "cfpb-319",
+      "chunk_sha256": "f2acdd38e0dd340ec8f2a9da0f49037e2c5c75984eb20f25b53b6613eecbe18c",
+      "document_sha256": "5c07e91ee9620c1b80e52a4f2736615a0525f8e85e6e3e9fd0ef42e34c48b3de",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "86970a034c3ca2a43aac37360dc6dcfc0dd87eb775ee94d450f188fde90b2133",
+      "source_id": "cfpb-329",
+      "chunk_sha256": "4edb13de2b6f8177e1854fead133a8557375c58058fca15b47e78b00e25c2416",
+      "document_sha256": "192e17664d48b5d52d8c69428333a50393d8ed571b301a8d41f276cc75a25dd2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "875b4b65a30654a7faba316097f0928eed250dd156325cb5fd682cfac93670ae",
+      "source_id": "cfpb-26",
+      "chunk_sha256": "53d24ffbe6809af1b7af950133563134906540790694adc498e982dbba112f2a",
+      "document_sha256": "53d24ffbe6809af1b7af950133563134906540790694adc498e982dbba112f2a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8768a4709e2520ebe3e090d9f1bf520e85d68c26594b1c959593205713c1fec8",
+      "source_id": "cfpb-332",
+      "chunk_sha256": "8b3c3149cafb2b2f2b174035c310bbd3931f5d37248b2a63baa24bb87dc05bb1",
+      "document_sha256": "8bce1b9304489c4b757488467ea96353bdbc7cf556b46ac2caf08d95d550850a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8946af6a90e504665933a7bfbbe11b1c1158ad90344f4385ed21cc89ba0ee01b",
+      "source_id": "cfpb-334",
+      "chunk_sha256": "e8638895aeb8460b88615349bdab9541f95f082dcf1bf3a2e6efc79547998869",
+      "document_sha256": "a933737b9e2a536ffb243c47eb49e2d1ee3fe0cba1784898662ed2b14ba98d2c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8960c743142768e39bbde36741277b92dcd991d7c3197d40dfe6351109274c6a",
+      "source_id": "cfpb-2134",
+      "chunk_sha256": "fe5032fe31b2a5ff2391bde6de3c6dd6b91e534cc2825193a2451d19d66578b0",
+      "document_sha256": "fe5032fe31b2a5ff2391bde6de3c6dd6b91e534cc2825193a2451d19d66578b0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "896e82956b9114137af79edf77962e46f972b86e5d4bba22f96a0c4c88e164bb",
+      "source_id": "cfpb-51",
+      "chunk_sha256": "34c4965b89b0e7dbafec76dc7da7865faf3c382ee4cd56a5ca528c64cc4353ec",
+      "document_sha256": "fd877549250297038ce2f1d3e69e1f7c298f99ca737fa4ddb3afc1f1540ebe95",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8a2512c7ba87269036ccb99c5b8432d9223e64bdd597421f77b8d6fd485e04d5",
+      "source_id": "cfpb-1157",
+      "chunk_sha256": "df56cc0e2e742cec0edd4a13825a357167b59d7baa2ce15e76fb49e1340a9b69",
+      "document_sha256": "15a6bad085a02e67c02704c351d79a068d4b30e62f7821401d8195e6944b734e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8af965d1e09a5c3c7c7e44d2727b7bdf4b41176c55b82f8dc244e28cd4376845",
+      "source_id": "cfpb-1469",
+      "chunk_sha256": "86741858675df790997cac39fca91cf5de28ed0ee69d473ec84206aa34d9f509",
+      "document_sha256": "68d0492566f9126aedab9101a0127c8795cdfaefa9de126c68a1e56ecd40fce0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8d7a9aba14f9a867ee66929b93c39abd920c76b9ae6ca1642a0be6d365e76b6d",
+      "source_id": "cfpb-1451",
+      "chunk_sha256": "081c5142b6ef31ecf0d5a19e13fe4d88934262b554fda16dd3ad80ffee0b7edc",
+      "document_sha256": "92a8cf3bbfd714436a033041082de1a78f0abd561e481726bc057539da607972",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8e79d4892deaf9fc142fd0d977a61ef072fbb4e6e2c04e28f970cb6089ee98ab",
+      "source_id": "cfpb-1861",
+      "chunk_sha256": "c040fe42b1146a7d3d7646b852378f48f3a18c6e4ea261e537585b4dc68890ae",
+      "document_sha256": "365aa434a0cab71fd07b24f87c40dd3cec70827c2934f879a90f021ffbea58d4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8eab0fb738fe2c61c13070fc8e9661e2c7d1e6cca9f619937c9d4526fa00b917",
+      "source_id": "cfpb-1403",
+      "chunk_sha256": "2360d25c323d45c7fa187d45067215eeca109d86ca8990b209509eae7e01c865",
+      "document_sha256": "419fa8d735f6e64071fb9e3fc8ca43d2ed3a56765f00c34b95ce60011b76123f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "8feda5abb6c99c80824bab6b99c7f52a14e407706f425febc7e1f50e22d27739",
+      "source_id": "cfpb-80",
+      "chunk_sha256": "922c7b29761d7ef69c88ed4e7f46c2f9fcc73b0e63f8e07b1c7e9311c56eddfb",
+      "document_sha256": "922c7b29761d7ef69c88ed4e7f46c2f9fcc73b0e63f8e07b1c7e9311c56eddfb",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "903a02beae527576c3b3813795acc80c86d5321d87e5f879522e642de935d4b8",
+      "source_id": "cfpb-1327",
+      "chunk_sha256": "d968935b902ebfafefc80f7789606149c11fe48a73e109927b22f822d8c1fe0a",
+      "document_sha256": "39de8177230bdb4cf556938c577c4a12070de8987d4590b76bd9a20f021af9fd",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "905f4ef55b8557a3cb6556dba4bc7621a597dec913cb458e311e862876c6a0a1",
+      "source_id": "cfpb-6",
+      "chunk_sha256": "32f6ded48485a81bef5a4f5332980088669468d430072b48c3bd34088a5ea68d",
+      "document_sha256": "a0d81e9b4c4134e3cd6716e5019f1cad296643d911a43c1ee7012d4d4f214e9c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "90a325667f857abce94ad9a812ad8404bab6bceacf2e5a0c64f367c32b3cf924",
+      "source_id": "cfpb-2110",
+      "chunk_sha256": "8e430718e965aa761c6074751d8fa5a0758d389b18112cc4f5bbecd990e091d3",
+      "document_sha256": "cfee2eb6453027a480381f3fcf83c06f0cc1f8ad4e70fd88983250ff7d26c878",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "90dddc552d2848d4f37528f98dd3975fabc9e7aea356c32e8ade2f0070a83e14",
+      "source_id": "cfpb-2123",
+      "chunk_sha256": "3cb23cef8b3faeb77883fa6a277d3b55a3946c1b6f2bb8bb74ce97226fff3520",
+      "document_sha256": "b3b14978dd357384db6e1bba1bf6628f74501bedbb4cebd84cca9e167aac1a8c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9129febd3f4cb47366f97170322c1fe154875269185626e06a29dd9086eda056",
+      "source_id": "cfpb-1365",
+      "chunk_sha256": "f4f062207c03caf4253ad8c22cdf4d95bd1074c81472668577375dc2dcbe6043",
+      "document_sha256": "57c0239725a27b1202c3d24572b2a80b948d72022b3dfbd40094e5ea5e9acd52",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "91f6c355bcffc88f145d35e2f706638f613d7a361f7a3d72f3fec545f04e36cb",
+      "source_id": "cfpb-322",
+      "chunk_sha256": "a1dfa63dc28207a03c750eb94669c1d07a081ffb2805eecbcd1218414b30cc93",
+      "document_sha256": "a1dfa63dc28207a03c750eb94669c1d07a081ffb2805eecbcd1218414b30cc93",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "92ac5d3af880ee9332d96097a121721e6bbac02eabdfa1dd0f466254de8d97f4",
+      "source_id": "cfpb-11",
+      "chunk_sha256": "0589d0f1c0af90baaf12cebecddbdf52101c8ab963e8c55232889ce0389f13f9",
+      "document_sha256": "4f4606be34b724d28d20f9c79bd35106b91bb9c26d0bd8e6e65dc818b69cf10a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "93895036ad120791673af8e520ff68e25553435f96aaf17f7af3fd5b3ee56685",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "45ee08609b30c2c24ef8b918ea15596ddbdbab0910a24851437cdcb0bdd9a2a5",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "961dc3a1358fd72ea64b2937dd4a060414499ee2e0fc41db42e3be0e3055a09e",
+      "source_id": "cfpb-58",
+      "chunk_sha256": "9f4073714abbd494aca5abfe02da5181929dbd7d1d1cbf1dcf25cd64af7772f9",
+      "document_sha256": "9f4073714abbd494aca5abfe02da5181929dbd7d1d1cbf1dcf25cd64af7772f9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "962866d3146a7f187541c4396b5291af2ac5e67a8716536b1203200a8392946c",
+      "source_id": "cfpb-29",
+      "chunk_sha256": "211f9750becfdd6d2d1475c7e764336e88945443b0ee1da3d217a2f18362aa06",
+      "document_sha256": "211f9750becfdd6d2d1475c7e764336e88945443b0ee1da3d217a2f18362aa06",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "96cbd1e5497364a3b5999cbb654d1bedc09200d1c1a3adef223ad32e25b8ca94",
+      "source_id": "cfpb-19",
+      "chunk_sha256": "88b4a9ad99a833429770d2c0f787527cd79c39632eca3af0a883f07bad964f99",
+      "document_sha256": "f0e25d496ec4ef3b5e9644bb0cec3dfe57051d6d84e24907e318b8e099863761",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "96f0fcf328bfd01d38c273c0783179acc3fd5938fa03f64b3477055bc641f92f",
+      "source_id": "cfpb-1449",
+      "chunk_sha256": "36b3a168b4ad1e73dd7c072188946d42b81742a01524a9ea7bd6dcbadbbf0504",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "96ff98c090b92abf1857783c0e5e1aaad98bd343d0b1b57060aeeef8216c295a",
+      "source_id": "cfpb-334",
+      "chunk_sha256": "d8e0969fc4c92673dbf8091ef90c0ee24e85133f86e7c0ee187c689f0adcb20b",
+      "document_sha256": "a933737b9e2a536ffb243c47eb49e2d1ee3fe0cba1784898662ed2b14ba98d2c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "999d37cd2adc03f9bc7ec4315befc282e1ae921b2ef4387ef0f42c25fbcd8324",
+      "source_id": "cfpb-1221",
+      "chunk_sha256": "9585966a556d9f1599b84cbe0af8fc62bc93b169d73897418b525fbb8d84c35f",
+      "document_sha256": "9585966a556d9f1599b84cbe0af8fc62bc93b169d73897418b525fbb8d84c35f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "99a44a81906f618ce856231887fa5a9f2db2252cb16a49d6433494f04b440de6",
+      "source_id": "cfpb-1403",
+      "chunk_sha256": "3b7eed881db2e4b65bef8ebbce8bcea0a0ff5648b5e29bf0c5282ff4728d6790",
+      "document_sha256": "419fa8d735f6e64071fb9e3fc8ca43d2ed3a56765f00c34b95ce60011b76123f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9a5452e61ce9d195bea2876b7b0b8927448b2393842065f955e06cc913d3f925",
+      "source_id": "cfpb-1463",
+      "chunk_sha256": "79796d1ef476d88dedaa28bf7555e190679a07ff8bdf8e559e05779ef17d164b",
+      "document_sha256": "ad51b50b5346cb3a64bc188fd0e7dda09273943d5cf51f48e49fe37a4df22fe6",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9ad0ca86017c2a8dda01d58963aa17c56faefcfb53e56b6f5d3dfd3e6ffed0e9",
+      "source_id": "cfpb-330",
+      "chunk_sha256": "6bda6374726b867930ee1d531b03e46d19a9b842c719f407822c557cf9d98e98",
+      "document_sha256": "5c99f0913601fb15068a8e843dfe783c5a15528c55d0482c3afb1bd0815f3628",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9b84a0f2f27b596a0d0ca9e566cf206d3633646e6638ab8d511c53964f648f12",
+      "source_id": "cfpb-5",
+      "chunk_sha256": "062aeb023b2c6698a721c5e8ae1dc48e15c5f5765011e680c959c1685f43af9c",
+      "document_sha256": "96c64fc10dc98946ed9d1847ad2839b2275f361d284f5031ba304aca705a94c0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9bd6b4ed0fccd69c2caeae492c829fc7f2b275f6944fdeb34606e598317b135d",
+      "source_id": "cfpb-309",
+      "chunk_sha256": "9a03de9c307673f6788bafadda2693846e9c57615fc429185635788f31e5165a",
+      "document_sha256": "3145e7ecf12563c8f0d552b8984999480e11f0c36947944ac3fcf175fb6e31e2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9c006d677e9ab9e728bcc28aff75696c8a51d601db46d8cc7a3792e925af3c9a",
+      "source_id": "cfpb-14",
+      "chunk_sha256": "d14f8feda2a5e3a353d7c9fa0e9e93bec31ca0ab29962d462dcebce2486b87c0",
+      "document_sha256": "d14f8feda2a5e3a353d7c9fa0e9e93bec31ca0ab29962d462dcebce2486b87c0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9d0ca11585357abe6f542409ed57c4bae49701c91f3d55c9067949cf6cd5d5f7",
+      "source_id": "cfpb-655",
+      "chunk_sha256": "16d4d67cdfc256fa3e3101cb9addf36b00f57870eb24ad530f6e09fee5491c8d",
+      "document_sha256": "f35eee0654d77b213f8836eb61b13e13fbb295f05c919b8ed4296052c8cba5f5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "9ff32c8de966f1ec3f3020bd5697a6473351b674dc7db9be6cbe8017ee80bc00",
+      "source_id": "cfpb-663",
+      "chunk_sha256": "76a9d6c84b3438376a2131f7c6ab79ae0720c9ae980c4181ee3adfe02025cfa0",
+      "document_sha256": "444657839be18711ab206f3532a7be33844b991b0161a5c7c5a8cf0ce4111686",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a0cb8c8f570e835fbb1defa0c39205898872ae811904b57aa8e8af34221c9c59",
+      "source_id": "cfpb-1483",
+      "chunk_sha256": "76900311e1ead3fc43b628037ba3363f49fc88a5437f61e5cbfac1c3be7312d9",
+      "document_sha256": "c8a9a90339d19ff44286fcd307ebdf7d13dc900052a81f9d42279d650199f865",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a10fdd5b9b3c689b22e4496cbb5651e537f83460d7683434fc118b3bee2db613",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "5b317a3549c14fd60ffdd7c76d571d5b0c330945326d028fadd12e8def4b3e9a",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a1d3dcc13586f85be9bc83232b7f18ddd10cbc1d7f171985c3934a22b0f9aaf1",
+      "source_id": "cfpb-1697",
+      "chunk_sha256": "54bf5bbb1ae8d57990979c8251bad2708c033adf934a23d5de697a62eff2b527",
+      "document_sha256": "54bf5bbb1ae8d57990979c8251bad2708c033adf934a23d5de697a62eff2b527",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a27b70424e73abfa9cca5d33326e0cfed8402175b41e29f594c8c5794a750070",
+      "source_id": "cfpb-1813",
+      "chunk_sha256": "8a868a5a31921f0ba2503c234f3eb03f8db7412c52240702b31a04ed2b12dae5",
+      "document_sha256": "8a868a5a31921f0ba2503c234f3eb03f8db7412c52240702b31a04ed2b12dae5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a28ce8dda9e428f3ca047fabda34c1acc61231c5bfe5af984f968aa5d073b8b4",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "37f02d7be9c928d4c44d8890de623dfbb4480eb55683a8f07afaf16ea0cbb603",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a2e649c7a1070f83a8de3f958f69cd168bb51da9662f3dde7e88e0f01b180ae8",
+      "source_id": "cfpb-2123",
+      "chunk_sha256": "10b523ac866d66c465517b1d7a7b717baf98a4aa06ca0094a257f5c269be04e0",
+      "document_sha256": "b3b14978dd357384db6e1bba1bf6628f74501bedbb4cebd84cca9e167aac1a8c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a361af70e67df2e5413a53e7e20057ff99d2bcb267b67ec1808f26b93ebdc669",
+      "source_id": "cfpb-2125",
+      "chunk_sha256": "5c181f583e38832734cc242f410b9b380c9d62349e84529d520708555c9ca39e",
+      "document_sha256": "05a8bc3769330dc9bf9a1bcf836118b9bfc66638123eeeff6664f58b078fede4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a532763f2c50e1998ca304973dac684958c7680cd0d64c125ecd0077e22c3598",
+      "source_id": "cfpb-1493",
+      "chunk_sha256": "c96f6d9367f4df723fda72923f4f9c940259b7f73b8f8c24b2dfc73a0f7af696",
+      "document_sha256": "c96f6d9367f4df723fda72923f4f9c940259b7f73b8f8c24b2dfc73a0f7af696",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "a551289b99c07c88bf40463ba9eb70b2a24e6f8b9908c94c4f9ada7266c58ce2",
+      "source_id": "cfpb-1401",
+      "chunk_sha256": "0d8937a681da7b1ed8a39bdcfd441032d447d3760efee9346206af55481a24f8",
+      "document_sha256": "603a8eb8d2ec3ab4da126a16e3b9f967dfbf0ce143fa941f3fa555694f380788",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -138,6 +2701,132 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "a9d614cc89c444ebec85f16f42d012627be5a6965dd80448c58450ea24968ef8",
+      "source_id": "cfpb-60",
+      "chunk_sha256": "47f13f5c936267a30918d459f911df2c99fad699fc42ae6c12d540bf6aec1a2e",
+      "document_sha256": "47f13f5c936267a30918d459f911df2c99fad699fc42ae6c12d540bf6aec1a2e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ab753a3dbaa070f76615c8052404289b55a8283d3b676eaab88799c9029d56e2",
+      "source_id": "cfpb-1447",
+      "chunk_sha256": "440f6b0c6ec671366ea14e9b743d4f440b60deaeaee0a7c7dac4bdae0718251f",
+      "document_sha256": "efd65792630376ac0cf503cd25a2734b29eb220471a98c1e3c7da5f3330e5736",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ac7b521a89a6235a34d21aa9a39072c07a92e4a8fcb3a9f68d740db5d87f6b69",
+      "source_id": "cfpb-1981",
+      "chunk_sha256": "b1b5dac670459146ec78c9607dbe8cbc591c477d20507e177e28a88d878b2856",
+      "document_sha256": "b1b5dac670459146ec78c9607dbe8cbc591c477d20507e177e28a88d878b2856",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "acc35c49c0ea77cefecf12a8c61c2339bc50a3e4babfeceedc430b7e832caa36",
+      "source_id": "cfpb-1377",
+      "chunk_sha256": "cc0d742aee55edab34fdf97b0311dec7830abade90e71e4cae0d33d00269ca0b",
+      "document_sha256": "e115b7881fc71a45560cc997b4e8e9af80e8ebd26bae21be7e8b2caace91b66c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "acd2baf4eedd81ed33f0b4c06f495fc326a65db0157cdcff07c91a232a8ce984",
+      "source_id": "cfpb-1859",
+      "chunk_sha256": "d93ac69f56036ee443b6fa1585f028403d0ef6ff6c395a86c627a93e80b364f2",
+      "document_sha256": "f2c95e0b05973e650f50a3be0f9e2608e5cc50317ba164f53523e396ee24a945",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "acf0e937b0229253099c8968bd5aa8767a154d8f5158e3600e454038156860d6",
+      "source_id": "cfpb-1695",
+      "chunk_sha256": "4d5b64f372f355c21e0e9f0e9a4e5c14cc08dde30719438456475d8ae9571dd6",
+      "document_sha256": "2005c0275b61e3e3fec3909d5b1a1ca92b96e0b4c6c991f971ce56c45128416c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ada20018f049b6e3c6c8b0df3f8cf1e62026c428118b52ab0802a2e9a649652d",
+      "source_id": "cfpb-1413",
+      "chunk_sha256": "5e9669fa345b2d40c864d2ebf9be70caa642e814974fbfc085d1aa8d04d53cd7",
+      "document_sha256": "8bcd7575ccddb89d056501982a8f9e840dc75987405731a48f4ae33405ccc9be",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ae90be64012d55ad45ce7eba36bc2b8c679daf3ba29e42267dd4000a172d67e2",
+      "source_id": "cfpb-1343",
+      "chunk_sha256": "eb2f4f73bdc26a48bb7edfe20cbc8172abe61de88dbf617721ad982b7167d466",
+      "document_sha256": "71cc90ec55d3b7d8fbbea32d4996ef05d1c013274a6ccdb8840bd132edf4feae",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "affab7fe3dd2b9b47051a090d00a4753c2a9e88ab0a790d5f087a3f938e4a0dc",
+      "source_id": "cfpb-1483",
+      "chunk_sha256": "79f0321b5b80bb011da74183360d0c8585d9ba1dee6f90fb622625fba1917271",
+      "document_sha256": "c8a9a90339d19ff44286fcd307ebdf7d13dc900052a81f9d42279d650199f865",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b007e4c818220767aec325105a6095135e952ece68b6e4ab990c10bbf7309aa7",
+      "source_id": "cfpb-34",
+      "chunk_sha256": "4b6031868b5f51eecca271a0826ab221e49374bb9f06b68aee086b145a75eb0e",
+      "document_sha256": "3c3ed93407d8a68444340ff99f81f6e0a224296fe277c73196b703d83e912148",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b105f438d358f10e32e4e3088163c21ad2f26102ec8e0075842cf3121d890cd3",
+      "source_id": "cfpb-5",
+      "chunk_sha256": "cea52321a37770f7ca9252e8e038a3ffa780ae703864fc524da62da8ef2c4a05",
+      "document_sha256": "96c64fc10dc98946ed9d1847ad2839b2275f361d284f5031ba304aca705a94c0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b1418d8f440166138eae5f67714edc839666f47a20c05e81284d40dc11c1e58f",
+      "source_id": "cfpb-1423",
+      "chunk_sha256": "db38d3b5feebb4589bc1f364cee8403d7841ca1a9821fcf80c32e9fedb9778a4",
+      "document_sha256": "815cbda2ccee6792258a1c397d74db811eed9c801f6ed7da98c74e65df9a1046",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b1b486192db94dbb201e5479c98dac16ece07ecaa15f84016928c7f607db9777",
+      "source_id": "cfpb-1865",
+      "chunk_sha256": "24d643e72166c58043e8a2ad7c5af52bd1768a8be7596d0dde2d5cd7b38a515c",
+      "document_sha256": "a1729840944d46739525d37037824b19073ee99e2708967d63d6d23f49f1484d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b2d96bc026b6d48c4e91262fe4eb5f1c9a9cc4f1a0687a340a6bdd927c7e1fb1",
+      "source_id": "cfpb-49",
+      "chunk_sha256": "e58126a62fb1f4c0177cd642ef1827908d0761327a6ef8f6f71016a49bf6ddc1",
+      "document_sha256": "e58126a62fb1f4c0177cd642ef1827908d0761327a6ef8f6f71016a49bf6ddc1",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b559e8e728489747585a9f0f23de4e8a76ab10522ec98b961a305fb2a3459c5e",
+      "source_id": "cfpb-2098",
+      "chunk_sha256": "3bf946c795a01c863d0414e04bd6da0c8d1726914481604fed9a1eb88ecd8b08",
+      "document_sha256": "995d15dfcea8b94d8c367efbb250f6ae66a8aa62e9fb488cdb4a893e02e19749",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b5f1c1dba308c99c67a84c07d6a2026359bb70862c2f7cb4a366b1f248efccec",
+      "source_id": "cfpb-433",
+      "chunk_sha256": "3054a674bb7bd3279e6cc0edc348ce0a8696c236d7335e7b1a1cb7628592b5ad",
+      "document_sha256": "3054a674bb7bd3279e6cc0edc348ce0a8696c236d7335e7b1a1cb7628592b5ad",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b6e2f92fb1fcb8ef2607d6b9d79d9095ed171d860d2d8ba67de18afa9ba49f0f",
+      "source_id": "cfpb-1815",
+      "chunk_sha256": "82db9a059e7a577e1d60ac9a09d2e5cfdc2a58c01c25c7b2080c2c6cbfb95538",
+      "document_sha256": "4566363b94a8e27617ae64f55f7187fe3ff27ed96bfac14ad97ef9335883ec2f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "b7dc1d8bdee4bb6c83a19716d3ff84a1645daf538b67367c4898fc47d259b9df",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "1e3783685726ca26f0ee8640b7cef5d9ca3914874b903651134193604d2e7264",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "bae076e6342b31861a51bed4078b8aab6feaed3b71a1d639fdfe11a738c9f473",
       "source_id": "cfpb-31",
       "chunk_sha256": "f7648244ac83428d8ab2cf029b10d515576a6cd0a7b4c59c30acd82eac2a6289",
@@ -145,10 +2834,136 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "bc8472461b448e3c0909ae0b13b3866d5fc206001419a4036700e84c6dba407f",
+      "source_id": "cfpb-323",
+      "chunk_sha256": "de89cd9b02c3a20d7710900ac1fd64752bd357c6cf7204a24aa1843fcf1a0af7",
+      "document_sha256": "ad3b7e0fbaf64c2a1c93d1f224977e9b5935076336ad17fc46fc4cab037a3759",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "bd607fecd431b242775d14373e8b9b2cbf58c755e27ecb80cf0a556845b81909",
+      "source_id": "cfpb-332",
+      "chunk_sha256": "7e2b2f82339a3d094d12c27aedd9a445357a652935f3b204b33b941e86db3c65",
+      "document_sha256": "8bce1b9304489c4b757488467ea96353bdbc7cf556b46ac2caf08d95d550850a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "beae2ccbb96a1912ff02de2a879a22d4c942de0564fd3e2d0aadf4485e2f3d0c",
+      "source_id": "cfpb-315",
+      "chunk_sha256": "01b437a3c3ba2c03d64ec6975af2ce514246a183920f036836e5889e96e7812e",
+      "document_sha256": "01b437a3c3ba2c03d64ec6975af2ce514246a183920f036836e5889e96e7812e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "bf8c61911b42945937560aff92f44b6917aa16e0e86aa3a9c1eeb2fdcb33a223",
+      "source_id": "cfpb-1625",
+      "chunk_sha256": "c4dc45f01525eda28aec2022d88be24483010e7e67c25b15a800195119e732e1",
+      "document_sha256": "781093af8990ec89aec56f2a1f509009e6eeabb6d5ef92b14725b23d3f72137a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c14bae33a67a111601a1f52963654b22324308d696b524934ad88b6aae47a7c3",
+      "source_id": "cfpb-1865",
+      "chunk_sha256": "994fa57d5e894a8a503fb81424a2ff37b17fbe370d8131dd4115eef0169beaa4",
+      "document_sha256": "a1729840944d46739525d37037824b19073ee99e2708967d63d6d23f49f1484d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c17f35e9fca08102ac004ff0d5a20742ef94af5f68be9cfe2da2721d1360fd08",
+      "source_id": "cfpb-1495",
+      "chunk_sha256": "fbf54ead574e5bc6284904a3205f02d84f55c346b521ab773fff7b34c5c2a697",
+      "document_sha256": "cd61557642e3496b736854c50f994b4aedf46822803ccc74c61d85ae72429179",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c223e0bf15503deb43f510de572673c8f2ceb6f704eaf70ce5da0dd5305d3bbe",
+      "source_id": "cfpb-813",
+      "chunk_sha256": "470b086a6aeb5781bf8ef9a07570a180c073cea934bdd2a1c7a4040c1883eada",
+      "document_sha256": "65c25e5f86111b42d31266ae9827ea3316e2f521fb202412dd1d5c8d32222f34",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c40ed6ae34fe01834135a8520a7f7e107831372167369fc6daaa98a9e75d7ec7",
+      "source_id": "cfpb-1447",
+      "chunk_sha256": "d4650179254deae29817b7c983da1b2921a32cde912eadb819bffe5072f7069d",
+      "document_sha256": "efd65792630376ac0cf503cd25a2734b29eb220471a98c1e3c7da5f3330e5736",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c488ebe1ee3a72641066d64a6e9284dffb5937421abdcf0c7f515f89806779e9",
+      "source_id": "cfpb-84",
+      "chunk_sha256": "40fc89f62e4e54dfb04478f89d4c755a5fa64485ff5112ccf697c515bcd5a5e7",
+      "document_sha256": "40fc89f62e4e54dfb04478f89d4c755a5fa64485ff5112ccf697c515bcd5a5e7",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c5583d432ed26d81439e0e8aeedeea0145eeb2957bb2ac863e8993691230948d",
+      "source_id": "cfpb-1157",
+      "chunk_sha256": "c9149c7e7b4284048b7c68eb0433987cc182c6e825c5156dd8c054305527087e",
+      "document_sha256": "15a6bad085a02e67c02704c351d79a068d4b30e62f7821401d8195e6944b734e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c5801c65cf0d66f583c0c78d53e8da9d490f0e249372b7733f5943b19167061d",
+      "source_id": "cfpb-655",
+      "chunk_sha256": "39f3d5454c9ca5d8e437f666fbcec71e609c9ba27ebda687c6acf0d3e666b401",
+      "document_sha256": "f35eee0654d77b213f8836eb61b13e13fbb295f05c919b8ed4296052c8cba5f5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "c72adf39b01fce7f37f890ef4503c264757f71869bda5f5ef5af2cc396b73742",
       "source_id": "cfpb-31",
       "chunk_sha256": "f3fe63e6ec5b755f1f52b3e456b1f1997242ee80ba13634b90656432597ee830",
       "document_sha256": "67932c021083f6a93bf62859e0a4ecdcd5605f5888c817b33767eaedaeac8372",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "c9b99475356449b0361ba278184705227aa69210667a3aee16ab4af233839b73",
+      "source_id": "cfpb-1457",
+      "chunk_sha256": "d9041c00682a9f9146668cebe3492511c757ec145619e063531beced7cb8fceb",
+      "document_sha256": "a44807dd92e901ea7f84ec54ed0d98f78bb05d052f0f4e834d36b38a0e7dd26e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "cab997461bd73a155e670972c009607470a818675b9eb29f9e53cf5dd3167311",
+      "source_id": "cfpb-15",
+      "chunk_sha256": "e473af22afd74d5fdfe5ede068df702fa126db59baad6f849944aca969d7c162",
+      "document_sha256": "e473af22afd74d5fdfe5ede068df702fa126db59baad6f849944aca969d7c162",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "cae830d4a2ca7750e22c465c7adacf4632fd1d7f5fa52b59727d1e150f315c6c",
+      "source_id": "cfpb-336",
+      "chunk_sha256": "726fec0b5e2fee7745b0933b79bfbd40316530c55b328786af1cccb987848e5a",
+      "document_sha256": "91e0ecfe6c1b34dd6e569bac662a0d7baa51e664f3e6acf72c6c457424b7f1f9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "cb4ea3eeb7d18495d071b9f973f80d24304196dffc3e0aee2efd770937f7c769",
+      "source_id": "cfpb-1343",
+      "chunk_sha256": "a3989599b51e948f94628577a4d2fe8ea697c91cd2b76e2429ede3edfb685daf",
+      "document_sha256": "71cc90ec55d3b7d8fbbea32d4996ef05d1c013274a6ccdb8840bd132edf4feae",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "cb9bc3b98a2f363372fec093ef93c692f5bac169a2f6561bf08921ab3815d892",
+      "source_id": "cfpb-1485",
+      "chunk_sha256": "cfb4fbf004a547ccdbeab17a07c747c9b3643d071fb841075ca028cc95fe62ee",
+      "document_sha256": "cfb4fbf004a547ccdbeab17a07c747c9b3643d071fb841075ca028cc95fe62ee",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "cd7f660b509dce362bd5686831f469e1ed14e16c6774180fded8be62a3f46bc3",
+      "source_id": "cfpb-36",
+      "chunk_sha256": "9075176f0ee22c4f99900819ed176c04ee638f2dce2250a73b5c453f9ad89886",
+      "document_sha256": "9075176f0ee22c4f99900819ed176c04ee638f2dce2250a73b5c453f9ad89886",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ce145a5ddd1cc238970e568774ec4575dccbf0333e44ec4e779f532d7979f1bd",
+      "source_id": "cfpb-1861",
+      "chunk_sha256": "7534fcd2e5b2956b629f5a56f54c812148d25515b4fa4aff361fd3e3fee02e00",
+      "document_sha256": "365aa434a0cab71fd07b24f87c40dd3cec70827c2934f879a90f021ffbea58d4",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -166,10 +2981,213 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "cfbc0fb3f1c1407c4345eefc574b5e7ca3e38dd41d033898e11c223875ae594e",
+      "source_id": "cfpb-1785",
+      "chunk_sha256": "425d6e61418381cc548df0aae278da074edb2280c3ec2a6d64fadcfafdc96a04",
+      "document_sha256": "2062ddb7958436db3ac9d0f6314628426ed8097c0b1461d849185ed1c3e835d3",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d352d6c206b8c1e1796c67327d3313d67df75e8e97d263f9f8bc5f52fb7ee4b6",
+      "source_id": "cfpb-40",
+      "chunk_sha256": "67cfc52b00d4be4cc53438b368f7aa85e989706709d7297b22ebf30425e3e4aa",
+      "document_sha256": "d6b1b1a66ad4866ecfb80be29d5cb63a4fc5ba6c2debacdf8d2505fa2ba3fe5a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d3f745175f0e157c6f54b7671c479980ca5e12d4b1bcbeef6b4c1a6f9612c557",
+      "source_id": "cfpb-5",
+      "chunk_sha256": "165b2680cdcf7535e737337ae0b96649c15dc16a52f0b28363215f864991ccca",
+      "document_sha256": "96c64fc10dc98946ed9d1847ad2839b2275f361d284f5031ba304aca705a94c0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d496d7b03ef3027036b12df4d49819d31dee9241ebb30e6448abe21608a8c6f7",
+      "source_id": "cfpb-48",
+      "chunk_sha256": "8dbb53b003af503c99d95253c83259961cf22db89d3e34ee742d02eec8a785cf",
+      "document_sha256": "8dbb53b003af503c99d95253c83259961cf22db89d3e34ee742d02eec8a785cf",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d6c1c878d566acae987c9f8565542acaaf81190b8a3ec5cd67b0abcbd9745bf3",
+      "source_id": "cfpb-1317",
+      "chunk_sha256": "76035080688c221502c9454cb68e4eb1f5644185d00c095f2d1378840bde877c",
+      "document_sha256": "76035080688c221502c9454cb68e4eb1f5644185d00c095f2d1378840bde877c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d8167429b345c2c247a8411f5a6cffcbdefd8e1063fec1de103bb06b21e1bb65",
+      "source_id": "cfpb-69",
+      "chunk_sha256": "dfe2e255a9948a6966317c0cb280796e9e905129fc08d15558b8ba79d0daa8c9",
+      "document_sha256": "ab8ebed45021a125b36b1e425356064f42f063db02ed06b6a6239f03ab7b407a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d8417168fcc9f5b53da40bdcb9497ddf88d71220f64d64c3a7a5d214b9d20d75",
+      "source_id": "cfpb-1541",
+      "chunk_sha256": "4d21f0223c2da68ba6ed6fc26af220355d2217cdc5ec1d02c0bb98c09fc25ee0",
+      "document_sha256": "4d21f0223c2da68ba6ed6fc26af220355d2217cdc5ec1d02c0bb98c09fc25ee0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d8dc993f185ce4a42e3a5d16bbe0847b589e0335cca5286848f9bc3a30736148",
+      "source_id": "cfpb-1815",
+      "chunk_sha256": "c66892fa167c8496bc107dde961c15837bce5d48c5b7f5c41669cd5aa5f2803f",
+      "document_sha256": "4566363b94a8e27617ae64f55f7187fe3ff27ed96bfac14ad97ef9335883ec2f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d9696e08c378abb81139b0e91934b2ba80b715b87737fd8789bfecfcb3efa3f3",
+      "source_id": "cfpb-1449",
+      "chunk_sha256": "7afef093d20131bc85579fdb1dc70ecba5d37302df6f3c51eb396f4c234afdef",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "d9d07a856dcbd40cff7e9d522d19f1a7e3c84d049c328bef821c8d056cadb361",
+      "source_id": "cfpb-323",
+      "chunk_sha256": "d1ec93000a45d9efef5cb4eb7a44dcb536540c3f470978d70dc3ec739d4a7e5f",
+      "document_sha256": "ad3b7e0fbaf64c2a1c93d1f224977e9b5935076336ad17fc46fc4cab037a3759",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "da757f70780c740bcc23570f4c87a910b68d849c818d58f67bc28d534761beb0",
+      "source_id": "cfpb-40",
+      "chunk_sha256": "d1b0390d181100acd7b0c4f34fd7949ccdc953ce90aef788196902a0cb374b32",
+      "document_sha256": "d6b1b1a66ad4866ecfb80be29d5cb63a4fc5ba6c2debacdf8d2505fa2ba3fe5a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "db3619a670ece7080d26cf59fcb33bf8aa8953a70e165edcf3a0a277d8661104",
+      "source_id": "cfpb-32",
+      "chunk_sha256": "b5fdd9d3c65b40a62579fd32f652fc43c89084d5f81cd2357ee0d43482a86fe7",
+      "document_sha256": "b5fdd9d3c65b40a62579fd32f652fc43c89084d5f81cd2357ee0d43482a86fe7",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "dbfb008aa5b1d76926e4f064d71042213524469ab0f81af4112de236b075208a",
+      "source_id": "cfpb-329",
+      "chunk_sha256": "a1ab4262769ad6ee6cf75972fb85fed1aeeded27cc6139da2c8e71846f135b7c",
+      "document_sha256": "192e17664d48b5d52d8c69428333a50393d8ed571b301a8d41f276cc75a25dd2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "dc3e4093ceb4d26554bf453fadaeb0bd32b5006df08f6b3cd0765a855c951ff7",
+      "source_id": "cfpb-1341",
+      "chunk_sha256": "6e32b93ee5d93cbccd842b916ce3e4d3e591d3a98c7e29844375224dae2eab05",
+      "document_sha256": "553ae4bb377c708a398f15d822691c341009377148ba1ce726b399d409bbe21b",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "dcf429423590187859a9b70ca715731c75a4c1fefdaa28f221f12e8911ab4c86",
       "source_id": "cfpb-31",
       "chunk_sha256": "96f33ea16e1f58933107fc1ba0bbe0153ac3dd5ef84f3518b80c0ffa0dd11dca",
       "document_sha256": "67932c021083f6a93bf62859e0a4ecdcd5605f5888c817b33767eaedaeac8372",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "dd1c5ef7407fc026e251a5c9423f73affbe21062ba84d4b7b40ea91539b9b3cc",
+      "source_id": "cfpb-1427",
+      "chunk_sha256": "511e0b9e8049fe6c533393ba44fc4898daa86f85f47653c3f9e9609da35a4f9e",
+      "document_sha256": "511e0b9e8049fe6c533393ba44fc4898daa86f85f47653c3f9e9609da35a4f9e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "dd254043705548162d11523c70ecd4061a496e96757f8f150b997d4bf2d5412d",
+      "source_id": "cfpb-1413",
+      "chunk_sha256": "ce120700f0224120067ddbbdf1e7224ed70699a80149d93315116a4dd5eaac37",
+      "document_sha256": "8bcd7575ccddb89d056501982a8f9e840dc75987405731a48f4ae33405ccc9be",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "dd5bbf071ae9caf3fc2cc897d0e945307de90608fdb7ddf5d95aa1ab6c27055d",
+      "source_id": "cfpb-89",
+      "chunk_sha256": "329625fe76ce7c7cf98a1739a61e9c0bcf7982dc28f699e7f69602d72f1e55a1",
+      "document_sha256": "efad9b818ca40836fe46229f4d5815374254a8360dd88311044d29e8650254ca",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ddd110918b4e504a1b6cbd9aa2a77ce657e88407d9e0ec11107105fa3b53af61",
+      "source_id": "cfpb-2125",
+      "chunk_sha256": "67c67aab8bffbb8f376c3264a659d774b7fbe5a0344b6c85baa4e12aa1a30714",
+      "document_sha256": "05a8bc3769330dc9bf9a1bcf836118b9bfc66638123eeeff6664f58b078fede4",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "de838058cc3101fa9ebe3e140f8f780e2be495ad84bd67029eb3a2a02c8150a4",
+      "source_id": "cfpb-1",
+      "chunk_sha256": "39a1c541b5b7844a3970c14095038a97f80e818ae4451361cf70c3eaa37e5963",
+      "document_sha256": "39a1c541b5b7844a3970c14095038a97f80e818ae4451361cf70c3eaa37e5963",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "df6b4351ea4e98c3bd3e5a1759a815b54590c588585edd82e8a8dc6ad2fdb595",
+      "source_id": "cfpb-1363",
+      "chunk_sha256": "1653c9df8b337fd6cd5dddc70129ad409b545560fc456716395753e1df2c54ab",
+      "document_sha256": "1653c9df8b337fd6cd5dddc70129ad409b545560fc456716395753e1df2c54ab",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e06295b95945f019e96108b1cb6768e699636c1ebd056295064793649afdbaa3",
+      "source_id": "cfpb-2098",
+      "chunk_sha256": "96d7962495cdde078694bb56c7a2c8eaccf2d69a4d0bdc269fe32fcb67356e80",
+      "document_sha256": "995d15dfcea8b94d8c367efbb250f6ae66a8aa62e9fb488cdb4a893e02e19749",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e0b5977b5b78566f4d716b364bce30f1d9f568669839144f99200dc55e3537ae",
+      "source_id": "cfpb-1411",
+      "chunk_sha256": "505c95e7da3174dc6f62c8e3de01aed5b5e61f67e71aa434a9ac4588fb6339cb",
+      "document_sha256": "8603cbce2d75d259f135234569c901ab7a5f8ea6ba372bc2bf33758413f8ec28",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e36403bf96efecb4933394b81c0357ed908c12d27d32a41c47587d0719e78aff",
+      "source_id": "cfpb-1827",
+      "chunk_sha256": "51f47e224dc57574405e07aa17d1f8ef8499de5ccf0015e29e3e21c0338923b8",
+      "document_sha256": "42dd43d1da818f6e04ecb05aeee9aad59343ac4b9bff4ab27cef4d18867d120d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e4147687c69cda119d2fda8596901cb059eb12ab0b09b12528d253938225656f",
+      "source_id": "cfpb-1343",
+      "chunk_sha256": "fe29c58e38a4622072eb6efef4d2c4b16a09e5962bf86de7669a8289ca9ddb1c",
+      "document_sha256": "71cc90ec55d3b7d8fbbea32d4996ef05d1c013274a6ccdb8840bd132edf4feae",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e42605e6aa89f3c38063559dc56218c7f4d87a33c8e1af2ff70fa062c7f5beb8",
+      "source_id": "cfpb-312",
+      "chunk_sha256": "043211bc1855c70cba37fe8117b250ef8ef0d577fec949f83641998a6ba79891",
+      "document_sha256": "2f08249b7301c51380911c1da53cd271a8fb1795ed8421dd1961e424ddc65da8",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e447c7d0251e9e00d325e88dff46d12dcc6f95e4af34271d6929c7b606008239",
+      "source_id": "cfpb-325",
+      "chunk_sha256": "50f8a4d22029cfb218ed9240e7028d02adb0123bda75a1927a30f5cb284053a6",
+      "document_sha256": "50f8a4d22029cfb218ed9240e7028d02adb0123bda75a1927a30f5cb284053a6",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e740ef2b80f1fb4ca0f3bd62945a20e8ffd02ca117e0f3a7a10c7767fe51f060",
+      "source_id": "cfpb-1537",
+      "chunk_sha256": "ac202f1b4913383cba2a8d69294a66849a3f0c666da4a1e9ca1769d5e5053e10",
+      "document_sha256": "e26fd66848910c0a7efe832e080a1b2d18053e62064166cd18de54161ff35e88",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e789bc1ca7a7f2de73dba4305413f18190d5a1350f02418b98c1744a0483f654",
+      "source_id": "cfpb-312",
+      "chunk_sha256": "ff7f039b1eba228369c5636b0baf15e2553be36f5310052c69fb1303e823b51b",
+      "document_sha256": "2f08249b7301c51380911c1da53cd271a8fb1795ed8421dd1961e424ddc65da8",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "e8fcf672f95ae64e9bdeb34640d626756dd0cc93afb360ade7c3120c0a99afc6",
+      "source_id": "cfpb-1457",
+      "chunk_sha256": "848db1e1632e78ad58ae6e4bce5a58755ebec3e1848c9ea58ee9ea81bd2d47d3",
+      "document_sha256": "a44807dd92e901ea7f84ec54ed0d98f78bb05d052f0f4e834d36b38a0e7dd26e",
       "chunking_version": "paragraphs-v1"
     },
     {
@@ -180,10 +3198,157 @@
       "chunking_version": "paragraphs-v1"
     },
     {
+      "chunk_id": "ea63fd8ff10f72d50af84c54e238b463987075dbba16a820468757ecd3ea8b38",
+      "source_id": "cfpb-3",
+      "chunk_sha256": "1eebc45409d5e9f01b1f538fb3e6a3716af74296d3eb71cd8a37a67555ad7946",
+      "document_sha256": "1eebc45409d5e9f01b1f538fb3e6a3716af74296d3eb71cd8a37a67555ad7946",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "eaad87e471bf403ba37bf5cfa1e5ae652c5f891e5477a17dd38332fed9b081b4",
+      "source_id": "cfpb-1433",
+      "chunk_sha256": "eb33e5e30d12b7aff8e841548d157c430b96340b0fbd4c5d8466c60df87e649b",
+      "document_sha256": "2b453c988dfdd9fc4c8fac12d47bb81d4d6802b6d7a91fc4a4381b746e8aaa7e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
       "chunk_id": "ecdc44fb2eab236d3c72cff914edc8c7c851c794ab254f672e60d139a3eb7ef6",
       "source_id": "cfpb-47",
       "chunk_sha256": "9b1c6fe81da0be7db32d84a347f64836f75f2e97b8cb7ff0574b1df1aad150c0",
       "document_sha256": "9b1c6fe81da0be7db32d84a347f64836f75f2e97b8cb7ff0574b1df1aad150c0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ef8d4c8e80ad42e6a952756e512ce8a7a4fc65a42f2f4be6dc8b5b59038379a3",
+      "source_id": "cfpb-1243",
+      "chunk_sha256": "225cbb16d32958bcff135cad831fbf4b078d49f6d8d5936ae7eff2c456f5ff46",
+      "document_sha256": "225cbb16d32958bcff135cad831fbf4b078d49f6d8d5936ae7eff2c456f5ff46",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "efde293d0d53e9d6ecc666f52e09a10857c2eddbdb8c5637ae9b00a9e3f0dbf4",
+      "source_id": "cfpb-338",
+      "chunk_sha256": "182a1aef4ebaa0686d7afccf1ec80ff44760ca5674f1b221b4d6362b2a30c41a",
+      "document_sha256": "7c322ca463a27cd8619ce21c9341cb816cf83dba719dd7a56467bae1f247ff7d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f0922248bef2b6e8bf34d6cb3a3dd48ab06c3dd668c5dfe8eb05b2aaf72a2929",
+      "source_id": "cfpb-1467",
+      "chunk_sha256": "8fa7e6f1a58e250a4ef3abd4803ecda9af5dc056ff3637770c057164578dcd3c",
+      "document_sha256": "faed82bcce242b78cd0b0a12ee636541a56e70c99166b7eb10bc956c89c20997",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f286bc10eceb28eb1f2a7c74283bddc0f6f76824052c36160e1e13dcb94643fe",
+      "source_id": "cfpb-2144",
+      "chunk_sha256": "0600d3604d22e8b08b258e48a7a2248d118e0dff120c672b5b4d581b81ec9099",
+      "document_sha256": "d720b475527aab43c1ca9373d983d2ca0bc419094e1fd5b93414b26d955b332d",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f28df6a8b0f7234f720d0045afaa1366677f8c701cdb614b1b49903e87c0f9f1",
+      "source_id": "cfpb-1327",
+      "chunk_sha256": "86fcc3efc9e6edd7cf325d5338ee0a84892d65f4dd6536b8a4bdf6f7f07f4391",
+      "document_sha256": "39de8177230bdb4cf556938c577c4a12070de8987d4590b76bd9a20f021af9fd",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f2a5fb1a509f25675aefec05bfa58cf0bd0a191348213899dd9ce41a6fdc2404",
+      "source_id": "cfpb-1821",
+      "chunk_sha256": "47e7f4598ccca9d52080a11b143c4a72f5f921e01893dd30aa05569e89584a4e",
+      "document_sha256": "11e799ca49da2c41572b2f00fdc643ff587f3d188720430fbcc9aac84addcaa5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f2e4a2004e3bf4a0fe26eeefc00659124e01406ed92afc223be561438577a8d4",
+      "source_id": "cfpb-2029",
+      "chunk_sha256": "4c46fb278c4c8ab95bf2970f187b0e884343bcad2a0cb59bad50d11c5d28f623",
+      "document_sha256": "cd4732d409958fcb96abbd4688df36efc2110582891238d4a2ac7bfc423a234a",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f2f66b0bf4a9a13750b4e3dab5e3f1435c65f5f7b544be40b2d797bf7cb6b311",
+      "source_id": "cfpb-61",
+      "chunk_sha256": "882bb5d5e05381f40281bba3c02af2b068dd51660d3cbe6c8a923b1b0aafb18c",
+      "document_sha256": "882bb5d5e05381f40281bba3c02af2b068dd51660d3cbe6c8a923b1b0aafb18c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f3f1935ea4af6a5fe144f7b3b088c8fa519ec2817cb56d52565af13cf10f6440",
+      "source_id": "cfpb-1291",
+      "chunk_sha256": "12ad8bb885d558267296efc11edc4db1ee6f8070f323d3bb27321a20a270bcb0",
+      "document_sha256": "12ad8bb885d558267296efc11edc4db1ee6f8070f323d3bb27321a20a270bcb0",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f413022193e6cf6b5081fd929a68c4cbd321211bd839487e6f299fe5011f7c26",
+      "source_id": "cfpb-1821",
+      "chunk_sha256": "f6c0dd15f9599ee822cffec59b6107b304d9f9fa4ddd410b788ea381357ea7eb",
+      "document_sha256": "11e799ca49da2c41572b2f00fdc643ff587f3d188720430fbcc9aac84addcaa5",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f553064139c6504da18f856a34db7815ef66804a0d9358e1c4cc262e6e34d0ee",
+      "source_id": "cfpb-329",
+      "chunk_sha256": "81bef9d019d82f5279d990cd2e1d8088652e670340d396e9159da8872b0488fb",
+      "document_sha256": "192e17664d48b5d52d8c69428333a50393d8ed571b301a8d41f276cc75a25dd2",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f568ce2ebdfe40ce734017d7ffca8913554ac7a2ab701f03f7a6ed3b3a9519bb",
+      "source_id": "cfpb-20",
+      "chunk_sha256": "070d5b385144b0a7978df8fede46245bf22f8a4d99ce2e52919588b342a5b229",
+      "document_sha256": "070d5b385144b0a7978df8fede46245bf22f8a4d99ce2e52919588b342a5b229",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f843869620d5ac35bf9c8c879767d5320f9b93b3c52588bc0be4e3372efd6427",
+      "source_id": "cfpb-2123",
+      "chunk_sha256": "b0a66c15c62fcdb741b45418d3103d83fc531245ee886db34bafc3ee6e3a1e78",
+      "document_sha256": "b3b14978dd357384db6e1bba1bf6628f74501bedbb4cebd84cca9e167aac1a8c",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "f9549b1bf088951fbde023acb96c7b27e39344c1c93611051f971c448c6c180b",
+      "source_id": "cfpb-1539",
+      "chunk_sha256": "36af12f5eb085c4ce974f8516ee05a5960479b7923ffd4d472f51eaebf496f9f",
+      "document_sha256": "36af12f5eb085c4ce974f8516ee05a5960479b7923ffd4d472f51eaebf496f9f",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "fa0123643fbe25c3de4972c22e30d56c5491bc4155e889d71b978120ed090c2c",
+      "source_id": "cfpb-1449",
+      "chunk_sha256": "e26c55904bd6c2c568f8fed03f9a5e2169e97eb5b7a683d8a418ba69d9332e1e",
+      "document_sha256": "a530a633af05e3a39b156848745f3434ed7415ca897525795c00e7c4ca4e6a44",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "fd4ff1230ccb6b8629fac290c14c9ec74ecf1126331cf3e056e2df55efaad56e",
+      "source_id": "cfpb-316",
+      "chunk_sha256": "ad4554bfc8b68302743f41eeb416d85f8f595d406b2b666a5b999e05cee48bb6",
+      "document_sha256": "e9d6419fffb5489c6a0311c38ee5542e4b2969c00b7b121241f02d0e55a2d5bf",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "fd8b9a1fc90fe3d9e30d4fb5906fb9b3a5df58b2a73aeec288926a07acb13919",
+      "source_id": "cfpb-1265",
+      "chunk_sha256": "bfc565a7efc7dec3e854e2bf3212175b452c21e14a369d6f889e0603d384d9b9",
+      "document_sha256": "ca8ba94f3b7646d2863a1b6cc4d0fe8b47b5e2109c5a6e5ef2871aedb95d38b9",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "fd8e4d5e543eea9dab53ad72c94583a005fa46e3923895e72cf52df35c18f40b",
+      "source_id": "cfpb-1157",
+      "chunk_sha256": "7598d3ff7e116d10d2005056d59d5f08d37640f3e294f111e43ac7a0a262ac75",
+      "document_sha256": "15a6bad085a02e67c02704c351d79a068d4b30e62f7821401d8195e6944b734e",
+      "chunking_version": "paragraphs-v1"
+    },
+    {
+      "chunk_id": "ffee3b988f18b119974c9d66716211ccae193cb56e366199c26570194326f066",
+      "source_id": "cfpb-1049",
+      "chunk_sha256": "e5a70ec09bfc042d35a1c12d972839131f3e0609459531f4d18a35ff161779da",
+      "document_sha256": "e5a70ec09bfc042d35a1c12d972839131f3e0609459531f4d18a35ff161779da",
       "chunking_version": "paragraphs-v1"
     }
   ]

@@ -1,0 +1,1728 @@
+{
+  "purpose": "Development comparison of the hosted source-excerpt responder on the original 8-article corpus and the expanded 163-article corpus.",
+  "status": "ungraded_development_comparison",
+  "created_on": "2026-11-16",
+  "method": "evaluation/run-corpus-comparison.mjs: real pinned embedding and reranker models, hosted responder code, PGlite with pgvector standing in for Neon.",
+  "limits": [
+    "PGlite is not the production Neon database.",
+    "Labels were written for the original 8-article corpus; an article outside the label can be a correct source in the expanded corpus.",
+    "The 12 new-topic questions were written by the assistant after seeing the article list and have no reviewed labels.",
+    "No response was graded by an independent human reviewer."
+  ],
+  "original_corpus": {
+    "documents": 8,
+    "chunks": 17,
+    "git_commit": "a1a5fe0"
+  },
+  "expanded_corpus": {
+    "documents": 163,
+    "chunks": 292
+  },
+  "results": [
+    {
+      "id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-47"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-47"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-47",
+            "score": 3.29
+          },
+          {
+            "source_id": "cfpb-47",
+            "score": 2.26
+          }
+        ],
+        "answer": "During this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases. [cfpb-47]\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made. [cfpb-47]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1827",
+          "cfpb-51",
+          "cfpb-47"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1827",
+            "score": 3.68
+          },
+          {
+            "source_id": "cfpb-51",
+            "score": 3.58
+          },
+          {
+            "source_id": "cfpb-47",
+            "score": 3.29
+          }
+        ],
+        "answer": "The interest charge on medical credit cards is often deferred for a period of time. This means that if you pay off your debt within this time, you can avoid paying interest. But, like other credit cards, if you make late payments or have an unpaid balance once this promotional period ends, you may end up with significant interest and fees on top of your medical bills. It can also impact your credit. [cfpb-1827]\n\nIf your card has a grace period, you can avoid paying interest on purchases if you pay off your card balance in full each month by the due date. When you pay less than the full balance but more than the minimum required, the card issuer must generally apply the amount you pay over the minimum first to the balance with the highest interest rate and any remaining portion to the other balances in descending order based on the applicable interest rate. It is generally up to the card issuer to decide to which balance it will apply the minimum amount portion of your total payment. [cfpb-51]\n\nDuring this time, you may not be charged interest as long as you pay your balance in full by the due date. Credit card companies are not required to give a grace period. However, most credit cards provide a grace period on purchases. [cfpb-47]"
+      }
+    },
+    {
+      "id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-1253"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1253"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1253",
+            "score": 2.93
+          },
+          {
+            "source_id": "cfpb-1253",
+            "score": 0.97
+          }
+        ],
+        "answer": "If a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete [cfpb-1253]\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days. [cfpb-1253]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1253",
+          "cfpb-2105"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1253",
+            "score": 2.93
+          },
+          {
+            "source_id": "cfpb-2105",
+            "score": 2.67
+          },
+          {
+            "source_id": "cfpb-1253",
+            "score": 0.97
+          }
+        ],
+        "answer": "If a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete [cfpb-1253]\n\nThe Fair Credit Reporting Act provides you with rights as a rental applicant and as a tenant. This federal law requires a landlord who rejects or denies your tenant application because of information in a tenant screening report to notify you about the rejection. The notification is called an adverse action notice, and it must:\n\n- Be given in writing, orally, or electronically\n\n- Provide the name, address, and phone number of the company that provided the report\n\n- Explain your right to a free copy of the report, if you request it within 60 days of the adverse action\n\n- Explain your right to dispute inaccurate information [cfpb-2105]\n\nFirst, find out what caused the lender to turn you down. If a lender rejects your application, it’s required under the Equal Credit Opportunity Act (ECOA) or Fair Credit Reporting Act (FCRA) to send you an adverse action notice telling you the specific reasons your application was rejected or telling you that you have the right to learn the reasons if you ask within 60 days. [cfpb-1253]"
+      }
+    },
+    {
+      "id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "dev-004",
+      "question": "I withdrew cash using my credit card. Does the purchase grace period generally let me avoid interest on that cash advance?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-47"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-47"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-47",
+            "score": 5.41
+          },
+          {
+            "source_id": "cfpb-47",
+            "score": 4.17
+          }
+        ],
+        "answer": "With credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction. [cfpb-47]\n\nIf your card gives a grace period and you are not carrying a balance, then you can avoid paying interest on new purchases if you pay your balance in full by the due date. If you lose your grace period by not paying your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made. [cfpb-47]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-34",
+          "cfpb-47",
+          "cfpb-51"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-34",
+            "score": 5.62
+          },
+          {
+            "source_id": "cfpb-47",
+            "score": 5.41
+          },
+          {
+            "source_id": "cfpb-51",
+            "score": 4.35
+          }
+        ],
+        "answer": "In most cases, you’ll also commonly pay a higher interest rate for a cash advance than you would for a typical credit card purchase. Unlike other purchases that have a grace period before they start to accrue interest, interest on a cash advance starts as soon as you withdraw your money. [cfpb-34]\n\nWith credit cards, grace periods typically apply only to purchase transactions. If you use your card to get a cash advance or use a check you received from your card issuer, generally you must start paying interest as of the date of the transaction. [cfpb-47]\n\nOften card companies charge one interest rate for purchases and different interest rates if you use your credit card to get cash, to write a check using your credit card account, or for other transactions. If your card has a grace period, you can avoid paying interest on purchases if you pay off your balance in full by the due date each month. [cfpb-51]"
+      }
+    },
+    {
+      "id": "dev-005",
+      "question": "My card lists an APR. What does that number describe?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-44"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-44",
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-44",
+            "score": -1.27
+          },
+          {
+            "source_id": "cfpb-45",
+            "score": -2.1
+          }
+        ],
+        "answer": "For credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR). [cfpb-44]\n\nA variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time. [cfpb-45]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-46",
+          "cfpb-44",
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-46",
+            "score": -1.19
+          },
+          {
+            "source_id": "cfpb-44",
+            "score": -1.27
+          },
+          {
+            "source_id": "cfpb-45",
+            "score": -2.1
+          }
+        ],
+        "answer": "However, the interest rate for a credit card is usually stated as an annual rate (the annual percentage rate or APR). The daily periodic interest rate generally can be calculated by dividing the annual percentage rate, or APR, by either 360 or 365, depending on the card issuer. [cfpb-46]\n\nFor credit cards, the interest rates are typically stated as a yearly rate. This is called the annual percentage rate (APR). [cfpb-44]\n\nA variable-rate APR or variable APR changes with the index interest rate, such as the prime rate published in the Wall Street Journal. The cardholder agreement will say how a card’s APR can change over time. [cfpb-45]"
+      }
+    },
+    {
+      "id": "dev-006",
+      "question": "My card has a fixed APR. Does fixed mean the issuer can never change it?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-45"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-45",
+            "score": 7.95
+          }
+        ],
+        "answer": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-45"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-45",
+            "score": 7.95
+          }
+        ],
+        "answer": "A fixed-rate APR or fixed APR sets an APR that does not fluctuate with changes to an index. This does not mean that the interest rate will never change, but the issuer generally must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]"
+      }
+    },
+    {
+      "id": "dev-007",
+      "question": "The same debt appears twice on my credit report under different names. Is that a type of error I should check?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-313"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 0.97
+          }
+        ],
+        "answer": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names [cfpb-313]"
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "dev-008",
+      "question": "To challenge inaccurate information on my credit report, should I contact only the bureau or also the company that supplied it?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314",
+        "cfpb-313",
+        "cfpb-1253"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313",
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 6.7
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": 5.02
+          }
+        ],
+        "answer": "If you find errors, you should contact the credit reporting company that sent you the report, and the lender or company that provided the information (called the “furnisher” of the information). Your credit report includes directions about how to dispute inaccurate or incomplete information or you can use our sample dispute letters for furnishers and credit reporting companies. [cfpb-313]\n\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information. [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1249",
+          "cfpb-314",
+          "cfpb-1819"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1249",
+            "score": 5.52
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": 5.02
+          },
+          {
+            "source_id": "cfpb-1819",
+            "score": 4.63
+          }
+        ],
+        "answer": "You have the legal right to dispute inaccurate information directly with both the credit reporting companies and the companies that furnish your information to the credit reporting companies. To fully protect your rights, you should always dispute credit report inaccuracies with both. They must conduct a reasonable investigation, and fix mistakes as needed, usually within 30 days, at no cost to you. [cfpb-1249]\n\nYou have the right to dispute errors on your credit report. Fixing an error generally means contacting both the credit reporting company and the company that provided the information. [cfpb-314]\n\nIf you review your report and spot errors, you can file a dispute and then ask that the company correct the error. You should also dispute the inaccurate information directly with the bank, credit union, or merchant that first reported the information to the checking account reporting company. Get more information about disputing information found on your checking account report. [cfpb-1819]"
+      }
+    },
+    {
+      "id": "dev-009",
+      "question": "I am mailing a credit-report dispute. What should I include, and should I send original supporting documents?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 6.7
+          }
+        ],
+        "answer": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 6.7
+          }
+        ],
+        "answer": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position [cfpb-314]"
+      }
+    },
+    {
+      "id": "dev-010",
+      "question": "A collector sent me a debt validation notice. What information should help me identify the debt and understand how to dispute it?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-331"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-331"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-331",
+            "score": 6.35
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": 6.03
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": 4.38
+          }
+        ],
+        "answer": "The information helps you recognize whether the debt is yours and, if not, how to dispute it.\n\n- A statement that the communication is from a debt collector\n\n- Your name and mailing information, along with the name and mailing information of the debt collector\n\n- The name of the creditor you owe the debt to\n\n  - It is possible that more than one creditor will be listed\n\n- The account number associated with the debt (if any)\n\n- An itemization of the current amount of the debt that reflects interest, fees, payments, and credits since a particular date\n\n- The current amount of the debt when the notice is provided\n\n- Information you can use to reply to the debt collector, such as if you believe the debt is not yours or if the amount is wrong\n\n- An end date for a 30-day period when you can dispute the debt [cfpb-331]\n\nUnder the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically. [cfpb-331]\n\nOnce you receive the debt validation information, you have 30 days to dispute the debt in writing. Failing to request verification in writing or within this time period can affect your ability to assert your rights under the debt collection rule. [cfpb-331]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-2098",
+          "cfpb-1467",
+          "cfpb-1447"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-2098",
+            "score": 7.4
+          },
+          {
+            "source_id": "cfpb-1467",
+            "score": 6.71
+          },
+          {
+            "source_id": "cfpb-1447",
+            "score": 6.7
+          }
+        ],
+        "answer": "Debt collectors are required to provide you with certain information when or soon after they first communicate with you, in a format usually called a debt collection validation notice. Usually provided electronically or in writing, the notice is meant to help you understand whether the debt is yours, and if not, how you can dispute it. [cfpb-2098]\n\n- Dispute the debt. If you believe you don’t owe the debt or it’s not yours to pay, you should dispute it. If you receive a validation notice and dispute the debt in writing within 30 days, the debt collector must stop contacting you until they verify the debt in writing. The written validation notice will include a deadline for when you must submit your written dispute letter.\n\n- Set boundaries for how debt collectors contact you. You can tell debt collectors how to contact you . You can also tell debt collectors not to contact you at certain times or places or by phone, email, text message, or mail. If you don’t want to hear from the debt collector again, you can also send the collector a written request to stop contacting you. [cfpb-1467]\n\nThis validation information can help you figure out if you owe the debt and will provide information on how to dispute it if you don’t. If you’re unsure who you owe money to or how much you owe, you can request the debt collector provide more information about the debt. [cfpb-1447]"
+      }
+    },
+    {
+      "id": "dev-011",
+      "question": "If I freeze my credit report with one bureau, do the other two automatically receive the freeze?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.23
+          }
+        ],
+        "answer": "Unlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31",
+          "cfpb-1341"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.23
+          },
+          {
+            "source_id": "cfpb-1341",
+            "score": 4.65
+          }
+        ],
+        "answer": "Unlike fraud alerts, if you place a security freeze with one credit reporting company, they do not notify the other credit reporting companies. You must contact each credit reporting company individually if you would like to place a security freeze with all three nationwide credit reporting companies. [cfpb-31]\n\nYou can freeze and unfreeze your credit records for free at the three nationwide credit reporting companies – Equifax , Experian , and TransUnion . You can place a \"freeze\" on your credit file at any time, but you must contact each nationwide credit reporting company separately by visiting their websites. [cfpb-1341]"
+      }
+    },
+    {
+      "id": "dev-012",
+      "question": "Will my bank waive my specific late fee tomorrow? I have not provided my account terms or spoken with the bank.",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "dev-013",
+      "question": "My apartment application is pending. Will this particular landlord approve me tomorrow?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "fresh-candidate-001",
+      "question": "The name is mine, but my credit report has a wrong phone number and address. Are those details included in the errors to look for?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-313"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 3.89
+          }
+        ],
+        "answer": "Check for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft [cfpb-313]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 3.89
+          }
+        ],
+        "answer": "Check for identity errors\n\n- Errors made to your identity information (wrong name, phone number, address)\n\n- Accounts belonging to another person with the same or a similar name as yours (mixing two consumers’ information in a single file is called a mixed file)\n\n- Incorrect accounts resulting from identity theft [cfpb-313]"
+      }
+    },
+    {
+      "id": "fresh-candidate-002",
+      "question": "My listed account balance and credit limit look wrong. Does the guidance treat both as things to check?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-313"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": -2.48
+          }
+        ],
+        "answer": "Check for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit [cfpb-313]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313",
+          "cfpb-312"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": -2.48
+          },
+          {
+            "source_id": "cfpb-312",
+            "score": -4.47
+          }
+        ],
+        "answer": "Check for data management errors\n\n- Accounts with an incorrect current balance\n\n- Accounts with an incorrect credit limit [cfpb-313]\n\nDispute any errors in your credit report. The information in your credit report affects whether you can get a loan – and how much you will have to pay to borrow money. It could also affect the hiring decisions potential employers may make about you. If you find something wrong with your credit report, dispute it. Be on the lookout for loans or credit cards listed that you never opened, misspelled names, or collection items that were not updated to show the account is current after a settlement was reached and satisfied. You can file your dispute with both the consumer credit reporting agency and the entity that furnished the bad information. [cfpb-312]"
+      }
+    },
+    {
+      "id": "fresh-candidate-003",
+      "question": "Can an incorrect last-payment date be a reporting error even if the account number is right?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-313"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 4.78
+          }
+        ],
+        "answer": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names [cfpb-313]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 4.78
+          }
+        ],
+        "answer": "Check for incorrect reporting of account status\n\n- Closed accounts reported as open\n\n- You are reported as the owner of the account, when you are actually just an authorized user\n\n- Accounts that are incorrectly reported as late or delinquent\n\n- Incorrect date of last payment, date opened, or date of first delinquency\n\n- Same debt listed more than once, possibly with different names [cfpb-313]"
+      }
+    },
+    {
+      "id": "fresh-candidate-004",
+      "question": "For a credit-report dispute that the bureau investigates, does the guidance say to pass my relevant information to the company that supplied it and report the results to me?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314",
+          "cfpb-1253"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 6.09
+          },
+          {
+            "source_id": "cfpb-1253",
+            "score": 4.9
+          }
+        ],
+        "answer": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you. [cfpb-314]\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information. [cfpb-1253]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314",
+          "cfpb-1253",
+          "cfpb-1339"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 6.09
+          },
+          {
+            "source_id": "cfpb-1253",
+            "score": 4.9
+          },
+          {
+            "source_id": "cfpb-1339",
+            "score": 4.48
+          }
+        ],
+        "answer": "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you. [cfpb-314]\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information. [cfpb-1253]\n\nYou should receive a written notice of the results of your dispute investigation along with a copy of your updated credit report following the investigation. This free report does not count as your annual free report. If the creditor or furnisher provides the wrong information to a credit reporting company and then corrects your credit report as a result of your dispute, it has a duty to forward the correction to every credit reporting company to which it has provided the incorrect information. [cfpb-1339]"
+      }
+    },
+    {
+      "id": "fresh-candidate-005",
+      "question": "What mailing option does the passage suggest if I want a record that the bureau received my dispute letter?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 4.97
+          }
+        ],
+        "answer": "You can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received. [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 4.97
+          }
+        ],
+        "answer": "You can choose to send your dispute letter by certified mail and ask for a return receipt, so that you have a record that your letter was received. [cfpb-314]"
+      }
+    },
+    {
+      "id": "fresh-candidate-006",
+      "question": "Where does the passage say a written dispute to a furnisher can be addressed?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 3.23
+          }
+        ],
+        "answer": "To dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute. [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 3.23
+          }
+        ],
+        "answer": "To dispute the information a furnisher provided to the credit reporting company, you can use our sample letter as a guide. Send disputes to furnishers in writing, using certified mail. Disputes can be sent to the furnisher’s address included on your consumer report or to an address specified by the furnisher for receiving credit reporting disputes. Furnishers generally must investigate and respond to your dispute within 30 days of when they receive the dispute. [cfpb-314]"
+      }
+    },
+    {
+      "id": "fresh-candidate-007",
+      "question": "The furnisher investigated and says the reported information is accurate. What can I ask the credit reporting companies to add if I still disagree?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-314"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 7
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": 5.03
+          }
+        ],
+        "answer": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future. [cfpb-314]\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports. [cfpb-314]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-314"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-314",
+            "score": 7
+          },
+          {
+            "source_id": "cfpb-314",
+            "score": 5.03
+          }
+        ],
+        "answer": "The furnisher might determine that the information about you is accurate and should not be updated or removed. In that case, you can contact the credit reporting companies again and ask them to include a statement explaining the dispute in your credit reports. The statement is then added to your file and provided to whomever requests your credit report in the future. [cfpb-314]\n\nIf the investigation shows the furnisher provided wrong information about you, or the information cannot be verified, the furnisher must update or remove the information and notify all the credit reporting companies after correcting it. Then, the credit reporting companies must update your credit reports. [cfpb-314]"
+      }
+    },
+    {
+      "id": "fresh-candidate-008",
+      "question": "Does the free report copy available with an initial fraud alert use up the free annual report described in the passage?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.28
+          }
+        ],
+        "answer": "Also, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.28
+          }
+        ],
+        "answer": "Also, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-009",
+      "question": "For how long does the passage say an active-duty alert removes a name from prescreened credit and insurance marketing lists?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 7.73
+          }
+        ],
+        "answer": "When you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 7.73
+          }
+        ],
+        "answer": "When you place an active-duty alert on your credit report, your name will also be removed for two years from prescreened credit offers and insurance marketing lists. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-010",
+      "question": "What documents does the passage list for asking reporting companies to block identity-theft information?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 5.49
+          }
+        ],
+        "answer": "You can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 5.49
+          }
+        ],
+        "answer": "You can ask credit reporting companies to block or remove fraudulent information and debts from your credit report by submitting an identity theft report and supporting documentation. If you’ve been a victim of identity theft, send the credit reporting companies:\n\n- An identity theft report, which can be done through IdentityTheft.gov\n\n- Proof of your identity\n\n- A letter identifying the fraudulent debts and information on your credit report [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-011",
+      "question": "Can the identity-theft blocking method in the passage be used for a debt that is not the result of identity theft?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.02
+          }
+        ],
+        "answer": "You can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.02
+          }
+        ],
+        "answer": "You can get a sample letter on IdentityTheft.gov to help you write your request. Use this method only for debts that are the result of identity theft. Credit reporting companies can refuse or remove a block if the information you provide is not correct or if debt is not caused by identity theft. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-012",
+      "question": "After receiving the identity-theft blocking request described in the passage, what time period is stated for blocking the fraudulent information?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 5.18
+          }
+        ],
+        "answer": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 5.18
+          }
+        ],
+        "answer": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-013",
+      "question": "After a reporting company tells a creditor that someone stole my identity, what does the passage say about passing those identity-theft debts to debt collectors?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 5.14
+          }
+        ],
+        "answer": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 5.14
+          }
+        ],
+        "answer": "Credit reporting companies must block fraudulent information from your credit report within four business days after receiving your request. In addition, they must tell the companies that provided the information that someone stole your identity. Once notified, creditors can’t turn identity theft-related debts over to debt collectors. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-014",
+      "question": "With an extended fraud alert, must the creditor check that it is me before approving new credit, and can the contact method be one I choose?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.91
+          }
+        ],
+        "answer": "An extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 6.91
+          }
+        ],
+        "answer": "An extended alert is good for seven years. If you have an extended alert, a creditor must contact you—in person, by phone, or another contact method of your choosing—to make sure it’s you before approving new credit. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-015",
+      "question": "Apart from reporting identity theft to the FTC, what immediate action does the passage list for affected accounts and financial-institution departments?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-31"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 2.99
+          }
+        ],
+        "answer": "If you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions. Report identity theft to the Federal Trade Commission (FTC) at IdentityTheft.gov. You will get an Identity Theft Report and recovery plan that walks you through the steps to take. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 2.99
+          }
+        ],
+        "answer": "If you are a victim of identity theft, take these steps right away. Close any affected accounts. Contact the security or fraud departments at your financial institutions. Report identity theft to the Federal Trade Commission (FTC) at IdentityTheft.gov. You will get an Identity Theft Report and recovery plan that walks you through the steps to take. [cfpb-31]"
+      }
+    },
+    {
+      "id": "fresh-candidate-016",
+      "question": "In the article's CFPB complaint description, what happens after I tell the CFPB about a company issue?",
+      "label_answerability_for_original_corpus": "answerable",
+      "label_source_ids_for_original_corpus": [
+        "cfpb-313"
+      ],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-313",
+          "cfpb-1253"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-313",
+            "score": 4.59
+          },
+          {
+            "source_id": "cfpb-1253",
+            "score": 2.95
+          }
+        ],
+        "answer": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint. [cfpb-313]\n\nIf you find information in your credit report that you believe is inaccurate, you can dispute what is in the report with the credit reporting company and the company that provided the information. The credit reporting company is required to conduct an investigation and correct any errors it finds. If after the investigation you still believe that the report is wrong, you generally have the right to add a statement to the report stating that you dispute the information. [cfpb-1253]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1467",
+          "cfpb-1327",
+          "cfpb-1449"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1467",
+            "score": 4.59
+          },
+          {
+            "source_id": "cfpb-1327",
+            "score": 2.83
+          },
+          {
+            "source_id": "cfpb-1449",
+            "score": 2.78
+          }
+        ],
+        "answer": "Companies can usually answer questions unique to your situation and more specific to the products and services they offer. If you have a complaint, tell us about your issue—we’ll forward your issue to the company, give you a tracking number, and keep you updated on the status of your complaint. [cfpb-1467]\n\nWhen consumers make a dispute, they often fail to get an adequate answer, or any answer at all, from the credit reporting company. You have rights under federal law if this happens to you. [cfpb-1327]\n\nThere is a catch, however. If the reporting company decides that the dispute is “frivolous,” it does not have to investigate. This can happen if the reporting company gets multiple requests or requests that seem formulaic, which sometimes fits the profile of a credit repair company. [cfpb-1449]"
+      }
+    },
+    {
+      "id": "fresh-candidate-017",
+      "question": "What dollar amount of deposit insurance covers a jointly owned checking account?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "fresh-candidate-018",
+      "question": "Do the supplied articles establish that my credit-report dispute must go to binding arbitration?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "fresh-candidate-019",
+      "question": "How many years may an accurate late-payment entry remain on a credit report?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1449"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1449",
+            "score": 6.51
+          }
+        ],
+        "answer": "Negative items that are accurate remain on your credit report for the appointed timeline. Negative information such as collections, charge-offs, judgments, and accounts reported late during the loan’s term remain on the credit report for seven years from the last activity or first delinquency date. Items are removed from the credit report once the seven years are up. [cfpb-1449]"
+      }
+    },
+    {
+      "id": "fresh-candidate-020",
+      "question": "Do these articles establish that my bank must reimburse every dollar stolen from my existing account?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "fresh-candidate-021",
+      "question": "Under French law, what deadline applies to a dispute about a French credit report?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "fresh-candidate-022",
+      "question": "What documents must I submit to qualify for a federal student-loan deferment?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-663",
+          "cfpb-655"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-663",
+            "score": -2
+          },
+          {
+            "source_id": "cfpb-655",
+            "score": -2.45
+          },
+          {
+            "source_id": "cfpb-663",
+            "score": -2.6
+          }
+        ],
+        "answer": "If you haven’t made a payment on your federal student loan for at least 270 days (nine months), and you have not entered into an agreement with your lender or servicer to postpone your payments (like deferment or forbearance), you are probably in default. [cfpb-663]\n\n- Repayment. If you can afford to pay off your defaulted federal loan, this is the fastest way to settle your debt. Under certain circumstances, your debt collector may be authorized to waive some of your outstanding fees and other collection costs. For some borrowers, this can be the cheapest way to bring a federal student loan out of default. Even after you've repaid, the debt will continue to appear on your credit report as a defaulted loan that was repaid. You'll also be eligible for federal student aid again, if you chose to go back to school.\n\n- Consolidation. Through consolidation, your defaulted loans are paid off by a new loan with new repayment terms. If you can't afford to repay your loan in full, consolidation is the fastest way to get out of default and enroll in one of the U.S. Department of Education’s alternative payment plans. If you can't afford to pay off your loan in full, it's also the fastest way to get out of default and be eligible for federal student aid again. Consolidation will not undo the negative effect on your credit report caused by your default. When speaking with a collector, be sure that you have written documentation about what federal student debt you owe. If you're concerned that you never borrowed these loans, check the U.S. Department of Education’s Federal Student Aid website. Through this website you can access information about your federal student loans. If the loan does not appear there, contact the collector and inform it of the problem. Remember, that system shows only your federal student loans, not your private student loans. [cfpb-655]\n\nDuring the months in which you miss payments on your federal student loans, your servicer must exercise \"due diligence\" in attempting to collect the loan. Your servicer must make repeated efforts to locate and contact you about repayment. [cfpb-663]"
+      }
+    },
+    {
+      "id": "fresh-candidate-023",
+      "question": "What routing number should I use for a transfer from my bank account?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "fresh-candidate-024",
+      "question": "Does a misspelled address on my report lower my credit score by exactly ten points?",
+      "label_answerability_for_original_corpus": "unanswerable",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      }
+    },
+    {
+      "id": "new-01",
+      "question": "Can a debt collector call me at work?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-331"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-331",
+            "score": 1.95
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": 0.96
+          }
+        ],
+        "answer": "If you’re being contacted by a debt collector, you have rights and protections under federal law, and the rights and protections apply to how and when they can contact you. Learn more about your debt collection protections. [cfpb-331]\n\nUnder the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically. [cfpb-331]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-332",
+          "cfpb-2110"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-332",
+            "score": 9.41
+          },
+          {
+            "source_id": "cfpb-332",
+            "score": 9.4
+          },
+          {
+            "source_id": "cfpb-2110",
+            "score": 8.73
+          }
+        ],
+        "answer": "- If your employer does not allow you to receive personal calls at work you should let the debt collector know that.\n\n- If a debt collector knows that you are not allowed to receive the debt collector’s calls at work then the debt collector is not allowed to call you there. [cfpb-332]\n\nCan debt collectors contact my place of employment?\n\n- Debt collectors may ask your employer for your address or telephone number.\n\n- If your employer does not allow you to receive personal calls at work you should let the debt collector know that. [cfpb-332]\n\nIf you don’t want to receive calls from a debt collector at a particular time or place, such as on the weekends or at work, you should tell the debt collector. If they’re aware you don’t want or are not allowed to receive personal calls at work, for example, they’re not allowed to contact you there. [cfpb-2110]"
+      }
+    },
+    {
+      "id": "new-02",
+      "question": "Am I responsible for unauthorized charges if my credit card is stolen?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-29"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-29",
+            "score": 9.46
+          },
+          {
+            "source_id": "cfpb-29",
+            "score": 7.91
+          }
+        ],
+        "answer": "If you report a lost or stolen credit card before it is used, you can’t be held responsible for any unauthorized charges. [cfpb-29]\n\nIf there is unauthorized use of your card before you report it missing, the most you will owe for unauthorized charges on the card is $50. Many cardholder agreements say you are not responsible for any charges in this circumstance. [cfpb-29]"
+      }
+    },
+    {
+      "id": "new-03",
+      "question": "How long does negative information stay on my credit report?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1449",
+          "cfpb-323"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1449",
+            "score": 9.59
+          },
+          {
+            "source_id": "cfpb-323",
+            "score": 9.08
+          },
+          {
+            "source_id": "cfpb-323",
+            "score": 8.67
+          }
+        ],
+        "answer": "Negative items that are accurate remain on your credit report for the appointed timeline. Negative information such as collections, charge-offs, judgments, and accounts reported late during the loan’s term remain on the credit report for seven years from the last activity or first delinquency date. Items are removed from the credit report once the seven years are up. [cfpb-1449]\n\nA credit reporting company generally can report most negative information for seven years. [cfpb-323]\n\nCredit reporting companies can generally report negative information about your credit account payment history for up to seven years, and may report positive information for longer. [cfpb-323]"
+      }
+    },
+    {
+      "id": "new-04",
+      "question": "What is a credit score?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1253"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1253",
+            "score": -3.72
+          }
+        ],
+        "answer": "If a lender rejects your application based on your credit report, the lender is also required to:\n\n- Provide you the numerical credit score it used in taking the adverse action and the key factors that affected your score\n\n- Give you the name, address, and telephone number of the credit reporting company that provided the report\n\n- Tell you about your right to get a free copy of your credit report from the credit reporting company that provided it within 60 days of your adverse action notice\n\n- Explain the process for fixing mistakes on your report or adding information to make your report more complete [cfpb-1253]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1883",
+          "cfpb-315"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1883",
+            "score": 9.79
+          },
+          {
+            "source_id": "cfpb-315",
+            "score": 9.29
+          }
+        ],
+        "answer": "A credit score is a number that is used to predict how likely you are to pay back a loan on time. Credit scores are used by companies to make decisions such as whether to offer you a mortgage or a credit card. They are also used to determine the interest rate you receive on a loan or credit card, and the credit limit. Learn more about credit scores. [cfpb-1883]\n\nA credit score is a prediction of your credit behavior, such as how likely you are to pay a loan back on time, based on information from your credit reports. [cfpb-315]"
+      }
+    },
+    {
+      "id": "new-05",
+      "question": "Can a debt collector contact my family or friends about my debt?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-331"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-331",
+            "score": 3.48
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": 2.3
+          }
+        ],
+        "answer": "If you’re being contacted by a debt collector, you have rights and protections under federal law, and the rights and protections apply to how and when they can contact you. Learn more about your debt collection protections. [cfpb-331]\n\nUnder the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically. [cfpb-331]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-2112",
+          "cfpb-332"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-2112",
+            "score": 8.05
+          },
+          {
+            "source_id": "cfpb-332",
+            "score": 7.61
+          },
+          {
+            "source_id": "cfpb-2112",
+            "score": 6.31
+          }
+        ],
+        "answer": "A debt collector can only communicate with you on social media platforms about a debt if the message is private. A debt collector cannot contact you on social media about a debt if the message is viewable by the general public or viewable by your friends, contacts, or followers on the platform. This would include your publicly visible profile page or any part of the platform where other people can see the message. [cfpb-2112]\n\nDebt collectors usually can't contact people you know more than once and they can't say they're trying to collect on a debt. Generally, a debt collector can't discuss your debt with anyone other than:\n\n- You\n\n- Your spouse\n\n- Your parents (if you are a minor)\n\n- Your guardian, executor, or administrator [cfpb-332]\n\nIf a debt collector attempts to send you a private message requesting to add you as a friend or contact, the debt collector must identify themself as a debt collector. [cfpb-2112]"
+      }
+    },
+    {
+      "id": "new-06",
+      "question": "How do I get a free copy of my credit report?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-31"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-31",
+            "score": 7.31
+          },
+          {
+            "source_id": "cfpb-31",
+            "score": 6.53
+          }
+        ],
+        "answer": "Also, with an initial fraud alert, you get to order one free copy of your credit report from each of the nationwide credit reporting companies. These free reports do not count as your free annual report from each credit reporting company. [cfpb-31]\n\nWhen you place an extended alert on your file, you can order two free copies of your credit report from each nationwide credit reporting company over a 12 month period. Your name will also be removed from prescreened credit offers and insurance marketing lists for five years. [cfpb-31]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1229",
+          "cfpb-89",
+          "cfpb-5"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1229",
+            "score": 7.73
+          },
+          {
+            "source_id": "cfpb-89",
+            "score": 7.69
+          },
+          {
+            "source_id": "cfpb-5",
+            "score": 7.66
+          }
+        ],
+        "answer": "You can check your credit at no charge at annualcreditreport.com . You can review your credit report online for free once a week, from each of the three nationwide consumer reporting companies (Equifax, Experian, and TransUnion). You can request a copy of your credit report by mail once every 12 months from each of the three companies. And, until December 2026, you can use annualcreditreport.com to request as many as six free copies of your Equifax credit report during any twelve-month period. [cfpb-1229]\n\nYou may also want to obtain a copy of your credit report. You are entitled to one free credit report every 12 months from each of the three major consumer reporting agencies – Equifax, Experian, and TransUnion. AnnualCreditReport.com , which was created by the three consumer reporting agencies, is a centralized service for requesting your free annual credit reports. You can order all three credit reports at the same time, or order one now and others later. [cfpb-89]\n\nYou can get a free copy of your credit report from each of the three major consumer reporting companies (Equifax, Experian and TransUnion) once a week at AnnualCreditReport.com. You also have the right to one free report from each company every 12 months. [cfpb-5]"
+      }
+    },
+    {
+      "id": "new-07",
+      "question": "What is a balance transfer fee?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1861"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1861",
+            "score": 6.06
+          }
+        ],
+        "answer": "The promotional interest rate for most balance transfers lasts for a limited time. After that, the interest rate on your new credit card may rise, increasing your payment amount. You’ll probably have to pay a “balance transfer fee.” The fee is usually a certain percentage of the amount you transfer or a fixed amount, whichever is more. [cfpb-1861]"
+      }
+    },
+    {
+      "id": "new-08",
+      "question": "What should I do if a debt collector sues me?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-331"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-331",
+            "score": 0.35
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": -0.31
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": -0.67
+          }
+        ],
+        "answer": "Under the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically. [cfpb-331]\n\nYou may see other information on your notice, but the information listed above generally must be included. If you think a debt collector failed to give you this information, you can submit a complaint with the CFPB. [cfpb-331]\n\nAlso, if you send the debt collector the written verification request or request for information about the original creditor within this 30-day period, the debt collector must pause collecting the amount of the debt you are disputing until they’ve adequately responded to your request. [cfpb-331]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1411",
+          "cfpb-1495",
+          "cfpb-336"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1411",
+            "score": 7.33
+          },
+          {
+            "source_id": "cfpb-1495",
+            "score": 7.2
+          },
+          {
+            "source_id": "cfpb-336",
+            "score": 7.12
+          }
+        ],
+        "answer": "You can sue the debt collector for violating the FDCPA. If you sue under the FDCPA and win, the debt collector must generally pay your attorney's fees and might also have to pay you damages. [cfpb-1411]\n\nYou can report any problems to your state's attorney general . You can also sue the debt collector for violations of the FDCPA. If you sue under the FDCPA and win, the debt collector must generally pay your attorney's fees and may also have to pay you damages. [cfpb-1495]\n\nIf you think a debt collector has violated the FDCPA, you can sue them for damages. If you prove a violation occurred, you may be awarded $1,000 in damages, plus additional compensation for any actual harm they caused. If you win, the collector may also be responsible for paying your lawyer fees and costs. There are lawyers that specialize in this type of lawsuit, but you can also go to court without a lawyer. [cfpb-336]"
+      }
+    },
+    {
+      "id": "new-09",
+      "question": "Can a credit card company raise my interest rate?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-44"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-44",
+            "score": 4.09
+          }
+        ],
+        "answer": "A credit card’s interest rate is the price you pay for borrowing money. [cfpb-44]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-69",
+          "cfpb-92",
+          "cfpb-1861"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-69",
+            "score": 10.36
+          },
+          {
+            "source_id": "cfpb-92",
+            "score": 9.54
+          },
+          {
+            "source_id": "cfpb-1861",
+            "score": 9.2
+          }
+        ],
+        "answer": "Credit card companies can usually increase your interest rate if they give you 45 days of advanced notice, but there may be steps you can take to lower your credit card interest rate. [cfpb-69]\n\nWhen your account is sold, the credit card company that buys your account becomes your new card company. Your new card company generally cannot increase the interest rate on any existing balance, except in certain circumstances. The new card company can increase the interest rate for new transactions, but it must give you 45 days’ notice. The new card company also can change other terms, but it must follow the same rules about giving notice that would apply if the account had not been sold and your old credit card company wanted to make the change. [cfpb-92]\n\nIf you’re more than 60 days late on a payment, the credit card company can increase your interest rate on all balances, including the transferred balance. [cfpb-1861]"
+      }
+    },
+    {
+      "id": "new-10",
+      "question": "What is a statute of limitations on a debt?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "evidence_limited",
+        "sources": [],
+        "selected_units": [],
+        "answer": "No sufficiently relevant source excerpt was selected. This search cannot determine the answer to your question."
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-1423"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-1423",
+            "score": 6.86
+          },
+          {
+            "source_id": "cfpb-1423",
+            "score": 6.34
+          }
+        ],
+        "answer": "In many states, statutes of limitations are in place to prevent creditors and debt collectors from using legal action to collect on an older debt. Some debts, though, such as federal student loans don’t have a statute of limitations. [cfpb-1423]\n\nMost states or jurisdictions have statutes of limitations between three and six years for debts, but some may be longer. This may also vary depending, for instance, on the:\n\n- Type of debt\n\n- State where you live\n\n- State law named in your credit agreement [cfpb-1423]"
+      }
+    },
+    {
+      "id": "new-11",
+      "question": "What is a secured credit card?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-44"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-44",
+            "score": -3.6
+          }
+        ],
+        "answer": "A credit card’s interest rate is the price you pay for borrowing money. [cfpb-44]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-2155"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-2155",
+            "score": 0.5
+          },
+          {
+            "source_id": "cfpb-2155",
+            "score": 0.25
+          }
+        ],
+        "answer": "Having a history of good credit helps you get housing, bank accounts, credit cards, and loans, and reduces how much interest you pay. Ask your bank, credit union, or local nonprofit credit counseling agency about credit cards and loans—like the ones listed below—that can help you start building credit, or rebuild your credit if you need to. The payments you make are reported to the three nationwide credit reporting companies, and they create a credit report for you. Paying on time, every time, can help you build a strong credit history and lower your costs for borrowing money in the future.\n\n- Secured credit card – You put in an amount of cash, for example $500. Then, you can spend up to that amount on your credit card. When you pay the secured credit card bill, you restore your spending amount back to the amount you put in.\n\n- Credit builder loans – You build credit and savings at the same time, through a loan from your bank or credit union. The money is not yours for spending—instead, it is held for you, it is held for you as savings. You pay the loan in small payments, usually over six to 24 months. At the end of that time, you receive the full amount you paid.\n\n- Retail or store credit cards – You can often get a credit card with a relatively low credit limit from stores, warehouses, gas stations, and other types of businesses that sell goods and services. The low credit limit means you are not as likely to run up high credit card bills. [cfpb-2155]\n\nNot all financial products help you build your credit history. Typically, payments like these are not reported to the nationwide credit reporting companies:\n\n- Debit card and cash. When you use a debit card or cash, you are not borrowing money that you need to repay later. This does not help you prove that you can pay off your debts.\n\n- Prepaid card. Unlike a secured credit card, when you use a prepaid card, you can spend only the money you deposited beforehand. While they can help you avoid debt that you cannot pay off, prepaid cards do not help you establish your credit history.\n\n- Payday loan. Even if you make on-time payments, a payday loan does not help your credit history because the payments are not reported to the nationwide credit reporting companies or included in your credit reports.\n\n- \"Buy here, pay here\" auto loan. Taking out a \"buy here, pay here\" car loan at a used car dealership does not help establish your credit history. The dealers often report only negative information—like late payments—not positive payment information, to the credit reporting companies. [cfpb-2155]"
+      }
+    },
+    {
+      "id": "new-12",
+      "question": "How do I stop a debt collector from contacting me?",
+      "label_answerability_for_original_corpus": "new_topic",
+      "label_source_ids_for_original_corpus": [],
+      "original_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-331"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-331",
+            "score": 2.85
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": 1.85
+          },
+          {
+            "source_id": "cfpb-331",
+            "score": 0.99
+          }
+        ],
+        "answer": "Also, if you send the debt collector the written verification request or request for information about the original creditor within this 30-day period, the debt collector must pause collecting the amount of the debt you are disputing until they’ve adequately responded to your request. [cfpb-331]\n\nIf you’re being contacted by a debt collector, you have rights and protections under federal law, and the rights and protections apply to how and when they can contact you. Learn more about your debt collection protections. [cfpb-331]\n\nUnder the debt collection rule, debt collectors have to provide you with certain information about your debt, known as validation information. Generally, this information is provided in a written notice sent as the initial communication to you or within five days of their first communication with you, and it may be sent by mail or electronically. [cfpb-331]"
+      },
+      "expanded_corpus": {
+        "disposition": "answer",
+        "sources": [
+          "cfpb-329",
+          "cfpb-330",
+          "cfpb-1411"
+        ],
+        "selected_units": [
+          {
+            "source_id": "cfpb-329",
+            "score": 8.09
+          },
+          {
+            "source_id": "cfpb-330",
+            "score": 8.07
+          },
+          {
+            "source_id": "cfpb-1411",
+            "score": 7.68
+          }
+        ],
+        "answer": "- Harassment. Debt collectors may not harass you or anyone else over the phone or through any other form of contact, including text or email.\n\n- Representation by attorney. If a debt collector knows that an attorney is representing you about the debt, the debt collector generally must stop contacting you and must contact the attorney instead. This is only true if the debt collector knows, or can easily find out, the name and contact information of your attorney. If an attorney is representing you and a debt collector calls, give them your attorney’s name and contact information and tell them that they should contact your attorney directly, instead of you. It’s also a good idea to keep all documents sent by a debt collector and write down dates and times of conversations, along with notes about what you discussed. These records can help you if you meet with a lawyer or go to court. [cfpb-329]\n\nYou can ask a debt collector to stop contacting you. Asking them to stop contacting you will not necessarily stop them from suing you or reporting the debt to a credit reporting company, which can affect your credit report and credit scores. If you don’t owe the debt or have already paid the debt, it is important to take action to contest the attempt to collect the debt. [cfpb-330]\n\nYou have the right to tell a debt collector to stop contacting you. If you ask a debt collector to stop all contact – regardless of the communications channel – the collector must stop. Keep in mind, though, that you could still owe the debt. [cfpb-1411]"
+      }
+    }
+  ]
+}
