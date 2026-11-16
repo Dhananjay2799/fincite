@@ -81,7 +81,7 @@ The Colab comparison uses grouped source quotes reconstructed from the saved loc
 
 The Vercel deployment at https://fincite-rouge.vercel.app is built from `apps/web`: its Node.js chat API runs Neon retrieval, pinned CPU models and verified source excerpts directly, without a local bridge or GGUF. It validates returned text against the committed corpus hashes. Local mode remains available.
 
-The deployment runs on the Vercel Hobby plan with a privately configured database secret. It has no rate limiting and a small corpus, so treat it as a demo, not a service. See [hosted setup and executed checks](docs/vercel-source-excerpts.md) for the `apps/web` project root, Hobby-only setup, measured bundle size and explicit verification limits.
+The deployment runs on the Vercel Hobby plan with a privately configured database secret. `/api/chat` limits each client address to 20 questions per minute and 300 per day. The counters are kept per function instance, so this deters casual scripted use; it is not a distributed limit. With a small corpus, treat it as a demo, not a service. See [hosted setup and executed checks](docs/vercel-source-excerpts.md) for the `apps/web` project root, Hobby-only setup, measured bundle size and explicit verification limits.
 
 ## Run the existing local demo
 
@@ -161,6 +161,6 @@ Notebooks, dataset manifests, configurations and raw results live in `training/`
 - Review candidate data and check semantic overlap across splits.
 - Build an independently reviewed held-out test set with more articles and questions.
 - Measure unsupported-answer rate, answer coverage, false refusals and citation support together.
-- Complete clean-machine artifact restoration and the presentation demo; add rate limiting to the hosted API.
+- Complete clean-machine artifact restoration and the presentation demo.
 
 The engineering result so far is a functioning pipeline with reproducible development comparisons and documented regressions. A claim that FinCite reduces hallucinations remains unproven.
