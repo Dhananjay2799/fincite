@@ -34,6 +34,8 @@ The install command skips optional ONNX GPU downloads. Linux CPU runtime files a
 
 ## Current deployment status
 
+**Update:** the project has since been deployed at https://fincite-rouge.vercel.app. The paragraphs below record the state when this document was first written.
+
 The connected Vercel account returned no accessible teams/workspaces and no matching project. Therefore no Vercel project, public deployment, URL, environment secret, plan change or paid resource was created. The implementation is prepared for a preview after workspace access and the server-only database configuration are available.
 
 After connecting the correct Vercel workspace, deploy the reviewed candidate as a preview, configure the preview database secret privately, and verify cash-advance and unsupported-question responses through the deployed UI. Keep the existing local demo available. Do not claim hosted success, permanent availability, independently measured answer quality, or fine-tuning improvement based on local build results.

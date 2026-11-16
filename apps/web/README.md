@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FinCite web app
 
-## Getting Started
+Next.js interface and `/api/chat` route for FinCite. Live at https://fincite-rouge.vercel.app.
 
-First, run the development server:
+See the [repository README](../../README.md) for the project overview, and
+[hosted setup](../../docs/vercel-source-excerpts.md) for the Vercel configuration.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Run locally
+
+From the repository root:
+
+```powershell
+npm ci --prefix apps/web
+node scripts/start-local.mjs
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This starts the local RAG bridge and the frontend at http://localhost:3000.
+Copy `.env.example` to `.env.local` and set `DATABASE_URL` first.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To run the hosted API path locally without the bridge, set `FINCITE_BACKEND=hosted`
+in `.env.local` and use `npm run dev --prefix apps/web`.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Checks
 
-## Learn More
+```powershell
+npm run lint --prefix apps/web
+npm run build --prefix apps/web
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Layout
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- `src/app/api/chat/route.ts`: request validation; hosted or local-bridge backend.
+- `src/lib/server/`: hosted retrieval, reranking and source-excerpt responder.
+- `src/components/fincite-workspace.tsx`: the single-page interface.
+- `src/lib/preview-examples.ts`: curated example answers shown by the example buttons.

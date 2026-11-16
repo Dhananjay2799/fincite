@@ -97,7 +97,7 @@ export default function FinCiteWorkspace() {
           {turns.length === 0 ? <div className={styles.welcome}>
             <div className={styles.heroEmblem}><Icon name="spark" size={29} /></div>
             <p className={styles.heroKicker}>A LITTLE LESS CONFUSION. A LITTLE MORE CLARITY.</p>
-            <h1>Money questions.<br /><em>Clearer answers.</em></h1>
+            <h1>Money questions.<br /><em>Official sources.</em></h1>
             <p className={styles.heroDescription}>Understand credit cards, credit reports, and consumer rights—with sources you can open and evidence limits you can see.</p>
             <div className={styles.heroTags}><span><Icon name="book" size={14} />Source-linked</span><span><Icon name="chat" size={14} />Source wording</span><span><Icon name="shield" size={14} />Clear limits</span></div>
             <div className={styles.exampleHeading}><span>Start with an example</span><small>Curated previews · not live AI answers</small></div>
@@ -111,7 +111,7 @@ export default function FinCiteWorkspace() {
             {turn.result.sources.length ? <div className={styles.sources}><p className={styles.sourceHeading}><Icon name="book" size={15} />{turn.isPreview ? "Sources for this example" : turn.result.output_mode === "source_excerpts" ? "Sources · exact excerpt wording checked" : "Retrieved passages · citation support is not verified"}</p>{turn.result.sources.map((source, sourceIndex) => <details className={styles.sourceCard} key={source.id}><summary><span className={styles.sourceNumber}>{sourceIndex + 1}</span><span><small>{turn.isPreview ? "CONSUMER FINANCIAL PROTECTION BUREAU" : `${source.id} · ${source.cited ? (turn.result.output_mode === "source_excerpts" ? "Excerpt source" : "Cited by model") : "Retrieved only"}`}</small><strong>{source.title}</strong></span><span className={styles.expandLabel}>Passage <span aria-hidden="true">⌄</span></span></summary><div className={styles.sourceContent}><blockquote>{source.quote}</blockquote><a href={source.url} target="_blank" rel="noopener noreferrer">Read the full CFPB article<Icon name="external" size={14} /></a></div></details>)}</div> : <p className={styles.noSources}>No supporting source cited.</p>}
             <div className={styles.answerFooter}><button onClick={() => copyAnswer(index, turn)}><Icon name={copied === index ? "check" : "copy"} size={15} />{copied === index ? "Copied" : "Copy answer"}</button>{turn.isPreview ? <small>Written to illustrate the interface. Not generated live.</small> : null}</div>
           </article>)}</div>}
-          {pending ? <div className={styles.requestStatus} role="status"><span className={styles.spinner} />Connecting to FinCite…</div> : null}
+          {pending ? <div className={styles.requestStatus} role="status"><span className={styles.spinner} />Searching CFPB sources… the first search can take about 10 seconds.</div> : null}
           {error ? <div className={styles.error} role="alert"><strong>Live answer unavailable</strong><p>{error}</p><small>Question: {submittedQuestion}</small></div> : null}
           <div ref={end} />
         </section>
