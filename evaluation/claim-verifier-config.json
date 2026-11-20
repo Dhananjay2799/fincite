@@ -1,0 +1,13 @@
+{
+  "version": "nli-development-v2",
+  "status": "experimental_not_release_validated",
+  "model_id": "Xenova/nli-deberta-v3-xsmall",
+  "model_revision": "2a4f614a701367a02d51389039afc998faeda637",
+  "dtype": "q8",
+  "max_pair_tokens": 512,
+  "minimum_entailment": 0.9,
+  "maximum_contradiction": 0.1,
+  "maximum_claims": 24,
+  "premise_policy": "score_each_cited_unit_require_support_and_no_conflict",
+  "note": "Provisional screening thresholds, not calibrated probabilities of financial correctness. No live deployment is enabled by this file."
+}

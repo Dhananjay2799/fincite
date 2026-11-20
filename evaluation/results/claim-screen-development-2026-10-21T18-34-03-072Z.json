@@ -1,0 +1,794 @@
+{
+  "status": "development_screen_complete_ungraded",
+  "created_at": "2026-10-21T18:34:03.073Z",
+  "input_sha256": "1e5601c3fd905a594aa03f8e2e4e01bd6194f1d1c494a1fdfa96138b2cb49954",
+  "code_sha256": {
+    "evaluation/claim-verifier-config.json": "0ccfb8f9e1290f03dcda91a91ae78ee1baeb290738bed273f32680588e70c0ad",
+    "ingestion/claim-verifier.mjs": "8306f1b0f9848b881d1d554159c480f8c6e8d97a0cc06b6d4e73e4f423c53129",
+    "ingestion/nli-model.mjs": "e2fb25e04aa7fc05977e2c9099e8d83868c60298fdb1f227759419b303346d2b",
+    "evaluation/run-claim-screen.mjs": "489f35d05b579b971edf3170bb7a9d5048c739350125d86584942899d70be10b"
+  },
+  "policy": {
+    "version": "nli-development-v2",
+    "status": "experimental_not_release_validated",
+    "model_id": "Xenova/nli-deberta-v3-xsmall",
+    "model_revision": "2a4f614a701367a02d51389039afc998faeda637",
+    "dtype": "q8",
+    "max_pair_tokens": 512,
+    "minimum_entailment": 0.9,
+    "maximum_contradiction": 0.1,
+    "maximum_claims": 24,
+    "premise_policy": "score_each_cited_unit_require_support_and_no_conflict",
+    "note": "Provisional screening thresholds, not calibrated probabilities of financial correctness. No live deployment is enabled by this file."
+  },
+  "load_ms": 9662.958556,
+  "results": [
+    {
+      "question_id": "dev-001",
+      "question": "Why am I charged interest when I pay my credit card minimum payment on time?",
+      "answer": "If you pay your credit card minimum payment on time, you may still be charged interest if you lose your grace period due to not paying your balance in full by the due date. Credit card companies are not required to give a grace period, but most provide it on purchases. If you lose your grace period, you will be charged interest on the unpaid portion of the balance. You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made. [cfpb-47]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_nli",
+        "claims": [
+          {
+            "claim": "If you pay your credit card minimum payment on time, you may still be charged interest if you lose your grace period due to not paying your balance in full by the due date.",
+            "source_ids": [
+              "cfpb-47"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 128,
+                "probabilities": {
+                  "contradiction": 0.008721017014778853,
+                  "entailment": 0.00934647883454651,
+                  "neutral": 0.9819325041506747
+                }
+              },
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 87,
+                "probabilities": {
+                  "contradiction": 0.019268471629362204,
+                  "entailment": 0.010032777467582375,
+                  "neutral": 0.9706987509030554
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "Credit card companies are not required to give a grace period, but most provide it on purchases.",
+            "source_ids": [
+              "cfpb-47"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 111,
+                "probabilities": {
+                  "contradiction": 0.02929294440396598,
+                  "entailment": 0.0076031134223471675,
+                  "neutral": 0.9631039421736868
+                }
+              },
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 70,
+                "probabilities": {
+                  "contradiction": 0.0002499984986537198,
+                  "entailment": 0.9897638506700053,
+                  "neutral": 0.009986150831341016
+                }
+              }
+            ],
+            "accepted": true
+          },
+          {
+            "claim": "If you lose your grace period, you will be charged interest on the unpaid portion of the balance.",
+            "source_ids": [
+              "cfpb-47"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 112,
+                "probabilities": {
+                  "contradiction": 0.008202085436237978,
+                  "entailment": 0.9278231336879457,
+                  "neutral": 0.06397478087581637
+                }
+              },
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 71,
+                "probabilities": {
+                  "contradiction": 0.01878884064559374,
+                  "entailment": 0.008172134283894978,
+                  "neutral": 0.9730390250705112
+                }
+              }
+            ],
+            "accepted": true
+          },
+          {
+            "claim": "You will also be charged interest on purchases in the new billing cycle starting on the date each purchase is made.",
+            "source_ids": [
+              "cfpb-47"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 114,
+                "probabilities": {
+                  "contradiction": 0.003785734824643703,
+                  "entailment": 0.9831549045486075,
+                  "neutral": 0.013059360626748718
+                }
+              },
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 73,
+                "probabilities": {
+                  "contradiction": 0.04236183656459319,
+                  "entailment": 0.003705999277109899,
+                  "neutral": 0.9539321641582968
+                }
+              }
+            ],
+            "accepted": true
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 263.284615999999
+    },
+    {
+      "question_id": "dev-002",
+      "question": "My loan application was denied because of my credit report. What information should I look for in the notice?",
+      "answer": "The adverse action notice should include the specific reasons for denial, the lender's numerical credit score, and the name, address, and phone number of the credit reporting company. You also have the right to a free copy of your credit report within 60 days of the notice. [cfpb-1253]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_nli",
+        "claims": [
+          {
+            "claim": "The adverse action notice should include the specific reasons for denial, the lender's numerical credit score, and the name, address, and phone number of the credit reporting company.",
+            "source_ids": [
+              "cfpb-1253"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-1253",
+                "status": "scored",
+                "pair_tokens": 149,
+                "probabilities": {
+                  "contradiction": 0.0007051596681784629,
+                  "entailment": 0.9699019654375565,
+                  "neutral": 0.029392874894265196
+                }
+              },
+              {
+                "source_id": "cfpb-1253",
+                "status": "scored",
+                "pair_tokens": 116,
+                "probabilities": {
+                  "contradiction": 0.0008012814722759684,
+                  "entailment": 0.0005785091169163465,
+                  "neutral": 0.9986202094108076
+                }
+              }
+            ],
+            "accepted": true
+          },
+          {
+            "claim": "You also have the right to a free copy of your credit report within 60 days of the notice.",
+            "source_ids": [
+              "cfpb-1253"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-1253",
+                "status": "scored",
+                "pair_tokens": 134,
+                "probabilities": {
+                  "contradiction": 0.003056553876889754,
+                  "entailment": 0.8840610261618589,
+                  "neutral": 0.1128824199612515
+                }
+              },
+              {
+                "source_id": "cfpb-1253",
+                "status": "scored",
+                "pair_tokens": 101,
+                "probabilities": {
+                  "contradiction": 0.0007851559106405171,
+                  "entailment": 0.0005991821904467692,
+                  "neutral": 0.9986156618989127
+                }
+              }
+            ],
+            "accepted": false
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 151.1187260000006
+    },
+    {
+      "question_id": "dev-003",
+      "question": "What will Bitcoin be worth next December?",
+      "answer": "The supplied passages do not answer this question.",
+      "generation_performed": false,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "gate_abstention_not_scored",
+        "claims": [],
+        "errors": []
+      },
+      "elapsed_ms": 0.014081999999689288
+    },
+    {
+      "question_id": "dev-004",
+      "question": "I withdrew cash using my credit card. Does the purchase grace period generally let me avoid interest on that cash advance?",
+      "answer": "The purchase grace period generally allows you to avoid interest on cash advances if you pay your balance in full by the due date. If you don't pay your balance in full by the due date, you will be charged interest on the unpaid portion of the balance. [cfpb-47]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_nli",
+        "claims": [
+          {
+            "claim": "The purchase grace period generally allows you to avoid interest on cash advances if you pay your balance in full by the due date.",
+            "source_ids": [
+              "cfpb-47"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 76,
+                "probabilities": {
+                  "contradiction": 0.2834458194456711,
+                  "entailment": 0.032902410279955364,
+                  "neutral": 0.6836517702743736
+                }
+              },
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 117,
+                "probabilities": {
+                  "contradiction": 0.004245051888729918,
+                  "entailment": 0.04434371786262035,
+                  "neutral": 0.9514112302486497
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "If you don't pay your balance in full by the due date, you will be charged interest on the unpaid portion of the balance.",
+            "source_ids": [
+              "cfpb-47"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 79,
+                "probabilities": {
+                  "contradiction": 0.09994683401665468,
+                  "entailment": 0.15225489765429046,
+                  "neutral": 0.7477982683290549
+                }
+              },
+              {
+                "source_id": "cfpb-47",
+                "status": "scored",
+                "pair_tokens": 120,
+                "probabilities": {
+                  "contradiction": 0.02076216765246428,
+                  "entailment": 0.8242333907607193,
+                  "neutral": 0.15500444158681628
+                }
+              }
+            ],
+            "accepted": false
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 162.66084199999932
+    },
+    {
+      "question_id": "dev-005",
+      "question": "My card lists an APR. What does that number describe?",
+      "answer": "The APR describes the yearly interest rate charged on credit card balances. It can be fixed or variable, depending on the card's terms. [cfpb-44]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_nli",
+        "claims": [
+          {
+            "claim": "The APR describes the yearly interest rate charged on credit card balances.",
+            "source_ids": [
+              "cfpb-44"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-44",
+                "status": "scored",
+                "pair_tokens": 42,
+                "probabilities": {
+                  "contradiction": 0.0027590450445424547,
+                  "entailment": 0.5683658096295231,
+                  "neutral": 0.4288751453259344
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "It can be fixed or variable, depending on the card's terms.",
+            "source_ids": [
+              "cfpb-44"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-44",
+                "status": "scored",
+                "pair_tokens": 44,
+                "probabilities": {
+                  "contradiction": 0.00487687849722522,
+                  "entailment": 0.0044741097379478725,
+                  "neutral": 0.9906490117648268
+                }
+              }
+            ],
+            "accepted": false
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 42.68506299999899
+    },
+    {
+      "question_id": "dev-006",
+      "question": "My card has a fixed APR. Does fixed mean the issuer can never change it?",
+      "answer": "The fixed APR does not mean the issuer can never change it. The issuer must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice. [cfpb-45]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "passes_nli_screen",
+        "claims": [
+          {
+            "claim": "The fixed APR does not mean the issuer can never change it.",
+            "source_ids": [
+              "cfpb-45"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-45",
+                "status": "scored",
+                "pair_tokens": 84,
+                "probabilities": {
+                  "contradiction": 0.0016692664481536745,
+                  "entailment": 0.9772803824048668,
+                  "neutral": 0.02105035114697943
+                }
+              }
+            ],
+            "accepted": true
+          },
+          {
+            "claim": "The issuer must notify you before the change occurs, and in most circumstances can apply the higher rate only to purchases and other transactions you make after you get the notice.",
+            "source_ids": [
+              "cfpb-45"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-45",
+                "status": "scored",
+                "pair_tokens": 104,
+                "probabilities": {
+                  "contradiction": 0.0007396426939880855,
+                  "entailment": 0.9768903195266374,
+                  "neutral": 0.022370037779374352
+                }
+              }
+            ],
+            "accepted": true
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 76.54771500000061
+    },
+    {
+      "question_id": "dev-007",
+      "question": "The same debt appears twice on my credit report under different names. Is that a type of error I should check?",
+      "answer": "[cfpb-313] The same debt appearing under different names is a type of error that should be checked. It may indicate incorrect reporting of account status or ownership. If you believe the debt is incorrect, you can contact the credit bureau to correct it.",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_format",
+        "claims": [],
+        "errors": [
+          "citation_without_claim",
+          "uncited_trailing_text",
+          "no_cited_claims"
+        ]
+      },
+      "elapsed_ms": 0.1557539999994333
+    },
+    {
+      "question_id": "dev-008",
+      "question": "To challenge inaccurate information on my credit report, should I contact only the bureau or also the company that supplied it?",
+      "answer": "To challenge inaccurate information on your credit report, you should contact both the credit reporting company and the company that supplied the information. [cfpb-314]\n\nIf the company that supplied the information determines the information is accurate, you can contact the credit reporting company again and ask them to include a statement explaining the dispute in your credit reports. [cfpb-314]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "passes_nli_screen",
+        "claims": [
+          {
+            "claim": "To challenge inaccurate information on your credit report, you should contact both the credit reporting company and the company that supplied the information.",
+            "source_ids": [
+              "cfpb-314"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-314",
+                "status": "scored",
+                "pair_tokens": 59,
+                "probabilities": {
+                  "contradiction": 0.0005896122068496257,
+                  "entailment": 0.993196978260429,
+                  "neutral": 0.006213409532721384
+                }
+              },
+              {
+                "source_id": "cfpb-314",
+                "status": "scored",
+                "pair_tokens": 95,
+                "probabilities": {
+                  "contradiction": 0.010873006966063473,
+                  "entailment": 0.7573294977341583,
+                  "neutral": 0.23179749529977844
+                }
+              },
+              {
+                "source_id": "cfpb-314",
+                "status": "scored",
+                "pair_tokens": 99,
+                "probabilities": {
+                  "contradiction": 0.00991045278708866,
+                  "entailment": 0.9246149505709687,
+                  "neutral": 0.06547459664194268
+                }
+              }
+            ],
+            "accepted": true
+          },
+          {
+            "claim": "If the company that supplied the information determines the information is accurate, you can contact the credit reporting company again and ask them to include a statement explaining the dispute in your credit reports.",
+            "source_ids": [
+              "cfpb-314"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-314",
+                "status": "scored",
+                "pair_tokens": 70,
+                "probabilities": {
+                  "contradiction": 0.0012567291483564665,
+                  "entailment": 0.001983361987898404,
+                  "neutral": 0.9967599088637452
+                }
+              },
+              {
+                "source_id": "cfpb-314",
+                "status": "scored",
+                "pair_tokens": 106,
+                "probabilities": {
+                  "contradiction": 0.0016128237427233095,
+                  "entailment": 0.9422780520459143,
+                  "neutral": 0.05610912421136244
+                }
+              },
+              {
+                "source_id": "cfpb-314",
+                "status": "scored",
+                "pair_tokens": 110,
+                "probabilities": {
+                  "contradiction": 0.01059176331521968,
+                  "entailment": 0.0021217358813160627,
+                  "neutral": 0.9872865008034643
+                }
+              }
+            ],
+            "accepted": true
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 236.13099899999906
+    },
+    {
+      "question_id": "dev-009",
+      "question": "I am mailing a credit-report dispute. What should I include, and should I send original supporting documents?",
+      "answer": "If you mail a dispute, your dispute letter should include:\n\n- Contact information for you, including your complete name, address, and telephone number\n\n- Credit report confirmation number, if available\n\n- Each error you want fixed, including the account number for any account you may be disputing\n\n- Clear explanation of why you are disputing the information\n\n- Request that the information be removed or corrected\n\n- A copy of the portion of your credit report that contains the disputed items, with the disputed items circled or highlighted\n\n- Copies (not originals) of documents that support your position\n\nYou should send original supporting documents if you are mailing them directly to the credit bureau. If you are mailing them to the creditor, you should send copies (not originals) of the documents. [source_id]",
+      "generation_performed": true,
+      "original_validation_error": "The model did not cite its answer. The answer was withheld.",
+      "screen": {
+        "decision": "withhold_format",
+        "claims": [],
+        "errors": [
+          "invalid_answer_format"
+        ]
+      },
+      "elapsed_ms": 0.0367949999999837
+    },
+    {
+      "question_id": "dev-010",
+      "question": "A collector sent me a debt validation notice. What information should help me identify the debt and understand how to dispute it?",
+      "answer": "The information provided in the debt validation notice includes the debt collector's contact information, the creditor's name, the account number, the current debt amount, and the date the notice was sent. This helps you identify the debt and understand how to dispute it. If the debt is not yours, you can dispute it by contacting the collector and providing evidence that the debt is not yours or that the amount is incorrect. The notice also includes a 30-day period during which you can dispute the debt. [cfpb-331]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_nli",
+        "claims": [
+          {
+            "claim": "The information provided in the debt validation notice includes the debt collector's contact information, the creditor's name, the account number, the current debt amount, and the date the notice was sent.",
+            "source_ids": [
+              "cfpb-331"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 105,
+                "probabilities": {
+                  "contradiction": 0.0012242737615964757,
+                  "entailment": 0.0007624768075812427,
+                  "neutral": 0.9980132494308223
+                }
+              },
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 210,
+                "probabilities": {
+                  "contradiction": 0.005765480215426388,
+                  "entailment": 0.39626795905730583,
+                  "neutral": 0.5979665607272677
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "This helps you identify the debt and understand how to dispute it.",
+            "source_ids": [
+              "cfpb-331"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 78,
+                "probabilities": {
+                  "contradiction": 0.000882063715741829,
+                  "entailment": 0.0006066904232576776,
+                  "neutral": 0.9985112458610005
+                }
+              },
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 183,
+                "probabilities": {
+                  "contradiction": 0.0016141645758941863,
+                  "entailment": 0.8992440904369887,
+                  "neutral": 0.09914174498711725
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "If the debt is not yours, you can dispute it by contacting the collector and providing evidence that the debt is not yours or that the amount is incorrect.",
+            "source_ids": [
+              "cfpb-331"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 98,
+                "probabilities": {
+                  "contradiction": 0.006369984930745397,
+                  "entailment": 0.0019522301899859056,
+                  "neutral": 0.9916777848792687
+                }
+              },
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 203,
+                "probabilities": {
+                  "contradiction": 0.0025156100739715157,
+                  "entailment": 0.6787253407363006,
+                  "neutral": 0.31875904918972797
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "The notice also includes a 30-day period during which you can dispute the debt.",
+            "source_ids": [
+              "cfpb-331"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 82,
+                "probabilities": {
+                  "contradiction": 0.001876566832702785,
+                  "entailment": 0.00033881701073334053,
+                  "neutral": 0.9977846161565639
+                }
+              },
+              {
+                "source_id": "cfpb-331",
+                "status": "scored",
+                "pair_tokens": 187,
+                "probabilities": {
+                  "contradiction": 0.004529729203100605,
+                  "entailment": 0.2716684988607087,
+                  "neutral": 0.7238017719361907
+                }
+              }
+            ],
+            "accepted": false
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 549.0764150000014
+    },
+    {
+      "question_id": "dev-011",
+      "question": "If I freeze my credit report with one bureau, do the other two automatically receive the freeze?",
+      "answer": "If you freeze your credit report with one bureau, the other two will not automatically receive the freeze. You must contact each credit reporting company individually to place a freeze with all three. [cfpb-31]",
+      "generation_performed": true,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "withhold_nli",
+        "claims": [
+          {
+            "claim": "If you freeze your credit report with one bureau, the other two will not automatically receive the freeze.",
+            "source_ids": [
+              "cfpb-31"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-31",
+                "status": "scored",
+                "pair_tokens": 74,
+                "probabilities": {
+                  "contradiction": 0.007531858797214758,
+                  "entailment": 0.8384053121489201,
+                  "neutral": 0.15406282905386517
+                }
+              },
+              {
+                "source_id": "cfpb-31",
+                "status": "scored",
+                "pair_tokens": 101,
+                "probabilities": {
+                  "contradiction": 0.02658993004545442,
+                  "entailment": 0.018095447300750297,
+                  "neutral": 0.9553146226537953
+                }
+              }
+            ],
+            "accepted": false
+          },
+          {
+            "claim": "You must contact each credit reporting company individually to place a freeze with all three.",
+            "source_ids": [
+              "cfpb-31"
+            ],
+            "pairs": [
+              {
+                "source_id": "cfpb-31",
+                "status": "scored",
+                "pair_tokens": 70,
+                "probabilities": {
+                  "contradiction": 0.0004123064674717026,
+                  "entailment": 0.9927008597170972,
+                  "neutral": 0.0068868338154312175
+                }
+              },
+              {
+                "source_id": "cfpb-31",
+                "status": "scored",
+                "pair_tokens": 97,
+                "probabilities": {
+                  "contradiction": 0.9752059258199007,
+                  "entailment": 0.00017385876427577208,
+                  "neutral": 0.024620215415823498
+                }
+              }
+            ],
+            "accepted": false
+          }
+        ],
+        "errors": [],
+        "warning": "Automated NLI screening only. Relevance, completeness, applicability and correctness are not established."
+      },
+      "elapsed_ms": 119.33505700000023
+    },
+    {
+      "question_id": "dev-012",
+      "question": "Will my bank waive my specific late fee tomorrow? I have not provided my account terms or spoken with the bank.",
+      "answer": "The supplied passages do not answer this question.",
+      "generation_performed": false,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "gate_abstention_not_scored",
+        "claims": [],
+        "errors": []
+      },
+      "elapsed_ms": 0.009283999999752268
+    },
+    {
+      "question_id": "dev-013",
+      "question": "My apartment application is pending. Will this particular landlord approve me tomorrow?",
+      "answer": "The supplied passages do not answer this question.",
+      "generation_performed": false,
+      "original_validation_error": null,
+      "screen": {
+        "decision": "gate_abstention_not_scored",
+        "claims": [],
+        "errors": []
+      },
+      "elapsed_ms": 0.005227999999988242
+    }
+  ],
+  "quality_scores": null,
+  "limitations": [
+    "Development replay of already-inspected answers, not held-out evaluation.",
+    "NLI scores are automated model predictions, not human grades or calibrated correctness probabilities.",
+    "A passed screen does not establish relevance, completeness, applicability or source freshness.",
+    "Sentence-level scoring can miss an unsupported clause inside an otherwise supported sentence.",
+    "Gate abstentions are not model refusals; citation errors and request failures stay separate.",
+    "No live mode, prompt, trained weights or public deployment is changed."
+  ],
+  "decision_counts": {
+    "withhold_nli": 6,
+    "gate_abstention_not_scored": 3,
+    "passes_nli_screen": 2,
+    "withhold_format": 2
+  },
+  "finished_at": "2026-10-21T18:34:04.680Z"
+}
