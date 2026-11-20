@@ -34,7 +34,9 @@ test("ordinary cash-withdrawal paraphrase retains credit-card source wording", a
 
 test("unsupported process-name paraphrases fail even when supplied an attractive ranking", async () => {
   const p = passage("cfpb-314", "The credit reporting company you sent the dispute letter to must investigate your dispute, forward the dispute and all relevant information you provided to the company that provided the information about you, and report the results back to you.");
-  for (const question of ["Is arbitration required for a credit report dispute?", "Must I use arbitration to dispute a credit report?"]) {
+  // "Mediation" is absent from the 163-article vocabulary. "Arbitration", used here for the
+  // 8-article corpus, now appears in it, so the unseen-term rule no longer applies to that word.
+  for (const question of ["Is mediation required for a credit report dispute?", "Must I use mediation to dispute a credit report?"]) {
     const result = await answerWithExcerpts(question, { retrieve: async () => [p], buildUnits: buildEvidenceUnits,
       rank: async (_, units) => ranks(units) });
     assert.equal(result.disposition, "evidence_limited");
